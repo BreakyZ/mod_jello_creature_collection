@@ -33,7 +33,7 @@ this.jcc_hunting_basilisks_action <- this.inherit("scripts/factions/faction_acti
 
 		local village = _faction.getSettlements()[0];
 
-		if (!this.isKindOf(village, "legends_lumber_village") && !this.isKindOf(village, "small_lumber_village") && !this.isKindOf(village, "medium_lumber_village"))
+		if (!this.isKindOf(village, "small_lumber_village") && !this.isKindOf(village, "medium_lumber_village"))
 		{
 			return;
 		}
