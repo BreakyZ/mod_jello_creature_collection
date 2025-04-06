@@ -1,0 +1,29 @@
+<brush name="gfx/entity_mod_jellos_creature_collection.png" version="17">
+
+
+<sprite id="cytoplasm_small_orientation" ic="FF1E2B3A" img="orientation\cytoplasm_small_orientation.png" />
+<sprite id="cytoplasm_medium_orientation" ic="FF1E2B3A" img="orientation\cytoplasm_medium_orientation.png" />
+<sprite id="cytoplasm_high_orientation" ic="FF1E2B3A" img="orientation\cytoplasm_high_orientation.png" />
+
+<sprite id="bust_cytoplasm_small_body" offsetY="30" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_small_body.png" left="-46" right="48" top="-49" bottom="43" />
+<sprite id="bust_cytoplasm_small_skull_01" offsetY="45" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_small_skull_01.png" left="-35" right="39" top="-58" bottom="20" />
+<sprite id="bust_cytoplasm_small_skull_02" offsetY="45" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_small_skull_02.png" left="-35" right="39" top="-58" bottom="20" />
+
+<sprite id="bust_cytoplasm_medium_body" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_medium_body.png" left="-71" right="65" top="-58" bottom="101" />
+<sprite id="bust_cytoplasm_medium_skull_01" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_medium_skull_01.png" left="-63" right="69" top="-56" bottom="104" />
+<sprite id="bust_cytoplasm_medium_skull_02" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_medium_skull_02.png" left="-63" right="69" top="-56" bottom="104" />
+<sprite id="bust_cytoplasm_medium_rib" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_medium_rib.png" left="-68" right="64" top="-56" bottom="104" />
+<sprite id="bust_cytoplasm_medium_jaw" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_medium_jaw.png" left="-69" right="63" top="-51" bottom="109" />
+<sprite id="bust_cytoplasm_medium_bone" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_medium_bone.png" left="-71" right="61" top="-56" bottom="104" />
+
+<sprite id="bust_cytoplasm_high_body" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_high_body.png" left="-103" right="94" top="-60" bottom="169" />
+<sprite id="bust_cytoplasm_high_skull_01" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_high_skull_01.png" left="-109" right="89" top="-56" bottom="173" />
+<sprite id="bust_cytoplasm_high_skel" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_high_skel.png" left="-103" right="95" top="-61" bottom="168" />
+<sprite id="bust_cytoplasm_high_rib" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_high_rib.png" left="-96" right="102" top="-77" bottom="152" />
+<sprite id="bust_cytoplasm_high_jaw" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_high_jaw.png" left="-102" right="96" top="-60" bottom="169" />
+<sprite id="bust_cytoplasm_high_bone" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_high_bone.png" left="-103" right="95" top="-60" bottom="169" />
+
+<sprite id="bust_cytoplasm_dead" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_dead.png" left="-61" right="63" top="-52" bottom="20" />
+
+
+</brush>
