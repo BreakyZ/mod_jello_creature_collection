@@ -193,7 +193,7 @@ this.jcc_basilisk_sentry <- this.inherit("scripts/entity/tactical/actor", {
 
 				if (r <= 40)
 				{
-					loot = this.new("scripts/items/misc/basilisk_feathers_item");
+					loot = this.new("scripts/items/misc/jcc_basilisk_feathers_item");
 				}
 				else if (r <= 80)
 				{
@@ -253,7 +253,7 @@ this.jcc_basilisk_sentry <- this.inherit("scripts/entity/tactical/actor", {
 
 		this.m.Skills.add(this.new("scripts/skills/actives/jcc_basilisk_sentry_inject_skill"));
 		this.m.Skills.add(this.new("scripts/skills/actives/jcc_basilisk_sentry_fowleye_skill"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_escape_artist"));
+		// this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_escape_artist"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_steel_brow"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_reach_advantage"));
@@ -266,17 +266,6 @@ this.jcc_basilisk_sentry <- this.inherit("scripts/entity/tactical/actor", {
 		{
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
 		}
-
-		if("Assets" in this.World && this.World.Assets != null && this.World.Assets.getCombatDifficulty() == this.Const.Difficulty.Legendary)
-		{
-			b.MeleeDefense += 5;
-			b.RangedDefense += 5;
-			this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_smackdown"));
-			this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_feint"));
-			this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_onslaught"));
-			this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_push_the_advantage"));
-		}
-
 	}
 
 	function assignRandomEquipment()

@@ -261,22 +261,13 @@ this.jcc_basilisk_drone_low <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/actives/jcc_basilisk_peck_skill"));
 		// this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_second_wind"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_overwhelm"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_escape_artist"));
+		// this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_escape_artist"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_crippling_strikes"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_berserk"));
 		// this.m.Skills.add(this.new("scripts/skills/perks/perk_steel_brow"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
 		b.Threat += 5;
-
-		if("Assets" in this.World && this.World.Assets != null && this.World.Assets.getCombatDifficulty() == this.Const.Difficulty.Legendary)
-		{
-			b.MeleeDefense += 5;
-			b.RangedDefense += 5;
-			this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_smackdown"));
-			this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_onslaught"));
-		}
-
 	}
 
 	function assignRandomEquipment()
