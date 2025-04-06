@@ -13,6 +13,13 @@ this.cyto_racial <- this.inherit("scripts/skills/skill", {
 		this.m.IsHidden = true;
 	}
 
+	function addStack()
+    {
+        local actor = this.getContainer().getActor();
+        actor.grow();
+        actor.checkMorale(1, 20);
+    }
+
 	function onBeforeDamageReceived( _attacker, _skill, _hitInfo, _properties )
 	{
 		if (_skill == null)

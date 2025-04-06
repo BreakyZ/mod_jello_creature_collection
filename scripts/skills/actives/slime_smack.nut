@@ -26,12 +26,12 @@ this.slime_smack <- this.inherit("scripts/skills/skill", {
 		this.m.IsTargeted = true;
 		this.m.IsStacking = false;
 		this.m.IsAttack = true;
-		this.m.IsIgnoredAsAOO = true;
+		this.m.IsIgnoredAsAOO = false;
 		this.m.IsAOE = true;
 		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BluntHead;
 		this.m.HitChanceBonus = 0;
-		this.m.DirectDamageMult = 0.4;
+		this.m.DirectDamageMult = 0.35;
 		this.m.ActionPointCost = 5;
 		this.m.FatigueCost = 25;
 		this.m.MinRange = 1;
@@ -79,7 +79,7 @@ this.slime_smack <- this.inherit("scripts/skills/skill", {
 		local targetTiles = [];
 		local attackDelay = 0;
 		local currentTileIndex = 0;
-		local numAttacks = getContainer().getActor().getSize()+1;
+		local numAttacks = getContainer().getActor().getSize();
 
 		for( local i = 0; i < 6; i = ++i )
 		{
