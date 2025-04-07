@@ -1,9 +1,26 @@
 <brush name="gfx/entity_mod_jellos_creature_collection.png" version="17">
 
+<!-- Worldmap -->
+
+<sprite id="figure_percht_01" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_percht_01.png" left="-17" right="21" top="-39" bottom="7" />
+<sprite id="figure_cytoplasm_01" offsetY="30" ic="FF36678A" width="68" height="106" img="world\party\figure_cytoplasm_01.png" left="-17" right="19" top="-41" bottom="5" />
+<sprite id="figure_cytoplasm_02" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_02.png" left="-26" right="30" top="-46" bottom="8" />
+<sprite id="figure_cytoplasm_03" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_03.png" left="-26" right="30" top="-46" bottom="8" />
+
+<sprite id="percht_camp_01" ic="FF38484E" width="218" height="180" img="world\location\percht_camp_01.png" left="-107" right="110" top="-91" bottom="88" />
+
+<!-- Orientation -->
 
 <sprite id="cytoplasm_small_orientation" ic="FF1E2B3A" img="orientation\cytoplasm_small_orientation.png" />
 <sprite id="cytoplasm_medium_orientation" ic="FF1E2B3A" img="orientation\cytoplasm_medium_orientation.png" />
 <sprite id="cytoplasm_high_orientation" ic="FF1E2B3A" img="orientation\cytoplasm_high_orientation.png" />
+<sprite id="cyto_soldier_orientation" ic="FF1E2B3A" img="orientation\cyto_soldier_orientation.png" />
+<sprite id="cyto_boss_orientation" ic="FF1E2B3A" img="orientation\cyto_boss_orientation.png" />
+<sprite id="cyto_black_orientation" ic="FF1E2B3A" img="orientation\cyto_black_orientation.png" />
+<sprite id="cyto_ooze_orientation" ic="FF1E2B3A" img="orientation\cyto_ooze_orientation.png" />
+<sprite id="percht_orientation" ic="FF1E2B3A" img="orientation\percht_orientation.png" />
+
+<!-- Cytoplasm Small/Medium/Big -->
 
 <sprite id="bust_cytoplasm_small_body" offsetY="30" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_small_body.png" left="-46" right="48" top="-49" bottom="43" />
 <sprite id="bust_cytoplasm_small_skull_01" offsetY="45" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_small_skull_01.png" left="-35" right="39" top="-58" bottom="20" />
@@ -25,5 +42,38 @@
 
 <sprite id="bust_cytoplasm_dead" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_dead.png" left="-61" right="63" top="-52" bottom="20" />
 
+<!-- Percht -->
+
+<sprite id="bust_percht_body_01" offsetY="30" offsetX="-2" ic="FF2A2D2F" width="104" height="142" img="entity\beasts\bust_percht_body_01.png" left="-56" right="57" top="-57" bottom="100" />
+  <sprite id="bust_percht_body_01_injured" offsetY="30" offsetX="-2" ic="FF2A2D2F" width="104" height="142" img="entity\beasts\bust_percht_body_01_injured.png" left="-56" right="57" top="-57" bottom="100" />
+  <sprite id="bust_percht_body_01_dead" offsetX="5" offsetY="30" f="6403" ic="FF252930" width="169" height="139" img="entity\beasts\bust_percht_body_01_dead.png" left="-76" right="107" top="-113" bottom="53" />
+  <sprite id="bust_percht_body_01_dead_arrows" offsetX="5" offsetY="30" f="6402" ic="FF444A50" width="169" height="139" img="entity\beasts\bust_percht_body_01_dead_arrows.png" left="-27" right="23" top="-17" bottom="37" />
+  <sprite id="bust_percht_body_01_dead_javelin" offsetX="5" offsetY="30" f="6402" ic="FF151C29" width="169" height="139" img="entity\beasts\bust_percht_body_01_dead_javelin.png" left="-3" right="43" top="-8" bottom="64" />
+  <sprite id="bust_percht_body_02" offsetY="30" offsetX="-2" ic="FF303538" width="104" height="142" img="entity\beasts\bust_percht_body_02.png" left="-56" right="57" top="-57" bottom="100" />
+  <sprite id="bust_percht_body_02_injured" offsetY="30" offsetX="-2" ic="FF303538" width="104" height="142" img="entity\beasts\bust_percht_body_02_injured.png" left="-56" right="57" top="-57" bottom="100" />
+  <sprite id="bust_percht_body_02_dead" offsetX="5" offsetY="30" f="6403" ic="FF282C35" width="169" height="139" img="entity\beasts\bust_percht_body_02_dead.png" left="-76" right="107" top="-113" bottom="53" />
+  <sprite id="bust_percht_body_02_dead_arrows" offsetX="5" offsetY="30" f="6402" ic="FF444A50" width="169" height="139" img="entity\beasts\bust_percht_body_02_dead_arrows.png" left="-27" right="23" top="-17" bottom="37" />
+  <sprite id="bust_percht_body_02_dead_javelin" offsetX="5" offsetY="30" f="6402" ic="FF151C29" width="169" height="139" img="entity\beasts\bust_percht_body_02_dead_javelin.png" left="-3" right="43" top="-8" bottom="64" />
+  <sprite id="bust_percht_head_01" offsetX="-2" offsetY="30" ic="FF3A3F41" width="104" height="142" img="entity\beasts\bust_percht_head_01.png" left="-56" right="58" top="-57" bottom="100" />
+  <sprite id="bust_percht_head_01_injured" offsetX="-2" offsetY="30" ic="FF3A3F41" width="104" height="142" img="entity\beasts\bust_percht_head_01_injured.png" left="-56" right="58" top="-57" bottom="100" />
+  <sprite id="bust_percht_head_01_dead"  offsetX="5" offsetY="30" f="6401" f1="30" f2="-15" ic="FF35393E" width="169" height="139" img="entity\beasts\bust_percht_head_01_dead.png" left="-82" right="106" top="-108" bottom="55" />
+  <sprite id="bust_percht_head_01_bloodpool" offsetX="5" offsetY="30" f="6420" f1="30" f2="-15" width="169" height="139" img="entity\beasts\bust_percht_head_01_bloodpool.png" left="-27" right="85" top="-70" bottom="30" />
+  <sprite id="bust_percht_head_02" offsetX="-2" offsetY="30" ic="FF3A3F41" width="104" height="142" img="entity\beasts\bust_percht_head_02.png" left="-56" right="58" top="-57" bottom="100" />
+  <sprite id="bust_percht_head_02_injured" offsetX="-2" offsetY="30" ic="FF3A3F41" width="104" height="142" img="entity\beasts\bust_percht_head_02_injured.png" left="-56" right="58" top="-57" bottom="100" />
+  <sprite id="bust_percht_head_02_dead" offsetX="5" offsetY="30" f="6401" f1="30" f2="-15" ic="FF35393E" width="169" height="139" img="entity\beasts\bust_percht_head_02_dead.png" left="-87" right="116" top="-115" bottom="57" />
+  <sprite id="bust_percht_head_02_bloodpool" offsetX="5" offsetY="30" f="6420" f1="30" f2="-15" width="169" height="139" img="entity\beasts\bust_percht_head_02_bloodpool.png" left="-22" right="70" top="-70" bottom="24" />
+  <sprite id="bust_percht_head_03" offsetX="-2" offsetY="30" ic="FF3A3F41" width="104" height="142" img="entity\beasts\bust_percht_head_03.png" left="-56" right="58" top="-57" bottom="100" />
+  <sprite id="bust_percht_head_03_injured" offsetX="-2" offsetY="30" ic="FF3A3F41" width="104" height="142" img="entity\beasts\bust_percht_head_03_injured.png" left="-56" right="58" top="-57" bottom="100" />
+  <sprite id="bust_percht_head_03_dead" offsetX="5" offsetY="30" f="6401" f1="30" f2="-15" ic="FF35393E" width="169" height="139" img="entity\beasts\bust_percht_head_03_dead.png" left="-87" right="116" top="-115" bottom="57" />
+  <sprite id="bust_percht_head_03_bloodpool" offsetX="5" offsetY="30" f="6420" f1="30" f2="-15" width="169" height="139" img="entity\beasts\bust_percht_head_03_bloodpool.png" left="-22" right="70" top="-70" bottom="24" />
+  <sprite id="bust_percht_dead_guts" offsetX="-5" offsetY="18" ic="FF191A48" width="238" height="186" img="entity\beasts\bust_percht_dead_guts.png" left="-29" right="31" top="-2" bottom="42" />
+
+
+<!-- Weapons -->
+
+  <sprite id="icon_percht_spetum_01" offsetY="35" ic="FF33404B" width="150" height="160" img="icons\icon_percht_spetum_01.png" left="-55" right="13" />
+  <sprite id="icon_percht_spetum_01_bloodied" offsetY="35" ic="FF2F3C4B" width="150" height="160" img="icons\icon_percht_spetum_01_bloodied.png" left="-55" right="13" />
+  <sprite id="icon_percht_flail_01"  ic="FF31383F" offsetY="35" width="130" height="142" img="icons\icon_percht_flail_01.png" left="0" right="66" top="-73" bottom="17" />
+  <sprite id="icon_percht_flail_01_bloodied" offsetY="35" ic="FF2D333F" width="130" height="142" img="icons\icon_percht_flail_01_bloodied.png" left="0" right="66" top="-73" bottom="17" />
 
 </brush>
