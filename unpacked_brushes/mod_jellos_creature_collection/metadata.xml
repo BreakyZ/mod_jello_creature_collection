@@ -71,9 +71,10 @@
 
 <!-- Weapons -->
 
-  <sprite id="icon_percht_spetum_01" offsetY="35" ic="FF33404B" width="150" height="160" img="icons\icon_percht_spetum_01.png" left="-55" right="13" />
-  <sprite id="icon_percht_spetum_01_bloodied" offsetY="35" ic="FF2F3C4B" width="150" height="160" img="icons\icon_percht_spetum_01_bloodied.png" left="-55" right="13" />
+  <sprite id="icon_percht_spetum_01" offsetY="35" f1="20" f2="-45" ic="FF33404B" width="150" height="160" img="icons\icon_percht_spetum_01.png" left="-55" right="13" />
+  <sprite id="icon_percht_spetum_01_bloodied" offsetY="35" f1="20" f2="-45" ic="FF2F3C4B" width="150" height="160" img="icons\icon_percht_spetum_01_bloodied.png" left="-55" right="13" />
   <sprite id="icon_percht_flail_01"  ic="FF31383F" offsetY="35" width="130" height="142" img="icons\icon_percht_flail_01.png" left="0" right="66" top="-73" bottom="17" />
   <sprite id="icon_percht_flail_01_bloodied" offsetY="35" ic="FF2D333F" width="130" height="142" img="icons\icon_percht_flail_01_bloodied.png" left="0" right="66" top="-73" bottom="17" />
+  <sprite id="icon_percht_bow" offsetY="35" ic="FF3B5263" width="104" height="142" img="icons\icon_percht_bow.png" left="-14" right="62" top="-76" bottom="34" />
 
 </brush>
