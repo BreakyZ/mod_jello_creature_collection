@@ -45,7 +45,7 @@ this.percht_bow <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.onEquip();
 		this.addSkill(this.new("scripts/skills/actives/quick_shot"));
-		this.addSkill(this.new("scripts/skills/actives/aimed_shot"));
+		this.addSkill(this.new("scripts/skills/actives/percht_shot"));
 	}
 
 });
