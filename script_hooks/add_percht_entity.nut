@@ -33,6 +33,9 @@ this.Const.Strings.PerchtNames <- [
 	"Pan",
 	"Samail",
 	"Rubezahl",
+	"Gil\'dan",
+	"Kil\'jaeden",
+	"Moloch",
 	"Krampus"
 ];
 this.Const.Strings.PerchtTitles <- [
@@ -43,20 +46,56 @@ this.Const.Strings.PerchtTitles <- [
 	"of the Black Sabbath",
 	"the Maneater",
 	"the Impaler",
-	"the Moloch",
+	"Ash-Spitter",
 	"Ur",
 	"the Black",
 	"Coal-Eyes",
 	"the Raucous",
-	"Gil'dan",
-	"Kil'jaeden",
 	"from Below",
 	"the Black Bellows",
 	"the Peeler",
 	"the Anathema",
 	"the King in Yellow",
 	"the Old Man of the Mountain",
-	"Sack-Stuffer"
+	"Sack-Stuffer",
+	"Gore-Spiller",
+	"of the Underworld",
+	"the Boogeyman",
+	"of the Dark",
+	"the Bump in the Night"
+];
+this.Const.World.LocationNames.PerchtClearing <- [
+	"Fortified Den",
+	"Hell\'s Gate",
+	"Eerie Clearing",
+	"Gathering Stones",
+	"Herdstones",
+	"Spirit\'s Well",
+	"Summoning Stones",
+	"Bone-Strewn Hellhole",
+	"Field of Delirium",
+	"Ill-Omened Clearing",
+	"Hellspawn\'s Den",
+	"Sacrifice Rock",
+	"Bone-Strewn Clearing",
+	"Sealing Stones",
+	"Pale Glade",
+	"Silent Copse",
+	"Wretched Clearing",
+	"Abandoned Hunter\'s Camp",
+	"Hunter\'s End",
+	"Percht\'s Glade",
+	"Uncharted Clearing",
+	"Haunted Moor",
+	"Den of Coal",
+	"Den of Sulfur",
+	"Huntsman\'s Copse",
+	"Huntsman\'s End"
+];
+this.Const.World.LocationNames.PerchtCastle <- [
+	"Child-Eater Hall",
+	"Hall of Hell",
+	"Greenbeard\'s Walls"
 ];
 
 this.Const.AI.Agent.ID.Percht <- "agent.percht";
@@ -87,7 +126,7 @@ this.Const.Tactical.Actor.Percht <- {
 };
 this.Const.World.Spawn.Troops.Percht <- {
 	ID = this.Const.EntityType.Percht,
-	Variant = 0,
+	Variant = 1,
 	Strength = 35,
 	Cost = 40,
 	Row = 2,

@@ -35,6 +35,7 @@ this.percht_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_wake_up_ally"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_default"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_splitshield"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_defend_spearwall"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_swing"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_split"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_crush_armor"));
@@ -43,6 +44,12 @@ this.percht_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_defend_knock_back"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_switchto_melee"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_switchto_ranged"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_thresh"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_crush_armor"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_decapitate"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_knock_out"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_lash"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_gash"));
 	}
 
 	function onUpdate()

@@ -91,7 +91,7 @@ this.scenario_swipe <- this.inherit("scripts/scenarios/tactical/scenario_templat
 		entity.setName(this.getRandomPlayerName());
 		items = entity.getItems();
 		items.equip(this.new("scripts/items/armor/sackcloth"));
-		items.equip(this.new("scripts/items/weapons/hunting_bow"));
+		items.equip(this.new("scripts/items/weapons/percht_bow"));
 		items.equip(this.new("scripts/items/ammo/quiver_of_arrows"));
 		items.addToBag(this.new("scripts/items/weapons/dagger"));
 
@@ -117,7 +117,6 @@ this.scenario_swipe <- this.inherit("scripts/scenarios/tactical/scenario_templat
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
 		entity.makeMiniboss();
-
 
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/percht");
 		entity.setFaction(this.Const.Faction.Beasts);

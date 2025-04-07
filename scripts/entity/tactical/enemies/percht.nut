@@ -301,14 +301,15 @@ this.percht <- this.inherit("scripts/entity/tactical/actor", {
 		local r;
 		local weapon;
 
-		if (this.Math.rand(1, 100) <= 45)
-		{
-			this.m.Items.addToBag(this.new("scripts/items/weapons/greenskins/orc_javelin"));
-		}
+
 
 		if (this.Math.rand(1, 100) <= 75)
 		{
-			if (this.Math.rand(1, 100) <= 50)
+			if (this.Math.rand(1, 100) <= 45)
+			{
+				this.m.Items.addToBag(this.new("scripts/items/weapons/greenskins/orc_javelin"));
+			}
+			if (this.Math.rand(1, 100) <= 70)
 			{
 				local r = this.Math.rand(1, 2);
 
@@ -334,12 +335,11 @@ this.percht <- this.inherit("scripts/entity/tactical/actor", {
 					weapon = this.new("scripts/items/weapons/greenskins/orc_metal_club");
 				}
 			}
-		}
 
-		if(weapon==null)
-		{
-			weapon = this.new("scripts/items/weapons/greenskins/orc_wooden_club");
-		}
+			if(weapon==null)
+			{
+				weapon = this.new("scripts/items/weapons/greenskins/orc_wooden_club");
+			}
 
 		if (this.m.Items.hasEmptySlot(this.Const.ItemSlot.Mainhand))
 		{
@@ -349,6 +349,26 @@ this.percht <- this.inherit("scripts/entity/tactical/actor", {
 		{
 			this.m.Items.addToBag(weapon);
 		}
+		}
+		else{
+			this.m.Items.equip(this.new("scripts/items/weapons/percht_bow"));
+			this.m.Items.equip(this.new("scripts/items/ammo/quiver_of_arrows"));
+			
+			local r = this.Math.rand(1, 2);
+
+			if (r == 1)
+			{
+				this.m.Items.addToBag(this.new("scripts/items/weapons/greenskins/orc_wooden_club"));
+
+			}
+			else if (r == 2)
+			{
+				this.m.Items.addToBag(this.new("scripts/items/weapons/greenskins/orc_metal_club"));
+
+			}
+		}
+
+
 
 	}
 
