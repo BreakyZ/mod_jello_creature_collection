@@ -83,16 +83,6 @@ this.cascade_skill_percht <- this.inherit("scripts/skills/skill", {
 					_skill.attackEntity(_user, target);
 				}
 			}.bindenv(this), this);
-			this.Time.scheduleEvent(this.TimeUnit.Virtual, 200, function ( _skill )
-			{
-				if (target.isAlive())
-				{
-					_skill.attackEntity(_user, target);
-				}
-
-				_skill.m.IsDoingAttackMove = true;
-				_skill.getContainer().setBusy(false);
-			}.bindenv(this), this);
 			return true;
 		}
 		else
