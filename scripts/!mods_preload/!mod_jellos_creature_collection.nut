@@ -7,7 +7,18 @@
 ::ModJelloCreatureCollection.HooksMod <- ::Hooks.register(::ModJelloCreatureCollection.ID, ::ModJelloCreatureCollection.Version, ::ModJelloCreatureCollection.Name);
 ::ModJelloCreatureCollection.HooksMod.require("mod_msu >= 1.2.6");
 
-::mods_queue("mod_jellos_creature_collection", null, function ()
+
+::ModJelloCreatureCollection.HooksMod.queue(">mod_msu", function()
 {
-	::include("script_hooks/add_cytoplasm_entity");
-});
+  // define mod class of this mod
+  ::ModJelloCreatureCollection.Mod <- ::MSU.Class.Mod(::ModJelloCreatureCollection.ID, ::ModJelloCreatureCollection.Version, ::ModJelloCreatureCollection.Name);
+
+  ::ModJelloCreatureCollection.Mod.Registry.addModSource(::MSU.System.Registry.ModSourceDomain.GitHub, "https://github.com/BreakyZ/mod_jello_creature_collection"); // this registers for release updates on the repo
+  ::ModJelloCreatureCollection.Mod.Registry.setUpdateSource(::MSU.System.Registry.ModSourceDomain.GitHub);
+
+  // load hook files
+  foreach (file in ::IO.enumerateFiles("script_hooks"))
+  {
+      ::include(file);
+  }
+}, ::Hooks.QueueBucket.Normal);

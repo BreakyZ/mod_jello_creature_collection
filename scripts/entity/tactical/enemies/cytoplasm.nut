@@ -309,6 +309,7 @@ this.cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_hold_out"));
 		this.m.Skills.add(this.new("scripts/skills/actives/slime_smack"));
 		this.m.Skills.add(this.new("scripts/skills/actives/merge_cyto_skill"));
+		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
 	}
 
 	function grow( _instant = false )

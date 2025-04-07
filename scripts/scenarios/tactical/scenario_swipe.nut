@@ -56,6 +56,7 @@ this.scenario_swipe <- this.inherit("scripts/scenarios/tactical/scenario_templat
 		items = entity.getItems();
 		items.equip(this.new("scripts/items/helmets/nasal_helmet"));
 		items.equip(this.new("scripts/items/armor/mail_shirt"));
+		items.equip(this.new("scripts/items/weapons/percht_flail"));
 		entity = this.spawnEntity("scripts/entity/tactical/player", 2, 6, 11, 16);
 		this.World.getPlayerRoster().add(entity);
 		entity.setName(this.getRandomPlayerName());
@@ -63,6 +64,7 @@ this.scenario_swipe <- this.inherit("scripts/scenarios/tactical/scenario_templat
 		items = entity.getItems();
 		items.equip(this.new("scripts/items/helmets/mail_coif"));
 		items.equip(this.new("scripts/items/armor/mail_shirt"));
+		items.equip(this.new("scripts/items/weapons/percht_spetum"));
 		entity = this.spawnEntity("scripts/entity/tactical/player", 2, 6, 11, 16);
 		this.World.getPlayerRoster().add(entity);
 		entity.setName(this.getRandomPlayerName());
@@ -109,10 +111,18 @@ this.scenario_swipe <- this.inherit("scripts/scenarios/tactical/scenario_templat
 				entity = this.spawnEntity("scripts/entity/tactical/enemies/cytoplasm");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
-				entity = this.spawnEntity("scripts/entity/tactical/enemies/cytoplasm");
+
+
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/percht");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
-				entity = this.spawnEntity("scripts/entity/tactical/enemies/cytoplasm");
+		entity.makeMiniboss();
+
+
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/percht");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/percht");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
 	}

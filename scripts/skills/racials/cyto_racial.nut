@@ -17,7 +17,7 @@ this.cyto_racial <- this.inherit("scripts/skills/skill", {
     {
         local actor = this.getContainer().getActor();
         actor.grow();
-        actor.checkMorale(1, 20);
+        //actor.checkMorale(1, 20);
     }
 
 	function onBeforeDamageReceived( _attacker, _skill, _hitInfo, _properties )

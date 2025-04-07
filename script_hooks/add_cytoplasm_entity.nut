@@ -42,6 +42,22 @@ this.Const.World.Spawn.Troops.Cytoplasm <- {
 	Row = 2,
 	Script = "scripts/entity/tactical/enemies/cytoplasm"
 };
+this.Const.World.Spawn.Troops.CytoplasmMEDIUM <- {
+		ID = this.Const.EntityType.Cytoplasm,
+		Variant = 0,
+		Strength = 35,
+		Cost = 35,
+		Row = -1,
+		Script = "scripts/entity/tactical/enemies/cytoplasm_medium"
+	};
+this.Const.World.Spawn.Troops.CytoplasmHIGH <- {
+		ID = this.Const.EntityType.Cytoplasm,
+		Variant = 0,
+		Strength = 70,
+		Cost = 70,
+		Row = -1,
+		Script = "scripts/entity/tactical/enemies/cytoplasm_high"
+	};
 this.Const.World.Spawn.Cytoplasm <- [
 	{
 		Body = "figure_Cytoplasm_01",

@@ -26,7 +26,7 @@ this.slime_smack <- this.inherit("scripts/skills/skill", {
 		this.m.IsTargeted = true;
 		this.m.IsStacking = false;
 		this.m.IsAttack = true;
-		this.m.IsIgnoredAsAOO = false;
+		this.m.IsIgnoredAsAOO = true;
 		this.m.IsAOE = true;
 		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
 		this.m.InjuriesOnHead = this.Const.Injury.BluntHead;
