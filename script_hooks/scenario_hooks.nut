@@ -1,9 +1,14 @@
 
-::mods_hookExactClass("states/main_menu_state", function(o) 
+::mods_hookExactClass("states/main_menu_state", function(q) 
 {
-  o.onSiblingAdded = (__original) function ( _stateName)
+  q.onSiblingAdded = @(__original) function ( _stateName)
   {
 	  __original(__stateName);
+	  
+	  if (_stateName == "TacticalState")
+        {
+            local tacticalState = this.RootState.get(_stateName);
+          
 	  if (tacticalState != null)
 	  {
 
@@ -14,10 +19,10 @@
 		  tacticalState.setScenario(this.new("scripts/scenarios/tactical/jcc_scenario_basilisks"));
 		  break;
 		}
-	  }
+	  }}
   }
 
-  o.scenario_menu_module_onQueryData = (__original) function ()
+  q.scenario_menu_module_onQueryData = @(__original) function ()
   {
 	local result = __original();
 	result.push({
