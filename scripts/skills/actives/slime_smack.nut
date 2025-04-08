@@ -6,9 +6,9 @@ this.slime_smack <- this.inherit("scripts/skills/skill", {
 		this.m.Name = "Slime Smack";
 		this.m.Description = "";
 		this.m.KilledString = "Battered to death";
-		this.m.Icon = "skills/active_229.png";
-		this.m.IconDisabled = "skills/active_229.png";
-		this.m.Overlay = "active_229";
+		this.m.Icon = "skills/slime_smack.png";
+		this.m.IconDisabled = "skills/slime_smack.png";
+		this.m.Overlay = "slime_smack";
 		this.m.SoundOnUse = [
 			"sounds/enemies/slime_smack_01.wav",
 			"sounds/enemies/slime_smack_02.wav"

@@ -1,5 +1,8 @@
 <brush name="gfx/entity_mod_jellos_creature_collection.png" version="17">
 
+<sprite id="krampus_charge" ic="FF614551" img="skills\krampus_charge.png" />
+<sprite id="slime_smack" ic="FF614551" img="skills\slime_smack.png" />
+
 <!-- Worldmap -->
 
 <sprite id="figure_percht_01" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_percht_01.png" left="-17" right="21" top="-39" bottom="7" />
