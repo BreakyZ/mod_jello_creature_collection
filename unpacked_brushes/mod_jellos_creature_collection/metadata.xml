@@ -26,6 +26,7 @@
 <sprite id="percht_orientation" ic="FF1E2B3A" img="orientation\percht_orientation.png" />
 <sprite id="basilisk_drone_orientation" ic="FF1E2B3A" img="orientation\basilisk_drone_orientation.png" />
 <sprite id="basilisk_sentry_orientation" ic="FF1E2B3A" img="orientation\basilisk_sentry_orientation.png" />
+<sprite id="basilisk_queen_orientation" ic="FF1E2B3A" img="orientation\basilisk_queen_orientation.png" />
 
 <!-- Cytoplasm Small/Medium/Big -->
 
@@ -75,7 +76,7 @@
   <sprite id="bust_percht_head_03_bloodpool" offsetX="5" offsetY="30" f="6420" f1="30" f2="-15" width="169" height="139" img="entity\beasts\bust_percht_head_03_bloodpool.png" left="-22" right="70" top="-70" bottom="24" />
   <sprite id="bust_percht_dead_guts" offsetX="-5" offsetY="18" ic="FF191A48" width="238" height="186" img="entity\beasts\bust_percht_dead_guts.png" left="-29" right="31" top="-2" bottom="42" />
 
-<!-- Weapons -->
+<!-- Basilisks -->
 
 <sprite id="basilisk_drone_01" offsetX="-15" offsetY="45" ic="FF24554E" width="104" height="142" img="entity\beasts\basilisk_drone_01.png" />
 <sprite id="basilisk_drone_head_01" offsetX="-15" offsetY="45" ic="FF315B61" width="104" height="142" img="entity\beasts\basilisk_drone_head_01.png" />
@@ -94,6 +95,14 @@
 <sprite id="basilisk_sentry_01_dead_arrows" offsetX="5" offsetY="20" f="64FB" ic="FF474C4F" width="179" height="154" img="entity\beasts\bear_01_dead_arrows.png" left="-34" right="46" top="-29" bottom="29" />
 <sprite id="basilisk_sentry_01_dead_javelin" offsetX="5" offsetY="20" f="64FB" ic="FF141B27" width="179" height="154" img="entity\beasts\bear_01_dead_javelin.png" left="-25" right="72" top="-16" bottom="55" />
 
+
+<sprite id="bust_basilisk_queen_body" ic="FF24554E" img="entity\beasts\bust_basilisk_queen_body.png" left="-114" right="66" top="-63" bottom="104" />
+<sprite id="bust_basilisk_queen_head" ic="FF24554E" img="entity\beasts\bust_basilisk_queen_head.png" left="-114" right="66" top="-63" bottom="104" />
+<sprite id="bust_basilisk_queen_injury" ic="FF24554E" img="entity\beasts\bust_basilisk_queen_body.png" left="-114" right="66" top="-63" bottom="104" />
+<sprite id="bust_basilisk_queen_body_dead" f="64FF" ic="FF295850" img="entity\beasts\bust_basilisk_queen_body_dead.png" left="-94" right="104" top="-65" bottom="64" />
+<sprite id="bust_basilisk_queen_head_dead" f="64F6" f1="-5" f2="-25" ic="FF315E5F" img="entity\beasts\bust_basilisk_queen_body_dead.png" left="-94" right="104" top="-65" bottom="64" />
+<!-- Use javs and arrows from sentry -->
+
 <!-- Weapons -->
 
   <sprite id="icon_percht_spetum_01" offsetY="35" f1="20" f2="-45" ic="FF33404B" width="150" height="160" img="icons\icon_percht_spetum_01.png" left="-55" right="13" />
@@ -101,5 +110,7 @@
   <sprite id="icon_percht_flail_01"  ic="FF31383F" offsetY="35" width="130" height="142" img="icons\icon_percht_flail_01.png" left="0" right="66" top="-73" bottom="17" />
   <sprite id="icon_percht_flail_01_bloodied" offsetY="35" ic="FF2D333F" width="130" height="142" img="icons\icon_percht_flail_01_bloodied.png" left="0" right="66" top="-73" bottom="17" />
   <sprite id="icon_percht_bow" offsetY="35" ic="FF3B5263" width="104" height="142" img="icons\icon_percht_bow.png" left="-14" right="62" top="-76" bottom="34" />
+  <sprite id="icon_becdebasilisk" img="icons\icon_becdebasilisk.png" ic="FF3B5263" left="-94" right="39" top="-67" bottom="97" />
+
 
 </brush>
