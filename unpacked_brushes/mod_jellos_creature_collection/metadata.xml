@@ -1,7 +1,9 @@
 <brush name="gfx/entity_mod_jellos_creature_collection.png" version="17">
 
-<sprite id="krampus_charge" ic="FF614551" img="skills\krampus_charge.png" />
-<sprite id="slime_smack" ic="FF614551" img="skills\slime_smack.png" />
+<!-- Skills -->
+
+<sprite id="krampus_charge" ic="FF614551" img="ui\skills\krampus_charge.png" />
+<sprite id="slime_smack" ic="FF614551" img="ui\skills\slime_smack.png" />
 
 <!-- Worldmap -->
 
