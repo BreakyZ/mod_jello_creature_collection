@@ -73,6 +73,24 @@
   <sprite id="bust_percht_head_03_bloodpool" offsetX="5" offsetY="30" f="6420" f1="30" f2="-15" width="169" height="139" img="entity\beasts\bust_percht_head_03_bloodpool.png" left="-22" right="70" top="-70" bottom="24" />
   <sprite id="bust_percht_dead_guts" offsetX="-5" offsetY="18" ic="FF191A48" width="238" height="186" img="entity\beasts\bust_percht_dead_guts.png" left="-29" right="31" top="-2" bottom="42" />
 
+<!-- Weapons -->
+
+<sprite id="basilisk_drone_01" offsetX="-15" offsetY="45" ic="FF24554E" width="104" height="142" img="entity\beasts\basilisk_drone_01.png" />
+<sprite id="basilisk_drone_head_01" offsetX="-15" offsetY="45" ic="FF315B61" width="104" height="142" img="entity\beasts\basilisk_drone_head_01.png" />
+<sprite id="basilisk_drone_01_injured" offsetX="-15" offsetY="45" ic="FF5E9C89" width="104" height="142" img="entity\beasts\basilisk_drone_01_injured.png" />
+<sprite id="basilisk_drone_01_dead" offsetX="5" offsetY="20" f="64FF" ic="FF295850" width="179" height="154" img="entity\beasts\basilisk_drone_01_dead.png" left="-66" right="55" top="-48" bottom="47" />
+<sprite id="basilisk_drone_head_01_dead" offsetX="5" offsetY="20" f="64F6" f1="-5" f2="-25" ic="FF315E5F" width="179" height="154" img="entity\beasts\basilisk_drone_head_01_dead.png" left="7" right="85" top="-45" bottom="29" />
+<sprite id="basilisk_drone_01_dead_arrows" offsetX="5" offsetY="20" f="64FB" ic="FF474C4F" width="179" height="154" img="entity\beasts\bear_01_dead_arrows.png" left="-34" right="46" top="-29" bottom="29" />
+<sprite id="basilisk_drone_01_dead_javelin" offsetX="5" offsetY="20" f="64FB" ic="FF141B27" width="179" height="154" img="entity\beasts\bear_01_dead_javelin.png" left="-25" right="72" top="-16" bottom="55" />
+
+<sprite id="basilisk_sentry_01" offsetX="-15" offsetY="45" ic="FF24554E" width="104" height="142" img="entity\beasts\basilisk_sentry_01.png" left="-67" right="73" top="-87" bottom="72" />
+<sprite id="basilisk_sentry_head_01" offsetX="-15" offsetY="45" ic="FF315B61" width="104" height="142" img="entity\beasts\basilisk_sentry_head_01.png" left="-66" right="73" top="-86" bottom="76" />
+<sprite id="basilisk_sentry_01_injured" offsetX="-15" offsetY="45" ic="FF5E9C89" width="104" height="142" img="entity\beasts\basilisk_sentry_01_injured.png" left="-67" right="73" top="-87" bottom="72" />
+
+<sprite id="basilisk_sentry_01_dead" offsetX="5" offsetY="20" f="64FF" ic="FF295850" width="179" height="154" img="entity\beasts\basilisk_sentry_01_dead.png" left="-74" right="76" top="-50" bottom="48" />
+<sprite id="basilisk_sentry_head_01_dead" offsetX="5" offsetY="20" f="64F6" f1="-5" f2="-25" ic="FF315E5F" width="179" height="154" img="entity\beasts\basilisk_sentry_head_01_dead.png" left="-91" right="-16" top="-43" bottom="39" />
+<sprite id="basilisk_sentry_01_dead_arrows" offsetX="5" offsetY="20" f="64FB" ic="FF474C4F" width="179" height="154" img="entity\beasts\bear_01_dead_arrows.png" left="-34" right="46" top="-29" bottom="29" />
+<sprite id="basilisk_sentry_01_dead_javelin" offsetX="5" offsetY="20" f="64FB" ic="FF141B27" width="179" height="154" img="entity\beasts\bear_01_dead_javelin.png" left="-25" right="72" top="-16" bottom="55" />
 
 <!-- Weapons -->
 
