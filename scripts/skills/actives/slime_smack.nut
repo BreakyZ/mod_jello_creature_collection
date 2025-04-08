@@ -73,7 +73,7 @@ this.slime_smack <- this.inherit("scripts/skills/skill", {
 
 			if(getContainer().getActor().getSize()==3){
 							
-			_properties.DirectDamageMult = 0.5;
+			this.m.DirectDamageMult = 0.5;
 			}
 		}
 	}
