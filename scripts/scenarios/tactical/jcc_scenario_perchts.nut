@@ -13,29 +13,7 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 		clouds.MinClouds = 20;
 		clouds.MaxClouds = 20;
 		clouds.MinVelocity = 3.0;
-		clouds.MaxVelocity = 9.0;		
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone", 12, 18, 7, 10);
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity.assignRandomEquipment();
-
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone", 12, 18, 7, 10);
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity.assignRandomEquipment();
-
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone", 12, 18, 7, 10);
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity.assignRandomEquipment();
-
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone", 12, 18, 7, 10);
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity.assignRandomEquipment();
-
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_sentry", 12, 18, 7, 10);
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity.assignRandomEquipment();
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_sentry", 12, 18, 7, 10);
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity.assignRandomEquipment();
+		clouds.MaxVelocity = 9.0;	
 		clouds.MinAlpha = 0.35;
 		clouds.MaxAlpha = 0.45;
 		clouds.MinScale = 2.0;
