@@ -34,7 +34,7 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 
 	function initMap()
 	{
-		local testMap = this.MapGen.get("tactical.test_hunting_grounds");
+		local testMap = this.MapGen.get("tactical.autumn");
 		local minX = testMap.getMinX();
 		local minY = testMap.getMinY();
 		this.Tactical.resizeScene(minX, minY);
