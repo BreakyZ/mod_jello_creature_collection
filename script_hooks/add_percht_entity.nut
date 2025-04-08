@@ -107,7 +107,7 @@ this.Const.EntityIcon.push("percht_orientation");
 this.Const.Tactical.Actor.Percht <- {
 	XP = 355,
 	ActionPoints = 10,
-	Hitpoints = 10,//350,
+	Hitpoints = 350,
 	Bravery = 140,
 	Stamina = 140,
 	MeleeSkill = 70,

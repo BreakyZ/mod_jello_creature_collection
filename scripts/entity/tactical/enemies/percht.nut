@@ -323,7 +323,6 @@ this.percht <- this.inherit("scripts/entity/tactical/actor", {
 				else if (r == 2)
 				{
 					weapon = this.new("scripts/items/weapons/percht_spetum");
-					this.setAlwaysApplySpriteOffset(true);
 					this.setSpriteOffset("arms_icon", ::createVec(0, 0))
 
 				}
@@ -381,6 +380,11 @@ this.percht <- this.inherit("scripts/entity/tactical/actor", {
 
 	}
 
+	function generateName()
+	{
+		this.m.Name = this.Const.Strings.PerchtNames[this.Math.rand(0, this.Const.Strings.PerchtNames.len() - 1)] + " " +this.Const.Strings.PerchtTitles[this.Math.rand(0, this.Const.Strings.PerchtTitles.len() - 1)] ;
+	}
+
 	function makeMiniboss()
 	{
 		if (!this.actor.makeMiniboss())
@@ -394,7 +398,6 @@ this.percht <- this.inherit("scripts/entity/tactical/actor", {
 
 		local r = this.Math.rand(1, 2);
 
-		this.setAlwaysApplySpriteOffset(true);
 		this.setSpriteOffset("arms_icon", ::createVec(-7, 0))
 		this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_agent");
 		this.m.AIAgent.setActor(this);
