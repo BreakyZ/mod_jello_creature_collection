@@ -1,39 +1,3 @@
-/*
-::mods_hookExactClass("states/main_menu_state", function(q) 
-{
-  q.onSiblingAdded = @(__original) function ( _stateName)
-  {
-	  __original(_stateName);
-	  
-	  if (_stateName == "TacticalState")
-        {
-            local tacticalState = this.RootState.get(_stateName);
-
-	  if (tacticalState != null)
-	  {
-
-
-		switch(this.m.SelectedScenarioID)
-		{
-		case 02104301:
-		  tacticalState.setScenario(this.new("scripts/scenarios/tactical/jcc_scenario_basilisks"));
-		  break;
-		}
-	  }
-	}
-  }
-
-  q.scenario_menu_module_onQueryData = @(__original) function ()
-  {
-	local result = __original();
-	result.push({
-					id = 02104301,
-					name = "Basilisks",
-					description = "[p=c][img]gfx/ui/events/event_05.png[/img][/p]\n[p=c]Fight against Basilisk Drones[/p]"
-				});
-	return result;
-  }
-});*/
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/states/main_menu_state", function ( q )
 {
 
@@ -117,11 +81,11 @@
 					tacticalState.setScenario(this.new("scripts/scenarios/tactical/scenario_test_bed_human"));
 					break;
 
-				case 02104301:
+				case 50:
 					tacticalState.setScenario(this.new("scripts/scenarios/tactical/jcc_scenario_basilisks"));
 					break;
 
-				case 02104302:
+				case 51:
 					tacticalState.setScenario(this.new("scripts/scenarios/tactical/jcc_scenario_perchts"));
 					break;
 
@@ -200,25 +164,16 @@
 				description = "[p=c][img]gfx/ui/events/event_127.png[/img][/p]\n[p=c]A possible late game encounter in enemy composition and equipment available. Difficult.[/p]"
 			},
 			{
-				id = 02104301,
+				id = 50,
 				name = "Basilisks",
 				description = "[p=c][img]gfx/ui/events/event_05.png[/img][/p]\n[p=c]Fight against Basilisk Drones[/p]"
 			},
 			{
-				id = 02104302,
+				id = 51,
 				name = "Perchts",
 				description = "[p=c][img]gfx/ui/events/event_05.png[/img][/p]\n[p=c]Fight against Perchts and various beasts.[/p]"
 			}
 		];
-
-		if (!this.isReleaseBuild())
-		{
-			result.push({
-				id = 20,
-				name = "Test",
-				description = "[p=c]An empty map for AI testing. Spawn combatants manually and let them fight it out.[/p]"
-			});
-		}
 
 		return result;
 	}

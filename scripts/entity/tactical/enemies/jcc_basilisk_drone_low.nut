@@ -2,9 +2,9 @@ this.jcc_basilisk_drone_low <- this.inherit("scripts/entity/tactical/actor", {
 	m = {},
 	function create()
 	{
-		this.m.Type = this.Const.EntityType.LegendBasiliskDroneLow;
+		this.m.Type = this.Const.EntityType.JccBasiliskDroneLow;
 		this.m.BloodType = this.Const.BloodType.Red;
-		this.m.XP = this.Const.Tactical.Actor.LegendBasiliskDrone.XP;
+		this.m.XP = this.Const.Tactical.Actor.JccBasiliskDrone.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(40, -20);
 		this.m.DecapitateBloodAmount = 3.0;
@@ -228,7 +228,7 @@ this.jcc_basilisk_drone_low <- this.inherit("scripts/entity/tactical/actor", {
 	{
 		this.actor.onInit();
 		local b = this.m.BaseProperties;
-		b.setValues(this.Const.Tactical.Actor.LegendBasiliskDroneLow); //weaker version of Drone
+		b.setValues(this.Const.Tactical.Actor.JccBasiliskDroneLow); //weaker version of Drone
 		b.IsImmuneToDisarm = true;
 		b.IsImmuneToPoison = true;
 

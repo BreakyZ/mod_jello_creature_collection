@@ -57,3 +57,45 @@
 		75
 	]
 };
+
+::Const.Tactical.Actor.JccPercht <- {
+	XP = 355,
+	ActionPoints = 10,
+	Hitpoints = 350,
+	Bravery = 140,
+	Stamina = 140,
+	MeleeSkill = 70,
+	RangedSkill = 60,
+	MeleeDefense = 10,
+	RangedDefense = 10,
+	Initiative = 90,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	FatigueRecoveryRate = 25,
+	Vision = 7,
+	Armor = [
+		66,
+		66
+	]
+};
+
+this.Const.Tactical.Actor.JccCytoplasm <- {
+	XP = 150,
+	ActionPoints = 8,
+	Hitpoints = 110,
+	Bravery = 90,
+	Stamina = 100,
+	MeleeSkill = 65,
+	RangedSkill = 60,
+	MeleeDefense = 10,
+	RangedDefense = 5,
+	Initiative = 70,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	FatigueRecoveryRate = 25,
+	Vision = 7,
+	Armor = [
+		0,
+		0
+	]
+};

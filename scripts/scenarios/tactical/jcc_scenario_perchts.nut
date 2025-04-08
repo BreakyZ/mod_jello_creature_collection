@@ -158,17 +158,17 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 		items.equip(this.new("scripts/items/weapons/greatsword"));
 
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/percht");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
 		entity.makeMiniboss();
 		entity.generateName();
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/percht");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/percht");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
 

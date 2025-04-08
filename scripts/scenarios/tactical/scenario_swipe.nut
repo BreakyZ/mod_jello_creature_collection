@@ -96,32 +96,32 @@ this.scenario_swipe <- this.inherit("scripts/scenarios/tactical/scenario_templat
 		items.addToBag(this.new("scripts/items/weapons/dagger"));
 
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/cytoplasm");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/cytoplasm");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/cytoplasm");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
-				entity = this.spawnEntity("scripts/entity/tactical/enemies/cytoplasm");
+				entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
-				entity = this.spawnEntity("scripts/entity/tactical/enemies/cytoplasm");
+				entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
 
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/percht");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
 		entity.makeMiniboss();
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/percht");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/percht");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
 	}

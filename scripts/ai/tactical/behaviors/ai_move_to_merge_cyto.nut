@@ -52,7 +52,7 @@ this.ai_move_to_merge_cyto <- this.inherit("scripts/ai/tactical/behavior", {
 			if (!myTile.hasNextTile(j))
 			{
 			}
-			else if (myTile.getNextTile(j).IsOccupiedByActor && myTile.getNextTile(j).getEntity().getType() == this.Const.EntityType.Cytoplasm && myTile.getNextTile(j).getEntity().getSize() == _entity.getSize())
+			else if (myTile.getNextTile(j).IsOccupiedByActor && myTile.getNextTile(j).getEntity().getType() == this.Const.EntityType.JccCytoplasm && myTile.getNextTile(j).getEntity().getSize() == _entity.getSize())
 			{
 				currentCount = ++currentCount;
 			}
@@ -76,7 +76,7 @@ this.ai_move_to_merge_cyto <- this.inherit("scripts/ai/tactical/behavior", {
 
 		foreach( e in entities )
 		{
-			if (e.getType() == this.Const.EntityType.Cytoplasm && e.getSize() == _entity.getSize())
+			if (e.getType() == this.Const.EntityType.JccCytoplasm && e.getSize() == _entity.getSize())
 			{
 				allies.push(e);
 			}
@@ -121,7 +121,7 @@ this.ai_move_to_merge_cyto <- this.inherit("scripts/ai/tactical/behavior", {
 								if (adjacentTile.ID == myTile.ID)
 								{
 								}
-								else if (adjacentTile.IsOccupiedByActor && adjacentTile.getEntity().getType() == this.Const.EntityType.Cytoplasm && adjacentTile.getEntity().getSize() == _entity.getSize())
+								else if (adjacentTile.IsOccupiedByActor && adjacentTile.getEntity().getType() == this.Const.EntityType.JccCytoplasm && adjacentTile.getEntity().getSize() == _entity.getSize())
 								{
 									count = ++count;
 								}

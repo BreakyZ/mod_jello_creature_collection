@@ -2,9 +2,9 @@ this.jcc_basilisk_sentry <- this.inherit("scripts/entity/tactical/actor", {
 	m = {},
 	function create()
 	{
-		this.m.Type = this.Const.EntityType.LegendBasiliskSentry;
+		this.m.Type = this.Const.EntityType.JccBasiliskSentry;
 		this.m.BloodType = this.Const.BloodType.Red;
-		this.m.XP = this.Const.Tactical.Actor.LegendBasiliskSentry.XP;
+		this.m.XP = this.Const.Tactical.Actor.JccBasiliskSentry.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(40, -20);
 		this.m.DecapitateBloodAmount = 3.0;
@@ -221,7 +221,7 @@ this.jcc_basilisk_sentry <- this.inherit("scripts/entity/tactical/actor", {
 	{
 		this.actor.onInit();
 		local b = this.m.BaseProperties;
-		b.setValues(this.Const.Tactical.Actor.LegendBasiliskSentry); 
+		b.setValues(this.Const.Tactical.Actor.JccBasiliskSentry); 
 		b.IsImmuneToDisarm = true;
 		b.IsImmuneToPoison = true;
 

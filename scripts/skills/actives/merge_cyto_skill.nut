@@ -48,7 +48,7 @@ this.merge_cyto_skill <- this.inherit("scripts/skills/skill", {
 			{
 				local tile = myTile.getNextTile(i);
 
-				if (!tile.IsOccupiedByActor || tile.getEntity().getType() != this.Const.EntityType.Cytoplasm || tile.getEntity().getSize() != mySize)
+				if (!tile.IsOccupiedByActor || tile.getEntity().getType() != this.Const.EntityType.JccCytoplasm || tile.getEntity().getSize() != mySize)
 				{
 				}
 				else
@@ -75,7 +75,7 @@ this.merge_cyto_skill <- this.inherit("scripts/skills/skill", {
 			{
 				local tile = _originTile.getNextTile(i);
 
-				if (!tile.IsOccupiedByActor || tile.getEntity().getType() != this.Const.EntityType.Cytoplasm || tile.getEntity().getSize() != mySize)
+				if (!tile.IsOccupiedByActor || tile.getEntity().getType() != this.Const.EntityType.JccCytoplasm || tile.getEntity().getSize() != mySize)
 				{
 				}
 				else

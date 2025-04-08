@@ -1,11 +1,10 @@
-this.jcc_basilisk_cloak <- this.inherit("scripts/items/jcc_armor/jcc_armor_cloak", {
+this.jcc_basilisk_cloak <- this.inherit("scripts/items/armor_upgrades/armor_upgrade", {
 	m = {},
 	function create()
 	{
-		this.jcc_armor_cloak.create(); //attachment gives poison immunity and extra durability
-		this.m.ID = "jcc_armor.body.jcc_basilisk_cloak";
-		this.m.Type = this.Const.Items.ArmorUpgrades.Cloak;
-		
+		this.armor_upgrade.create();
+		this.m.ID = "armor.body.jcc_basilisk_cloak";
+	
 		this.m.Name = "Basilisk Cloak";
 		this.m.Description = "A cloak made from feathers of a Basilisk. The weave offers exceptional padding and protects the midsection and mouth from poison.";
 		this.m.ArmorDescription = "A cloak made from feathers of a Basilisk. The weave offers exceptional padding and protects the midsection and mouth from poison.";
@@ -29,7 +28,7 @@ this.jcc_basilisk_cloak <- this.inherit("scripts/items/jcc_armor/jcc_armor_cloak
 
 	function getTooltip()
 	{
-		local result = this.jcc_armor_cloak.getTooltip();
+		local result = this.armor_upgrade.getTooltip();
 		result.push({
 			id = 15,
 			type = "text",
@@ -51,7 +50,7 @@ this.jcc_basilisk_cloak <- this.inherit("scripts/items/jcc_armor/jcc_armor_cloak
 
 	function onUpdateProperties( _properties )
 	{
-		this.jcc_armor_cloak.onUpdateProperties(_properties);
+		this.armor_upgrade.onUpdateProperties(_properties);
 		_properties.IsImmuneToPoison = true;
 	}
 

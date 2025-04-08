@@ -3,7 +3,7 @@ this.jcc_basilisk_sentry_agent <- this.inherit("scripts/ai/tactical/agent", {
 	function create()
 	{
 		this.agent.create();
-		this.m.ID = this.Const.AI.Agent.ID.LegendBasiliskSentry;
+		this.m.ID = this.Const.AI.Agent.ID.BasiliskSentry;
 		this.m.Properties.IsRangedUnit = true;
 
 		this.m.Properties.TargetPriorityHitchanceMult = 6.00;

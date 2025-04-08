@@ -60,7 +60,7 @@ this.ai_merge_cyto <- this.inherit("scripts/ai/tactical/behavior", {
 						{
 							local other = nextTile.getEntity();
 
-							if (other.getType() == this.Const.EntityType.Cytoplasm && other.getSize() == _entity.getSize() && !other.isTurnDone() && other.getMoraleState() != this.Const.MoraleState.Fleeing && !other.getCurrentProperties().IsStunned)
+							if (other.getType() == this.Const.EntityType.JccCytoplasm && other.getSize() == _entity.getSize() && !other.isTurnDone() && other.getMoraleState() != this.Const.MoraleState.Fleeing && !other.getCurrentProperties().IsStunned)
 							{
 								local surrounding = 0;
 
@@ -80,7 +80,7 @@ this.ai_merge_cyto <- this.inherit("scripts/ai/tactical/behavior", {
 										{
 											local check = checkTile.getEntity();
 
-											if (check.getType() == this.Const.EntityType.Cytoplasm && other.getSize() == check.getSize())
+											if (check.getType() == this.Const.EntityType.JccCytoplasm && other.getSize() == check.getSize())
 											{
 												surrounding = ++surrounding;
 											}
