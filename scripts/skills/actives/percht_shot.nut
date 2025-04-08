@@ -17,14 +17,12 @@ this.percht_shot <- this.inherit("scripts/skills/skill", {
 		this.m.IconDisabled = "skills/active_18_sw.png";
 		this.m.Overlay = "active_18";
 		this.m.SoundOnUse = [
-			"sounds/combat/aimed_shot_01.wav",
-			"sounds/combat/aimed_shot_02.wav",
-			"sounds/combat/aimed_shot_03.wav"
+			"sounds/combat/percht_shot_01.wav",
+			"sounds/combat/percht_shot_02.wav",
+			"sounds/combat/percht_shot_03.wav"
 		];
 		this.m.SoundOnHit = [
-			"sounds/combat/arrow_hit_01.wav",
-			"sounds/combat/arrow_hit_02.wav",
-			"sounds/combat/arrow_hit_03.wav"
+			"sounds/combat/percht_shot_hit_01.wav"
 		];
 		this.m.SoundOnHitShield = [
 			"sounds/combat/shield_hit_arrow_01.wav",
