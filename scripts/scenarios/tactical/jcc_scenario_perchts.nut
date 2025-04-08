@@ -172,28 +172,28 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_direwolf_p");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf");
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_direwolf_p");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf");
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_direwolf_p");
-		entity.setFaction(this.Const.Faction.Beasts);
-
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_direwolf_high_p");
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_direwolf_high_p");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf");
 		entity.setFaction(this.Const.Faction.Beasts);
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_schrat_p");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf_high");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf_high");
 		entity.setFaction(this.Const.Faction.Beasts);
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_spider_p");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/schrat");
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_spider_p");
+
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider");
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_spider_p");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider");
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_spider_p");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider");
 		entity.setFaction(this.Const.Faction.Beasts);
 
 	}
