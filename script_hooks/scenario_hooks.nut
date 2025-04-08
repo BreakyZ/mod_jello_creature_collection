@@ -151,7 +151,7 @@
 		}
 	}
 
-	q.scenario_menu_module_onQueryData = @(__original)  = function ()
+	q.scenario_menu_module_onQueryData = @(__original) function ()
 	{
 		local result = [
 			{
