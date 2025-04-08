@@ -7,9 +7,9 @@ this.krampus_charge <- this.inherit("scripts/skills/skill", {
 		this.m.ID = "actives.krampus_charge";
 		this.m.Name = "Horn Charge";
 		this.m.Description = "";
-		this.m.Icon = "skills/active_52.png";
-		this.m.IconDisabled = "skills/active_52_sw.png";
-		this.m.Overlay = "active_52";
+		this.m.Icon = "skills/krampus_charge.png";
+		this.m.IconDisabled = "skills/krampus_charge.png";
+		this.m.Overlay = "krampus_charge";
 		this.m.SoundOnUse = [
 			"sounds/enemies/percht_charge1.wav",
 			"sounds/enemies/percht_charge2.wav",
