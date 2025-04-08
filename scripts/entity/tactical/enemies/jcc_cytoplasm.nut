@@ -16,7 +16,7 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 	function create()
 	{
 		this.m.Type = this.Const.EntityType.JccCytoplasm;
-		//this.m.BloodType = this.Const.BloodType.Red;
+		this.m.BloodType = this.Const.BloodType.Red;
 		this.m.XP = this.Const.Tactical.Actor.JccCytoplasm.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";

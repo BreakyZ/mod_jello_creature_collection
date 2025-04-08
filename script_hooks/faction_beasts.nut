@@ -79,7 +79,7 @@
 	]
 };
 
-this.Const.Tactical.Actor.JccCytoplasm <- {
+::Const.Tactical.Actor.JccCytoplasm <- {
 	XP = 150,
 	ActionPoints = 8,
 	Hitpoints = 110,
