@@ -1,4 +1,4 @@
-this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_template", {
+this.jcc_scenario_slimes <- this.inherit("scripts/scenarios/tactical/scenario_template", {
 	m = {},
 	function generate()
 	{
@@ -8,17 +8,6 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 		this.initEntities();
 		this.initStash();
 		this.m.Music = this.Const.Music.BeastsTracks;
-		local clouds = this.Tactical.getWeather().createCloudSettings();
-		clouds.Type = this.getconsttable().CloudType.Rain;
-		clouds.MinClouds = 20;
-		clouds.MaxClouds = 20;
-		clouds.MinVelocity = 3.0;
-		clouds.MaxVelocity = 9.0;
-		clouds.MinAlpha = 0.35;
-		clouds.MaxAlpha = 0.45;
-		clouds.MinScale = 2.0;
-		clouds.MaxScale = 3.0;
-		this.Tactical.getWeather().buildCloudCover(clouds);
 		this.Tactical.getCamera().Level = 1;
 		this.Tactical.CameraDirector.addMoveToTileEvent(0, this.Tactical.getTile(15, 14 - 15 / 2), 1, null, null, 0, 100);
 	}

@@ -57,8 +57,13 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/cyto_move_04.wav",
 			"sounds/enemies/cyto_move_05.wav"
 		];
+		this.m.Sound[this.Const.Sound.ActorEvent.Other1] = [
+			"sounds/enemies/slime_fuse_01.wav",
+			"sounds/enemies/slime_fuse_02.wav"
+		];
 		this.m.SoundPitch = 1.1;
 		local onArmorHitSounds = this.getItems().getAppearance().ImpactSound;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 0.5;
 		onArmorHitSounds[this.Const.BodyPart.Body] = this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived];
 		onArmorHitSounds[this.Const.BodyPart.Head] = this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived];
 		this.m.AIAgent = this.new("scripts/ai/tactical/agents/cytoplasm_agent");
@@ -250,7 +255,7 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 			return;
 		}
 
-		local rock = this.Tactical.spawnEntity("scripts/entity/tactical/enemies/cytoplasm", _tile.Coords.X, _tile.Coords.Y);
+		local rock = this.Tactical.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm", _tile.Coords.X, _tile.Coords.Y);
 		rock.setFaction(this.m.BackupFaction);
 
 		if (this.m.BackupWorldParty != null)

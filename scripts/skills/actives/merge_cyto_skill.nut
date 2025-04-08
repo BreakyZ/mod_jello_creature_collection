@@ -3,7 +3,7 @@ this.merge_cyto_skill <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.merge_cyto";
-		this.m.Name = "Merge Cytoplasms";
+		this.m.Name = "Profusion";
 		this.m.Description = "";
 		this.m.Icon = "skills/active_194.png";
 		this.m.IconDisabled = "skills/active_194.png";
