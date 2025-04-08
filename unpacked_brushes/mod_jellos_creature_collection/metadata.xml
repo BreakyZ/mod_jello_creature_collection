@@ -81,16 +81,16 @@
 <sprite id="basilisk_drone_01" offsetX="-15" offsetY="45" ic="FF24554E" width="104" height="142" img="entity\beasts\basilisk_drone_01.png" />
 <sprite id="basilisk_drone_head_01" offsetX="-15" offsetY="45" ic="FF315B61" width="104" height="142" img="entity\beasts\basilisk_drone_head_01.png" />
 <sprite id="basilisk_drone_01_injured" offsetX="-15" offsetY="45" ic="FF5E9C89" width="104" height="142" img="entity\beasts\basilisk_drone_01_injured.png" />
-<sprite id="basilisk_drone_01_dead" offsetX="5" offsetY="20" f="64FF" ic="FF295850" width="179" height="154" img="entity\beasts\basilisk_drone_01_dead.png" left="-66" right="55" top="-48" bottom="47" />
-<sprite id="basilisk_drone_head_01_dead" offsetX="5" offsetY="20" f="64F6" f1="-5" f2="-25" ic="FF315E5F" width="179" height="154" img="entity\beasts\basilisk_drone_head_01_dead.png" left="7" right="85" top="-45" bottom="29" />
+<sprite id="basilisk_drone_01_dead" offsetX="5" offsetY="20" f="64FF" ic="FF295850" width="179" height="154" img="entity\beasts\basilisk_drone_01_dead.png" left="-72" right="58" top="-50" bottom="47" />
+<sprite id="basilisk_drone_head_01_dead" offsetX="5" offsetY="20" f="64F6" f1="-5" f2="-25" ic="FF315E5F" width="179" height="154" img="entity\beasts\basilisk_drone_head_01_dead.png" left="9" right="87" top="-51" bottom="29" />
 <sprite id="basilisk_drone_01_dead_arrows" offsetX="5" offsetY="20" f="64FB" ic="FF474C4F" width="179" height="154" img="entity\beasts\bear_01_dead_arrows.png" left="-34" right="46" top="-29" bottom="29" />
 <sprite id="basilisk_drone_01_dead_javelin" offsetX="5" offsetY="20" f="64FB" ic="FF141B27" width="179" height="154" img="entity\beasts\bear_01_dead_javelin.png" left="-25" right="72" top="-16" bottom="55" />
 
-<sprite id="basilisk_sentry_01" offsetX="-15" offsetY="45" ic="FF24554E" width="104" height="142" img="entity\beasts\basilisk_sentry_01.png" left="-67" right="73" top="-87" bottom="72" />
-<sprite id="basilisk_sentry_head_01" offsetX="-15" offsetY="45" ic="FF315B61" width="104" height="142" img="entity\beasts\basilisk_sentry_head_01.png" left="-66" right="73" top="-86" bottom="76" />
-<sprite id="basilisk_sentry_01_injured" offsetX="-15" offsetY="45" ic="FF5E9C89" width="104" height="142" img="entity\beasts\basilisk_sentry_01_injured.png" left="-67" right="73" top="-87" bottom="72" />
+<sprite id="basilisk_sentry_01" offsetX="-15" offsetY="45" ic="FF24554E" width="104" height="142" img="entity\beasts\basilisk_sentry_01.png" left="-69" right="67" top="-70" bottom="81" />
+<sprite id="basilisk_sentry_head_01" offsetX="-15" offsetY="45" ic="FF315B61" width="104" height="142" img="entity\beasts\basilisk_sentry_head_01.png" left="-69" right="67" top="-70" bottom="81" />
+<sprite id="basilisk_sentry_01_injured" offsetX="-15" offsetY="45" ic="FF5E9C89" width="104" height="142" img="entity\beasts\basilisk_sentry_01_injured.png" left="-69" right="67" top="-70" bottom="81" />
 
-<sprite id="basilisk_sentry_01_dead" offsetX="5" offsetY="20" f="64FF" ic="FF295850" width="179" height="154" img="entity\beasts\basilisk_sentry_01_dead.png" left="-74" right="76" top="-50" bottom="48" />
+<sprite id="basilisk_sentry_01_dead" offsetX="5" offsetY="20" f="64FF" ic="FF295850" width="179" height="154" img="entity\beasts\basilisk_sentry_01_dead.png" left="-76" right="74" top="-50" bottom="61" />
 <sprite id="basilisk_sentry_head_01_dead" offsetX="5" offsetY="20" f="64F6" f1="-5" f2="-25" ic="FF315E5F" width="179" height="154" img="entity\beasts\basilisk_sentry_head_01_dead.png" left="-91" right="-16" top="-43" bottom="39" />
 <sprite id="basilisk_sentry_01_dead_arrows" offsetX="5" offsetY="20" f="64FB" ic="FF474C4F" width="179" height="154" img="entity\beasts\bear_01_dead_arrows.png" left="-34" right="46" top="-29" bottom="29" />
 <sprite id="basilisk_sentry_01_dead_javelin" offsetX="5" offsetY="20" f="64FB" ic="FF141B27" width="179" height="154" img="entity\beasts\bear_01_dead_javelin.png" left="-25" right="72" top="-16" bottom="55" />
