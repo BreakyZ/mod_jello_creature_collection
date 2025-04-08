@@ -34,7 +34,7 @@
 	return result;
   }
 });*/
-::Mod_Sellswords.HooksMod.hook("scripts/states/main_menu_state", function ( q ) {
+::ModJelloCreatureCollection.HooksMod.hook("scripts/states/main_menu_state", function ( q ) {
 {
 
 	q.onSiblingAdded = @(__original) function ( _stateName )
