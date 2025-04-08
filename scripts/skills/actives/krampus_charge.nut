@@ -38,7 +38,7 @@ this.krampus_charge <- this.inherit("scripts/skills/skill", {
 		this.m.MaxLevelDifference = 1;
 	}
 
-	function getTooltip()
+function getTooltip()
 	{
 		local p = this.getContainer().getActor().getCurrentProperties();
 		return [
@@ -58,225 +58,6 @@ this.krampus_charge <- this.inherit("scripts/skills/skill", {
 				text = this.getCostString()
 			}
 		];
-	}
-
-	function onUpdate( _properties )
-	{
-		_properties.DamageRegularMin += 45;
-		_properties.DamageRegularMax += 70;
-		_properties.DamageArmorMult *= 0.75;
-	
-	}
-	function onUse( _user, _targetTile )
-	{
-		this.m.TilesUsed = [];
-		local tag = {
-			Skill = this,
-			User = _user,
-			OldTile = _user.getTile(),
-			TargetTile = _targetTile
-		};
-
-		if (tag.OldTile.IsVisibleForPlayer || _targetTile.IsVisibleForPlayer)
-		{
-			local myPos = _user.getPos();
-			local targetPos = _targetTile.Pos;
-			local distance = tag.OldTile.getDistanceTo(_targetTile);
-			local Dx = (targetPos.X - myPos.X) / distance;
-			local Dy = (targetPos.Y - myPos.Y) / distance;
-
-			for( local i = 0; i < distance; i = ++i )
-			{
-				local x = myPos.X + Dx * i;
-				local y = myPos.Y + Dy * i;
-				local tile = this.Tactical.worldToTile(this.createVec(x, y));
-
-				if (this.Tactical.isValidTile(tile.X, tile.Y) && this.Const.Tactical.DustParticles.len() != 0)
-				{
-					for( local i = 0; i < this.Const.Tactical.DustParticles.len(); i = ++i )
-					{
-						this.Tactical.spawnParticleEffect(false, this.Const.Tactical.DustParticles[i].Brushes, this.Tactical.getTile(tile), this.Const.Tactical.DustParticles[i].Delay, this.Const.Tactical.DustParticles[i].Quantity * 0.5, this.Const.Tactical.DustParticles[i].LifeTimeQuantity * 0.5, this.Const.Tactical.DustParticles[i].SpawnRate, this.Const.Tactical.DustParticles[i].Stages);
-					}
-				}
-			}
-		}
-
-		this.Tactical.getNavigator().teleport(_user, _targetTile, this.onTeleportDone.bindenv(this), tag, false, 3.0);
-		return true;
-	}
-
-	function applyEffectToTarget( _user, _target, _targetTile )
-	{
-		if (_target.isNonCombatant())
-		{
-			return;
-		}
-
-		local stagger = this.new("scripts/skills/effects/staggered_effect");
-		_target.getSkills().add(stagger);
-
-		if (!_user.isHiddenToPlayer() && _targetTile.IsVisibleForPlayer)
-		{
-			this.Tactical.EventLog.log(stagger.getLogEntryOnAdded(this.Const.UI.getColorizedEntityName(_user), this.Const.UI.getColorizedEntityName(_target)));
-		}
-
-		if (!_target.getCurrentProperties().IsImmuneToKnockBackAndGrab && !_target.getCurrentProperties().IsRooted)
-		{
-			local knockToTile = this.findTileToKnockBackTo(_user.getTile(), _targetTile);
-
-			if (knockToTile == null)
-			{
-				return;
-			}
-
-			this.m.TilesUsed.push(knockToTile.ID);
-
-			if (!_user.isHiddenToPlayer() && (_targetTile.IsVisibleForPlayer || knockToTile.IsVisibleForPlayer))
-			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + " has knocked back " + this.Const.UI.getColorizedEntityName(_target));
-			}
-
-			local skills = _target.getSkills();
-			skills.removeByID("effects.shieldwall");
-			skills.removeByID("effects.spearwall");
-			skills.removeByID("effects.riposte");
-			_target.setCurrentMovementType(this.Const.Tactical.MovementType.Involuntary);
-			local damage = this.Math.max(0, this.Math.abs(knockToTile.Level - _targetTile.Level) - 1) * this.Const.Combat.FallingDamage;
-
-			if (damage == 0)
-			{
-				this.Tactical.getNavigator().teleport(_target, knockToTile, null, null, true);
-			}
-			else
-			{
-				local p = this.getContainer().getActor().getCurrentProperties();
-				local tag = {
-					Attacker = _user,
-					Skill = this,
-					HitInfo = clone this.Const.Tactical.HitInfo
-				};
-				tag.HitInfo.DamageRegular = damage;
-				tag.HitInfo.DamageDirect = 1.0;
-				tag.HitInfo.BodyPart = this.Const.BodyPart.Body;
-				tag.HitInfo.BodyDamageMult = 1.0;
-				tag.HitInfo.FatalityChanceMult = 1.0;
-				this.Tactical.getNavigator().teleport(_target, knockToTile, this.onKnockedDown, tag, true);
-			}
-		}
-	}
-
-	function findTileToKnockBackTo( _userTile, _targetTile )
-	{
-		local dir = _userTile.getDirectionTo(_targetTile);
-
-		if (_targetTile.hasNextTile(dir))
-		{
-			local knockToTile = _targetTile.getNextTile(dir);
-
-			if (knockToTile.IsEmpty && knockToTile.Level - _targetTile.Level <= 1 && this.m.TilesUsed.find(knockToTile.ID) == null)
-			{
-				return knockToTile;
-			}
-		}
-
-		local altdir = dir - 1 >= 0 ? dir - 1 : 5;
-
-		if (_targetTile.hasNextTile(altdir))
-		{
-			local knockToTile = _targetTile.getNextTile(altdir);
-
-			if (knockToTile.IsEmpty && knockToTile.Level - _targetTile.Level <= 1 && this.m.TilesUsed.find(knockToTile.ID) == null)
-			{
-				return knockToTile;
-			}
-		}
-
-		altdir = dir + 1 <= 5 ? dir + 1 : 0;
-
-		if (_targetTile.hasNextTile(altdir))
-		{
-			local knockToTile = _targetTile.getNextTile(altdir);
-
-			if (knockToTile.IsEmpty && knockToTile.Level - _targetTile.Level <= 1 && this.m.TilesUsed.find(knockToTile.ID) == null)
-			{
-				return knockToTile;
-			}
-		}
-
-		return null;
-	}
-
-	function onKnockedDown( _entity, _tag )
-	{
-		if (_tag.HitInfo.DamageRegular != 0)
-		{
-			_entity.onDamageReceived(_tag.Attacker, _tag.Skill, _tag.HitInfo);
-		}
-	}
-
-	function onTeleportDone( _entity, _tag )
-	{
-		local myTile = _entity.getTile();
-		local potentialVictims = [];
-		local betterThanNothing;
-		local dirToTarget = _tag.OldTile.getDirectionTo(myTile);
-
-		if (_tag.OldTile.IsVisibleForPlayer || myTile.IsVisibleForPlayer)
-		{
-			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_entity) + " gores");
-		}
-
-		for( local i = 0; i != 6; i = ++i )
-		{
-			if (!myTile.hasNextTile(i))
-			{
-			}
-			else
-			{
-				local tile = myTile.getNextTile(i);
-
-				if (!tile.IsOccupiedByActor)
-				{
-				}
-				else
-				{
-					local actor = tile.getEntity();
-
-					if (actor.isAlliedWith(_entity))
-					{
-					}
-					else
-					{
-						if (betterThanNothing == null)
-						{
-							betterThanNothing = actor;
-						}
-
-						potentialVictims.push(actor);
-					}
-				}
-			}
-		}
-
-		if (potentialVictims.len() == 0 && betterThanNothing != null)
-		{
-			potentialVictims.push(betterThanNothing);
-		}
-
-		foreach( victim in potentialVictims )
-		{
-			if (_tag.Skill.m.SoundOnHit.len() != 0)
-			{
-				this.Sound.play(_tag.Skill.m.SoundOnHit[this.Math.rand(0, _tag.Skill.m.SoundOnHit.len() - 1)], this.Const.Sound.Volume.Skill, victim.getPos());
-			}
-
-			this.attackEntity(_entity, victim);
-
-			if (victim.isAlive())
-			{
-				_tag.Skill.applyEffectToTarget(_entity, victim, victim.getTile());
-			}
-		}
 	}
 
 	function isUsable()
@@ -333,14 +114,222 @@ this.krampus_charge <- this.inherit("scripts/skills/skill", {
 		this.m.IsSpent = false;
 	}
 
+	function onUse( _user, _targetTile )
+	{
+		this.m.IsSpent = true;
+		local tag = {
+			Skill = this,
+			User = _user,
+			OldTile = _user.getTile(),
+			TargetTile = _targetTile,
+			OnRepelled = this.onRepelled
+		};
 
+		if (tag.OldTile.IsVisibleForPlayer || _targetTile.IsVisibleForPlayer)
+		{
+			local myPos = _user.getPos();
+			local targetPos = _targetTile.Pos;
+			local distance = tag.OldTile.getDistanceTo(_targetTile);
+			local Dx = (targetPos.X - myPos.X) / distance;
+			local Dy = (targetPos.Y - myPos.Y) / distance;
+
+			for( local i = 0; i < distance; i = ++i )
+			{
+				local x = myPos.X + Dx * i;
+				local y = myPos.Y + Dy * i;
+				local tile = this.Tactical.worldToTile(this.createVec(x, y));
+
+				if (this.Tactical.isValidTile(tile.X, tile.Y) && this.Const.Tactical.DustParticles.len() != 0)
+				{
+					for( local i = 0; i < this.Const.Tactical.DustParticles.len(); i = ++i )
+					{
+						this.Tactical.spawnParticleEffect(false, this.Const.Tactical.DustParticles[i].Brushes, this.Tactical.getTile(tile), this.Const.Tactical.DustParticles[i].Delay, this.Const.Tactical.DustParticles[i].Quantity * 0.5, this.Const.Tactical.DustParticles[i].LifeTimeQuantity * 0.5, this.Const.Tactical.DustParticles[i].SpawnRate, this.Const.Tactical.DustParticles[i].Stages);
+					}
+				}
+			}
+		}
+
+		this.Tactical.getNavigator().teleport(_user, _targetTile, this.onTeleportDone, tag, false, 2.0);
+		return true;
+	}
 
 	function onRepelled( _tag )
 	{
 		this.Tactical.getNavigator().teleport(_tag.User, _tag.TargetTile, null, null, false);
 	}
 
+	function onTeleportDone( _entity, _tag )
+	{
+		local myTile = _entity.getTile();
+		local potentialVictims = [];
+		local betterThanNothing;
+		local ZOC = [];
+		local dirToTarget = _tag.OldTile.getDirectionTo(myTile);
 
+		for( local i = 0; i != 6; i = ++i )
+		{
+			if (!myTile.hasNextTile(i))
+			{
+			}
+			else
+			{
+				local tile = myTile.getNextTile(i);
+
+				if (!tile.IsOccupiedByActor)
+				{
+				}
+				else
+				{
+					local actor = tile.getEntity();
+
+					if (actor.isAlliedWith(_entity) || actor.getSkills().hasSkill("effects.staggered"))
+					{
+					}
+					else
+					{
+						ZOC.push(actor);
+
+						if (betterThanNothing == null)
+						{
+							betterThanNothing = actor;
+						}
+
+						if (actor.getSkills().hasSkill("effects.staggered"))
+						{
+						}
+						else
+						{
+							potentialVictims.push(actor);
+						}
+					}
+				}
+			}
+		}
+
+		foreach( actor in ZOC )
+		{
+			if (!actor.onMovementInZoneOfControl(_entity, true))
+			{
+				continue;
+			}
+
+			if (actor.onAttackOfOpportunity(_entity, true))
+			{
+				if (_tag.OldTile.IsVisibleForPlayer || myTile.IsVisibleForPlayer)
+				{
+					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_entity) + " charges and is repelled");
+				}
+
+				if (!_entity.isAlive() || _entity.isDying())
+				{
+					return;
+				}
+
+				local dir = myTile.getDirectionTo(_tag.OldTile);
+
+				if (myTile.hasNextTile(dir))
+				{
+					local tile = myTile.getNextTile(dir);
+
+					if (tile.IsEmpty && this.Math.abs(tile.Level - myTile.Level) <= 1 && tile.getDistanceTo(actor.getTile()) > 1)
+					{
+						_tag.TargetTile = tile;
+						this.Time.scheduleEvent(this.TimeUnit.Virtual, 50, _tag.OnRepelled, _tag);
+						return;
+					}
+				}
+
+				for( local i = 0; i != 6; i = ++i )
+				{
+					if (!myTile.hasNextTile(i))
+					{
+					}
+					else
+					{
+						local tile = myTile.getNextTile(i);
+
+						if (tile.IsEmpty && this.Math.abs(tile.Level - myTile.Level) <= 1)
+						{
+							if (tile.getZoneOfControlCountOtherThan(_entity.getAlliedFactions()) != 0)
+							{
+							}
+							else
+							{
+								_tag.TargetTile = tile;
+								this.Time.scheduleEvent(this.TimeUnit.Virtual, 50, _tag.OnRepelled, _tag);
+								return;
+							}
+						}
+					}
+				}
+
+				_tag.TargetTile = _tag.OldTile;
+				this.Time.scheduleEvent(this.TimeUnit.Virtual, 50, _tag.OnRepelled, _tag);
+				return;
+			}
+		}
+
+		if (potentialVictims.len() == 0 && betterThanNothing != null)
+		{
+			potentialVictims.push(betterThanNothing);
+		}
+
+		if (potentialVictims.len() != 0)
+		{
+			local victim = potentialVictims[this.Math.rand(0, potentialVictims.len() - 1)];
+			local chance = 100;
+
+			if (victim.isArmedWithShield())
+			{
+				local shield = victim.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand);
+				chance = chance - shield.getMeleeDefense();
+
+				if (victim.getSkills().hasSkill("effects.shieldwall"))
+				{
+					chance = chance - shield.getMeleeDefense();
+				}
+			}
+
+			if (_tag.Skill.m.SoundOnHit.len() != 0)
+			{
+				this.Sound.play(_tag.Skill.m.SoundOnHit[this.Math.rand(0, _tag.Skill.m.SoundOnHit.len() - 1)], this.Const.Sound.Volume.Skill, victim.getPos());
+			}
+
+			if (!victim.isHiddenToPlayer())
+			{
+				local layers = this.Const.ShakeCharacterLayers[this.Const.BodyPart.Body];
+				this.Tactical.getShaker().shake(victim, myTile, 2);
+			}
+
+			if (this.Math.rand(1, 100) <= chance)
+			{
+				victim.getSkills().add(this.new("scripts/skills/effects/staggered_effect"));
+
+				if (_tag.OldTile.IsVisibleForPlayer || myTile.IsVisibleForPlayer)
+				{
+					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_entity) + " charges and staggers " + this.Const.UI.getColorizedEntityName(victim));
+				}
+
+				return;
+			}
+		}
+
+		if (_tag.OldTile.IsVisibleForPlayer || myTile.IsVisibleForPlayer)
+		{
+			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_entity) + " charges");
+		}
+	}
+
+	function onAnySkillUsed( _skill, _targetEntity, _properties )
+	{
+		if (_skill == this)
+		{
+			_properties.DamageRegularMin = 35;
+			_properties.DamageRegularMin = 55;
+			_properties.DamageDirectMult = 0.4;
+			_properties.DamageArmorMult = 1.1;
+		}
+	}
 
 });
 
