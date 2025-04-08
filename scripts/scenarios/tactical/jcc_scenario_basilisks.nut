@@ -2,39 +2,19 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 	m = {},
 	function generate()
 	{
-		this.logDebug("ScenarioLineBattle::generate()");
+		this.logDebug("ScenarioBasilisks::generate()");
 		this.createStash();
 		this.initMap();
 		this.initEntities();
 		this.initStash();
-		this.Tactical.Entities.makeEnemiesKnownToAI();
-		local clouds = this.Tactical.getWeather().createCloudSettings();
-		clouds.Type = this.getconsttable().CloudType.StaticFog;
-		clouds.MinClouds = 12;
-		clouds.MaxClouds = 18;
-		clouds.MinAlpha = 0.25;
-		clouds.MaxAlpha = 0.5;
-		clouds.MinScale = 2.0;
-		clouds.MaxScale = 3.0;
-		this.Tactical.getWeather().buildCloudCover(clouds);
-		local rain = this.Tactical.getWeather().createRainSettings();
-		rain.MinDrops = 150;
-		rain.MaxDrops = 150;
-		rain.NumSplats = 50;
-		rain.MinVelocity = 400.0;
-		rain.MaxVelocity = 500.0;
-		rain.MinAlpha = 0.75;
-		rain.MaxAlpha = 1.0;
-		rain.MinScale = 0.75;
-		rain.MaxScale = 1.0;
-		this.Tactical.getWeather().buildRain(rain);
-		this.Tactical.getWeather().setAmbientLightingPreset(6);
-		this.Tactical.getCamera().Level = 3;
+		this.m.Music = this.Const.Music.BeastsTracks;
+		this.Tactical.getCamera().Level = 1;
+		this.Tactical.CameraDirector.addMoveToTileEvent(0, this.Tactical.getTile(15, 14 - 15 / 2), 1, null, null, 0, 100);
 	}
 
 	function initMap()
 	{
-		local testMap = this.MapGen.get("tactical.autumn");
+		local testMap = this.MapGen.get("tactical.plains");
 		local minX = testMap.getMinX();
 		local minY = testMap.getMinY();
 		this.Tactical.resizeScene(minX, minY);
@@ -49,8 +29,10 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 	function initEntities()
 	{
 		local entity;
+		local armor;
 		local items;
-		entity = this.spawnEntity("scripts/entity/tactical/player", 12, 12, 14, 14);
+		local upgrade;
+		entity = this.spawnEntity("scripts/entity/tactical/player", 12, 12, 15, 15);
 		
 		this.World.getPlayerRoster().add(entity);
 		entity.setName(this.getRandomPlayerName());
@@ -163,32 +145,21 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 		items.equip(this.new("scripts/items/helmets/mail_coif"));
 		items.equip(this.new("scripts/items/armor/coat_of_plates"));
 		items.equip(this.new("scripts/items/weapons/greatsword"));
-		
-		
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone", 12, 18, 7, 10);
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity.assignRandomEquipment();
-
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone", 12, 18, 7, 10);
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity.assignRandomEquipment();
-
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone", 12, 18, 7, 10);
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity.assignRandomEquipment();
-
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone", 12, 18, 7, 10);
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity.assignRandomEquipment();
-
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_sentry", 12, 18, 7, 10);
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity.assignRandomEquipment();
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_sentry", 12, 18, 7, 10);
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/player", 13, 13, 18, 18);
 
 
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_sentry");
+		entity.setFaction(this.Const.Faction.Beasts);		
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_sentry");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_sentry");
+		entity.setFaction(this.Const.Faction.Beasts);
 	}
 
 	function spawnEntity( _script, _minX = 10, _maxX = 28, _minY = 3, _maxY = 28 )
@@ -202,6 +173,13 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 			x = this.Math.rand(_minX, _maxX);
 			y = this.Math.rand(_minY, _maxY) - x / 2;
 
+			if (this.Tactical.getTile(x, y).IsOccupiedByActor)
+			{
+				continue;
+			}
+
+			this.Tactical.getTile(x, y).removeObject();
+
 			if (this.Tactical.getTile(x, y).IsEmpty)
 			{
 				break;
@@ -214,12 +192,16 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 	function initStash()
 	{
 		this.Stash.clear();
+		this.Stash.resize(117);
 		this.Stash.setLocked(false);
 		this.Stash.add(this.new("scripts/items/weapons/dagger"));
 		this.Stash.add(this.new("scripts/items/weapons/scramasax"));
+		this.Stash.add(this.new("scripts/items/weapons/javelin"));
+		this.Stash.add(this.new("scripts/items/weapons/javelin"));
+		this.Stash.add(this.new("scripts/items/weapons/throwing_axe"));
+		this.Stash.add(this.new("scripts/items/weapons/throwing_axe"));
 		this.Stash.add(this.new("scripts/items/weapons/hatchet"));
 		this.Stash.add(this.new("scripts/items/weapons/hatchet"));
-		this.Stash.add(this.new("scripts/items/weapons/hand_axe"));
 		this.Stash.add(this.new("scripts/items/weapons/hand_axe"));
 		this.Stash.add(this.new("scripts/items/weapons/hand_axe"));
 		this.Stash.add(this.new("scripts/items/weapons/warhammer"));
@@ -236,12 +218,14 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 		this.Stash.add(this.new("scripts/items/weapons/greatsword"));
 		this.Stash.add(this.new("scripts/items/weapons/greatsword"));
 		this.Stash.add(this.new("scripts/items/weapons/greatsword"));
+		this.Stash.add(this.new("scripts/items/weapons/greataxe"));
+		this.Stash.add(this.new("scripts/items/weapons/greataxe"));
+		this.Stash.add(this.new("scripts/items/weapons/greataxe"));
 		this.Stash.add(this.new("scripts/items/weapons/billhook"));
 		this.Stash.add(this.new("scripts/items/weapons/billhook"));
 		this.Stash.add(this.new("scripts/items/weapons/billhook"));
-		this.Stash.add(this.new("scripts/items/weapons/boar_spear"));
-		this.Stash.add(this.new("scripts/items/weapons/boar_spear"));
-		this.Stash.add(this.new("scripts/items/weapons/boar_spear"));
+		this.Stash.add(this.new("scripts/items/weapons/militia_spear"));
+		this.Stash.add(this.new("scripts/items/weapons/militia_spear"));
 		this.Stash.add(this.new("scripts/items/weapons/boar_spear"));
 		this.Stash.add(this.new("scripts/items/weapons/boar_spear"));
 		this.Stash.add(this.new("scripts/items/weapons/boar_spear"));
@@ -251,6 +235,9 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 		this.Stash.add(this.new("scripts/items/weapons/winged_mace"));
 		this.Stash.add(this.new("scripts/items/weapons/winged_mace"));
 		this.Stash.add(this.new("scripts/items/weapons/winged_mace"));
+		this.Stash.add(this.new("scripts/items/weapons/flail"));
+		this.Stash.add(this.new("scripts/items/weapons/flail"));
+		this.Stash.add(this.new("scripts/items/weapons/flail"));
 		this.Stash.add(this.new("scripts/items/weapons/short_bow"));
 		this.Stash.add(this.new("scripts/items/weapons/short_bow"));
 		this.Stash.add(this.new("scripts/items/weapons/hunting_bow"));
@@ -263,24 +250,22 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 		this.Stash.add(this.new("scripts/items/shields/kite_shield"));
 		this.Stash.add(this.new("scripts/items/shields/kite_shield"));
 		this.Stash.add(this.new("scripts/items/shields/kite_shield"));
+		this.Stash.add(this.new("scripts/items/helmets/hood"));
 		this.Stash.add(this.new("scripts/items/helmets/aketon_cap"));
-		this.Stash.add(this.new("scripts/items/helmets/aketon_cap"));
-		this.Stash.add(this.new("scripts/items/helmets/aketon_cap"));
-		this.Stash.add(this.new("scripts/items/helmets/helmet_with_neckguard"));
-		this.Stash.add(this.new("scripts/items/helmets/helmet_with_neckguard"));
-		this.Stash.add(this.new("scripts/items/helmets/helmet_with_neckguard"));
-		this.Stash.add(this.new("scripts/items/helmets/helmet_with_neckguard"));
+		this.Stash.add(this.new("scripts/items/helmets/full_aketon_cap"));
+		this.Stash.add(this.new("scripts/items/helmets/nasal_helmet"));
+		this.Stash.add(this.new("scripts/items/helmets/padded_nasal_helmet"));
+		this.Stash.add(this.new("scripts/items/helmets/nasal_helmet_with_mail"));
 		this.Stash.add(this.new("scripts/items/helmets/mail_coif"));
-		this.Stash.add(this.new("scripts/items/helmets/mail_coif"));
-		this.Stash.add(this.new("scripts/items/helmets/mail_coif"));
+		this.Stash.add(this.new("scripts/items/helmets/closed_mail_coif"));
+		this.Stash.add(this.new("scripts/items/helmets/reinforced_mail_coif"));
 		this.Stash.add(this.new("scripts/items/helmets/kettle_hat"));
-		this.Stash.add(this.new("scripts/items/helmets/kettle_hat"));
-		this.Stash.add(this.new("scripts/items/helmets/kettle_hat"));
+		this.Stash.add(this.new("scripts/items/helmets/padded_kettle_hat"));
+		this.Stash.add(this.new("scripts/items/helmets/kettle_hat_with_mail"));
 		this.Stash.add(this.new("scripts/items/helmets/flat_top_helmet"));
-		this.Stash.add(this.new("scripts/items/helmets/flat_top_helmet"));
+		this.Stash.add(this.new("scripts/items/helmets/flat_top_with_mail"));
 		this.Stash.add(this.new("scripts/items/helmets/full_helm"));
 		this.Stash.add(this.new("scripts/items/helmets/full_helm"));
-		this.Stash.add(this.new("scripts/items/armor/padded_surcoat"));
 		this.Stash.add(this.new("scripts/items/armor/padded_surcoat"));
 		this.Stash.add(this.new("scripts/items/armor/gambeson"));
 		this.Stash.add(this.new("scripts/items/armor/gambeson"));
@@ -291,6 +276,19 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 		this.Stash.add(this.new("scripts/items/armor/mail_shirt"));
 		this.Stash.add(this.new("scripts/items/armor/lamellar_harness"));
 		this.Stash.add(this.new("scripts/items/armor/coat_of_plates"));
+		this.Stash.add(this.new("scripts/items/ammo/quiver_of_arrows"));
+		this.Stash.add(this.new("scripts/items/ammo/quiver_of_arrows"));
+		this.Stash.add(this.new("scripts/items/ammo/quiver_of_arrows"));
+		this.Stash.add(this.new("scripts/items/ammo/quiver_of_arrows"));
+		this.Stash.add(this.new("scripts/items/ammo/quiver_of_bolts"));
+		this.Stash.add(this.new("scripts/items/ammo/quiver_of_bolts"));
+		this.Stash.add(this.new("scripts/items/ammo/quiver_of_bolts"));
+		this.Stash.add(this.new("scripts/items/accessory/wardog_item"));
+		this.Stash.add(this.new("scripts/items/accessory/wardog_item"));
+		this.Stash.add(this.new("scripts/items/accessory/wardog_item"));
+		this.Stash.add(this.new("scripts/items/accessory/wardog_item"));
+		this.Stash.add(this.new("scripts/items/accessory/wardog_item"));
+		this.Stash.add(this.new("scripts/items/accessory/wardog_item"));
 	}
 
 });
