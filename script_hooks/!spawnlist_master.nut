@@ -60,3 +60,35 @@
 	Row = -1,
 	Script = "scripts/entity/tactical/enemies/jcc_cytoplasm_high"
 };
+::Const.World.Spawn.Troops.JccDirewolfP <- {
+		ID = this.Const.EntityType.Direwolf,
+		Variant = 0,
+		Strength = 15,
+		Cost = 20,
+		Row = -1,
+		Script = "scripts/entity/tactical/enemies/jcc_direwolf_p"
+};
+::Const.World.Spawn.Troops.JccDirewolfHIGHP <- {
+		ID = this.Const.EntityType.Direwolf,
+		Variant = 0,
+		Strength = 20,
+		Cost = 25,
+		Row = -1,
+		Script = "scripts/entity/tactical/enemies/jcc_direwolf_high_p"
+};
+::Const.World.Spawn.Troops.JccSchratP <- {
+		ID = this.Const.EntityType.Schrat,
+		Variant = 0,
+		Strength = 70,
+		Cost = 70,
+		Row = -1,
+		Script = "scripts/entity/tactical/enemies/jcc_schrat_p"
+};
+::Const.World.Spawn.Troops.JccSpiderP <- {
+		ID = this.Const.EntityType.Spider,
+		Variant = 0,
+		Strength = 13,
+		Cost = 12,
+		Row = -1,
+		Script = "scripts/entity/tactical/enemies/jcc_spider_p"
+};

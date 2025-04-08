@@ -89,6 +89,10 @@
 					tacticalState.setScenario(this.new("scripts/scenarios/tactical/jcc_scenario_perchts"));
 					break;
 
+				case 52:
+					tacticalState.setScenario(this.new("scripts/scenarios/tactical/jcc_scenario_slimes"));
+					break;
+
 				default:
 					tacticalState.setScenario(this.new("scripts/scenarios/tactical/scenario_combat_basics"));
 					break;
@@ -172,6 +176,11 @@
 				id = 51,
 				name = "Perchts",
 				description = "[p=c][img]gfx/ui/events/event_05.png[/img][/p]\n[p=c]Fight against Perchts and various beasts.[/p]"
+			},			
+			{
+				id = 52,
+				name = "Slimes",
+				description = "[p=c][img]gfx/ui/events/event_05.png[/img][/p]\n[p=c]Fight against Slimes.[/p]"
 			}
 		];
 

@@ -2,14 +2,14 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 	m = {},
 	function generate()
 	{
-		this.logDebug("ScenarioPerchts::generate()");
+		this.logDebug("ScenarioSlimes::generate()");
 		this.createStash();
 		this.initMap();
 		this.initEntities();
 		this.initStash();
 		this.m.Music = this.Const.Music.BeastsTracks;
 		local clouds = this.Tactical.getWeather().createCloudSettings();
-		clouds.Type = this.getconsttable().CloudType.Fog;
+		clouds.Type = this.getconsttable().CloudType.Rain;
 		clouds.MinClouds = 20;
 		clouds.MaxClouds = 20;
 		clouds.MinVelocity = 3.0;
@@ -25,7 +25,7 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 
 	function initMap()
 	{
-		local testMap = this.MapGen.get("tactical.forest");
+		local testMap = this.MapGen.get("tactical.plains");
 		local minX = testMap.getMinX();
 		local minY = testMap.getMinY();
 		this.Tactical.resizeScene(minX, minY);
@@ -158,42 +158,19 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 		items.equip(this.new("scripts/items/weapons/greatsword"));
 
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht");
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity.assignRandomEquipment();
-		entity.makeMiniboss();
-		entity.generateName();
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm");
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity.assignRandomEquipment();
-
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm");
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity.assignRandomEquipment();
-
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_direwolf_p");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm");
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_direwolf_p");
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_direwolf_p");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm");
 		entity.setFaction(this.Const.Faction.Beasts);
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_direwolf_high_p");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm_medium");
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_direwolf_high_p");
-		entity.setFaction(this.Const.Faction.Beasts);
-
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_schrat_p");
-		entity.setFaction(this.Const.Faction.Beasts);
-
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_spider_p");
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_spider_p");
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_spider_p");
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_spider_p");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm_medium");
 		entity.setFaction(this.Const.Faction.Beasts);
 
 	}

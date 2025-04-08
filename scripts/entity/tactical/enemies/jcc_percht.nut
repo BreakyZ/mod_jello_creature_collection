@@ -279,7 +279,7 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsAffectedByNight = false;
 
 		//b.IsSpecializedInBows = true;
-		b.IsSpecializedInThrowing = true;
+		
 
 		//this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge"));
 		this.m.Skills.add(this.new("scripts/skills/actives/charge"));
@@ -361,6 +361,10 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 			
 			this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_ranged_agent");
 			this.m.AIAgent.setActor(this);
+			local b = this.m.BaseProperties;
+			b.setValues(this.Const.Tactical.Actor.JccPercht);
+			b.RangedSkill += 5;
+			
 
 			local r = this.Math.rand(1, 2);
 

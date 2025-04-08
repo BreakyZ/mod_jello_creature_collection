@@ -20,7 +20,7 @@ this.percht_ranged_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.Properties.OverallDefensivenessMult = 0.5;
 		this.m.Properties.OverallFormationMult = 1.0;
 		this.m.Properties.EngageTargetMultipleOpponentsMult = 1.0;
-		this.m.Properties.EngageTargetAlreadyBeingEngagedMult = 1.25;
+		this.m.Properties.EngageTargetAlreadyBeingEngagedMult = 1.0;
 	}
 
 	function onAddBehaviors()
