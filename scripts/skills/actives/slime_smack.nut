@@ -13,10 +13,10 @@ this.slime_smack <- this.inherit("scripts/skills/skill", {
 			"sounds/enemies/slime_smack_01.wav",
 			"sounds/enemies/slime_smack_02.wav"
 		];
-		this.m.SoundOnHit = [
+		/*this.m.SoundOnHit = [
 			"sounds/enemies/golem_flurry_01.wav",
 			"sounds/enemies/golem_flurry_02.wav"
-		];
+		];*/
 		this.m.SoundOnHitDelay = 0;
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.OffensiveTargeted;
@@ -49,6 +49,13 @@ this.slime_smack <- this.inherit("scripts/skills/skill", {
 	{
 		if (_skill == this)
 		{
+			if(getContainer().getActor().getSize()==1){this.m.SoundOnHit = [
+			"sounds/combat/bash_01.wav",
+			"sounds/combat/bash_02.wav",
+			"sounds/combat/bash_03.wav"
+			];}
+			
+			
 			_properties.DamageRegularMin += 35;
 			_properties.DamageRegularMax += 45;
 			_properties.DamageArmorMult *= 0.6;
@@ -58,13 +65,15 @@ this.slime_smack <- this.inherit("scripts/skills/skill", {
 			_properties.DamageRegularMin += 40;
 			_properties.DamageRegularMax += 50;
 			_properties.DamageArmorMult = 0.7;
-
+			this.m.SoundOnHit = [
+			"sounds/enemies/golem_flurry_01.wav",
+			"sounds/enemies/golem_flurry_02.wav"
+			];
 			}
 
 			if(getContainer().getActor().getSize()==3){
 							
 			_properties.DirectDamageMult = 0.5;
-
 			}
 		}
 	}
