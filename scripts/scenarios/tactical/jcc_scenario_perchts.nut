@@ -157,42 +157,42 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 		items.equip(this.new("scripts/items/armor/coat_of_plates"));
 		items.equip(this.new("scripts/items/weapons/greatsword"));
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht", 19, 19, 11, 11);
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
 		entity.makeMiniboss();
 		entity.generateName();
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht", 19, 19, 12, 12);
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht", 19, 19, 13, 13);
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf", 19, 19, 14, 14);
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf", 19, 19, 15, 15);
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf");
-		entity.setFaction(this.Const.Faction.Beasts);
-
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf_high");
-		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf_high");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf", 19, 19, 16, 16);
 		entity.setFaction(this.Const.Faction.Beasts);
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/schrat");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf_high", 20, 20, 11, 11);
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf_high", 20, 20, 12, 12);
 		entity.setFaction(this.Const.Faction.Beasts);
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/schrat", 21, 21, 11, 11);
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider");
+
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider", 20, 20, 13, 13);
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider", 20, 20, 14, 14);
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider", 20, 20, 15, 15);
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider", 20, 20, 16, 16);
 		entity.setFaction(this.Const.Faction.Beasts);
 
 	}
