@@ -360,6 +360,9 @@ this.percht <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.Items.equip(this.new("scripts/items/weapons/percht_bow"));
 			this.m.Items.equip(this.new("scripts/items/ammo/quiver_of_arrows"));
 			
+			this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_ranged_agent");
+			this.m.AIAgent.setActor(this);
+
 			local r = this.Math.rand(1, 2);
 
 			if (r == 1)
@@ -393,6 +396,8 @@ this.percht <- this.inherit("scripts/entity/tactical/actor", {
 
 		this.setAlwaysApplySpriteOffset(true);
 		this.setSpriteOffset("arms_icon", ::createVec(-7, 0))
+		this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_agent");
+		this.m.AIAgent.setActor(this);
 
 		if (r == 1)
 		{
