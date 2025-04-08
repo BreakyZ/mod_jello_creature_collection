@@ -10,9 +10,8 @@ this.slime_smack <- this.inherit("scripts/skills/skill", {
 		this.m.IconDisabled = "skills/active_229.png";
 		this.m.Overlay = "active_229";
 		this.m.SoundOnUse = [
-			"sounds/enemies/big_golem_windup_01.wav",
-			"sounds/enemies/big_golem_windup_02.wav",
-			"sounds/enemies/big_golem_windup_03.wav"
+			"sounds/enemies/slime_smack_01.wav",
+			"sounds/enemies/slime_smack_02.wav"
 		];
 		this.m.SoundOnHit = [
 			"sounds/enemies/golem_flurry_01.wav",

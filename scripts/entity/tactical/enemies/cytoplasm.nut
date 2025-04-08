@@ -21,37 +21,42 @@ this.cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
 		this.actor.create();
-		/*this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived] = [
-			"sounds/enemies/blutschenk_hurt_01.wav",
-			"sounds/enemies/blutschenk_hurt_02.wav",
-			"sounds/enemies/blutschenk_hurt_03.wav",
-			"sounds/enemies/blutschenk_hurt_04.wav",
-			"sounds/enemies/blutschenk_hurt_05.wav"
+		this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived] = [
+			"sounds/enemies/cyto_hurt_01.wav",
+			"sounds/enemies/cyto_hurt_02.wav",
+			"sounds/enemies/cyto_hurt_03.wav",
+			"sounds/enemies/cyto_hurt_04.wav"
 		];
 		this.m.Sound[this.Const.Sound.ActorEvent.Death] = [
-			"sounds/enemies/blutschenk_death_01.wav",
-			"sounds/enemies/blutschenk_death_02.wav",
-			"sounds/enemies/blutschenk_death_03.wav",
-			"sounds/enemies/blutschenk_death_04.wav"
+			"sounds/enemies/cyto_death_01.wav",
+			"sounds/enemies/cyto_death_02.wav",
+			"sounds/enemies/cyto_death_03.wav",
+			"sounds/enemies/cyto_death_04.wav"
 		];
 		this.m.Sound[this.Const.Sound.ActorEvent.Flee] = [
-			"sounds/enemies/blutschenk_flee_01.wav",
-			"sounds/enemies/blutschenk_flee_02.wav"
+			"sounds/enemies/cyto_flee_01.wav",
+			"sounds/enemies/cyto_flee_02.wav",
+			"sounds/enemies/cyto_flee_03.wav",
+			"sounds/enemies/cyto_flee_04.wav"
 		];
 		this.m.Sound[this.Const.Sound.ActorEvent.Idle] = [
-			"sounds/enemies/blutschenk_idle_01.wav",
-			"sounds/enemies/blutschenk_idle_02.wav",
-			"sounds/enemies/blutschenk_idle_03.wav",
-			"sounds/enemies/blutschenk_idle_04.wav",
-			"sounds/enemies/blutschenk_idle_05.wav",
-			"sounds/enemies/blutschenk_idle_06.wav",
-			"sounds/enemies/blutschenk_idle_07.wav",
-			"sounds/enemies/blutschenk_idle_08.wav",
-			"sounds/enemies/blutschenk_idle_09.wav",
-			"sounds/enemies/blutschenk_idle_10.wav",
-			"sounds/enemies/blutschenk_idle_11.wav",
-			"sounds/enemies/blutschenk_idle_12.wav"
-		];*/
+			"sounds/enemies/cyto_idle_01.wav",
+			"sounds/enemies/cyto_idle_02.wav",
+			"sounds/enemies/cyto_idle_03.wav",
+			"sounds/enemies/cyto_idle_04.wav",
+			"sounds/enemies/cyto_idle_05.wav",
+			"sounds/enemies/cyto_idle_06.wav",
+			"sounds/enemies/cyto_idle_07.wav",
+			"sounds/enemies/cyto_idle_08.wav",
+			"sounds/enemies/cyto_idle_09.wav"
+		];
+		this.m.Sound[this.Const.Sound.ActorEvent.Move] = [
+			"sounds/enemies/cyto_move_01.wav",
+			"sounds/enemies/cyto_move_02.wav",
+			"sounds/enemies/cyto_move_03.wav",
+			"sounds/enemies/cyto_move_04.wav",
+			"sounds/enemies/cyto_move_05.wav"
+		];
 		this.m.SoundPitch = 1.1;
 		local onArmorHitSounds = this.getItems().getAppearance().ImpactSound;
 		onArmorHitSounds[this.Const.BodyPart.Body] = this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived];
