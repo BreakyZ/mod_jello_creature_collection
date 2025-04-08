@@ -178,7 +178,6 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 		items.equip(this.new("scripts/items/helmets/mail_coif"));
 		items.equip(this.new("scripts/items/armor/coat_of_plates"));
 		items.equip(this.new("scripts/items/weapons/greatsword"));
-		entity = this.spawnEntity("scripts/entity/tactical/player", 13, 13, 18, 18);
 
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht");
 		entity.setFaction(this.Const.Faction.Beasts);

@@ -281,8 +281,8 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 		//b.IsSpecializedInBows = true;
 		
 
-		//this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge"));
-		this.m.Skills.add(this.new("scripts/skills/actives/charge"));
+		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge"));
+		//this.m.Skills.add(this.new("scripts/skills/actives/charge"));
 
 		this.setAlwaysApplySpriteOffset(true);
 		this.setSpriteOffset("arms_icon", ::createVec(-7, 0))
