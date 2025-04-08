@@ -341,21 +341,22 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 				}
 			}
 
-			if(weapon==null)
+			if (weapon == null)
 			{
 				weapon = this.new("scripts/items/weapons/greenskins/orc_wooden_club");
 			}
 
-		if (this.m.Items.hasEmptySlot(this.Const.ItemSlot.Mainhand))
-		{
-			this.m.Items.equip(weapon);
+			if (this.m.Items.hasEmptySlot(this.Const.ItemSlot.Mainhand))
+			{
+				this.m.Items.equip(weapon);
+			}
+			else
+			{
+				this.m.Items.addToBag(weapon);
+			}
 		}
 		else
 		{
-			this.m.Items.addToBag(weapon);
-		}
-		}
-		else{
 			this.m.Items.equip(this.new("scripts/items/weapons/percht_bow"));
 			this.m.Items.equip(this.new("scripts/items/ammo/quiver_of_arrows"));
 			
