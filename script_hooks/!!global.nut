@@ -21,7 +21,7 @@ for (local i = -1; i < ::Const.EntityIcon.len(); i++) {
 }
 
 ::Const.EntityType.JccBasiliskSentry <-
-	::Const.EntityType.addNew("basilisk_drone_orientation", "Basilisk Sentry", "Basilisk Sentries", this.Const.FactionType.Beasts);
+	::Const.EntityType.addNew("basilisk_sentry_orientation", "Basilisk Sentry", "Basilisk Sentries", this.Const.FactionType.Beasts);
 ::Const.EntityType.JccBasiliskDrone <-
 	::Const.EntityType.addNew("basilisk_drone_orientation", "Basilisk Drone", "Basilisk Drones", this.Const.FactionType.Beasts);
 ::Const.EntityType.JccBasiliskDroneLow <-
