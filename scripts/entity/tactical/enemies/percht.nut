@@ -284,6 +284,9 @@ this.percht <- this.inherit("scripts/entity/tactical/actor", {
 		//this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge"));
 		this.m.Skills.add(this.new("scripts/skills/actives/charge"));
 
+		this.setAlwaysApplySpriteOffset(true);
+		this.setSpriteOffset("arms_icon", ::createVec(-7, 0))
+
 		if (this.Const.DLC.Unhold)
 		{
 			this.m.Skills.add(this.new("scripts/skills/actives/wake_ally_skill"));
@@ -320,6 +323,9 @@ this.percht <- this.inherit("scripts/entity/tactical/actor", {
 				else if (r == 2)
 				{
 					weapon = this.new("scripts/items/weapons/percht_spetum");
+					this.setAlwaysApplySpriteOffset(true);
+					this.setSpriteOffset("arms_icon", ::createVec(0, 0))
+
 				}
 			}
 			else
@@ -384,6 +390,9 @@ this.percht <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
 
 		local r = this.Math.rand(1, 2);
+
+		this.setAlwaysApplySpriteOffset(true);
+		this.setSpriteOffset("arms_icon", ::createVec(-7, 0))
 
 		if (r == 1)
 		{
