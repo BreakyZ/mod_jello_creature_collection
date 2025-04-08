@@ -34,11 +34,10 @@
 	return result;
   }
 });*/
-
-::mods_hookExactClass("states/main_menu_state", function(o) 
+::Mod_Sellswords.HooksMod.hook("scripts/states/main_menu_state", function ( q ) {
 {
 
-	o.onSiblingAdded = function ( _stateName )
+	q.onSiblingAdded = @(__original) function ( _stateName )
 	{
 		if (_stateName == "TacticalState")
 		{
@@ -152,7 +151,7 @@
 		}
 	}
 
-	o.scenario_menu_module_onQueryData = function ()
+	q.scenario_menu_module_onQueryData = @(__original)  = function ()
 	{
 		local result = [
 			{
