@@ -257,7 +257,9 @@ this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_crippling_strikes"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_berserk"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_steel_brow"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_steel_brow"));		
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_battering_ram"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_stalwart"));
 		b.Threat += 5;
 
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));
@@ -268,7 +270,6 @@ this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_fearsome"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_underdog"));
 
-		this.m.Skills.add(this.new("scripts/skills/actives/unstoppable_charge_skill"));
 		this.m.Skills.add(this.new("scripts/skills/actives/jcc_basilisk_big_peck_skill"));
 		this.m.Skills.add(this.new("scripts/skills/actives/miasma_skill"));
 

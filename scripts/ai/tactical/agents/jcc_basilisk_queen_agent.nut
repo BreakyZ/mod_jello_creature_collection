@@ -32,8 +32,6 @@ this.jcc_basilisk_queen_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_retreat"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_engage_melee"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_break_free"));
-		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_line_breaker"));
-		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_charge"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_miasma"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_default"));
 	}
