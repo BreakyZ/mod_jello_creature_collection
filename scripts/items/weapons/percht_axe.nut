@@ -5,7 +5,7 @@ this.percht_axe <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.percht_axe";
 		this.m.Name = "Devil Axe";
-		this.m.Description = "A massive axe possessed by things not of this world. Just as likely to turn it\'s heft upon the wielder\'s neck as the target\'s.";
+		this.m.Description = "A massive axe possessed by things not of this world. Just as likely to turn it\'s heft upon the wielder\'s neck as the enemy\'s.";
 		this.m.Categories = "Axe, Two-Handed";
 		this.m.IconLarge = "weapons/melee/jcc_devilaxe.png";
 		this.m.Icon = "weapons/melee/jcc_devilaxe_70x70.png";

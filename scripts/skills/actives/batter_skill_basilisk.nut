@@ -6,8 +6,8 @@ this.batter_skill_basilisk <- this.inherit("scripts/skills/skill", {
 		this.m.Name = "Batter";
 		this.m.Description = "A strike that can cover the distance of 2 tiles. Its effect can be felt through the thickest of armor. Can apply Basilisk poison.";
 		this.m.KilledString = "Hammered to death";
-		this.m.Icon = "skills/actives/basilisk_hammer_01.png";
-		this.m.IconDisabled = "skills/actives/basilisk_hammer_01_sw.png";
+		this.m.Icon = "skills/basilisk_hammer_01.png";
+		this.m.IconDisabled = "skills/basilisk_hammer_01_sw.png";
 		this.m.Overlay = "basilisk_hammer_01";
 		this.m.SoundOnUse = [
 			"sounds/combat/hammer_strike_01.wav",
@@ -71,7 +71,7 @@ this.batter_skill_basilisk <- this.inherit("scripts/skills/skill", {
 				id = 8,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "Dealing at least "+this.Const.Combat.PoisonEffectMinDamage+" damage will inflict Basilisk poison on the target"
+				text = "Dealing at least "+this.Const.Combat.PoisonEffectMinDamage+" damage will inflict Basilisk poison on the target, lowering their resolve and ability to recover fatigue"
 			});
 		
 
