@@ -121,8 +121,7 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 			items = entity.getItems();
 			items.equip(this.new("scripts/items/helmets/hood"));
 			items.equip(this.new("scripts/items/armor/mail_shirt"));
-			items.equip(this.new("scripts/items/weapons/boar_spear"));
-			items.equip(this.new("scripts/items/shields/wooden_shield"));
+			items.equip(this.new("scripts/items/weapons/jcc_slime_warbrand"));
 			
 			entity = this.spawnEntity("scripts/entity/tactical/player", 13, 13, 15, 15);
 			this.World.getPlayerRoster().add(entity);
@@ -151,7 +150,7 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 			items = entity.getItems();
 			items.equip(this.new("scripts/items/helmets/mail_coif"));
 			items.equip(this.new("scripts/items/armor/coat_of_plates"));
-			items.equip(this.new("scripts/items/weapons/greatsword"));
+			items.equip(this.new("scripts/items/weapons/jcc_slime_bardiche"));
 		}
 
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone");

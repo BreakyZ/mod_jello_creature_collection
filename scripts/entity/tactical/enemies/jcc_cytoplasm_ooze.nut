@@ -144,46 +144,6 @@ this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
 		return corpse;
 	}
 
-	function onAfterDeath( _tile )
-	{
-		if (!this.m.IsSpawningOnTile)
-		{
-			return;
-		}
-
-		if (this.getSize() == 1)
-		{
-			return;
-		}
-
-		local rock = this.Tactical.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm", _tile.Coords.X, _tile.Coords.Y);
-		rock.setFaction(this.m.BackupFaction);
-
-		if (this.m.BackupWorldParty != null)
-		{
-			local e;
-
-			if (this.getSize() == 3)
-			{
-				e = this.Const.World.Common.addTroop(this.m.BackupWorldParty.get(), {
-					Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM
-				}, false);
-			}
-			else
-			{
-				e = this.Const.World.Common.addTroop(this.m.BackupWorldParty.get(), {
-					Type = this.Const.World.Spawn.Troops.JccCytoplasm
-				}, false);
-			}
-
-			rock.setWorldTroop(e);
-		}
-
-		if (this.getSize() == 3)
-		{
-			rock.grow(true);
-		}
-	}
 
 	function onInit()
 	{

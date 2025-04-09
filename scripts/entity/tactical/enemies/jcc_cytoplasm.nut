@@ -299,11 +299,11 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.CurrentProperties = clone baseProperties;
 		this.m.ActionPointCosts = this.Const.DefaultMovementAPCost;
 		this.m.FatigueCosts = this.Const.DefaultMovementFatigueCost;
-		local variant = this.Math.rand(1, 2);
+		local varia = this.Math.rand(1, 2);
 
 		this.addSprite("socket").setBrush("bust_base_beasts");
 		local skullA = this.addSprite("skullA");
-		skullA.setBrush("bust_cytoplasm_small_skull_0" + variant);
+		skullA.setBrush("bust_cytoplasm_small_skull_0" + varia);
 
 		local body = this.addSprite("body");
 		body.setBrush("bust_cytoplasm_small_body");

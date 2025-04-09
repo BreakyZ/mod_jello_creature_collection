@@ -98,7 +98,7 @@
 <sprite id="basilisk_drone_head_01" offsetX="-15" offsetY="45" ic="FF315B61" width="104" height="142" img="entity\beasts\basilisk_drone_head_01.png" />
 <sprite id="basilisk_drone_01_injured" offsetX="-15" offsetY="45" ic="FF5E9C89" width="104" height="142" img="entity\beasts\basilisk_drone_01_injured.png" />
 <sprite id="basilisk_drone_01_dead" offsetX="5" offsetY="20" f="64FF" ic="FF295850" width="179" height="154" img="entity\beasts\basilisk_drone_01_dead.png" left="-72" right="58" top="-50" bottom="47" />
-<sprite id="basilisk_drone_head_01_dead" offsetX="5" offsetY="20" f="64F6" f1="-5" f2="-25" ic="FF315E5F" width="179" height="154" img="entity\beasts\basilisk_drone_head_01_dead.png" left="9" right="87" top="-51" bottom="29" />
+<sprite id="basilisk_drone_head_01_dead" offsetX="5" offsetY="20" f="64F6" f1="-5" f2="-25" ic="FF315E5F" width="179" height="154" img="entity\beasts\basilisk_drone_head_01_dead.png" left="9" right="91" top="-56" bottom="29" />
 <sprite id="basilisk_drone_01_dead_arrows" offsetX="5" offsetY="20" f="64FB" ic="FF474C4F" width="179" height="154" img="entity\beasts\bear_01_dead_arrows.png" left="-34" right="46" top="-29" bottom="29" />
 <sprite id="basilisk_drone_01_dead_javelin" offsetX="5" offsetY="20" f="64FB" ic="FF141B27" width="179" height="154" img="entity\beasts\bear_01_dead_javelin.png" left="-25" right="72" top="-16" bottom="55" />
 
@@ -132,6 +132,12 @@
   
   <sprite id="icon_jcc_devilaxe" img="icons\icon_jcc_devilaxe.png" ic="FF3B5263" left="-71" right="15" top="-55" bottom="61" offsetY="35" width="130" height="142" />
   <sprite id="icon_jcc_devilaxe_bloodied" img="icons\icon_jcc_devilaxe_bloodied.png" ic="FF3B5263" left="-71" right="15" top="-55" bottom="61" offsetY="35" width="130" height="142" />
+
+  <sprite id="icon_slime_greatsword" offsetY="35" ic="FF56575A" width="130" height="142" img="icons\icon_slime_greatsword.png" left="-62" right="34" top="-63" bottom="45" />
+  <sprite id="icon_slime_bardiche" offsetY="35" ic="FF4D545F" width="180" height="152" img="icons\icon_slime_bardiche.png" left="-84" right="12" top="-60" bottom="52" />
+
+  <sprite id="icon_slime_greatsword_bloodied" offsetY="35" ic="FF56575A" width="130" height="142" img="icons\icon_slime_greatsword_bloodied.png" left="-62" right="34" top="-63" bottom="45" />
+  <sprite id="icon_slime_bardiche_bloodied" offsetY="35" ic="FF4D545F" width="180" height="152" img="icons\icon_slime_bardiche_bloodied.png" left="-84" right="12" top="-60" bottom="52" />
 
 
 </brush>
