@@ -191,7 +191,7 @@ this.jcc_basilisk_sentry <- this.inherit("scripts/entity/tactical/actor", {
 				local r = this.Math.rand(1, 100);
 				local loot;
 
-				if (r <= 40)
+				if (r <= 30)
 				{
 					loot = this.new("scripts/items/misc/jcc_basilisk_feathers_item");
 				}

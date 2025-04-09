@@ -1,10 +1,10 @@
-this.jcc_basilisk_drone <- this.inherit("scripts/entity/tactical/actor", {
+this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
 	m = {},
 	function create()
 	{
-		this.m.Type = this.Const.EntityType.JccBasiliskDrone;
+		this.m.Type = this.Const.EntityType.JccBasiliskQueen;
 		this.m.BloodType = this.Const.BloodType.Red;
-		this.m.XP = this.Const.Tactical.Actor.JccBasiliskDrone.XP;
+		this.m.XP = this.Const.Tactical.Actor.JccBasiliskQueen.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(40, -20);
 		this.m.DecapitateBloodAmount = 3.0;
@@ -59,17 +59,10 @@ this.jcc_basilisk_drone <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/Basilisk_fatigue03.wav"
 		];
 
-		this.m.SoundPitch = this.Math.rand(0.9, 1.1);
-		this.m.SoundVolumeOverall = 1.25;
+		this.m.SoundPitch = this.Math.rand(0.6, 0.9);
+		this.m.SoundVolumeOverall = 1.45;
 
-		if (this.Math.rand(1, 100) <= 40)
-		{
-			this.m.AIAgent = this.new("scripts/ai/tactical/agents/jcc_basilisk_drone_agent"); //normal	
-		}
-		else
-		{
-			this.m.AIAgent = this.new("scripts/ai/tactical/agents/jcc_basilisk_drone_aggressive_agent"); //aggressive
-		}
+		this.m.AIAgent = this.new("scripts/ai/tactical/agents/jcc_basilisk_drone_aggressive_agent");
 		this.m.AIAgent.setActor(this);
 
 	}
@@ -179,7 +172,7 @@ this.jcc_basilisk_drone <- this.inherit("scripts/entity/tactical/actor", {
 
 			this.spawnTerrainDropdownEffect(_tile);
 			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "A Basilisk Drone";
+			corpse.CorpseName = "A Basilisk Queen";
 			corpse.Tile = _tile;
 			corpse.IsResurrectable = false;
 			corpse.IsConsumable = true;
@@ -200,11 +193,11 @@ this.jcc_basilisk_drone <- this.inherit("scripts/entity/tactical/actor", {
 
 				if (r <= 40)
 				{
-					loot = this.new("scripts/items/misc/jcc_basilisk_feathers_item");
+					loot = this.new("scripts/items/misc/jcc_basilisk_egg_item");
 				}
-				else if (r <= 60)
+				else if (r <= 80)
 				{
-					loot = this.new("scripts/items/loot/jcc_basilisk_talon_item");
+					loot = this.new("scripts/items/loot/jcc_basilisk_crown_item");
 					loot = this.new("scripts/items/misc/jcc_basilisk_eye_item");
 				}
 
@@ -228,7 +221,7 @@ this.jcc_basilisk_drone <- this.inherit("scripts/entity/tactical/actor", {
 	{
 		this.actor.onInit();
 		local b = this.m.BaseProperties;
-		b.setValues(this.Const.Tactical.Actor.JccBasiliskDrone); 
+		b.setValues(this.Const.Tactical.Actor.JccBasiliskQueen); 
 		b.IsImmuneToDisarm = true;
 		b.IsImmuneToPoison = true;
 
@@ -237,20 +230,20 @@ this.jcc_basilisk_drone <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.CurrentProperties = clone b;
 		this.m.ActionPointCosts = this.Const.DefaultMovementAPCost;
 		this.m.FatigueCosts = this.Const.DefaultMovementFatigueCost;
-		this.m.Items.getAppearance().Body = "basilisk_drone_01"; //credit to Wellington for all drone sprites and ideas
+		this.m.Items.getAppearance().Body = "bust_basilisk_queen_body"; //credit to Wellington for all drone sprites and ideas
 		this.addSprite("socket").setBrush("bust_base_beasts");
 		local body = this.addSprite("body");
-		body.setBrush("basilisk_drone_01");
+		body.setBrush("bust_basilisk_queen_body");
 		body.varySaturation(0.1);
 		body.varyColor(0.09, 0.09, 0.09);
 		this.addSprite("armor");
 		local head = this.addSprite("head");
-		head.setBrush("basilisk_drone_head_01");
+		head.setBrush("bust_basilisk_queen_head");
 		head.Saturation = body.Saturation;
 		head.Color = body.Color;
 		local injury_body = this.addSprite("injury");
 		injury_body.Visible = false;
-		injury_body.setBrush("basilisk_drone_01_injured");
+		injury_body.setBrush("bust_basilisk_queen_injury");
 		this.addSprite("helmet");
 		this.addDefaultStatusSprites();
 		this.getSprite("status_rooted").Scale = 0.65;
@@ -267,16 +260,16 @@ this.jcc_basilisk_drone <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_steel_brow"));
 		b.Threat += 5;
 
+		this.m.Skills.add(this.new("scripts/skills/actives/unstoppable_charge_skill"));
+		this.m.Skills.add(this.new("scripts/skills/actives/miasma_skill"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));
+		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
+
 		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 35)
 		{
 			b.MeleeDefense += 5;
 			b.RangedDefense += 5;
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
-		}
-
-		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 50)
-		{
-			// this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_escape_artist"));
 		}
 
 	}

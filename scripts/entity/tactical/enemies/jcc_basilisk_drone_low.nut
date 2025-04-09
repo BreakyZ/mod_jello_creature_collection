@@ -202,7 +202,7 @@ this.jcc_basilisk_drone_low <- this.inherit("scripts/entity/tactical/actor", {
 				{
 					loot = this.new("scripts/items/misc/jcc_basilisk_feathers_item");
 				}
-				else if (r <= 80)
+				else if (r <= 60)
 				{
 					loot = this.new("scripts/items/loot/jcc_basilisk_talon_item");
 					loot = this.new("scripts/items/misc/jcc_basilisk_eye_item");
