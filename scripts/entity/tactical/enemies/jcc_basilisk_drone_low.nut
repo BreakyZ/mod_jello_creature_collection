@@ -258,6 +258,8 @@ this.jcc_basilisk_drone_low <- this.inherit("scripts/entity/tactical/actor", {
 		this.setSpriteOffset("status_stunned", this.createVec(0, 10));
 		this.setSpriteOffset("arrow", this.createVec(0, 10));		
 
+
+		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
 		this.m.Skills.add(this.new("scripts/skills/actives/jcc_basilisk_peck_skill"));
 		// this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_second_wind"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_overwhelm"));

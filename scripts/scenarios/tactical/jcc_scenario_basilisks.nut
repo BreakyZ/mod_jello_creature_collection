@@ -50,7 +50,9 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 			entity.setName(this.getRandomPlayerName());
 			entity.setScenarioValues();
 			items = entity.getItems();
-			items.equip(this.new("scripts/items/armor/leather_tunic"));
+			armor = this.new("scripts/items/armor/sellsword_armor");
+			armor.setUpgrade(this.new("scripts/items/armor_upgrades/jcc_basilisk_cloak"));
+			items.equip(armor);
 			items.equip(this.new("scripts/items/weapons/basilisk_hammer"));
 			items.equip(this.new("scripts/items/helmets/hood"));
 			items.addToBag(this.new("scripts/items/weapons/dagger"));

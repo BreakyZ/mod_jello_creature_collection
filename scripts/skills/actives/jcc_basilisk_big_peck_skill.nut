@@ -5,7 +5,7 @@ this.jcc_basilisk_big_peck_skill <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.jcc_basilisk_big_peck";
-		this.m.Name = "Cudgel";
+		this.m.Name = "Big Peck";
 		this.m.Description = "";
 		this.m.KilledString = "Pecked to death";
 		this.m.Icon = "skills/basilisk_big_peck.png";
