@@ -35,6 +35,7 @@ this.krampus_charge <- this.inherit("scripts/skills/skill", {
 		this.m.DirectDamageMult = 0.4;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 25;
+		this.m.ChanceDisembowel = 50;
 		this.m.MinRange = 1;
 		this.m.MaxRange = 2;
 		this.m.MaxLevelDifference = 1;

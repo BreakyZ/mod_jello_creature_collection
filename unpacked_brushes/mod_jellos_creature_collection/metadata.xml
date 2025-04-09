@@ -104,9 +104,9 @@
 <sprite id="basilisk_sentry_01_dead_javelin" offsetX="5" offsetY="20" f="64FB" ic="FF141B27" width="179" height="154" img="entity\beasts\bear_01_dead_javelin.png" left="-25" right="72" top="-16" bottom="55" />
 
 
-<sprite id="bust_basilisk_queen_body"  img="entity\beasts\bust_basilisk_queen_body.png" left="-114" right="60" top="-52" bottom="112" offsetX="-5" offsetY="35" ic="FF171844" width="174" height="214" />
-<sprite id="bust_basilisk_queen_head" offsetX="-5" offsetY="35" ic="FF171844" width="174" height="214" img="entity\beasts\bust_basilisk_queen_head.png" left="-114" right="60" top="-52" bottom="112" />
-<sprite id="bust_basilisk_queen_injury" offsetX="-5" offsetY="35" ic="FF171844" width="174" height="214" img="entity\beasts\bust_basilisk_queen_body.png" left="-114" right="60" top="-52" bottom="112"  />
+<sprite id="bust_basilisk_queen_body"  img="entity\beasts\bust_basilisk_queen_body.png" left="-112" right="62" top="-59" bottom="105" offsetX="-5" offsetY="35" ic="FF171844" width="174" height="214" />
+<sprite id="bust_basilisk_queen_head" offsetX="-5" offsetY="35" ic="FF171844" width="174" height="214" img="entity\beasts\bust_basilisk_queen_head.png" left="-112" right="62" top="-59" bottom="105" />
+<sprite id="bust_basilisk_queen_injury" offsetX="-5" offsetY="35" ic="FF171844" width="174" height="214" img="entity\beasts\bust_basilisk_queen_body.png" left="-112" right="62" top="-59" bottom="105"  />
 <sprite id="bust_basilisk_queen_body_dead" f="64FF" ic="FF295850" img="entity\beasts\bust_basilisk_queen_body_dead.png" left="-94" right="104" top="-65" bottom="64" />
 <sprite id="bust_basilisk_queen_head_dead" f="64F6" f1="-5" f2="-25" ic="FF315E5F" img="entity\beasts\bust_basilisk_queen_body_dead.png" left="-94" right="104" top="-65" bottom="64" />
 <!-- Use javs and arrows from sentry -->
