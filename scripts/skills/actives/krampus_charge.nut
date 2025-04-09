@@ -291,7 +291,7 @@ function getTooltip()
 			}
 			else
 			{
-				local p = this.getContainer().buildPropertiesForUse(this, targetEntity);
+				local p = this.getContainer().buildPropertiesForUse(this, victim);
 				local hitInfo = clone this.Const.Tactical.HitInfo;
 				local damageMult = p.MeleeDamageMult * p.DamageTotalMult;
 				local damageRegular = this.Math.rand(p.DamageRegularMin, p.DamageRegularMax) * p.DamageRegularMult * 0.5;
