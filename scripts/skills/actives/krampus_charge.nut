@@ -286,8 +286,11 @@ function getTooltip()
 			_entity.getSkills().getAttackOfOpportunity().useForFree(victim.getTile());
 			_tag.Skill.m.IsCharging = false;
 
-			if (::MSU.isNull(victim) || !victim.isAlive() || victim.isDying())
+			if (!victim.isAlive() || victim.isDying())
+			{
+				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_entity) + " charges and tramples " + this.Const.UI.getColorizedEntityName(victim));	
 				return;
+			}
 
 			local chance = 100;
 
