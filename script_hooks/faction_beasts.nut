@@ -141,7 +141,7 @@
 	]
 };
 
-::Const.Tactical.Actor.JccCytoOoze <- {
+::Const.Tactical.Actor.JccCytoplasmOoze <- {
 	XP = 200,
 	ActionPoints = 9,
 	Hitpoints = 130,

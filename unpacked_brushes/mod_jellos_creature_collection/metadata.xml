@@ -62,8 +62,9 @@
 
   <sprite id="jcc_slimeball" rotSpeed="800" ic="FF757575" width="70" height="70" img="effects\jcc_slimeball.png" top="-28" bottom="34" />
   <sprite id="bust_cyto_ooze_body" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_ooze_body.png" left="-62" right="57" top="-58" bottom="104"  />
-  <sprite id="bust_cyto_ooze_skull" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_ooze_skull.png" left="-62" right="57" top="-58" bottom="104" />
-  <sprite id="bust_cyto_ooze_dead" offsetY="35" ic="FF336182" width="340" height="558" img="  entity\beasts\bust_cyto_ooze_dead.png" left="-62" right="68" top="-51" bottom="21" />
+  <sprite id="bust_cyto_ooze_skull_01" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_ooze_skull_01.png" left="-62" right="57" top="-58" bottom="104" />
+    <sprite id="bust_cyto_ooze_skull_02" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_ooze_skull_02.png" left="-62" right="57" top="-58" bottom="104" />
+  <sprite id="bust_cyto_ooze_dead" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_ooze_dead.png" left="-62" right="68" top="-51" bottom="21" />
 
 <!-- Percht -->
 

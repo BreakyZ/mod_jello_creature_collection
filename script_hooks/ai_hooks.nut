@@ -5,6 +5,7 @@
 ::Const.AI.Agent.ID.Percht <- "agent.percht";
 ::Const.AI.Agent.ID.PerchtRanged <- "agent.percht_ranged";
 ::Const.AI.Agent.ID.BasiliskQueen <- "agent.basilisk_queen";
+::Const.AI.Agent.ID.CytoOoze <- "agent.cyto_ooze";
 
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_charge", function ( q ) {
 
@@ -23,5 +24,5 @@
     q.m.PossibleSkills.push("actives.jcc_basilisk_sentry_fowleye");
 	q.m.PossibleSkills.push("actives.jcc_basilisk_sentry_inject");
 	q.m.PossibleSkills.push("actives.split_man_cursed");
-		q.m.PossibleSkills.push("actives.cyto_gunk_shot");
+	q.m.PossibleSkills.push("actives.cyto_gunk_shot");
 });

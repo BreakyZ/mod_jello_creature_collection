@@ -168,6 +168,8 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_queen", 19, 19, 16, 16);
 		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_queen");
+		entity.setFaction(this.Const.Faction.Beasts);
 	}
 
 	function spawnEntity( _script, _minX = 10, _maxX = 28, _minY = 3, _maxY = 28 )

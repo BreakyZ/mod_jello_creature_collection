@@ -1,4 +1,4 @@
-::Const.ProjectileType.Dart <- ::Const.ProjectileType.COUNT; // rename me
+::Const.ProjectileType.JccSlimeBall <- ::Const.ProjectileType.COUNT; // rename me
 ::Const.ProjectileType.COUNT += 1;
 
 ::Const.ProjectileDecals.extend([
@@ -6,4 +6,5 @@
 ]);
 
 ::Const.ProjectileSprite.extend([
+	"jcc_slimeball"
 ]);

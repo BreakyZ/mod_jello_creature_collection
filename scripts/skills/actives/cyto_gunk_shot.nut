@@ -13,8 +13,8 @@ this.cyto_gunk_shot <- this.inherit("scripts/skills/skill", {
 		this.m.IconDisabled = "skills/active_12_sw.png";
 		this.m.Overlay = "active_12";
 		this.m.SoundOnUse = [
-			"sounds/combat/cyto_spit_01.wav",
-			"sounds/combat/cyto_spit_02.wav"
+			"sounds/enemies/cyto_spit_01.wav",
+			"sounds/enemies/cyto_spit_02.wav"
 		];
 		this.m.SoundOnHit = [
 			"sounds/combat/cleave_hit_hitpoints_01.wav",
@@ -22,10 +22,10 @@ this.cyto_gunk_shot <- this.inherit("scripts/skills/skill", {
 			"sounds/combat/cleave_hit_hitpoints_03.wav"
 		];
 		this.m.SoundOnHitShield = [
-			"sounds/combat/unhold_regenerate_01.wav",
-			"sounds/combat/unhold_regenerate_02.wav"
+			"sounds/enemies/unhold_regenerate_01.wav",
+			"sounds/enemies/unhold_regenerate_02.wav"
 		];
-		t/*his.m.SoundOnMiss = [
+		/*this.m.SoundOnMiss = [
 			"sounds/combat/dlc4/sling_miss_01.wav",
 			"sounds/combat/dlc4/sling_miss_02.wav",
 			"sounds/combat/dlc4/sling_miss_03.wav",
@@ -54,7 +54,7 @@ this.cyto_gunk_shot <- this.inherit("scripts/skills/skill", {
 		this.m.MinRange = 1;
 		this.m.MaxRange = 6;
 		this.m.MaxLevelDifference = 4;
-		this.m.ProjectileType = this.Const.ProjectileType.Stone;
+		this.m.ProjectileType = this.Const.ProjectileType.JccSlimeBall;
 		this.m.ProjectileTimeScale = 1.2;
 		this.m.IsProjectileRotated = true;
 		this.m.ChanceDecapitate = 0;

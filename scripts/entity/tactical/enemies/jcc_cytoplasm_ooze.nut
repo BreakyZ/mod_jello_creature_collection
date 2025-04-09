@@ -15,9 +15,9 @@ this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
 	}
 	function create()
 	{
-		this.m.Type = this.Const.EntityType.JccCytoOoze;
+		this.m.Type = this.Const.EntityType.JccCytoplasmOoze;
 		this.m.BloodType = this.Const.BloodType.Red;
-		this.m.XP = this.Const.Tactical.Actor.JccCytoOoze.XP;
+		this.m.XP = this.Const.Tactical.Actor.JccCytoplasmOoze.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
 		this.actor.create();
@@ -66,7 +66,7 @@ this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 0.5;
 		onArmorHitSounds[this.Const.BodyPart.Body] = this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived];
 		onArmorHitSounds[this.Const.BodyPart.Head] = this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived];
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/cytoplasm_agent");
+		this.m.AIAgent = this.new("scripts/ai/tactical/agents/cyto_ooze_agent");
 		this.m.AIAgent.setActor(this);
 	}
 
@@ -303,7 +303,7 @@ this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
 
 		this.addSprite("socket").setBrush("bust_base_beasts");
 		local skullA = this.addSprite("skullA");
-		skullA.setBrush("bust_cyto_ooze_skull" + variant);
+		skullA.setBrush("bust_cyto_ooze_skull_0" + variant);
 
 		local body = this.addSprite("body");
 		body.setBrush("bust_cyto_ooze_body");

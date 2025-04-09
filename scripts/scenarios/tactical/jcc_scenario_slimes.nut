@@ -169,6 +169,11 @@ this.jcc_scenario_slimes <- this.inherit("scripts/scenarios/tactical/scenario_te
 
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm_high");
 		entity.setFaction(this.Const.Faction.Beasts);
+
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm_ooze", 19, 19, 16, 16);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm_ooze", 19, 19, 17, 17);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm_ooze", 20, 20, 16, 16);
+		entity.setFaction(this.Const.Faction.Beasts);
 	}
 
 	function spawnEntity( _script, _minX = 10, _maxX = 28, _minY = 3, _maxY = 28 )
