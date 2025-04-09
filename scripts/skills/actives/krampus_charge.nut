@@ -1,6 +1,7 @@
 this.krampus_charge <- this.inherit("scripts/skills/skill", {
 	m = {
-		IsSpent = false
+		IsSpent = false,
+		IsCharging = false
 	},
 	function create()
 	{
@@ -31,6 +32,7 @@ this.krampus_charge <- this.inherit("scripts/skills/skill", {
 		this.m.IsAttack = true;
 		this.m.IsIgnoredAsAOO = true;
 		this.m.IsUsingActorPitch = true;
+		this.m.DirectDamageMult = 0.4;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 25;
 		this.m.MinRange = 1;
@@ -277,6 +279,12 @@ function getTooltip()
 		if (potentialVictims.len() != 0)
 		{
 			local victim = potentialVictims[this.Math.rand(0, potentialVictims.len() - 1)];
+
+			_tag.Skill.m.IsCharging = true;
+			// Make the attack happen before causing the stagger
+			_entity.getSkills().getAttackOfOpportunity().useForFree(victim.getTile());
+			_tag.Skill.m.IsCharging = false;
+
 			local chance = 100;
 
 			if (victim.isArmedWithShield())
@@ -322,13 +330,18 @@ function getTooltip()
 
 	function onAnySkillUsed( _skill, _targetEntity, _properties )
 	{
-		if (_skill == this)
+		if (this.m.IsCharging)
 		{
 			_properties.DamageRegularMin = 35;
 			_properties.DamageRegularMin = 55;
-			_properties.DamageDirectMult = 0.4;
 			_properties.DamageArmorMult = 1.1;
 		}
+	}
+
+	function onAnySkillExecuted( _skill, _targetTile, _targetEntity, _forFree )
+	{
+		if (this.m.IsCharging)
+			this.m.IsCharging = false;
 	}
 
 });
