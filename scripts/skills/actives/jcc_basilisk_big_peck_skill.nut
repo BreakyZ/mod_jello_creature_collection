@@ -8,9 +8,9 @@ this.jcc_basilisk_big_peck_skill <- this.inherit("scripts/skills/skill", {
 		this.m.Name = "Cudgel";
 		this.m.Description = "";
 		this.m.KilledString = "Pecked to death";
-		this.m.Icon = "skills/active_133.png";
-		this.m.IconDisabled = "skills/active_133_sw.png";
-		this.m.Overlay = "active_133";
+		this.m.Icon = "skills/basilisk_big_peck.png";
+		this.m.IconDisabled = "skills/basilisk_big_peck_sw.png";
+		this.m.Overlay = "basilisk_big_peck";
 		this.m.SoundOnUse = [
 			"sounds/combat/cudgel_01.wav",
 			"sounds/combat/cudgel_02.wav",

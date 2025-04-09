@@ -62,7 +62,7 @@ this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.SoundPitch = this.Math.rand(0.6, 0.9);
 		this.m.SoundVolumeOverall = 1.45;
 
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/jcc_basilisk_drone_aggressive_agent");
+		this.m.AIAgent = this.new("scripts/ai/tactical/agents/jcc_basilisk_queen_agent");
 		this.m.AIAgent.setActor(this);
 
 	}
