@@ -15,6 +15,7 @@
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_bow", function ( q ) {
 
 	q.m.PossibleSkills.push("actives.percht_shot");
+	q.m.PossibleSkills.push("actives.cyto_gunk_shot");
 });
 
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_default", function ( q ) {
@@ -24,8 +25,4 @@
     q.m.PossibleSkills.push("actives.jcc_basilisk_sentry_fowleye");
 	q.m.PossibleSkills.push("actives.jcc_basilisk_sentry_inject");
 	q.m.PossibleSkills.push("actives.split_man_cursed");
-});
-::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_bow", function ( q ) {
-
-	q.m.PossibleSkills.push("actives.cyto_gunk_shot");
 });
