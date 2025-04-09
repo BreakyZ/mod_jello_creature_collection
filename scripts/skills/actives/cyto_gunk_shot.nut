@@ -5,7 +5,7 @@ this.cyto_gunk_shot <- this.inherit("scripts/skills/skill", {
 	},
 	function create()
 	{
-		this.m.ID = "actives.gunk_shot";
+		this.m.ID = "actives.cyto_gunk_shot";
 		this.m.Name = "Gunk Shot";
 		this.m.Description = "Propel a stone towards a target with your sling. Accuracy drops sharply with distance. Can not be used while engaged in melee.";
 		this.m.KilledString = "Pummeled";
