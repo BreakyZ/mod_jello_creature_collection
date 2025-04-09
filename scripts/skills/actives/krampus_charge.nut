@@ -6,7 +6,7 @@ this.krampus_charge <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.krampus_charge";
 		this.m.Name = "Horn Charge";
-		this.m.Description = "Ram the target with all your strength, doing damage and staggering them in the process.";
+		this.m.Description = "Charge towards a position, ramming a nearby foe with all your might to damage and stagger them.";
 		this.m.Icon = "skills/krampus_charge.png";
 		this.m.IconDisabled = "skills/krampus_charge_sw.png";
 		this.m.Overlay = "krampus_charge";
