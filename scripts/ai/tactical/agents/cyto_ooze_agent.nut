@@ -21,6 +21,9 @@ this.cyto_ooze_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.Properties.OverallHideMult = 0.75;
 		this.m.Properties.EngageTargetMultipleOpponentsMult = 1.35;
 		this.m.Properties.EngageTargetArmedWithRangedWeaponMult = 1.5;
+		this.m.Properties.EngageRangeMin = 3;
+		this.m.Properties.EngageRangeMax = 7;
+		this.m.Properties.EngageRangeIdeal = 6;
 	}
 
 	function onAddBehaviors()
