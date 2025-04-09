@@ -60,7 +60,7 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 		entity.setScenarioValues();
 		items = entity.getItems();
 		items.equip(this.new("scripts/items/armor/leather_tunic"));
-		items.equip(this.new("scripts/items/weapons/pike"));
+		items.equip(this.new("scripts/items/weapons/basilisk_hammer"));
 		items.equip(this.new("scripts/items/helmets/hood"));
 		items.addToBag(this.new("scripts/items/weapons/dagger"));
 		items.equip(this.new("scripts/items/accessory/armored_wardog_item"));

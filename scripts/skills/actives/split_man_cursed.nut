@@ -17,11 +17,7 @@ this.split_man_cursed <- this.inherit("scripts/skills/skill", {
 			"sounds/combat/overhead_strike_02.wav",
 			"sounds/combat/overhead_strike_03.wav"
 		];
-		this.m.SoundOnHit = [
-			"sounds/combat/overhead_strike_hit_01.wav",
-			"sounds/combat/overhead_strike_hit_02.wav",
-			"sounds/combat/overhead_strike_hit_03.wav"
-		];
+
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.OffensiveTargeted;
 		this.m.IsSerialized = false;
@@ -115,7 +111,7 @@ this.split_man_cursed <- this.inherit("scripts/skills/skill", {
 			id = 8,
 			type = "text",
 			icon = "ui/icons/warning.png",
-			text = "Has a [color=" + this.Const.UI.Color.DamageValue + "]" + (100-this.getContainer().getActor().getCurrentProperties().Bravery)+ "%[/color] chance to damage the wielder instead. " + "(100-Resolve)"
+			text = "Has a [color=" + this.Const.UI.Color.DamageValue + "]" + (100-this.getContainer().getActor().getCurrentProperties().Bravery)+ "%[/color] chance to damage the wielder instead " + "(100-Resolve)"
 		});
 		return ret;
 	}
@@ -128,15 +124,37 @@ this.split_man_cursed <- this.inherit("scripts/skills/skill", {
 
 	function onUse( _user, _targetTile )
 	{
+		local item = this.getContainer().getActor().getItems().getItemAtSlot(this.Const.ItemSlot.Accessory); 
+		local effResolve = _user.getCurrentProperties().Bravery;
+
+		if(item!=null){
+			if(item.getID() == "accessory.undead_trophy"){
+				effResolve*=2;
+			}
+		}
+
+		//protective sigils
+
+		
+
 		local backfire = false;
 		local targetTile = _targetTile;
-		this.m.BackfireChance=100-_user.getCurrentProperties().Bravery;
+		this.m.BackfireChance=100-effResolve;
 		local backfireRng = this.Math.rand(1, 100);
 
 		if(backfireRng<=this.m.BackfireChance){
 			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + " backfires! (Chance: "+this.m.BackfireChance+" Rolled: "+backfireRng+")");
 			targetTile = _user.getTile();
 			backfire = true;
+					this.m.SoundOnHit = [
+			"sounds/enemies/devilaxe_backfire.wav"
+		];
+		}else{
+					this.m.SoundOnHit = [
+			"sounds/combat/overhead_strike_hit_01.wav",
+			"sounds/combat/overhead_strike_hit_02.wav",
+			"sounds/combat/overhead_strike_hit_03.wav"
+		];
 		}
 
 

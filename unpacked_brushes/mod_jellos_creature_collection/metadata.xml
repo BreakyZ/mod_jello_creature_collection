@@ -5,6 +5,7 @@
 <sprite id="krampus_charge" ic="FF614551" img="ui\skills\krampus_charge.png" />
 <sprite id="slime_smack" ic="FF614551" img="ui\skills\slime_smack.png" />
 <sprite id="split_man_cursed" ic="FF614551" img="ui\skills\split_man_cursed.png" />
+<sprite id="basilisk_hammer_01" ic="FF614551" img="ui\skills\basilisk_hammer_01.png" />
 
 
 <!-- Worldmap -->
@@ -118,8 +119,8 @@
   <sprite id="icon_percht_flail_01_bloodied" offsetY="35" ic="FF2D333F" width="130" height="142" img="icons\icon_percht_flail_01_bloodied.png" left="0" right="66" top="-73" bottom="17" />
   <sprite id="icon_percht_bow" offsetY="35" ic="FF3B5263" width="104" height="142" img="icons\icon_percht_bow.png" left="-14" right="62" top="-76" bottom="34" />
   
-  <sprite id="icon_becdebasilisk" img="icons\icon_becdebasilisk.png" ic="FF3B5263" left="-94" right="39" top="-67" bottom="97" />    
-  <sprite id="icon_becdebasilisk_bloodied" img="icons\icon_becdebasilisk_bloodied.png" ic="FF3B5263" left="-94" right="39" top="-67" bottom="97" />
+  <sprite id="icon_becdebasilisk" img="icons\icon_becdebasilisk.png" offsetY="35" ic="FF424952" width="150" height="160" left="-87" right="33" top="-62" bottom="92" />    
+  <sprite id="icon_becdebasilisk_bloodied" img="icons\icon_becdebasilisk_bloodied.png" offsetY="35" ic="FF424952" width="150" height="160"  left="-87" right="33" top="-62" bottom="92" />
   
   <sprite id="icon_jcc_devilaxe" img="icons\icon_jcc_devilaxe.png" ic="FF3B5263" left="-71" right="15" top="-55" bottom="61" offsetY="35" width="130" height="142" />
   <sprite id="icon_jcc_devilaxe_bloodied" img="icons\icon_jcc_devilaxe_bloodied.png" ic="FF3B5263" left="-71" right="15" top="-55" bottom="61" offsetY="35" width="130" height="142" />

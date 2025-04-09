@@ -11,9 +11,9 @@ this.krampus_charge <- this.inherit("scripts/skills/skill", {
 		this.m.IconDisabled = "skills/krampus_charge_sw.png";
 		this.m.Overlay = "krampus_charge";
 		this.m.SoundOnUse = [
-			"sounds/enemies/percht_charge1.wav",
-			"sounds/enemies/percht_charge2.wav",
-			"sounds/enemies/percht_charge3.wav"
+			"sounds/enemies/percht_charge01.wav",
+			"sounds/enemies/percht_charge02.wav",
+			"sounds/enemies/percht_charge03.wav"
 		];
 		this.m.SoundOnHit = [
 			"sounds/combat/knockback_hit_01.wav",
