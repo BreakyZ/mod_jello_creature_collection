@@ -92,14 +92,12 @@ this.basilisk_hammer <- this.inherit("scripts/items/weapons/weapon", {
 		}
 
 		this.spawnIcon("status_effect_54", _target.getTile());
-		local poison = ::Legends.Effects.get(_target, ::Legends.Effect.LegendRedbackSpiderPoison);
-		local actor = this.getContainer().getActor();
 
-		local poison = _targetEntity.getSkills().getSkillByID("effects.jcc_basilisk_poison");
+		local poison = _target.getSkills().getSkillByID("effects.jcc_basilisk_poison");
 
 		if (poison == null)
 		{
-			_targetEntity.getSkills().add(this.new("scripts/skills/effects/jcc_basilisk_poison_effect"));
+			_target.getSkills().add(this.new("scripts/skills/effects/jcc_basilisk_poison_effect"));
 		}
 		else
 		{
