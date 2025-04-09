@@ -286,6 +286,9 @@ function getTooltip()
 			_entity.getSkills().getAttackOfOpportunity().useForFree(victim.getTile());
 			_tag.Skill.m.IsCharging = false;
 
+			if (::MSU.isNull(victim) || !victim.isAlive() || victim.isDying())
+				return;
+
 			local chance = 100;
 
 			if (victim.isArmedWithShield())
