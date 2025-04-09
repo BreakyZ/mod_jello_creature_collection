@@ -1,1 +1,4 @@
-mod_jello_creature_collection.zip
+*.zip
+*.sublime-workspace
+*.sublime-project
+.bbbuilder/
