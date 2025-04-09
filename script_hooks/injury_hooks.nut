@@ -2,7 +2,7 @@
 
 
 ::Const.Injury.SlimeBodyInjuries <- clone ::Const.Injury.BluntBody;
-::Const.Injury.SlimeBodyInjuries.push([{
+::Const.Injury.SlimeBodyInjuries.push({
                 ID = "injury.exposed_ribs",
                 Threshold = 0.25,
                 Script = "injury/exposed_ribs_injury"
@@ -21,7 +21,7 @@
                 ID = "injury.burnt_hands",
                 Threshold = 0.5,
                 Script = "injury/burnt_hands_injury"
-        }]);
+        });
 
 ::Const.Injury.SlimeHeadInjuries <- clone ::Const.Injury.BluntHead;
 ::Const.Injury.SlimeHeadInjuries.push({
