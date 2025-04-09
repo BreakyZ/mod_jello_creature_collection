@@ -119,3 +119,45 @@
 		0
 	]
 };
+
+::Const.Tactical.Actor.JccCytoplasm <- {
+	XP = 150,
+	ActionPoints = 8,
+	Hitpoints = 110,
+	Bravery = 90,
+	Stamina = 100,
+	MeleeSkill = 65,
+	RangedSkill = 60,
+	MeleeDefense = 10,
+	RangedDefense = 5,
+	Initiative = 70,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	FatigueRecoveryRate = 25,
+	Vision = 7,
+	Armor = [
+		0,
+		0
+	]
+};
+
+::Const.Tactical.Actor.JccCytoOoze <- {
+	XP = 200,
+	ActionPoints = 9,
+	Hitpoints = 130,
+	Bravery = 90,
+	Stamina = 125,
+	MeleeSkill = 65,
+	RangedSkill = 60,
+	MeleeDefense = 10,
+	RangedDefense = 5,
+	Initiative = 70,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	FatigueRecoveryRate = 25,
+	Vision = 7,
+	Armor = [
+		0,
+		0
+	]
+};

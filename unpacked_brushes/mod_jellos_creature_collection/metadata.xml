@@ -58,6 +58,13 @@
 
 <sprite id="bust_cytoplasm_dead" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_dead.png" left="-61" right="63" top="-52" bottom="20" />
 
+<!-- Green Cytoplasm -->
+
+  <sprite id="jcc_slimeball" rotSpeed="800" ic="FF757575" width="70" height="70" img="effects\jcc_slimeball.png" top="-28" bottom="34" />
+  <sprite id="bust_cyto_ooze_body" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_ooze_body.png" left="-62" right="57" top="-58" bottom="104"  />
+  <sprite id="bust_cyto_ooze_skull" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_ooze_skull.png" left="-62" right="57" top="-58" bottom="104" />
+  <sprite id="bust_cyto_ooze_dead" offsetY="35" ic="FF336182" width="340" height="558" img="  entity\beasts\bust_cyto_ooze_dead.png" left="-62" right="68" top="-51" bottom="21" />
+
 <!-- Percht -->
 
 <sprite id="bust_percht_body_01" offsetY="30" offsetX="-2" ic="FF2A2D2F" width="104" height="142" img="entity\beasts\bust_percht_body_01.png" left="-56" right="57" top="-57" bottom="100" />

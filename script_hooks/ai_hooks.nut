@@ -23,4 +23,5 @@
     q.m.PossibleSkills.push("actives.jcc_basilisk_sentry_fowleye");
 	q.m.PossibleSkills.push("actives.jcc_basilisk_sentry_inject");
 	q.m.PossibleSkills.push("actives.split_man_cursed");
+		q.m.PossibleSkills.push("actives.cyto_gunk_shot");
 });
