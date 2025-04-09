@@ -127,11 +127,12 @@ this.cyto_gunk_shot <- this.inherit("scripts/skills/skill", {
 		return this.skill.isUsable() && (!this.Tactical.isActive() || !this.getContainer().getActor().getTile().hasZoneOfControlOtherThan(this.getContainer().getActor().getAlliedFactions()));
 	}
 
+	/*
 	function onAfterUpdate( _properties )
 	{
-		this.m.AdditionalAccuracy = this.m.Item.getAdditionalAccuracy();
-		this.m.FatigueCostMult = _properties.IsSpecializedInThrowing ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
-	}
+		//this.m.AdditionalAccuracy = this.m.Item.getAdditionalAccuracy();
+		//this.m.FatigueCostMult = _properties.IsSpecializedInThrowing ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
+	}*/
 
 	function onUse( _user, _targetTile )
 	{
