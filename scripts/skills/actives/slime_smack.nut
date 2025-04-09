@@ -27,8 +27,8 @@ this.slime_smack <- this.inherit("scripts/skills/skill", {
 		this.m.IsAttack = true;
 		this.m.IsIgnoredAsAOO = true;
 		this.m.IsAOE = true;
-		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
-		this.m.InjuriesOnHead = this.Const.Injury.BluntHead;
+		this.m.InjuriesOnBody = this.Const.Injury.SlimeBody;
+		this.m.InjuriesOnHead = this.Const.Injury.SlimeHead;
 		this.m.HitChanceBonus = 0;
 		this.m.DirectDamageMult = 0.35;
 		this.m.ActionPointCost = 5;
