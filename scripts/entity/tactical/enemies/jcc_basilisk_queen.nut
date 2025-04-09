@@ -197,10 +197,10 @@ this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
 				}
 				else if (r <= 80)
 				{
-					loot = this.new("scripts/items/loot/jcc_basilisk_crown_item");
+					
 					loot = this.new("scripts/items/misc/jcc_basilisk_eye_item");
 				}
-
+				loot = this.new("scripts/items/loot/jcc_basilisk_crown_item");
 				if (loot != null)
 				{
 					loot.drop(_tile);

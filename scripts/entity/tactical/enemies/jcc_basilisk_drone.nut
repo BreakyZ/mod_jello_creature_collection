@@ -62,7 +62,7 @@ this.jcc_basilisk_drone <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.SoundPitch = this.Math.rand(0.9, 1.1);
 		this.m.SoundVolumeOverall = 1.25;
 
-		if (this.Math.rand(1, 100) <= 40)
+		if (this.Math.rand(1, 100) <= 30)
 		{
 			this.m.AIAgent = this.new("scripts/ai/tactical/agents/jcc_basilisk_drone_agent"); //normal	
 		}
@@ -265,6 +265,7 @@ this.jcc_basilisk_drone <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_berserk"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_steel_brow"));
+		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
 		b.Threat += 5;
 
 		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 35)
