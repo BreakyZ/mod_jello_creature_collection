@@ -41,6 +41,13 @@ this.split_man_cursed <- this.inherit("scripts/skills/skill", {
 
 	function getTooltip()
 	{
+
+		local backfireTT = (100-this.getContainer().getActor().getCurrentProperties().Bravery);
+
+		if(backfireTT <= 0){
+			backfireTT = 1;
+		}
+
 		local p = this.getContainer().buildPropertiesForUse(this, null);
 		local mult = 1.5;
 		local damage_regular_min = this.Math.floor(p.DamageRegularMin * p.DamageRegularMult * p.DamageTotalMult * mult * p.MeleeDamageMult);
@@ -111,7 +118,7 @@ this.split_man_cursed <- this.inherit("scripts/skills/skill", {
 			id = 8,
 			type = "text",
 			icon = "ui/icons/warning.png",
-			text = "Has a [color=" + this.Const.UI.Color.DamageValue + "]" + (100-this.getContainer().getActor().getCurrentProperties().Bravery)+ "%[/color] chance to damage the wielder instead " + "(100-Resolve)"
+			text = "Has a [color=" + this.Const.UI.Color.DamageValue + "]" + backfireTT + "%[/color] chance to damage the wielder instead " + "(100-Resolve)"
 		});
 		return ret;
 	}
@@ -141,6 +148,10 @@ this.split_man_cursed <- this.inherit("scripts/skills/skill", {
 		local targetTile = _targetTile;
 		this.m.BackfireChance=100-effResolve;
 		local backfireRng = this.Math.rand(1, 100);
+
+		if(this.m.BackfireChance<=0){
+			this.m.BackfireChance=1;
+		}
 
 		if(backfireRng<=this.m.BackfireChance){
 			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + " backfires! (Chance: "+this.m.BackfireChance+" Rolled: "+backfireRng+")");
