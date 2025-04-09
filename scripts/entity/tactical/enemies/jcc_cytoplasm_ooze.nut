@@ -16,7 +16,7 @@ this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
 	function create()
 	{
 		this.m.Type = this.Const.EntityType.JccCytoplasmOoze;
-		this.m.BloodType = this.Const.BloodType.Red;
+		this.m.BloodType = this.Const.BloodType.Green;
 		this.m.XP = this.Const.Tactical.Actor.JccCytoplasmOoze.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
@@ -178,7 +178,7 @@ this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
 			local decal;
 			local skin = this.getSprite("body");
 			this.m.IsCorpseFlipped = flip;
-			decal = _tile.spawnDetail("bust_cytoplasm_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
+			decal = _tile.spawnDetail("bust_cyto_ooze_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = skin.Color;
 			decal.Saturation = skin.Saturation;
 			decal.Scale = 0.9;

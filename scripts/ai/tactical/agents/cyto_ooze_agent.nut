@@ -40,10 +40,6 @@ this.cyto_ooze_agent <- this.inherit("scripts/ai/tactical/agent", {
 	function onUpdate()
 	{
 
-		if(this.getActor().getSize()>=3)
-		{
-			this.m.Properties.PreferCarefulEngage = false;
-		}
 	}
 
 });
