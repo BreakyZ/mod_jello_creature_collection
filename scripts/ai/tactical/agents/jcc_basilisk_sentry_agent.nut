@@ -19,6 +19,9 @@ this.jcc_basilisk_sentry_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.Properties.OverallDefensivenessMult = 1.0;
 		this.m.Properties.OverallFormationMult = 1.1;
 
+		this.m.Properties.EngageRangeIdeal = 2;
+		this.m.Properties.EngageRangeMax = 2;
+
 		this.m.Properties.EngageTargetMultipleOpponentsMult = 1.35;
 		this.m.Properties.EngageFlankingMult = 1.0;
 		this.m.Properties.EngageTargetAlreadyBeingEngagedMult = 1.0;
