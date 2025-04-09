@@ -4,7 +4,7 @@ this.percht_spetum <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.percht_spetum";
-		this.m.Name = "Ribspreader";
+		this.m.Name = "Flesh Prodder";
 		this.m.Description = "A heavy tree-limb ending in a wide, two-pronged speartip. The added weight makes it difficult to hold a spearwall.";
 		this.m.Categories = "Spear, Two-Handed";
 		this.m.IconLarge = "weapons/melee/percht_spetum_01.png";

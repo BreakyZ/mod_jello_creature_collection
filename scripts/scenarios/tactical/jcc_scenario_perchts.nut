@@ -115,8 +115,7 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 		entity.setScenarioValues();
 		items = entity.getItems();
 		items.equip(this.new("scripts/items/armor/mail_shirt"));
-		items.equip(this.new("scripts/items/weapons/hand_axe"));
-		items.equip(this.new("scripts/items/shields/kite_shield"));
+		items.equip(this.new("scripts/items/weapons/percht_axe"));
 		entity = this.spawnEntity("scripts/entity/tactical/player", 13, 13, 14, 14);
 		
 		this.World.getPlayerRoster().add(entity);
