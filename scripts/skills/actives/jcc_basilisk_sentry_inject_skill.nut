@@ -34,8 +34,8 @@ this.jcc_basilisk_sentry_inject_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsAttack = true;
 		// this.m.IsTooCloseShown = true;
 		// this.m.IsWeaponSkill = true;
-		this.m.InjuriesOnBody = this.Const.Injury.BluntBody;
-		this.m.InjuriesOnHead = this.Const.Injury.BluntHead; //check below
+		this.m.InjuriesOnBody = this.Const.Injury.PiercingBody;
+		this.m.InjuriesOnHead = this.Const.Injury.PiercingHead; //check below
 		this.m.DirectDamageMult = 0.3; //ignore armour multi.
 		this.m.HitChanceBonus = 0;
 		this.m.ActionPointCost = 6;

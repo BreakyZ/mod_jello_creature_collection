@@ -4,10 +4,6 @@ this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
 		Size = 1,
 		Variant = 1,
 		ScaleStartTime = 0,
-		BackupFaction = 0,
-		BackupWorldParty = null,
-		IsShrinking = false,
-		IsSpawningOnTile = false
 	},
 	function getSize()
 	{
@@ -56,10 +52,6 @@ this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/cyto_move_03.wav",
 			"sounds/enemies/cyto_move_04.wav",
 			"sounds/enemies/cyto_move_05.wav"
-		];
-		this.m.Sound[this.Const.Sound.ActorEvent.Other1] = [
-			"sounds/enemies/slime_fuse_01.wav",
-			"sounds/enemies/slime_fuse_02.wav"
 		];
 		this.m.SoundPitch = 1.1;
 		local onArmorHitSounds = this.getItems().getAppearance().ImpactSound;
