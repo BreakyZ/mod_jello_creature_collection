@@ -25,6 +25,15 @@
 	Script = "scripts/entity/tactical/enemies/jcc_basilisk_sentry"
 };
 
+::Const.World.Spawn.Troops.JccBasiliskQueen <- {
+	ID = this.Const.EntityType.JccBasiliskQueen,
+	Variant = 0,
+	Strength = 30,
+	Cost = 50,
+	Row = 2,
+	Script = "scripts/entity/tactical/enemies/jcc_basilisk_queen"
+};
+
 ::Const.World.Spawn.Troops.JccPercht <- {
 	ID = this.Const.EntityType.JccPercht,
 	Variant = 1,
