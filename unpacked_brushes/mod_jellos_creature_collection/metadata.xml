@@ -7,10 +7,15 @@
 
 <!-- Worldmap -->
 
-<sprite id="figure_percht_01" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_percht_01.png" left="-17" right="21" top="-39" bottom="7" />
-<sprite id="figure_cytoplasm_01" offsetY="30" ic="FF36678A" width="68" height="106" img="world\party\figure_cytoplasm_01.png" left="-17" right="19" top="-41" bottom="5" />
-<sprite id="figure_cytoplasm_02" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_02.png" left="-26" right="30" top="-46" bottom="8" />
-<sprite id="figure_cytoplasm_03" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_03.png" left="-26" right="30" top="-46" bottom="8" />
+<sprite id="figure_percht_01" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_percht_01.png" />
+
+<sprite id="figure_cytoplasm_01" offsetY="30" ic="FF36678A" width="68" height="106" img="world\party\figure_cytoplasm_01.png" />
+<sprite id="figure_cytoplasm_02" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_02.png"  />
+<sprite id="figure_cytoplasm_03" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_03.png"  />
+
+<sprite id="figure_basilisk_01" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_basilisk_01.png"  />
+<sprite id="figure_basilisk_02" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_basilisk_02.png"  />
+<sprite id="figure_basilisk_03" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_basilisk_03.png"  />
 
 <sprite id="percht_camp_01" ic="FF38484E" width="218" height="180" img="world\location\percht_camp_01.png" left="-107" right="110" top="-91" bottom="88" />
 
