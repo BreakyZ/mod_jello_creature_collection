@@ -260,10 +260,17 @@ this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_steel_brow"));
 		b.Threat += 5;
 
-		this.m.Skills.add(this.new("scripts/skills/actives/unstoppable_charge_skill"));
-		this.m.Skills.add(this.new("scripts/skills/actives/miasma_skill"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));
 		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_lone_wolf"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_fast_adaption"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_battle_forged"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_fearsome"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_underdog"));
+
+		this.m.Skills.add(this.new("scripts/skills/actives/unstoppable_charge_skill"));
+		this.m.Skills.add(this.new("scripts/skills/actives/jcc_basilisk_big_peck_skill"));
+		this.m.Skills.add(this.new("scripts/skills/actives/miasma_skill"));
 
 		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 35)
 		{

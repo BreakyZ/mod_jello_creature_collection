@@ -58,6 +58,26 @@
 	]
 };
 
+::Const.Tactical.Actor.JccBasiliskQueen <- {
+	XP = 800,
+	ActionPoints = 12,
+	Hitpoints = 1000,
+	Bravery = 180,
+	Stamina = 300,
+	MeleeSkill = 75,
+	RangedSkill = 0,
+	MeleeDefense = 10,
+	RangedDefense = -10,
+	Initiative = 85,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	FatigueRecoveryRate = 30,
+	Armor = [
+		180,
+		180
+	]
+};
+
 ::Const.Tactical.Actor.JccPercht <- {
 	XP = 355,
 	ActionPoints = 10,
