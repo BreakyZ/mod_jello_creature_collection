@@ -5,7 +5,7 @@ this.cyto_ooze_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.agent.create();
 		this.m.ID = this.Const.AI.Agent.ID.CytoOoze;
 		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.Defend] = 1.0;
-		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.EngageMelee] = 0.0;
+		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.EngageMelee] = 1.0;
 		this.m.Properties.IsRangedUnit = true;
 		this.m.Properties.TargetPriorityHitchanceMult = 0.6;
 		this.m.Properties.TargetPriorityHitpointsMult = 0.2;
@@ -16,14 +16,22 @@ this.cyto_ooze_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.Properties.TargetPriorityFinishOpponentMult = 3.0;
 		this.m.Properties.TargetPriorityCounterSkillsMult = 0.5;
 		this.m.Properties.TargetPriorityArmorMult = 0.5;
-		this.m.Properties.OverallDefensivenessMult = 1.1;
-		this.m.Properties.OverallFormationMult = 1.0;
 		this.m.Properties.OverallHideMult = 0.75;
 		this.m.Properties.EngageTargetMultipleOpponentsMult = 1.35;
 		this.m.Properties.EngageTargetArmedWithRangedWeaponMult = 1.5;
 		this.m.Properties.EngageRangeMin = 3;
 		this.m.Properties.EngageRangeMax = 7;
 		this.m.Properties.EngageRangeIdeal = 6;
+
+		;
+		this.m.Properties.TargetPriorityMoraleMult = 1.0;
+		this.m.Properties.TargetPriorityBraveryMult = 1.0;
+		this.m.Properties.OverallDefensivenessMult = 0.0;
+		this.m.Properties.OverallFormationMult = 1.35;
+		this.m.Properties.OverallMagnetismMult = 1.35;
+
+		this.m.Properties.EngageTargetAlreadyBeingEngagedMult = 0.75;
+		this.m.Properties.EngageFlankingMult = 1.25;
 	}
 
 	function onAddBehaviors()

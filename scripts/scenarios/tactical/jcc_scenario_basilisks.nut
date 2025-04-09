@@ -166,9 +166,11 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_sentry");
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_queen", 19, 19, 16, 16);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_queen", 20, 20, 16, 16);
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_queen");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone");
 		entity.setFaction(this.Const.Faction.Beasts);
 	}
 
