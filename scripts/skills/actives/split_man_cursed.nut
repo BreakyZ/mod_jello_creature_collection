@@ -140,7 +140,11 @@ this.split_man_cursed <- this.inherit("scripts/skills/skill", {
 			}
 		}
 
-		//protective sigils
+		local armor = this.getContainer().getActor().getItems().getItemAtSlot(this.Const.ItemSlot.Body);
+		if (armor != null && armor.getUpgrade() != null && armor.getUpgrade().getID() == "armor_upgrade.protective_runes"){
+			effResolve+=20;
+		}
+		
 
 		
 

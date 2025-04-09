@@ -14,8 +14,8 @@ this.cytoplasm_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.Properties.TargetPriorityFinishOpponentMult = 3.0;
 		this.m.Properties.TargetPriorityCounterSkillsMult = 1.0;
 		this.m.Properties.TargetPriorityArmorMult = 1.0;
-		this.m.Properties.TargetPriorityMoraleMult = 0.0;
-		this.m.Properties.TargetPriorityBraveryMult = 0.0;
+		this.m.Properties.TargetPriorityMoraleMult = 1.0;
+		this.m.Properties.TargetPriorityBraveryMult = 1.0;
 		this.m.Properties.OverallDefensivenessMult = 0.0;
 		this.m.Properties.OverallFormationMult = 1.35;
 		this.m.Properties.OverallMagnetismMult = 1.35;
