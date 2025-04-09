@@ -9,10 +9,10 @@ this.jcc_basilisk_cloak <- this.inherit("scripts/items/armor_upgrades/armor_upgr
 		this.m.Description = "A cloak made from feathers of a Basilisk. The weave offers exceptional padding and protects the midsection and mouth from poison.";
 		this.m.ArmorDescription = "A cloak made from feathers of a Basilisk. The weave offers exceptional padding and protects the midsection and mouth from poison.";
 		
-		this.m.Icon = "jcc_armor/upgrades/upgrade_basilisk.png";
+		this.m.Icon = "upgrades/upgrade_basilisk.png";
 		this.m.IconLarge = this.m.Icon;
 		this.m.OverlayIcon = this.m.Icon; 
-		this.m.OverlayIconLarge = "jcc_armor/upgrades/inventory_upgrade_basilisk.png"; 
+		this.m.OverlayIconLarge = "upgrades/inventory_upgrade_basilisk.png"; 
 		this.m.SpriteFront = null;
 		this.m.SpriteBack = "upgrade_basilisk_back";
 		this.m.SpriteDamagedFront = null;
