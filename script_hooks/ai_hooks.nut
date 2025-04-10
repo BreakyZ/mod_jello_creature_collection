@@ -17,6 +17,12 @@ local count = ::Const.AI.Behavior.ID.COUNT;
 ::Const.AI.Behavior.ID.MoveToMergeCyto <- count++;
 ::Const.AI.Behavior.ID.COUNT = count;
 
+::Const.AI.Behavior.Order.SlimeSmack <- 28;
+::Const.AI.Behavior.Order.CallOfTheWild <- 39;
+::Const.AI.Behavior.Order.KrampusCharge <- 4;
+::Const.AI.Behavior.Order.MergeCyto <- 100;
+::Const.AI.Behavior.Order.MoveToMergeCyto <- 11;
+
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_charge", function ( q ) {
 
 	q.m.PossibleSkills.push("actives.krampus_charge");
