@@ -14,6 +14,11 @@
 	q.m.PossibleSkills.push("actives.krampus_charge");
 });
 
+::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_engage_melee", function ( q ) {
+
+	q.m.PossibleSkills.push("actives.krampus_charge");
+});
+
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_throw_net", function ( q ) {
 
 	q.m.PossibleSkills.push("actives.jcc_cyto_engulf_skill");

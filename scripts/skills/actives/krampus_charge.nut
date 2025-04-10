@@ -17,9 +17,9 @@ this.krampus_charge <- this.inherit("scripts/skills/skill", {
 			"sounds/enemies/percht_charge03.wav"
 		];
 		this.m.SoundOnHit = [
-			"sounds/combat/knockback_hit_01.wav",
-			"sounds/combat/knockback_hit_02.wav",
-			"sounds/combat/knockback_hit_03.wav"
+			"sounds/combat/shatter_hit_01.wav",
+			"sounds/combat/shatter_hit_02.wav",
+			"sounds/combat/shatter_hit_03.wav"
 		];
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.UtilityTargeted;
@@ -32,6 +32,7 @@ this.krampus_charge <- this.inherit("scripts/skills/skill", {
 		this.m.IsAttack = true;
 		this.m.IsIgnoredAsAOO = true;
 		this.m.IsUsingActorPitch = true;
+		this.m.IsWeaponSkill = true;
 		this.m.DirectDamageMult = 0.4;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 25;
@@ -43,6 +44,7 @@ this.krampus_charge <- this.inherit("scripts/skills/skill", {
 
 function getTooltip()
 	{
+		local ret = this.getDefaultUtilityTooltip();
 		local p = this.getContainer().getActor().getCurrentProperties();
 		return [
 			{
@@ -152,7 +154,7 @@ function getTooltip()
 			}
 		}
 
-		this.Tactical.getNavigator().teleport(_user, _targetTile, this.onTeleportDone, tag, false, 2.0);
+		this.Tactical.getNavigator().teleport(_user, _targetTile, this.onTeleportDone.bindenv(this), tag, false, 2.0);
 		return true;
 	}
 
@@ -281,15 +283,37 @@ function getTooltip()
 		{
 			local victim = potentialVictims[this.Math.rand(0, potentialVictims.len() - 1)];
 
-			_tag.Skill.m.IsCharging = true;
-			// Make the attack happen before causing the stagger
-			_entity.getSkills().getAttackOfOpportunity().useForFree(victim.getTile());
-			_tag.Skill.m.IsCharging = false;
+			local success = this.Math.rand(1, 100) <= this.getHitchance(victim);
 
-			if (!victim.isAlive() || victim.isDying())
+			if (!success)
 			{
-				this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_entity) + " charges and tramples " + this.Const.UI.getColorizedEntityName(victim));	
-				return;
+				victim.onMissed(this.getContainer().getActor(), this);
+			}
+			else
+			{
+				local p = this.getContainer().buildPropertiesForUse(this, victim);
+				local hitInfo = clone this.Const.Tactical.HitInfo;
+				local damageMult = p.MeleeDamageMult * p.DamageTotalMult;
+				local damageRegular = this.Math.rand(p.DamageRegularMin, p.DamageRegularMax) * p.DamageRegularMult * 0.5;
+				local damageArmor = this.Math.rand(p.DamageRegularMin, p.DamageRegularMax) * p.DamageArmorMult * 0.5;
+				local damageDirect = this.Math.minf(1.0, p.DamageDirectMult * (this.m.DirectDamageMult + p.DamageDirectAdd + p.DamageDirectMeleeAdd));
+				hitInfo.DamageRegular = damageRegular * damageMult;
+				hitInfo.DamageArmor = damageArmor * damageMult;
+				hitInfo.DamageDirect = damageDirect;
+				hitInfo.BodyPart = this.Const.BodyPart.Body;
+				hitInfo.BodyDamageMult = 1.0;
+				hitInfo.FatalityChanceMult = 0.0;
+				victim.onDamageReceived(this.getContainer().getActor(), this, hitInfo);
+
+				if (!victim.isAlive() || victim.isDying())
+				{
+					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_entity) + " charges and tramples " + this.Const.UI.getColorizedEntityName(victim));	
+					return;
+				}
+				else
+				{
+
+				}
 			}
 
 			local chance = 100;
@@ -335,21 +359,13 @@ function getTooltip()
 		}
 	}
 
-	function onAnySkillUsed( _skill, _targetEntity, _properties )
+	function onAnySkillUsed(_skill, _targetEntity, _properties)
 	{
-		if (this.m.IsCharging)
-		{
-			_properties.DamageRegularMin = 35;
-			_properties.DamageRegularMin = 55;
-			_properties.DamageArmorMult = 1.1;
-		}
+		if (_skill == this)
+        {
+            _properties.DamageRegularMin = 35;
+            _properties.DamageRegularMin = 55;
+            _properties.DamageArmorMult = 1.1;
+        }
 	}
-
-	function onAnySkillExecuted( _skill, _targetTile, _targetEntity, _forFree )
-	{
-		if (this.m.IsCharging)
-			this.m.IsCharging = false;
-	}
-
 });
-

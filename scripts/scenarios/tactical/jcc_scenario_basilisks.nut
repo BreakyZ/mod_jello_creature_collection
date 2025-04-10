@@ -32,9 +32,15 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 		local armor;
 		local items;
 		local upgrade;
+		local banner;
 
-				//player units
+		//player units
 		{
+
+			banner = this.new("scripts/items/tools/player_banner");
+			banner.m.Variant = 1;
+			banner.updateVariant();
+
 			entity = this.spawnEntity("scripts/entity/tactical/player", 12, 12, 15, 15);
 			this.World.getPlayerRoster().add(entity);
 			entity.setName(this.getRandomPlayerName());
@@ -42,8 +48,8 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 			items = entity.getItems();
 			items.equip(this.new("scripts/items/helmets/kettle_hat"));
 			items.equip(this.new("scripts/items/armor/padded_leather"));
-			items.equip(this.new("scripts/items/weapons/pike"));
-			items.equip(this.new("scripts/items/accessory/wardog_item"));
+			items.equip(banner);
+			items.equip(this.new("scripts/items/accessory/hexen_trophy_item"));
 			
 			entity = this.spawnEntity("scripts/entity/tactical/player", 12, 12, 13, 13);
 			this.World.getPlayerRoster().add(entity);
@@ -113,6 +119,7 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 			armor.setUpgrade(upgrade);
 			items.equip(armor);
 			items.equip(this.new("scripts/items/weapons/percht_axe"));
+			items.equip(this.new("scripts/items/accessory/ghoul_trophy_item"));
 			
 			entity = this.spawnEntity("scripts/entity/tactical/player", 13, 13, 14, 14);
 			this.World.getPlayerRoster().add(entity);

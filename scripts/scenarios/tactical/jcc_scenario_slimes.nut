@@ -32,9 +32,15 @@ this.jcc_scenario_slimes <- this.inherit("scripts/scenarios/tactical/scenario_te
 		local armor;
 		local items;
 		local upgrade;
+		local banner;
 
 		//player units
 		{
+
+			banner = this.new("scripts/items/tools/player_banner");
+			banner.m.Variant = 1;
+			banner.updateVariant();
+
 			entity = this.spawnEntity("scripts/entity/tactical/player", 12, 12, 15, 15);
 			this.World.getPlayerRoster().add(entity);
 			entity.setName(this.getRandomPlayerName());
@@ -42,15 +48,17 @@ this.jcc_scenario_slimes <- this.inherit("scripts/scenarios/tactical/scenario_te
 			items = entity.getItems();
 			items.equip(this.new("scripts/items/helmets/kettle_hat"));
 			items.equip(this.new("scripts/items/armor/padded_leather"));
-			items.equip(this.new("scripts/items/weapons/pike"));
-			items.equip(this.new("scripts/items/accessory/wardog_item"));
+			items.equip(banner);
+			items.equip(this.new("scripts/items/accessory/hexen_trophy_item"));
 			
 			entity = this.spawnEntity("scripts/entity/tactical/player", 12, 12, 13, 13);
 			this.World.getPlayerRoster().add(entity);
 			entity.setName(this.getRandomPlayerName());
 			entity.setScenarioValues();
 			items = entity.getItems();
-			items.equip(this.new("scripts/items/armor/leather_tunic"));
+			armor = this.new("scripts/items/armor/sellsword_armor");
+			armor.setUpgrade(this.new("scripts/items/armor_upgrades/jcc_basilisk_cloak"));
+			items.equip(armor);
 			items.equip(this.new("scripts/items/weapons/basilisk_hammer"));
 			items.equip(this.new("scripts/items/helmets/hood"));
 			items.addToBag(this.new("scripts/items/weapons/dagger"));
@@ -111,6 +119,7 @@ this.jcc_scenario_slimes <- this.inherit("scripts/scenarios/tactical/scenario_te
 			armor.setUpgrade(upgrade);
 			items.equip(armor);
 			items.equip(this.new("scripts/items/weapons/percht_axe"));
+			items.equip(this.new("scripts/items/accessory/ghoul_trophy_item"));
 			
 			entity = this.spawnEntity("scripts/entity/tactical/player", 13, 13, 14, 14);
 			this.World.getPlayerRoster().add(entity);
@@ -119,8 +128,7 @@ this.jcc_scenario_slimes <- this.inherit("scripts/scenarios/tactical/scenario_te
 			items = entity.getItems();
 			items.equip(this.new("scripts/items/helmets/hood"));
 			items.equip(this.new("scripts/items/armor/mail_shirt"));
-			items.equip(this.new("scripts/items/weapons/boar_spear"));
-			items.equip(this.new("scripts/items/shields/wooden_shield"));
+			items.equip(this.new("scripts/items/weapons/jcc_slime_warbrand"));
 			
 			entity = this.spawnEntity("scripts/entity/tactical/player", 13, 13, 15, 15);
 			this.World.getPlayerRoster().add(entity);
@@ -149,7 +157,7 @@ this.jcc_scenario_slimes <- this.inherit("scripts/scenarios/tactical/scenario_te
 			items = entity.getItems();
 			items.equip(this.new("scripts/items/helmets/mail_coif"));
 			items.equip(this.new("scripts/items/armor/coat_of_plates"));
-			items.equip(this.new("scripts/items/weapons/greatsword"));
+			items.equip(this.new("scripts/items/weapons/jcc_slime_bardiche"));
 		}
 
 
