@@ -1,7 +1,7 @@
  
-::ModJelloCreatureCollection.HooksMod.hook("scripts/items/ammo/legendary/quiver_oc_coated_arrows", function ( q ) {
+::ModJelloCreatureCollection.HooksMod.hook("scripts/items/ammo/legendary/quiver_of_coated_arrows", function ( q ) {
 
-	 q.onDamageDealt = @(__original) function ( _target, _skill, _hitInfo )
+    q.onDamageDealt = @(__original) function ( _target, _skill, _hitInfo )
     {
         if (_skill.getID() != "actives.aimed_shot" && _skill.getID() != "actives.quick_shot" && _skill.getID() != "actives.percht_shot")
         {
