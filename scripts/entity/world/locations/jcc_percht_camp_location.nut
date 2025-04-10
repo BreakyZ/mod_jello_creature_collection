@@ -2,7 +2,7 @@ this.jcc_percht_camp_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "A set of fur jurts typical for the barbarians of the northern regions.";
+		return "percht camp.";
 	}
 
 	function create()
@@ -22,7 +22,7 @@ this.jcc_percht_camp_location <- this.inherit("scripts/entity/world/location", {
 
 	function onSpawned()
 	{
-		this.m.Name = this.World.EntityManager.getUniqueLocationName(this.Const.World.LocationNames.BarbarianCamp);
+		this.m.Name = this.World.EntityManager.getUniqueLocationName(this.Const.World.LocationNames.PerchtClearing);
 		this.location.onSpawned();
 	}
 

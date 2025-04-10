@@ -81,7 +81,8 @@
 	"Den of Coal",
 	"Den of Sulfur",
 	"Huntsman\'s Copse",
-	"Huntsman\'s End"
+	"Huntsman\'s End",
+	"Gateless Gate"
 ];
 ::Const.World.LocationNames.PerchtCastle <- [
 	"Child-Eater Hall",
