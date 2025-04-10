@@ -5,8 +5,8 @@ this.ai_move_to_merge_cyto <- this.inherit("scripts/ai/tactical/behavior", {
 	},
 	function create()
 	{
-		this.m.ID = this.Const.AI.Behavior.ID.MoveToMerge;
-		this.m.Order = this.Const.AI.Behavior.Order.MoveToMerge;
+		this.m.ID = this.Const.AI.Behavior.ID.MoveToMergeCyto;
+		this.m.Order = this.Const.AI.Behavior.Order.MoveToMergeCyto;
 		this.m.IsThreaded = true;
 		this.behavior.create();
 	}

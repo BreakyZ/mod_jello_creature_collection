@@ -319,7 +319,7 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_hold_out"));
 		this.m.Skills.add(this.new("scripts/skills/actives/slime_smack"));
 		this.m.Skills.add(this.new("scripts/skills/actives/merge_cyto_skill"));
-		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
+		this.m.Skills.add(this.new("scripts/skills/effects/perk_captain"));
 	}
 
 	function grow( _instant = false )
@@ -376,12 +376,16 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 			this.setSpriteOffset("status_rooted", this.createVec(-7, 14));
 			this.setSpriteOffset("status_rooted_back", this.createVec(-7, 14));
 			b.IsImmuneToKnockBackAndGrab = true;
+			b.IsImmuneToStun = true;
 
 			if (this.m.WorldTroop != null && ("Party" in this.m.WorldTroop) && this.m.WorldTroop.Party != null && !this.m.WorldTroop.Party.isNull())
 			{
 				this.m.WorldTroop.Script = this.Const.World.Spawn.Troops.JccCytoplasmHIGH.Script;
 				this.m.WorldTroop.Strength = this.Const.World.Spawn.Troops.JccCytoplasmHIGH.Strength;
 			}
+
+				this.m.Skills.add(this.new("scripts/skills/perks/perk_fearsome"));
+				this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));
 		}
 
 		this.m.SoundPitch = 1.2 - this.m.Size * 0.1;
@@ -405,6 +409,7 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.IsShrinking = true;
 		local b = this.m.BaseProperties;
 		b.IsImmuneToKnockBackAndGrab = false;
+		b.IsImmuneToStun = false;
 
 		if (this.m.Size == 2)
 		{
@@ -426,6 +431,8 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 				this.m.WorldTroop.Script = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM.Script;
 				this.m.WorldTroop.Strength = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM.Strength;
 			}
+			this.getContainer().removeByID("perk.fearsome");
+			this.getContainer().removeByID("perk.captain");
 
 		}
 		else if (this.m.Size == 1)

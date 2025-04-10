@@ -7,8 +7,8 @@ this.ai_call_of_the_wild <- this.inherit("scripts/ai/tactical/behavior", {
 	},
 	function create()
 	{
-		this.m.ID = this.Const.AI.Behavior.ID.Howl;
-		this.m.Order = this.Const.AI.Behavior.Order.Howl;
+		this.m.ID = this.Const.AI.Behavior.ID.CallOfTheWild;
+		this.m.Order = this.Const.AI.Behavior.Order.CallOfTheWild;
 		this.behavior.create();
 	}
 
@@ -75,13 +75,13 @@ this.ai_call_of_the_wild <- this.inherit("scripts/ai/tactical/behavior", {
 
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Other Werewolves in range to howl with: " + allies);
+			this.logInfo("* " + _entity.getName() + ": Other beasts in range to buff: " + allies);
 		}
 
-		if (allies >= this.Const.AI.Behavior.HowlMinAlliesInRange)
+		if (allies >= 2)
 		{
 			local scoreMult = this.Math.minf(1.5, allies / 4.0);
-			return this.Const.AI.Behavior.Score.Howl * scoreMult * score;
+			return 60 * scoreMult * score;
 		}
 
 		return this.Const.AI.Behavior.Score.Zero;
@@ -91,7 +91,7 @@ this.ai_call_of_the_wild <- this.inherit("scripts/ai/tactical/behavior", {
 	{
 		if (this.Const.AI.VerboseMode)
 		{
-			this.logInfo("* " + _entity.getName() + ": Using Howl!");
+			this.logInfo("* " + _entity.getName() + ": Using Call of the Wild!");
 		}
 
 		this.m.Skill.use(_entity.getTile());

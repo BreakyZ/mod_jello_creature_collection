@@ -9,6 +9,14 @@
 ::Const.AI.Agent.ID.CytoSoldier <- "agent.cyto_soldier";
 ::Const.AI.Agent.ID.CytoBlack <- "agent.cyto_black";
 
+local count = ::Const.AI.Behavior.ID.COUNT;
+::Const.AI.Behavior.ID.SlimeSmack <- count++;
+::Const.AI.Behavior.ID.CallOfTheWild <- count++;
+::Const.AI.Behavior.ID.KrampusCharge <- count++;
+::Const.AI.Behavior.ID.MergeCyto <- count++;
+::Const.AI.Behavior.ID.MoveToMergeCyto <- count++;
+::Const.AI.Behavior.ID.COUNT = count;
+
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_charge", function ( q ) {
 
 	q.m.PossibleSkills.push("actives.krampus_charge");

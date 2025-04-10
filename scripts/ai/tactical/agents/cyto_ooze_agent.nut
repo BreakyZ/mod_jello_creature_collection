@@ -42,7 +42,7 @@ this.cyto_ooze_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_engage_ranged"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_bow"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_default"));
-		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_slimeSmack"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_slime_smack"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_gruesome_feast"));
 	}
 

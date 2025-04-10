@@ -8,8 +8,8 @@ this.ai_merge_cyto <- this.inherit("scripts/ai/tactical/behavior", {
 	},
 	function create()
 	{
-		this.m.ID = this.Const.AI.Behavior.ID.Merge;
-		this.m.Order = this.Const.AI.Behavior.Order.Merge;
+		this.m.ID = this.Const.AI.Behavior.ID.MergeCyto;
+		this.m.Order = this.Const.AI.Behavior.Order.MergeCyto;
 		this.behavior.create();
 	}
 

@@ -8,8 +8,8 @@ this.ai_krampus_charge <- this.inherit("scripts/ai/tactical/behavior", {
 	},
 	function create()
 	{
-		this.m.ID = this.Const.AI.Behavior.ID.Charge;
-		this.m.Order = this.Const.AI.Behavior.Order.Charge;
+		this.m.ID = this.Const.AI.Behavior.ID.KrampusCharge;
+		this.m.Order = this.Const.AI.Behavior.Order.KrampusCharge;
 		this.m.IsThreaded = false;
 		this.behavior.create();
 	}

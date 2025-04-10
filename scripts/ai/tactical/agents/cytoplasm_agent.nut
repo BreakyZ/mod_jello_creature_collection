@@ -37,7 +37,7 @@ this.cytoplasm_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_move_to_merge_cyto"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_merge_cyto"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_default"));
-		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_slimeSmack"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_slime_smack"));
 	}
 
 	function onUpdate()
