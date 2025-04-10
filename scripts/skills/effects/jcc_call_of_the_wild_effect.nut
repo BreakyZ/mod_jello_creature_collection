@@ -1,4 +1,4 @@
-this.jcc_call_of_the_wild <- this.inherit("scripts/skills/skill", {
+this.jcc_call_of_the_wild_effect <- this.inherit("scripts/skills/skill", {
 	m = {
 		BleedDamage = 5,
 		BleedSounds = [
