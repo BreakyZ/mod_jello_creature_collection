@@ -280,12 +280,12 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 		if (r == 1)
 		{
 			this.m.Items.equip(this.new("scripts/items/weapons/jcc_slime_bardiche"));
-			this.setSpriteOffset("arms_icon", ::createVec(10, 25));
+			this.setSpriteOffset("arms_icon", ::createVec(15, 25));
 
 		}else
 		{
 			this.m.Items.equip(this.new("scripts/items/weapons/jcc_slime_warbrand"));
-			this.setSpriteOffset("arms_icon", ::createVec(20, 47));
+			this.setSpriteOffset("arms_icon", ::createVec(25, 47));
 
 		}
 

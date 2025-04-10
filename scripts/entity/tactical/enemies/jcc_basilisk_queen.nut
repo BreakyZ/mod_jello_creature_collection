@@ -254,7 +254,7 @@ this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
 		// this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_second_wind"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_overwhelm"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_crippling_strikes"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
+		//this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_berserk"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_steel_brow"));		
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_battering_ram"));
