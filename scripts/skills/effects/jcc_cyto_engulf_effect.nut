@@ -48,7 +48,7 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/skill", {
 			{
 				id = 2,
 				type = "description",
-				text = "This character is engulfed by a cytoplasm and slowly being digested alive, resulting in the loss of [color=" + this.Const.UI.Color.NegativeValue + "]10[/color] hitpoints and [color=" + this.Const.UI.Color.NegativeValue + "]20[/color]% armor."
+				text = "This character is engulfed by a cytoplasm and slowly being digested alive, resulting in the loss of [color=" + this.Const.UI.Color.NegativeValue + "]10[/color] hitpoints and [color=" + this.Const.UI.Color.NegativeValue + "]20%[/color] armor."
 			},
 			{
 				id = 9,
@@ -86,9 +86,9 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/skill", {
 				}
 
 				local hitInfo = clone this.Const.Tactical.HitInfo;
-				hitInfo.DamageRegular = 0.0;
+				hitInfo.DamageRegular = 0;
 				hitInfo.DamageArmor = damage;
-				hitInfo.DamageDirect = 0.0;
+				hitInfo.DamageDirect = 1.0;
 				hitInfo.BodyPart = this.Const.BodyPart.Head;
 				hitInfo.BodyDamageMult = 1.0;
 				hitInfo.FatalityChanceMult = 0.0;
@@ -111,7 +111,7 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/skill", {
 				}
 
 				local hitInfo = clone this.Const.Tactical.HitInfo;
-				hitInfo.DamageRegular = 0.0;
+				hitInfo.DamageRegular = 10;
 				hitInfo.DamageArmor = damage;
 				hitInfo.DamageDirect = 0.0;
 				hitInfo.BodyPart = this.Const.BodyPart.Body;
@@ -208,17 +208,11 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/skill", {
 
 	function onTurnEnd()
 	{
-
-			this.applyDamage();
-		
+		this.applyDamage();	
 	}
 
 	function onWaitTurn()
 	{
-
-			this.applyDamage();
-		
+		this.applyDamage();
 	}
-
 });
-

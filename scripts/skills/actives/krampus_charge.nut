@@ -42,27 +42,9 @@ this.krampus_charge <- this.inherit("scripts/skills/skill", {
 		this.m.MaxLevelDifference = 1;
 	}
 
-function getTooltip()
+	function getTooltip()
 	{
-		local ret = this.getDefaultUtilityTooltip();
-		local p = this.getContainer().getActor().getCurrentProperties();
-		return [
-			{
-				id = 1,
-				type = "title",
-				text = this.getName()
-			},
-			{
-				id = 2,
-				type = "description",
-				text = this.getDescription()
-			},
-			{
-				id = 3,
-				type = "text",
-				text = this.getCostString()
-			}
-		];
+		return this.skill.getDefaultTooltip();
 	}
 
 	function isUsable()
