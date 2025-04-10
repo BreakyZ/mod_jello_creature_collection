@@ -63,8 +63,27 @@
   <sprite id="jcc_slimeball" rotSpeed="800" ic="FF757575" width="70" height="70" img="effects\jcc_slimeball.png" top="-28" bottom="34" />
   <sprite id="bust_cyto_ooze_body" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_ooze_body.png" left="-62" right="57" top="-58" bottom="104"  />
   <sprite id="bust_cyto_ooze_skull_01" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_ooze_skull_01.png" left="-62" right="57" top="-58" bottom="104" />
-    <sprite id="bust_cyto_ooze_skull_02" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_ooze_skull_02.png" left="-62" right="57" top="-58" bottom="104" />
+	<sprite id="bust_cyto_ooze_skull_02" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_ooze_skull_02.png" left="-62" right="57" top="-58" bottom="104" />
   <sprite id="bust_cyto_ooze_dead" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_ooze_dead.png" left="-62" right="68" top="-51" bottom="21" />
+
+<!-- Cytoplasm Soldier -->
+
+  <sprite id="bust_cyto_soldier_body" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_body.png" left="-62" right="57" top="-58" bottom="104"  />
+  <sprite id="bust_cyto_soldier_boss_dead" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_boss_dead.png" left="-62" right="68" top="-51" bottom="21" />
+   <sprite id="bust_cyto_soldier_dead" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_dead.png" left="-62" right="68" top="-51" bottom="21" />
+	<sprite id="bust_cyto_soldier_skull_01" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_skull_01.png" left="-62" right="57" top="-58" bottom="104"  />
+  <sprite id="bust_cyto_soldier_skull_02" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_skull_02.png" left="-62" right="57" top="-58" bottom="104"  />
+ <sprite id="bust_cyto_soldier_ribs" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_ribs.png" left="-62" right="57" top="-58" bottom="104"  />
+<sprite id="bust_cyto_soldier_helmet" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_helmet.png" left="-62" right="57" top="-58" bottom="104"  />
+ <sprite id="bust_cyto_soldier_helmet_damaged" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_helmet_damaged.png" left="-62" right="57" top="-58" bottom="104"  />
+ <sprite id="bust_cyto_soldier_helmet_flat" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_helmet_flat.png" left="-62" right="57" top="-58" bottom="104"  />
+ <sprite id="bust_cyto_soldier_helmet_flat_damaged" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_helmet_flat_damaged.png" left="-62" right="57" top="-58" bottom="104"  />
+ <sprite id="bust_cyto_soldier_helmet_kettle" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_helmet_kettle.png" left="-62" right="57" top="-58" bottom="104"  />
+ <sprite id="bust_cyto_soldier_helmet_kettle_damaged" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_helmet_kettle_damaged.png" left="-62" right="57" top="-58" bottom="104"  />
+<sprite id="bust_cyto_soldier_body_boss" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_body_boss.png" left="-62" right="57" top="-58" bottom="104"  />
+
+
+
 
 <!-- Percht -->
 
@@ -115,8 +134,8 @@
 <sprite id="bust_basilisk_queen_body"  img="entity\beasts\bust_basilisk_queen_body.png" left="-112" right="62" top="-72" bottom="92" offsetX="-5" offsetY="35" ic="FF555758" width="174" height="214" />
 <sprite id="bust_basilisk_queen_head" offsetX="-5" offsetY="35" ic="FF171844" width="174" height="214" img="entity\beasts\bust_basilisk_queen_head.png" left="-112" right="62" top="-72" bottom="92" />
 <sprite id="bust_basilisk_queen_injury" offsetX="-5" offsetY="35" ic="FF171844" width="174" height="214" img="entity\beasts\bust_basilisk_queen_injury.png" left="-112" right="62" top="-72" bottom="92"  />
-<sprite id="bust_basilisk_queen_body_dead" f="64FF" ic="FF295850" img="entity\beasts\bust_basilisk_queen_body_dead.png" left="-94" right="104" top="-65" bottom="64" />
-<sprite id="bust_basilisk_queen_head_dead" f="64F6" f1="-5" f2="-25" ic="FF315E5F" img="entity\beasts\bust_basilisk_queen_head_dead.png" left="-94" right="104" top="-65" bottom="64" />
+<sprite id="bust_basilisk_queen_body_dead" f="64FF" ic="FF295850" img="entity\beasts\bust_basilisk_queen_body_dead.png" left="-94" right="104" top="-50" bottom="79" />
+<sprite id="bust_basilisk_queen_head_dead" f="64F6" f1="-5" f2="-25" ic="FF315E5F" img="entity\beasts\bust_basilisk_queen_head_dead.png" left="-94" right="104" top="-50" bottom="79" />
 <!-- Use javs and arrows from sentry -->
 
 <!-- Weapons -->

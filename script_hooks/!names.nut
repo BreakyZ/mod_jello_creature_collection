@@ -87,3 +87,15 @@
 	"Hall of Hell",
 	"Greenbeard\'s Walls"
 ];
+::Const.Strings.JccSlimeNames <- [
+	"Bodysnatcher",
+	"Slimer",
+	"Roteater",
+	"Scumsucker",
+	"Manmelter",
+	"Maneater",
+	"Manbiter",
+	"Skullstripper",
+	"The Thing",
+	"The Blob"
+];

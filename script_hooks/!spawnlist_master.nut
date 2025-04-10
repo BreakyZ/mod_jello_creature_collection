@@ -77,3 +77,11 @@
 	Row = -1,
 	Script = "scripts/entity/tactical/enemies/jcc_cytoplasm_ooze"
 };
+::Const.World.Spawn.Troops.JccCytoplasmSoldier <- {
+	ID = this.Const.EntityType.JccCytoplasmSoldier,
+	Variant = 0,
+	Strength = 35,
+	Cost = 35,
+	Row = -1,
+	Script = "scripts/entity/tactical/enemies/jcc_cytoplasm_soldier"
+};

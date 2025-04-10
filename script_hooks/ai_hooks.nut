@@ -6,6 +6,7 @@
 ::Const.AI.Agent.ID.PerchtRanged <- "agent.percht_ranged";
 ::Const.AI.Agent.ID.BasiliskQueen <- "agent.basilisk_queen";
 ::Const.AI.Agent.ID.CytoOoze <- "agent.cyto_ooze";
+::Const.AI.Agent.ID.CytoSoldier <- "agent.cyto_soldier";
 
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_charge", function ( q ) {
 

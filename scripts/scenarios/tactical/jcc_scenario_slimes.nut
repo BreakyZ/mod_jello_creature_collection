@@ -176,6 +176,18 @@ this.jcc_scenario_slimes <- this.inherit("scripts/scenarios/tactical/scenario_te
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm_ooze");
 		entity.setFaction(this.Const.Faction.Beasts);
+
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm_soldier");
+		entity.assignRandomEquipment();
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm_soldier");
+		entity.assignRandomEquipment();
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm_soldier");
+		entity.assignRandomEquipment();
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.makeMiniboss();
+		entity.generateName();
 	}
 
 	function spawnEntity( _script, _minX = 10, _maxX = 28, _minY = 3, _maxY = 28 )
