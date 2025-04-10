@@ -170,7 +170,7 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 			items.equip(this.new("scripts/items/armor/coat_of_plates"));
 			items.equip(this.new("scripts/items/weapons/jcc_slime_bardiche"));
 		}
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht", 19, 19, 11, 11);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht", 30, 30, 11, 11);
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
 		entity.makeMiniboss();
@@ -198,7 +198,7 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/schrat", 21, 21, 11, 11);
 		entity.setFaction(this.Const.Faction.Beasts);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/perchta", 21, 21, 12, 12);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_perchta", 21, 21, 12, 12);
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
 
