@@ -167,6 +167,9 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.FatigueCosts = this.Const.DefaultMovementFatigueCost;
 		local variant = this.Math.rand(1, 2);
 
+		this.setAlwaysApplySpriteOffset(true);
+		this.setSpriteOffset("arms_icon", ::createVec(7, 7));
+
 		this.addSprite("socket").setBrush("bust_base_beasts");
 		local skullA = this.addSprite("skullA");
 		skullA.setBrush("bust_cyto_soldier_skull_0" + variant);
@@ -181,6 +184,8 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.body.setBrush("bust_cyto_soldier_body");
 		this.m.body.varySaturation(0.25);
 		this.m.body.varyColor(0.06, 0.06, 0.06);
+
+		this.addSprite("helmet");
 
 		this.addDefaultStatusSprites();
 		this.getSprite("status_rooted").Scale = 0.45;
@@ -221,14 +226,19 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 		else if (r <= 50)
 		{
 			weapon = this.new("scripts/items/weapons/warbrand");
+			this.setSpriteOffset("arms_icon", ::createVec(7, 15));
+
 		}
 		else if (r <= 70)
 		{
 			weapon = this.new("scripts/items/weapons/longsword");
+			this.setSpriteOffset("arms_icon", ::createVec(7, 15));
+
 		}
 		else
 		{
 			weapon = this.new("scripts/items/weapons/hooked_blade");
+			this.setSpriteOffset("arms_icon", ::createVec(10, 15));
 		}
 
 		local helmet = [
@@ -245,7 +255,7 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 
 	function generateName()
 	{
-		this.m.Name = this.Const.Strings.JccSlimeNames[this.Math.rand(0, this.Const.Strings.JccPerchtNames.len() - 1)];
+		this.m.Name = this.Const.Strings.JccSlimeNames[this.Math.rand(0, this.Const.Strings.JccSlimeNames.len() - 1)];
 	}
 
 	function makeMiniboss()
@@ -264,15 +274,16 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 
 		local r = this.Math.rand(1, 2);
 
-		this.setSpriteOffset("arms_icon", ::createVec(7, 7))
-
 		if (r == 1)
 		{
 			this.m.Items.equip(this.new("scripts/items/weapons/jcc_slime_bardiche"));
+			this.setSpriteOffset("arms_icon", ::createVec(7, 7));
 
 		}else
 		{
 			this.m.Items.equip(this.new("scripts/items/weapons/jcc_slime_warbrand"));
+			this.setSpriteOffset("arms_icon", ::createVec(7, 15));
+
 		}
 
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_fearsome"));
