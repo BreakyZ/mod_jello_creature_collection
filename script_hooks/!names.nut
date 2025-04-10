@@ -97,5 +97,6 @@
 	"Manbiter",
 	"Skullstripper",
 	"The Thing",
-	"The Blob"
+	"The Blob",
+	"Rimuru"
 ];
