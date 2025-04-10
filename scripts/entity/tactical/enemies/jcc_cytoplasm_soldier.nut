@@ -222,17 +222,18 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 		if (r <= 15)
 		{
 			weapon = this.new("scripts/items/weapons/bardiche");
+			this.setSpriteOffset("arms_icon", ::createVec(10, 20));
 		}
 		else if (r <= 50)
 		{
 			weapon = this.new("scripts/items/weapons/warbrand");
-			this.setSpriteOffset("arms_icon", ::createVec(7, 15));
+			this.setSpriteOffset("arms_icon", ::createVec(20, 40));
 
 		}
 		else if (r <= 70)
 		{
 			weapon = this.new("scripts/items/weapons/longsword");
-			this.setSpriteOffset("arms_icon", ::createVec(7, 15));
+			this.setSpriteOffset("arms_icon", ::createVec(20, 40));
 
 		}
 		else
@@ -277,12 +278,12 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 		if (r == 1)
 		{
 			this.m.Items.equip(this.new("scripts/items/weapons/jcc_slime_bardiche"));
-			this.setSpriteOffset("arms_icon", ::createVec(7, 7));
+			this.setSpriteOffset("arms_icon", ::createVec(10, 20));
 
 		}else
 		{
 			this.m.Items.equip(this.new("scripts/items/weapons/jcc_slime_warbrand"));
-			this.setSpriteOffset("arms_icon", ::createVec(7, 15));
+			this.setSpriteOffset("arms_icon", ::createVec(20, 40));
 
 		}
 
