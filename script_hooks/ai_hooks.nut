@@ -3,7 +3,6 @@
 ::Const.AI.Agent.ID.BasiliskSentry <- "agent.basilisk_sentry";
 ::Const.AI.Agent.ID.Cytoplasm <- "agent.cytoplasm";
 ::Const.AI.Agent.ID.Percht <- "agent.percht";
-::Const.AI.Agent.ID.Perchta <- "agent.perchta";
 ::Const.AI.Agent.ID.PerchtRanged <- "agent.percht_ranged";
 ::Const.AI.Agent.ID.BasiliskQueen <- "agent.basilisk_queen";
 ::Const.AI.Agent.ID.CytoOoze <- "agent.cyto_ooze";

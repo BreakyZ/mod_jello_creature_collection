@@ -32,6 +32,7 @@
 <sprite id="cyto_black_orientation" ic="FF1E2B3A" img="orientation\cyto_black_orientation.png" />
 <sprite id="cyto_ooze_orientation" ic="FF1E2B3A" img="orientation\cyto_ooze_orientation.png" />
 <sprite id="percht_orientation" ic="FF1E2B3A" img="orientation\percht_orientation.png" />
+<sprite id="perchta_orientation" ic="FF1E2B3A" img="orientation\perchta_orientation.png" />
 <sprite id="basilisk_drone_orientation" ic="FF1E2B3A" img="orientation\basilisk_drone_orientation.png" />
 <sprite id="basilisk_sentry_orientation" ic="FF1E2B3A" img="orientation\basilisk_sentry_orientation.png" />
 <sprite id="basilisk_queen_orientation" ic="FF1E2B3A" img="orientation\basilisk_queen_orientation.png" />

@@ -51,7 +51,7 @@ this.jcc_perchta <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 1.7;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 4;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 2;
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/perchta_agent");
+		this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_agent");
 		this.m.AIAgent.setActor(this);
 	}
 
@@ -361,6 +361,12 @@ this.jcc_perchta <- this.inherit("scripts/entity/tactical/actor", {
 		}
 		else
 		{
+				this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_ranged_agent");
+				this.m.AIAgent.setActor(this);
+				local b = this.m.BaseProperties;
+				b.setValues(this.Const.Tactical.Actor.JccPercht);
+				b.RangedSkill += 5;
+
 				this.m.Items.equip(this.new("scripts/items/weapons/percht_bow"));
 				this.m.Items.equip(this.new("scripts/items/ammo/quiver_of_arrows"));
 			
