@@ -30,6 +30,8 @@ for (local i = -1; i < ::Const.EntityIcon.len(); i++) {
 	::Const.EntityType.addNew("basilisk_queen_orientation", "Basilisk Queen", "Basilisk Queens", this.Const.FactionType.Beasts);
 ::Const.EntityType.JccPercht <-
 	::Const.EntityType.addNew("percht_orientation", "Percht", "Perchts", this.Const.FactionType.Beasts);
+::Const.EntityType.JccPerchta <-
+	::Const.EntityType.addNew("perchta_orientation", "Perchta", "Perchtas", this.Const.FactionType.Beasts);
 ::Const.EntityType.JccCytoplasm <-
 	::Const.EntityType.addNew("cytoplasm_small_orientation", "Cytoplasm", "Cytoplasms", this.Const.FactionType.Beasts);
 ::Const.EntityType.JccCytoplasmOoze <-

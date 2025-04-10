@@ -90,8 +90,14 @@
  <sprite id="bust_cyto_soldier_helmet_kettle_damaged" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_helmet_kettle_damaged.png" left="-62" right="57" top="-58" bottom="104"  />
 <sprite id="bust_cyto_soldier_body_boss" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_body_boss.png" left="-62" right="57" top="-58" bottom="104"  />
 
+<!-- Perchta -->
 
-
+  <sprite id="bust_perchta_body_injured" offsetY="30" offsetX="-2" ic="FF2A2D2F" width="104" height="142" img="entity\beasts\bust_perchta_body_injured.png" left="-56" right="57" top="-57" bottom="100" />
+  <sprite id="bust_perchta_head_injured" offsetY="30" offsetX="-2" ic="FF2A2D2F" width="104" height="142" img="entity\beasts\bust_perchta_head_injured.png" left="-56" right="57" top="-57" bottom="100" />
+  <sprite id="bust_perchta_body" offsetY="30" offsetX="-2" ic="FF2A2D2F" width="104" height="142" img="entity\beasts\bust_perchta_body.png" left="-56" right="57" top="-57" bottom="100" />
+  <sprite id="bust_perchta_head" offsetY="30" offsetX="-2" ic="FF2A2D2F" width="104" height="142" img="entity\beasts\bust_perchta_head.png" left="-56" right="57" top="-57" bottom="100" />
+  <sprite id="bust_perchta_body_dead" offsetX="5" offsetY="30" f="6403" ic="FF252930" width="169" height="139" img="entity\beasts\bust_perchta_body_dead.png" left="-76" right="107" top="-113" bottom="53" />  
+  <sprite id="bust_perchta_head_dead" offsetX="5" offsetY="30" f="6403" ic="FF252930" width="169" height="139" img="entity\beasts\bust_perchta_head_dead.png" left="-76" right="107" top="-113" bottom="53" />
 
 <!-- Percht -->
 
@@ -166,5 +172,7 @@
   <sprite id="icon_slime_greatsword_bloodied" offsetY="35" ic="FF56575A" width="130" height="142" img="icons\icon_slime_greatsword_bloodied.png" left="-58" right="15" top="-64" bottom="50" />
   <sprite id="icon_slime_bardiche_bloodied" offsetY="35" ic="FF4D545F" width="180" height="152" img="icons\icon_slime_bardiche_bloodied.png"  left="-72" right="10" top="-60" bottom="60"/>
 
+  <sprite id="icon_percht_whip" offsetY="35" ic="FF222A3D" width="130" height="142" img="icons\icon_percht_whip.png" left="-6" right="74" top="-69" bottom="17" />
+  <sprite id="icon_percht_whip_bloodied" offsetY="35" ic="FF222A3D" width="130" height="142" img="icons\icon_percht_whip_bloodied.png" left="-6" right="74" top="-69" bottom="17"  />
 
 </brush>

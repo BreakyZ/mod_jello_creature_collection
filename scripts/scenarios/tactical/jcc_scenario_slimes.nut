@@ -147,7 +147,7 @@ this.jcc_scenario_slimes <- this.inherit("scripts/scenarios/tactical/scenario_te
 			items = entity.getItems();
 			items.equip(this.new("scripts/items/helmets/hood"));
 			items.equip(this.new("scripts/items/armor/padded_surcoat"));
-			items.equip(this.new("scripts/items/weapons/winged_mace"));
+			items.equip(this.new("scripts/items/weapons/percht_whip"));
 			items.equip(this.new("scripts/items/shields/wooden_shield"));
 			
 			entity = this.spawnEntity("scripts/entity/tactical/player", 13, 13, 17, 17);

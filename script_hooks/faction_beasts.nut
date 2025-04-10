@@ -99,6 +99,27 @@
 	]
 };
 
+::Const.Tactical.Actor.JccPerchta <- {
+	XP = 355,
+	ActionPoints = 10,
+	Hitpoints = 350,
+	Bravery = 150,
+	Stamina = 140,
+	MeleeSkill = 70,
+	RangedSkill = 60,
+	MeleeDefense = 15,
+	RangedDefense = 15,
+	Initiative = 90,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	FatigueRecoveryRate = 25,
+	Vision = 7,
+	Armor = [
+		20,
+		20
+	]
+};
+
 ::Const.Tactical.Actor.JccCytoplasm <- {
 	XP = 150,
 	ActionPoints = 8,

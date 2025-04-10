@@ -45,6 +45,15 @@
 	TitleList = this.Const.Strings.JccPerchtTitles
 };
 
+::Const.World.Spawn.Troops.JccPerchta <- {
+	ID = this.Const.EntityType.JccPerchta,
+	Variant = 0,
+	Strength = 35,
+	Cost = 60,
+	Row = 2,
+	Script = "scripts/entity/tactical/enemies/jcc_perchta"
+};
+
 ::Const.World.Spawn.Troops.JccCytoplasm <- {
 	ID = this.Const.EntityType.JccCytoplasm,
 	Variant = 0,

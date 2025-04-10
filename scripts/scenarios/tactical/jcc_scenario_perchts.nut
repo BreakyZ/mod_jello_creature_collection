@@ -158,7 +158,7 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 			items = entity.getItems();
 			items.equip(this.new("scripts/items/helmets/hood"));
 			items.equip(this.new("scripts/items/armor/padded_surcoat"));
-			items.equip(this.new("scripts/items/weapons/winged_mace"));
+			items.equip(this.new("scripts/items/weapons/percht_whip"));
 			items.equip(this.new("scripts/items/shields/wooden_shield"));
 			
 			entity = this.spawnEntity("scripts/entity/tactical/player", 13, 13, 17, 17);
@@ -198,6 +198,9 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/schrat", 21, 21, 11, 11);
 		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/perchta", 21, 21, 12, 12);
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
 
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider", 20, 20, 13, 13);
 		entity.setFaction(this.Const.Faction.Beasts);
