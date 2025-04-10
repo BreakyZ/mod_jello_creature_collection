@@ -38,3 +38,5 @@
 	q.m.PossibleSkills.push("actives.jcc_basilisk_sentry_inject");
 	q.m.PossibleSkills.push("actives.split_man_cursed");
 });
+
+ 
