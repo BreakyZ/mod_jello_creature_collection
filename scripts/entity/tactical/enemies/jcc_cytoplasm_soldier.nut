@@ -289,6 +289,8 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_fearsome"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_battle_forged"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_nimble"));
+		this.m.Skills.add(this.new("scripts/skills/racial/unhold_racial"));
 
 		return true;
 	}
