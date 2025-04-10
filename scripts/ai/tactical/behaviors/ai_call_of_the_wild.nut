@@ -1,8 +1,7 @@
 this.ai_call_of_the_wild <- this.inherit("scripts/ai/tactical/behavior", {
 	m = {
 		PossibleSkills = [
-			::Legends.Actives.getID(::Legends.Active.LegendWerewolfHowl),
-			::Legends.Actives.getID(::Legends.Active.LegendWhiteWolfHowl)
+			"actives.jcc_krampus_yell"
 		],
 		Skill = null
 	},
