@@ -36,3 +36,5 @@ for (local i = -1; i < ::Const.EntityIcon.len(); i++) {
 	::Const.EntityType.addNew("cyto_ooze_orientation", "Oozing Cytoplasm", "Oozing Cytoplasms", this.Const.FactionType.Beasts);
 ::Const.EntityType.JccCytoplasmSoldier <-
 	::Const.EntityType.addNew("cyto_soldier_orientation", "Cytoplasm Soldier", "Cytoplasm Soldiers", this.Const.FactionType.Beasts);
+::Const.EntityType.JccCytoplasmBlack <-
+	::Const.EntityType.addNew("cyto_black_orientation", "Black Cytoplasm", "Black Cytoplasms", this.Const.FactionType.Beasts);

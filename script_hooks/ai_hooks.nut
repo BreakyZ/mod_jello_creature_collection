@@ -7,10 +7,16 @@
 ::Const.AI.Agent.ID.BasiliskQueen <- "agent.basilisk_queen";
 ::Const.AI.Agent.ID.CytoOoze <- "agent.cyto_ooze";
 ::Const.AI.Agent.ID.CytoSoldier <- "agent.cyto_soldier";
+::Const.AI.Agent.ID.CytoBlack <- "agent.cyto_black";
 
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_charge", function ( q ) {
 
 	q.m.PossibleSkills.push("actives.krampus_charge");
+});
+
+::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_throw_net", function ( q ) {
+
+	q.m.PossibleSkills.push("actives.jcc_cyto_engulf_skill");
 });
 
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_bow", function ( q ) {

@@ -1,7 +1,7 @@
-this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
+this.jcc_cytoplasm_black <- this.inherit("scripts/entity/tactical/actor", {
 	m = 
 	{
-		Size = 1,
+		Size = 2,
 		Variant = 1,
 		ScaleStartTime = 0,
 	},
@@ -11,9 +11,9 @@ this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
 	}
 	function create()
 	{
-		this.m.Type = this.Const.EntityType.JccCytoplasmOoze;
-		this.m.BloodType = this.Const.BloodType.Green;
-		this.m.XP = this.Const.Tactical.Actor.JccCytoplasmOoze.XP;
+		this.m.Type = this.Const.EntityType.JccCytoplasmBlack;
+		this.m.BloodType = this.Const.BloodType.Dark;
+		this.m.XP = this.Const.Tactical.Actor.JccCytoplasmBlack.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
 		this.actor.create();
@@ -53,12 +53,12 @@ this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/cyto_move_04.wav",
 			"sounds/enemies/cyto_move_05.wav"
 		];
-		this.m.SoundPitch = 1.1;
+		this.m.SoundPitch = 0.8;
 		local onArmorHitSounds = this.getItems().getAppearance().ImpactSound;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 0.5;
 		onArmorHitSounds[this.Const.BodyPart.Body] = this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived];
 		onArmorHitSounds[this.Const.BodyPart.Head] = this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived];
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/cyto_ooze_agent");
+		this.m.AIAgent = this.new("scripts/ai/tactical/agents/cyto_black_agent");
 		this.m.AIAgent.setActor(this);
 	}
 
@@ -79,7 +79,7 @@ this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
 			local decal;
 			local skin = this.getSprite("body");
 			this.m.IsCorpseFlipped = flip;
-			decal = _tile.spawnDetail("bust_cyto_ooze_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
+			decal = _tile.spawnDetail("bust_cyto_black_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = skin.Color;
 			decal.Saturation = skin.Saturation;
 			decal.Scale = 0.9;
@@ -149,7 +149,7 @@ this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
 	{
 		this.actor.onInit();
 		local baseProperties = this.m.BaseProperties;
-		baseProperties.setValues(this.Const.Tactical.Actor.JccCytoplasmOoze);
+		baseProperties.setValues(this.Const.Tactical.Actor.JccCytoplasmBlack);
 		baseProperties.IsAffectedByNight = false;
 		baseProperties.IsImmuneToDisarm = true;
 		baseProperties.IsImmuneToBleeding = true;
@@ -163,11 +163,9 @@ this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
 		local variant = this.Math.rand(1, 2);
 
 		this.addSprite("socket").setBrush("bust_base_beasts");
-		local skullA = this.addSprite("skullA");
-		skullA.setBrush("bust_cyto_ooze_skull_0" + variant);
 
 		local body = this.addSprite("body");
-		body.setBrush("bust_cyto_ooze_body");
+		body.setBrush("bust_cyto_black_body");
 		body.varySaturation(0.25);
 		body.varyColor(0.06, 0.06, 0.06);
 
@@ -179,10 +177,11 @@ this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_backstabber"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_hold_out"));
 		this.m.Skills.add(this.new("scripts/skills/actives/slime_smack"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_fast_adaption"));
-		this.m.Skills.add(this.new("scripts/skills/actives/cyto_gunk_shot"));
+		this.m.Skills.add(this.new("scripts/skills/actives/jcc_cyto_engulf_skill"));
 		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_bullseye"));
+		//this.m.Skills.add(this.new("scripts/skills/perks/perk_adrenalin"));		
+		this.m.Skills.add(this.new("scripts/skills/actives/gruesome_feast"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_berserk"));
 	}
 
 	

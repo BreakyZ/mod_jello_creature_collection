@@ -156,7 +156,7 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 	{
 		this.actor.onInit();
 		local baseProperties = this.m.BaseProperties;
-		baseProperties.setValues(this.Const.Tactical.Actor.JccCytoplasm);
+		baseProperties.setValues(this.Const.Tactical.Actor.JccCytoplasmSoldier);
 		baseProperties.IsAffectedByNight = false;
 		baseProperties.IsImmuneToBleeding = true;
 		baseProperties.IsAffectedByInjuries = false;
@@ -285,7 +285,7 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 		}else
 		{
 			this.m.Items.equip(this.new("scripts/items/weapons/jcc_slime_warbrand"));
-			this.setSpriteOffset("arms_icon", ::createVec(20, 40));
+			this.setSpriteOffset("arms_icon", ::createVec(20, 47));
 
 		}
 

@@ -182,3 +182,25 @@
 		0
 	]
 };
+
+
+::Const.Tactical.Actor.JccCytoplasmBlack <- {
+	XP = 400,
+	ActionPoints = 9,
+	Hitpoints = 300,
+	Bravery = 160,
+	Stamina = 200,
+	MeleeSkill = 75,
+	RangedSkill = 60,
+	MeleeDefense = 15,
+	RangedDefense = 10,
+	Initiative = 40,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	FatigueRecoveryRate = 25,
+	Vision = 7,
+	Armor = [
+		0,
+		0
+	]
+};

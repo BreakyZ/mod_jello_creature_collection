@@ -43,6 +43,10 @@ this.cyto_racial <- this.inherit("scripts/skills/skill", {
 		{
 			_properties.DamageReceivedRegularMult *= 0.5;
 		}
+		else if (_skill.getID() == "actives.ignite_firelance" || _skill.getID() == "actives.throw_fire_bomb")
+		{
+			_properties.DamageReceivedRegularMult *= 2.0;
+		}
 	}
 
 });

@@ -66,6 +66,12 @@
 	<sprite id="bust_cyto_ooze_skull_02" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_ooze_skull_02.png" left="-62" right="57" top="-58" bottom="104" />
   <sprite id="bust_cyto_ooze_dead" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_ooze_dead.png" left="-62" right="68" top="-51" bottom="21" />
 
+<!-- Black Cytoplasm -->
+
+    <sprite id="bust_cyto_black_body" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_black_body.png" left="-103" right="94" top="-60" bottom="169" />
+    <sprite id="bust_cyto_black_dead" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_black_dead.png" left="-62" right="68" top="-51" bottom="21" />
+    <sprite id="cyto_black_engulf" offsetY="30" ic="FF30484E" width="340" height="558" img="entity\beasts\cyto_black_engulf.png" left="-60" top="-68" bottom="51" right="59" />
+
 <!-- Cytoplasm Soldier -->
 
   <sprite id="bust_cyto_soldier_body" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_body.png" left="-62" right="57" top="-58" bottom="104"  />
