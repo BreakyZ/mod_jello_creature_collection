@@ -1,5 +1,7 @@
 this.jcc_krampus_yell_skill <- this.inherit("scripts/skills/skill", {
-	m = {},
+	m = {
+		Cooldown = this.Math.rand(1, 2)
+	},
 	function create()
 	{
 		this.m.ID = "actives.jcc_krampus_yell";
@@ -38,6 +40,11 @@ this.jcc_krampus_yell_skill <- this.inherit("scripts/skills/skill", {
 		return this.skill.isUsable() && !tile.hasZoneOfControlOtherThan(this.getContainer().getActor().getAlliedFactions());
 	}
 
+	function onTurnStart()
+	{
+		this.m.Cooldown = this.Math.max(0, this.m.Cooldown - 1);
+	}
+
 	function onUse( _user, _targetTile )
 	{
 		local myTile = _user.getTile();
@@ -62,6 +69,7 @@ this.jcc_krampus_yell_skill <- this.inherit("scripts/skills/skill", {
 		}
 
 		this.getContainer().add(this.new("scripts/skills/effects/jcc_call_of_the_wild_effect"));
+		this.m.Cooldown = this.Math.rand(1, 2);
 		return true;
 	}
 
