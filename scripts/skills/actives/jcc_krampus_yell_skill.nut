@@ -57,11 +57,11 @@ this.jcc_krampus_yell_skill <- this.inherit("scripts/skills/skill", {
 
 			if (a.getFaction() == _user.getFaction())
 			{
-				a.getSkills().add(this.new("scripts/skills/effects/jcc_call_of_the_wild"));
+				a.getSkills().add(this.new("scripts/skills/effects/jcc_call_of_the_wild_effect"));
 			}
 		}
 
-		this.getContainer().add(this.new("scripts/skills/effects/jcc_call_of_the_wild"));
+		this.getContainer().add(this.new("scripts/skills/effects/jcc_call_of_the_wild_effect"));
 		return true;
 	}
 
