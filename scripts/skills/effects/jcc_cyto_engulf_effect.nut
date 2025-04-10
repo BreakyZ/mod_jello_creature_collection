@@ -29,8 +29,8 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/skill", {
 		this.m.IconMini = "status_effect_95_mini";
 		this.m.Overlay = "status_effect_95";
 		this.m.SoundOnUse = [
-			"sounds/enemies/dlc2/giant_spider_poison_01.wav",
-			"sounds/enemies/dlc2/giant_spider_poison_02.wav"
+			"sounds/combat/poison_applied_01.wav",
+			"sounds/combat/poison_applied_02.wav"
 		];
 		this.m.Type = this.Const.SkillType.StatusEffect;
 		this.m.IsActive = false;

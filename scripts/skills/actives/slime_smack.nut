@@ -31,7 +31,7 @@ this.slime_smack <- this.inherit("scripts/skills/skill", {
 		this.m.InjuriesOnHead = this.Const.Injury.SlimeHeadInjuries;
 		this.m.HitChanceBonus = 0;
 		this.m.DirectDamageMult = 0.35;
-		this.m.ActionPointCost = 5;
+		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 25;
 		this.m.MinRange = 1;
 		this.m.MaxRange = 1;
