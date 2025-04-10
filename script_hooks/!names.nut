@@ -26,7 +26,8 @@
 	"Gil\'dan",
 	"Kil\'jaeden",
 	"Moloch",
-	"Krampus"
+	"Krampus",
+	"Vader Johan"
 ];
 ::Const.Strings.JccPerchtTitles <- [
 	"the Harrier",

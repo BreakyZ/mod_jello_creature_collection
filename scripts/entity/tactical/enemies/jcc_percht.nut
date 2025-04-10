@@ -192,6 +192,45 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
 	}
 
+
+	function getLootForTile( _killer, _loot )
+	{
+		if (_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals)
+		{
+			local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
+
+			for( local i = 0; i < n; i = ++i )
+			{
+				local r = this.Math.rand(1, 100);
+				local loot;
+
+				if (r <= 40)
+				{
+					loot = this.new("scripts/items/misc/jcc_krampus_coal_item");
+				}
+				else if (r <= 80)
+				{
+					loot = this.new("scripts/items/misc/jcc_krampus_scalp_item");
+				}
+				else
+				{
+					loot = this.new("scripts/items/misc/jcc_krampus_tongue_item");
+				}
+
+				_loot.push(loot);
+			}
+
+			if (this.Math.rand(1, 100) <= 20)
+			{
+				local loot = this.new("scripts/items/loot/jcc_krampus_bell_item");
+				_loot.push(loot);
+			}
+		}
+
+		return this.actor.getLootForTile(_killer, _loot);
+	}
+
+
 	function generateCorpse( _tile, _fatalityType, _killer )
 	{
 		local corpse = clone this.Const.Corpse;
@@ -281,7 +320,8 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 		//b.IsSpecializedInBows = true;
 		
 
-		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge"));
+		//this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge"));		
+		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge_alt"));
 		//this.m.Skills.add(this.new("scripts/skills/actives/charge"));
 
 		this.setAlwaysApplySpriteOffset(true);
