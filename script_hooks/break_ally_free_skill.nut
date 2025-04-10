@@ -35,7 +35,7 @@
 		return __original();
 	}
 
-	q.onVerifyTarget = @(__original) ( _originTile, _targetTile )
+	q.onVerifyTarget = @(__original) function ( _originTile, _targetTile )
 	{
 		if (!this.skill.onVerifyTarget(_originTile, _targetTile))
 		{
