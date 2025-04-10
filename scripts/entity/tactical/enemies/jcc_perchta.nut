@@ -322,7 +322,7 @@ this.jcc_perchta <- this.inherit("scripts/entity/tactical/actor", {
 		
 
 		//this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge"));		
-		//this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge_alt"));
+		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge_alt"));
 		//this.m.Skills.add(this.new("scripts/skills/actives/charge"));
 
 		this.setAlwaysApplySpriteOffset(true);
