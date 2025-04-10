@@ -97,8 +97,8 @@
   <sprite id="bust_perchta_head_injured" offsetY="30" offsetX="-2" ic="FF2A2D2F" width="104" height="142" img="entity\beasts\bust_perchta_head_injured.png" left="-59" right="60" top="-60" bottom="103" />
   <sprite id="bust_perchta_body" offsetY="30" offsetX="-2" ic="FF2A2D2F" width="104" height="142" img="entity\beasts\bust_perchta_body.png"  left="-59" right="60" top="-60" bottom="103" />
   <sprite id="bust_perchta_head" offsetY="30" offsetX="-2" ic="FF2A2D2F" width="104" height="142" img="entity\beasts\bust_perchta_head.png" left="-59" right="60" top="-60" bottom="103" />
-  <sprite id="bust_perchta_body_dead" offsetX="5" offsetY="30" f="6403" ic="FF252930" width="169" height="139" img="entity\beasts\bust_perchta_body_dead.png" left="-76" right="107" top="-113" bottom="53" />  
-  <sprite id="bust_perchta_head_dead" offsetX="5" offsetY="30" f="6403" ic="FF252930" width="169" height="139" img="entity\beasts\bust_perchta_head_dead.png" left="-76" right="107" top="-113" bottom="53" />
+  <sprite id="bust_perchta_body_dead" offsetX="5" offsetY="30" f="6403" ic="FF252930" width="169" height="139" img="entity\beasts\bust_perchta_body_dead.png" left="-79" right="110" top="-116" bottom="56" />  
+  <sprite id="bust_perchta_head_dead" offsetX="5" offsetY="30" f="6403" ic="FF252930" width="169" height="139" img="entity\beasts\bust_perchta_head_dead.png" left="-79" right="110" top="-116" bottom="56" />
 
 <!-- Percht -->
 
