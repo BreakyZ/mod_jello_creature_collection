@@ -63,12 +63,12 @@ this.ai_call_of_the_wild <- this.inherit("scripts/ai/tactical/behavior", {
 		}
 
 		this.m.Skill = skills[this.Math.rand(0, skills.len() - 1)];
-		local knownAllies = this.getAgent().getKnownAllies();
+		local knownAllies = this.Tactical.Entities.getInstancesOfFaction(_entity.getFaction());
 		local allies = 0;
 
 		foreach( a in knownAllies )
 		{
-			if (_entity.getTile().getDistanceTo(a.getTile()) <= 6 && a.getFlags().has("werewolf"))
+			if (_entity.getTile().getDistanceTo(a.getTile()) <= 8)
 			{
 				allies = ++allies;
 			}
