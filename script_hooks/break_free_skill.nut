@@ -1,4 +1,4 @@
-::ModJelloCreatureCollection.HooksMod.hook("scripts/skills/actives/break_ally_free_skill", function ( q ) {
+::ModJelloCreatureCollection.HooksMod.hook("scripts/skills/actives/break_free_skill", function ( q ) {
 	q.onUse = @(__original) function ( _user, _targetTile )
 	{
 		local toHit = this.getChance();
