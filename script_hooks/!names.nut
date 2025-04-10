@@ -98,5 +98,11 @@
 	"Skullstripper",
 	"The Thing",
 	"The Blob",
-	"Rimuru"
+	"Rimuru",
+	"The Pulse",
+	"Nameless Sludge",
+	"Putrid Mucus",
+	"The Red Guck",
+	"Glopping Biomass",
+	"Slimed Squire",
 ];
