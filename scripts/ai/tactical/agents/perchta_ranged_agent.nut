@@ -2,7 +2,7 @@ this.perchta_ranged_agent <- this.inherit("scripts/ai/tactical/agents/percht_ran
 	m = {},
 	function create()
 	{
-		this.percht_agent.create();
+		this.percht_ranged_agent.create();
 		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.CallOfTheWild] = 5.0;
 	}
 
