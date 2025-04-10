@@ -21,6 +21,8 @@ this.percht_ranged_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.Properties.OverallHideMult = 0.75;
 		this.m.Properties.EngageTargetMultipleOpponentsMult = 1.35;
 		this.m.Properties.EngageTargetArmedWithRangedWeaponMult = 1.5;
+
+
 	}
 
 	function onAddBehaviors()
@@ -50,7 +52,6 @@ this.percht_ranged_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_lash"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_gash"));
 
-		//this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_call_of_the_wild"));
 	}
 
 	function onUpdate()

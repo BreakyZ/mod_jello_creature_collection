@@ -21,7 +21,7 @@ this.jcc_krampus_yell_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsAttack = false;
 		this.m.IsIgnoredAsAOO = true;
 		this.m.IsVisibleTileNeeded = false;
-		this.m.ActionPointCost = 9;
+		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 45;
 		this.m.MinRange = 1;
 		this.m.MaxRange = 1;

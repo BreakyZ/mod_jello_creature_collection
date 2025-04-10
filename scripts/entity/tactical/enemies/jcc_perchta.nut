@@ -51,7 +51,7 @@ this.jcc_perchta <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 1.7;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 4;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 2;
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_agent");
+		this.m.AIAgent = this.new("scripts/ai/tactical/agents/perchta_agent");
 		this.m.AIAgent.setActor(this);
 	}
 
@@ -325,7 +325,8 @@ this.jcc_perchta <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge_alt"));
 		//this.m.Skills.add(this.new("scripts/skills/actives/charge"));
 
-		//this.m.Skills.add(this.new("scripts/skills/actives/jcc_krampus_yell_skill"));
+		this.m.Skills.add(this.new("scripts/skills/actives/jcc_krampus_yell_skill"));
+
 
 		this.setAlwaysApplySpriteOffset(true);
 		this.setSpriteOffset("arms_icon", ::createVec(-7, 0))
@@ -363,7 +364,7 @@ this.jcc_perchta <- this.inherit("scripts/entity/tactical/actor", {
 		}
 		else
 		{
-				this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_ranged_agent");
+				this.m.AIAgent = this.new("scripts/ai/tactical/agents/perchta_ranged_agent");
 				this.m.AIAgent.setActor(this);
 				local b = this.m.BaseProperties;
 				b.setValues(this.Const.Tactical.Actor.JccPercht);
