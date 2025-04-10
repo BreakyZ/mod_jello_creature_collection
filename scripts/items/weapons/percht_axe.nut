@@ -36,7 +36,7 @@ this.percht_axe <- this.inherit("scripts/items/weapons/weapon", {
 		local skill;
 		skill = this.new("scripts/skills/actives/split_man_cursed");
 		this.addSkill(skill);
-		skill = this.new("scripts/skills/actives/krampus_charge");
+		skill = this.new("scripts/skills/actives/krampus_charge_alt");
 		this.addSkill(skill);
 		skill = this.new("scripts/skills/actives/split_shield");
 		this.addSkill(skill);

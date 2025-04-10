@@ -51,7 +51,7 @@ this.jcc_perchta <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 1.7;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 4;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 2;
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_agent");
+		this.m.AIAgent = this.new("scripts/ai/tactical/agents/perchta_agent");
 		this.m.AIAgent.setActor(this);
 	}
 
@@ -306,6 +306,7 @@ this.jcc_perchta <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_coup_de_grace"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_backstabber"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_dodge"));
 		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
 		b.IsSpecializedInSwords = true;
 		b.IsSpecializedInAxes = true;
@@ -317,8 +318,7 @@ this.jcc_perchta <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsSpecializedInCleavers = true;
 		b.IsSpecializedInDaggers = true;
 		b.IsAffectedByNight = false;
-
-		//b.IsSpecializedInBows = true;
+		b.IsSpecializedInBows = true;
 		
 
 		//this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge"));		
@@ -346,8 +346,27 @@ this.jcc_perchta <- this.inherit("scripts/entity/tactical/actor", {
 		local weapon;
 
 
-		weapon = this.new("scripts/items/weapons/percht_whip");
-		this.m.Items.equip(weapon);
+
+
+		if (this.Math.rand(1, 100) <= 65)
+		{
+
+				weapon = this.new("scripts/items/weapons/percht_whip");
+				this.m.Items.equip(weapon);
+
+				if (this.Math.rand(1, 100) <= 40)
+				{
+					this.m.Items.equip(this.new("scripts/items/shields/wooden_shield_old"));
+				}
+		}
+		else
+		{
+				this.m.Items.equip(this.new("scripts/items/weapons/percht_bow"));
+				this.m.Items.equip(this.new("scripts/items/ammo/quiver_of_arrows"));
+			
+				this.m.Items.addToBag(this.new("scripts/items/weapons/percht_whip"));
+		}
+
 
 	}
 
