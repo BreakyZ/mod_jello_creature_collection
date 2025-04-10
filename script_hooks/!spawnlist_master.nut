@@ -79,7 +79,7 @@
 };
 ::Const.World.Spawn.Troops.JccCytoplasmSoldier <- {
 	ID = this.Const.EntityType.JccCytoplasmSoldier,
-	Variant = 0,
+	Variant = 1,
 	Strength = 35,
 	Cost = 35,
 	Row = -1,

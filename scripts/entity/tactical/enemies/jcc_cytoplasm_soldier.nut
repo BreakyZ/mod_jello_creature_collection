@@ -233,7 +233,7 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 		else if (r <= 70)
 		{
 			weapon = this.new("scripts/items/weapons/longsword");
-			this.setSpriteOffset("arms_icon", ::createVec(20, 40));
+			this.setSpriteOffset("arms_icon", ::createVec(30, 40));
 
 		}
 		else
@@ -272,6 +272,8 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.body.setBrush("bust_cyto_soldier_body_boss");
 
 		this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
+
+		this.m.Size = 2;
 
 		local r = this.Math.rand(1, 2);
 
