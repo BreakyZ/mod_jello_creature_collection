@@ -54,6 +54,7 @@ this.percht_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_knock_out"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_lash"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_gash"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_call_of_the_wild"));
 	}
 
 	function onUpdate()
