@@ -179,8 +179,10 @@ this.jcc_scenario_slimes <- this.inherit("scripts/scenarios/tactical/scenario_te
 
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm_soldier");
 		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm_soldier");
 		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm_soldier");
 		entity.assignRandomEquipment();
 		entity.setFaction(this.Const.Faction.Beasts);

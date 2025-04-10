@@ -50,6 +50,7 @@ this.cyto_soldier_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_switchto_melee"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_switchto_ranged"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_protect"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_slimeSmack"));
 	}
 
 	function onUpdate()
