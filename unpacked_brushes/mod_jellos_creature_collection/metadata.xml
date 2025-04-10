@@ -74,7 +74,9 @@
 	<sprite id="bust_cyto_soldier_skull_01" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_skull_01.png" left="-62" right="57" top="-58" bottom="104"  />
   <sprite id="bust_cyto_soldier_skull_02" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_skull_02.png" left="-62" right="57" top="-58" bottom="104"  />
  <sprite id="bust_cyto_soldier_ribs" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_ribs.png" left="-62" right="57" top="-58" bottom="104"  />
+
 <sprite id="bust_cyto_soldier_helmet" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_helmet.png" left="-62" right="57" top="-58" bottom="104"  />
+ <sprite id="bust_cyto_soldier_jaw" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_jaw.png" left="-62" right="57" top="-58" bottom="104"  />
  <sprite id="bust_cyto_soldier_helmet_damaged" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_helmet_damaged.png" left="-62" right="57" top="-58" bottom="104"  />
  <sprite id="bust_cyto_soldier_helmet_flat" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_helmet_flat.png" left="-62" right="57" top="-58" bottom="104"  />
  <sprite id="bust_cyto_soldier_helmet_flat_damaged" offsetY="35" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cyto_soldier_helmet_flat_damaged.png" left="-62" right="57" top="-58" bottom="104"  />
