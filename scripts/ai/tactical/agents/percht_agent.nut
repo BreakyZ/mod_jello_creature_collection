@@ -23,6 +23,8 @@ this.percht_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.Properties.EngageRangeMin = 1;
 		this.m.Properties.EngageRangeMax = 2;
 		this.m.Properties.EngageRangeIdeal = 1; //may need to be 2?
+
+		//this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.CallOfTheWild] = 3.0;
 	}
 
 	function onAddBehaviors()
@@ -54,7 +56,8 @@ this.percht_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_knock_out"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_lash"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_gash"));
-		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_call_of_the_wild"));
+
+		//this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_call_of_the_wild"));
 	}
 
 	function onUpdate()
