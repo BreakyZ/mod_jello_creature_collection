@@ -25,7 +25,7 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 
 	function initMap()
 	{
-		local testMap = this.MapGen.get("tactical.jcc_percht_camp");
+		local testMap = this.MapGen.get("tactical.forest");
 		local minX = testMap.getMinX();
 		local minY = testMap.getMinY();
 		this.Tactical.resizeScene(minX, minY);

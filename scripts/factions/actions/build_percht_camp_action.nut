@@ -44,8 +44,6 @@ this.build_percht_camp_action <- this.inherit("scripts/factions/faction_action",
 		local minY = this.Const.DLC.Desert ? 0.4 : 0.2;
 		local maxY = this.Const.DLC.Wildmen ? 0.75 : 1.0;
 
-		if (r == 1)
-		{
 			local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries, [
 				this.Const.World.TerrainType.Snow, this.Const.World.TerrainType.Steppe
 			], 8, 1000, 1000, 7, 7, null, minY, maxY);
@@ -54,7 +52,7 @@ this.build_percht_camp_action <- this.inherit("scripts/factions/faction_action",
 			{
 				camp = this.World.spawnLocation("scripts/entity/world/locations/jcc_percht_camp_location", tile.Coords);
 			}
-		}
+		
 
 		if (camp != null)
 		{
