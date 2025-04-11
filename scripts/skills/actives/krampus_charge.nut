@@ -292,10 +292,6 @@ this.krampus_charge <- this.inherit("scripts/skills/skill", {
 					this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_entity) + " charges and tramples " + this.Const.UI.getColorizedEntityName(victim));	
 					return;
 				}
-				else
-				{
-
-				}
 			}
 
 			local chance = 100;
