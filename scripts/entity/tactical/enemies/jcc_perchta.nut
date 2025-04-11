@@ -321,8 +321,8 @@ this.jcc_perchta <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsSpecializedInBows = true;
 		
 
-		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge"));		
-		// this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge_alt"));
+		//this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge"));		
+		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge_alt"));
 		//this.m.Skills.add(this.new("scripts/skills/actives/charge"));
 
 		//this.m.Skills.add(this.new("scripts/skills/actives/jcc_krampus_yell_skill"));
@@ -367,7 +367,7 @@ this.jcc_perchta <- this.inherit("scripts/entity/tactical/actor", {
 				this.m.AIAgent = this.new("scripts/ai/tactical/agents/perchta_ranged_agent");
 				this.m.AIAgent.setActor(this);
 				local b = this.m.BaseProperties;
-				b.setValues(this.Const.Tactical.Actor.JccPercht);
+				b.setValues(this.Const.Tactical.Actor.JccPerchta);
 				b.RangedSkill += 5;
 
 				this.m.Items.equip(this.new("scripts/items/weapons/percht_bow"));
