@@ -11,15 +11,6 @@ this.jcc_hunting_basilisks_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Type = "contract.jcc_hunting_basilisks";
 		this.m.Name = "Basilisk Infestation";
 		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
-		this.m.DescriptionTemplates = [
-			"An ominous clucking floats across the fields at dawn. Locals tell tales of a bloodthirsty beast standing taller than a man.",
-			"Underestimate these giant chickens at your peril. A single one can either kill or feed an entire company.",
-			"With eyes that shine like burning coals and a bawk that chills the blood, a basilisk is not to be trifled with.",
-			"The thick plumage provides formidable protection against weapons and spells, making it a challenging adversary.",
-			"Powerful pecks and thrashing wings create a whirlwind of destruction that can quickly incapacitate unwary adventurers.",
-			"Beware the deceptively agile movements, for its powerful talons can shred armor and flesh alike with ease.",
-			"The reports could be dismissed as a fever dream, if not for the corpses left behind.",
-		];
 	}
 
 	function onImportIntro()
@@ -524,16 +515,16 @@ this.jcc_hunting_basilisks_contract <- this.inherit("scripts/contracts/contract"
 		}
 
 		local tile = this.getTileToSpawnLocation(playerTile, numWoods >= 12 ? 6 : 3, 9, disallowedTerrain);
-		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "Basilisks", false, this.Const.World.Spawn.JccBasiliskLOW, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "Basilisks", false, this.Const.World.Spawn.JccBasilisk, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult());
 		party.setDescription("A stampede of basilisks hunting for food");
-		party.setFootprintType(this.Const.World.FootprintsType.Basilisks);
+		party.setFootprintType(this.Const.World.FootprintsType.Direwolves);
 		party.setAttackableByAI(false);
 		party.setFootprintSizeOverride(1.10);
 
 		for( local i = 0; i < 2; i = ++i ) {
 			local nearTile = this.getTileToSpawnLocation(playerTile, 4, 5);
 			if (nearTile != null)
-				this.Const.World.Common.addFootprintsFromTo(nearTile, party.getTile(), this.Const.BeastFootprints, this.Const.World.FootprintsType.Basilisks, 0.75);
+				this.Const.World.Common.addFootprintsFromTo(nearTile, party.getTile(), this.Const.BeastFootprints, this.Const.World.FootprintsType.Direwolves, 0.75);
 		}
 
 		this.m.Target = this.WeakTableRef(party);
