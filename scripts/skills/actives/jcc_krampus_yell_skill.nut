@@ -57,7 +57,7 @@ this.jcc_krampus_yell_skill <- this.inherit("scripts/skills/skill", {
 				continue;
 			}
 
-			if (myTile.getDistanceTo(a.getTile()) > 8)
+			if (myTile.getDistanceTo(a.getTile()) > 3)
 			{
 				continue;
 			}
