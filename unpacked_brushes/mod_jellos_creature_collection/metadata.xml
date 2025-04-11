@@ -10,7 +10,7 @@
 
 <!-- Worldmap -->
 
-<sprite id="figure_percht_01" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_percht_01.png" />
+<sprite id="figure_percht_01" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_percht_01.png" left="-17" right="42" top="-40" bottom="20" />
 
 <sprite id="figure_cytoplasm_01" offsetY="30" ic="FF36678A" width="68" height="106" img="world\party\figure_cytoplasm_01.png" />
 <sprite id="figure_cytoplasm_02" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_02.png"  />
