@@ -67,7 +67,7 @@ this.ai_call_of_the_wild <- this.inherit("scripts/ai/tactical/behavior", {
 
 		foreach( a in knownAllies )
 		{
-			if (_entity.getTile().getDistanceTo(a.getTile()) <= 8 && _entity.getSkills().hasSkill("effects.jcc_call_of_the_wild"))
+			if (_entity.getTile().getDistanceTo(a.getTile()) <= 3 && !_entity.getSkills().hasSkill("effects.jcc_call_of_the_wild"))
 			{
 				allies = ++allies;
 			}
