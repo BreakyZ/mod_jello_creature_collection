@@ -226,13 +226,12 @@
 	]
 };
 
-
 ::Const.FactionTrait.Actions[16].extend([
-	"build_percht_camp_action",
-	"defend_percht_action",
-	"send_percht_ambushers_action",
-	"send_percht_roamers_action"
-	]);
+	"scripts/factions/actions/build_percht_camp_action",
+	"scripts/factions/actions/defend_percht_action",
+	"scripts/factions/actions/send_percht_ambushers_action",
+	"scripts/factions/actions/send_percht_roamers_action"
+]);
 
 
 ::Const.PerchtBanners <- [
