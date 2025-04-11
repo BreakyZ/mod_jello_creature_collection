@@ -252,7 +252,7 @@ this.jcc_basilisk_sentry <- this.inherit("scripts/entity/tactical/actor", {
 		this.setSpriteOffset("arrow", this.createVec(0, 10));		
 
 		this.m.Skills.add(this.new("scripts/skills/actives/jcc_basilisk_sentry_inject_skill"));
-		this.m.Skills.add(this.new("scripts/skills/actives/jcc_basilisk_sentry_fowleye_skill"));
+		//this.m.Skills.add(this.new("scripts/skills/actives/jcc_basilisk_sentry_fowleye_skill"));
 		// this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_escape_artist"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_steel_brow"));

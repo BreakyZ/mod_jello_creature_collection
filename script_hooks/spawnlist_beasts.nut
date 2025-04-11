@@ -66,6 +66,40 @@
 			{
 				Type = this.Const.World.Spawn.Troops.Direwolf,
 				Num = 3
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Spider,
+				Num = 3
+			}
+		]
+	},
+	{
+		Body = "figure_percht_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccPercht,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Direwolf,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Spider,
+				Num = 6
+			}
+		]
+	},
+	{
+		Body = "figure_percht_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccPercht,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Direwolf,
+				Num = 3
 			}
 		]
 	},
@@ -276,7 +310,7 @@
 				Num = 3
 			},
 			{
-				Type = this.Const.World.Spawn.Troops.Percht,
+				Type = this.Const.World.Spawn.Troops.JccPercht,
 				Num = 2
 			}
 		]
@@ -293,7 +327,7 @@
 				Num = 4
 			},
 			{
-				Type = this.Const.World.Spawn.Troops.Percht,
+				Type = this.Const.World.Spawn.Troops.JccPercht,
 				Num = 2
 			}
 		]
@@ -310,7 +344,7 @@
 				Num = 5
 			},
 			{
-				Type = this.Const.World.Spawn.Troops.Percht,
+				Type = this.Const.World.Spawn.Troops.JccPercht,
 				Num = 2
 			}
 		]
@@ -327,7 +361,7 @@
 				Num = 6
 			},
 			{
-				Type = this.Const.World.Spawn.Troops.Percht,
+				Type = this.Const.World.Spawn.Troops.JccPercht,
 				Num = 2
 			}
 		]
@@ -344,7 +378,7 @@
 				Num = 3
 			},
 			{
-				Type = this.Const.World.Spawn.Troops.Percht,
+				Type = this.Const.World.Spawn.Troops.JccPercht,
 				Num = 2
 			}
 		]
@@ -361,7 +395,7 @@
 				Num = 4
 			},
 			{
-				Type = this.Const.World.Spawn.Troops.Percht,
+				Type = this.Const.World.Spawn.Troops.JccPercht,
 				Num = 2
 			}
 		]
@@ -378,7 +412,7 @@
 				Num = 5
 			},
 			{
-				Type = this.Const.World.Spawn.Troops.Percht,
+				Type = this.Const.World.Spawn.Troops.JccPercht,
 				Num = 2
 			}
 		]
@@ -395,7 +429,7 @@
 				Num = 6
 			},
 			{
-				Type = this.Const.World.Spawn.Troops.Percht,
+				Type = this.Const.World.Spawn.Troops.JccPercht,
 				Num = 2
 			}
 		]
@@ -792,6 +826,90 @@
 				Num = 2
 			}
 		]
+	},
+	{
+		Body = "figure_percht_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccPercht,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.GhoulLOW,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Spider,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Direwolf,
+				Num = 2
+			}
+		]
+	},
+	{
+		Body = "figure_percht_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccPercht,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.GhoulLOW,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Spider,
+				Num = 6
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Direwolf,
+				Num = 2
+			}
+		]
+	},
+	{
+		Body = "figure_percht_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccPercht,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Ghoul,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Spider,
+				Num = 6
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Direwolf,
+				Num = 2
+			}
+		]
+	},
+	{
+		Body = "figure_percht_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccPercht,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Ghoul,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Spider,
+				Num = 6
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+				Num = 2
+			}
+		]
 	}
 ];
 
@@ -841,4 +959,3 @@ function calculateCosts( _p )
 }
 
 this.calculateCosts(this.Const.World.Spawn.JccPercht);
-this.calculateCosts(this.Const.World.Spawn.JccPerchtHunters);

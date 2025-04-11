@@ -94,7 +94,7 @@ this.send_percht_ambushers_action <- this.inherit("scripts/factions/faction_acti
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "Bestial Despoilers", false, this.Const.World.Spawn.JccPercht, this.Math.rand(75, 120) * this.getReputationToDifficultyLightMult() * mult);
 		party.getSprite("banner").setBrush(settlement.getBanner());
 		party.setDescription("A pack of beasts and their dark masters, hungry for fresh kills.");
-		party.setFootprintType(this.Const.World.FootprintsType.Beasts);
+		party.setFootprintType(this.Const.World.FootprintsType.Direwolves);
 		party.getFlags().set("IsRandomlySpawned", true);
 		party.getLoot().Money = this.Math.rand(0, 50);
 		party.getLoot().ArmorParts = this.Math.rand(0, 10);

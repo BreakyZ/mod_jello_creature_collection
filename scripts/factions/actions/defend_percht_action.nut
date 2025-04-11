@@ -82,7 +82,7 @@ this.defend_percht_action <- this.inherit("scripts/factions/faction_action", {
 			local party = this.getFaction().spawnEntity(spawnpoints[i], "Bestial Despoilers", false, this.Const.World.Spawn.JccPercht, this.m.Settlement.getResources() * 0.66);
 			party.getSprite("banner").setBrush(this.m.Settlement.getBanner());
 			party.setDescription("A pack of beasts and their dark masters, hungry for fresh kills.");
-			party.setFootprintType(this.Const.World.FootprintsType.Beasts);
+			party.setFootprintType(this.Const.World.FootprintsType.Direwolves);
 			party.getFlags().set("IsRandomlySpawned", true);
 			local c = party.getController();
 			local guard = this.new("scripts/ai/world/orders/guard_order");
