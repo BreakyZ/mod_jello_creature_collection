@@ -10,7 +10,7 @@
 
 <!-- Worldmap -->
 
-<sprite id="figure_percht_01" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_percht_01.png" left="-17" right="42" top="-40" bottom="20" />
+<sprite id="figure_percht_01" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_percht_01.png" left="-25" right="34" top="-54" bottom="6" />
 
 <sprite id="figure_cytoplasm_01" offsetY="30" ic="FF36678A" width="68" height="106" img="world\party\figure_cytoplasm_01.png" />
 <sprite id="figure_cytoplasm_02" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_02.png"  />
@@ -183,5 +183,7 @@
   <sprite id="upgrade_basilisk_front_dead" offsetX="6" offsetY="10" f="64EF" ic="FF404E61" width="191" height="185" img="entity\armor_upgrades\upgrade_basilisk_dead.png" left="-67" right="54" top="-56" bottom="38" />
   <sprite id="upgrade_basilisk_back_dead" offsetX="6" offsetY="10" f="64FD" ic="FF1A1D21" width="191" height="185" img="entity\armor_upgrades\upgrade_basilisk_dead.png" left="-67" right="54" top="-56" bottom="38"  />
 
+  <sprite id="basilisk_trophy" offsetY="35" ic="FF374C5A" width="140" height="248" img="entity\details\basilisk_trophy.png" left="-26" right="34" top="-49" bottom="3" />
+    <sprite id="basilisk_trophy_dead" offsetX="6" offsetY="10" f="64FD" ic="FF384D5B" width="191" height="185" img="entity\details\basilisk_trophy_dead.png" left="-36" right="16" top="-47" bottom="17" />
 
 </brush>
