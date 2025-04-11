@@ -66,6 +66,13 @@ this.jcc_basilisk_trophy_item <- this.inherit("scripts/items/accessory/accessory
 			icon = "ui/icons/damage_dealt.png",
 			text = "Deal [color=" + this.Const.UI.Color.PositiveValue + "]+20%[/color] more damage when hitting the head with any weapon"
 		});
+
+		result.push({
+			id = 16,
+			type = "text",
+			icon = "ui/icons/melee_skill.png",
+			text = "Reduces Melee Skill by [color=" + this.Const.UI.Color.NegativeValue + "]5[/color] while equipped"
+		});
 		return result;
 	}
 
@@ -84,6 +91,7 @@ this.jcc_basilisk_trophy_item <- this.inherit("scripts/items/accessory/accessory
 		this.accessory.onUpdateProperties(_properties);
 		_properties.HitChance[this.Const.BodyPart.Head] += 5;
 		_properties.DamageAgainstMult[this.Const.BodyPart.Head] += 0.2;
+		_properties.MeleeSkill -= 5;
 	}
 
 });

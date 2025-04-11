@@ -5,7 +5,7 @@ this.jcc_basilisk_cloak_blueprint <- this.inherit("scripts/crafting/blueprint", 
 		this.blueprint.create();
 		this.m.ID = "blueprint.jcc_basilisk_cloak";
 		this.m.PreviewCraftable = this.new("scripts/items/armor_upgrades/jcc_basilisk_cloak");
-		this.m.Cost = 4000;
+		this.m.Cost = 350;
 		local ingredients = [
 			{
 				Script = "scripts/items/misc/jcc_basilisk_feathers_item",

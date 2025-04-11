@@ -913,6 +913,140 @@
 	}
 ];
 
+::Const.World.Spawn.JccBasilisk <- [
+	{
+		Body = "figure_basilisk_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 1
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 3
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 5
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 7
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 12
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 15
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_02",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskSentry,
+				Num = 1
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_02",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskSentry,
+				Num = 1
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_02",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskSentry,
+				Num = 4
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_02",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 4
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskSentry,
+				Num = 5
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_03",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskSentry,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskQueen,
+				Num = 1
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_03",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskQueen,
+				Num = 1
+			}
+		]
+	}
+];
 
 function onCostCompare( _t1, _t2 )
 {

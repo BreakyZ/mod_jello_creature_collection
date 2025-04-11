@@ -185,14 +185,10 @@ this.tactical_percht_camp <- this.inherit("scripts/mapgen/tactical_template", {
 					{
 						tile.clear();
 
-						if (d == 0 && hasPalisade)
-						{
-							tile.spawnObject("entity/tactical/objects/barbarian_camp_altar");
-						}
-						else
-						{
-							tile.spawnObject("entity/tactical/objects/orc_camp_fireplace");
-						}
+						tile.spawnObject("entity/tactical/objects/orc_camp_fireplace");
+
+
+						
 					}
 					else if (d <= 1)
 					{
@@ -201,7 +197,7 @@ this.tactical_percht_camp <- this.inherit("scripts/mapgen/tactical_template", {
 					else if (d >= 4 && this.Math.rand(1, 100) <= 2)
 					{
 						tile.clear();
-						tile.spawnObject("entity/tactical/objects/goblin_camp_cage");
+						tile.spawnObject("entity/tactical/objects/boulder_bloody");
 					}
 					else if (this.Math.rand(1, 100) <= 2)
 					{
@@ -214,7 +210,7 @@ this.tactical_percht_camp <- this.inherit("scripts/mapgen/tactical_template", {
 						}
 						else
 						{
-							tile.spawnObject("entity/tactical/objects/boulder_bloody");
+							tile.spawnObject("entity/tactical/objects/human_camp_wall");
 						}
 					}
 					else if (d <= 7 && this.Math.rand(1, 100) <= (hasPalisade ? 14 : 6))
