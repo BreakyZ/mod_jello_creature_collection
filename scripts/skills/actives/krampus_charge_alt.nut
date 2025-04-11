@@ -68,6 +68,10 @@ this.krampus_charge_alt <- this.inherit("scripts/skills/skill", {
 
 	function onVerifyTarget( _originTile, _targetTile )
 	{
+		/*if(!_targetTile.IsVisibleForPlayer || !_originTile.IsVisibleForPlayer)
+		{
+			return false;
+		}*/
 		if (!_targetTile.IsEmpty)
 		{
 			return false;
