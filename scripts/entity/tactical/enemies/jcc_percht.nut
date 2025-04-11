@@ -320,8 +320,8 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 		//b.IsSpecializedInBows = true;
 		
 
-		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge"));		
-		// this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge_alt"));
+		//this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge"));		
+		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge_alt"));
 		//this.m.Skills.add(this.new("scripts/skills/actives/charge"));
 
 		this.setAlwaysApplySpriteOffset(true);
@@ -364,7 +364,7 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 				{
 					weapon = this.new("scripts/items/weapons/percht_spetum");
 					this.setSpriteOffset("arms_icon", ::createVec(0, 0))
-
+					this.m.Skills.removeByID("actives.krampus_charge_alt");
 				}
 			}
 			else

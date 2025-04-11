@@ -45,7 +45,7 @@ this.build_percht_camp_action <- this.inherit("scripts/factions/faction_action",
 		local maxY = this.Const.DLC.Wildmen ? 0.75 : 1.0;
 
 			local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries, [
-				this.Const.World.TerrainType.Snow, this.Const.World.TerrainType.Steppe
+				this.Const.World.TerrainType.Snow, this.Const.World.TerrainType.Steppe, this.Const.World.TerrainType.Plains 
 			], 8, 1000, 1000, 7, 7, null, minY, maxY);
 
 			if (tile != null)
