@@ -80,7 +80,7 @@ this.send_percht_roamers_action <- this.inherit("scripts/factions/faction_action
 
 		local settlement = this.pickWeightedRandom(settlements);
 		settlement.setLastSpawnTimeToNow();
-		local party = this.getFaction().spawnEntity(settlement.getTile(), "Bestial Hunters", false, this.Const.World.Spawn.BarbarianHunters, this.Math.min(settlement.getResources(), this.Math.rand(60, 110)));
+		local party = this.getFaction().spawnEntity(settlement.getTile(), "Bestial Hunters", false, this.Const.World.Spawn.JccPerchtHunters, this.Math.min(settlement.getResources(), this.Math.rand(60, 110)));
 		party.getSprite("banner").setBrush(settlement.getBanner());
 		party.setDescription("A group of perchts gathering what the wild offers.");
 		party.setFootprintType(this.Const.World.FootprintsType.Barbarians);

@@ -58,7 +58,8 @@ this.build_percht_camp_action <- this.inherit("scripts/factions/faction_action",
 
 		if (camp != null)
 		{
-			local banner = this.getAppropriateBanner(camp, _faction.getSettlements(), 15, this.Const.BanditBanners);
+			local banner = this.getAppropriateBanner(camp, _faction.getSettlements(), 15, this.Const.PerchtBanners);
+			//local banner = party.getSprite("banner").setBrush("banner_beasts_01");
 			camp.onSpawned();
 			camp.setBanner(banner);
 			_faction.addSettlement(camp, false);

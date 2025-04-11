@@ -233,3 +233,8 @@
 	"send_percht_ambushers_action",
 	"send_percht_roamers_action"
 	]);
+
+
+::Const.PerchtBanners <- [
+	"banner_beasts_01"
+];
