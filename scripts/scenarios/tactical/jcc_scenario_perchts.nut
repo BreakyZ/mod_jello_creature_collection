@@ -25,10 +25,64 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 
 	function initMap()
 	{
-		local testMap = this.MapGen.get("tactical.forest");
+		local testMap = this.MapGen.get("tactical.jcc_percht_camp");
 		local minX = testMap.getMinX();
 		local minY = testMap.getMinY();
 		this.Tactical.resizeScene(minX, minY);
+		local roadTile = this.MapGen.get("tactical.tile.moss1");
+		local _rect = {
+			X = 0,
+			Y = 0,
+			W = minX,
+			H = minY
+		};
+		local _properties;
+		local roadX = _rect.W / 2;
+		local roadY = 0;
+		local roadEndY = _rect.H - 1;
+		local roadYMoved = false;
+
+		while (true)
+		{
+			roadTile.fill({
+				X = roadX,
+				Y = roadY,
+				W = 1,
+				H = 1,
+				IsEmpty = false
+			}, _properties);
+			roadTile.fill({
+				X = roadX + 1,
+				Y = roadY,
+				W = 1,
+				H = 1,
+				IsEmpty = false
+			}, _properties);
+
+			if (roadY == roadEndY)
+			{
+				break;
+			}
+
+			local r = this.Math.rand(0, 100);
+
+			if (!roadYMoved || r < 50)
+			{
+				roadY = ++roadY;
+				roadYMoved = true;
+			}
+			else if (r < 66 && roadX + 1 < _rect.H - 1)
+			{
+				roadX = ++roadX;
+				roadYMoved = false;
+			}
+			else if (roadY - 1 >= 1)
+			{
+				roadX = --roadX;
+				roadYMoved = false;
+			}
+		}
+
 		testMap.fill({
 			X = 0,
 			Y = 0,

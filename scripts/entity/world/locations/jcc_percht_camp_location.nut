@@ -2,7 +2,7 @@ this.jcc_percht_camp_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "percht camp.";
+		return "replace me.";
 	}
 
 	function create()

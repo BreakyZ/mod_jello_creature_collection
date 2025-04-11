@@ -225,3 +225,11 @@
 		0
 	]
 };
+
+
+::Const.FactionTrait.Actions[16].extend([
+	"build_percht_camp_action",
+	"defend_percht_action",
+	"send_percht_ambushers_action",
+	"send_percht_roamers_action"
+	]);

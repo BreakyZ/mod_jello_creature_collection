@@ -9,11 +9,32 @@ this.tactical_percht_camp <- this.inherit("scripts/mapgen/tactical_template", {
 
 	function fill( _rect, _properties, _pass = 1 )
 	{
-		local centerTile = this.Tactical.getTileSquare(_rect.W / 2 + _properties.ShiftX, _rect.H / 2 + _properties.ShiftY);
-		local minDist = 0;
-		local isOnHill = centerTile.Level == 3;
-		local hasPalisade = _properties.Fortification != 0;
-		local radius = this.Const.Tactical.Settings.CampRadius + _properties.AdditionalRadius;
+		local centerTile;
+		local minDist;
+		local isOnHill;
+		local hasPalisade;
+		local radius;
+
+		/*if(_properties!=null){	
+			 centerTile = this.Tactical.getTileSquare(_rect.W / 2 + _properties.ShiftX, _rect.H / 2 + _properties.ShiftY);
+			 minDist = 0;
+			 isOnHill = centerTile.Level == 3;
+			 hasPalisade = _properties.Fortification != 0;
+			 radius = this.Const.Tactical.Settings.CampRadius + _properties.AdditionalRadius;
+		}
+		else{
+			 centerTile = this.Tactical.getTileSquare(_rect.W / 2, _rect.H / 2);
+			 minDist = 0;
+			 isOnHill = centerTile.Level == 3;
+			 hasPalisade = true;
+			 radius = this.Const.Tactical.Settings.CampRadius + 30;
+		}*/
+		 centerTile = this.Tactical.getTileSquare(_rect.W / 2 + _properties.ShiftX, _rect.H / 2 + _properties.ShiftY);
+		 minDist = 0;
+		 isOnHill = centerTile.Level == 3;
+		 hasPalisade = _properties.Fortification != 0;
+		 radius = this.Const.Tactical.Settings.CampRadius + _properties.AdditionalRadius;
+
 		local heads00 = 1;
 		local heads01 = 1;
 
@@ -104,20 +125,26 @@ this.tactical_percht_camp <- this.inherit("scripts/mapgen/tactical_template", {
 						tile.removeObject();
 						local o;
 
-						if (_properties.Fortification == this.Const.Tactical.FortificationType.Palisade)
-						{
-							o = tile.spawnObject("entity/tactical/objects/human_camp_wall");
+						if(_properties!=null){
+
+							if (_properties.Fortification == this.Const.Tactical.FortificationType.Palisade)
+							{
+								o = tile.spawnObject("entity/tactical/objects/human_camp_wall");
+							}
+							else if (_properties.Fortification == this.Const.Tactical.FortificationType.Walls)
+							{
+								o = tile.spawnObject("entity/tactical/objects/graveyard_wall");
+							}
+							else if (this.Math.rand(1, 100) <= 50)
+							{
+								o = tile.spawnObject("entity/tactical/objects/human_camp_wall");
+							}
+							else
+							{
+								o = tile.spawnObject("entity/tactical/objects/graveyard_wall");
+							}
 						}
-						else if (_properties.Fortification == this.Const.Tactical.FortificationType.Walls)
-						{
-							o = tile.spawnObject("entity/tactical/objects/graveyard_wall");
-						}
-						else if (this.Math.rand(1, 100) <= 50)
-						{
-							o = tile.spawnObject("entity/tactical/objects/human_camp_wall");
-						}
-						else
-						{
+						else{
 							o = tile.spawnObject("entity/tactical/objects/graveyard_wall");
 						}
 
