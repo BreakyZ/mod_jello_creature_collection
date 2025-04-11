@@ -16,9 +16,9 @@
 <sprite id="figure_cytoplasm_02" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_02.png"  />
 <sprite id="figure_cytoplasm_03" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_03.png"  />
 
-<sprite id="figure_basilisk_01" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_basilisk_01.png"  />
-<sprite id="figure_basilisk_02" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_basilisk_02.png"  />
-<sprite id="figure_basilisk_03" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_basilisk_03.png"  />
+<sprite id="figure_basilisk_01" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_basilisk_01.png" left="-54" right="30" top="-56" bottom="24" />
+<sprite id="figure_basilisk_02" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_basilisk_02.png" left="-51" right="33" top="-58" bottom="22" />
+<sprite id="figure_basilisk_03" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_basilisk_03.png" left="-51" right="33" top="-58" bottom="22" />
 
 <sprite id="percht_camp_01" ic="FF38484E" width="218" height="180" img="world\location\percht_camp_01.png" left="-107" right="110" top="-91" bottom="88" />
 
