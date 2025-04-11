@@ -37,7 +37,7 @@
 			local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
 			local party = _action.getFaction().spawnEntity(tile, "Basilisks", false, this.Const.World.Spawn.JccBasilisk, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
 			party.getSprite("banner").setBrush("banner_beasts_01");
-			party.setDescription("A chaotic swarm of Basilisks");
+			party.setDescription("A chaotic swarm of basilisks");
 			party.setFootprintType(this.Const.World.FootprintsType.Basilisks);
 			party.setSlowerAtNight(true);
 			party.setUsingGlobalVision(false);

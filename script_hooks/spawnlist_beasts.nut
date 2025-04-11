@@ -910,6 +910,19 @@
 				Num = 2
 			}
 		]
+	},
+	{
+		Body = "figure_percht_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccPercht,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Lindwurm,
+				Num = 1
+			}
+		]
 	}
 ];
 
