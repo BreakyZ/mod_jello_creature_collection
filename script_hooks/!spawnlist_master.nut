@@ -102,11 +102,3 @@
 	Row = 2,
 	Script = "scripts/entity/tactical/enemies/jcc_cytoplasm_black"
 };
-
-::Const.FactionTrait.Actions[16].extend([
-	"build_percht_camp_action",
-	"defend_percht_action",
-	"send_percht_ambushers_action",
-	"send_percht_roamers_action"
-	]);
-
