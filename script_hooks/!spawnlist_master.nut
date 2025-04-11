@@ -28,8 +28,8 @@
 ::Const.World.Spawn.Troops.JccBasiliskQueen <- {
 	ID = this.Const.EntityType.JccBasiliskQueen,
 	Variant = 0,
-	Strength = 30,
-	Cost = 50,
+	Strength = 70,
+	Cost = 70,
 	Row = 2,
 	Script = "scripts/entity/tactical/enemies/jcc_basilisk_queen"
 };
@@ -38,7 +38,7 @@
 	ID = this.Const.EntityType.JccPercht,
 	Variant = 1,
 	Strength = 35,
-	Cost = 40,
+	Cost = 35,
 	Row = 2,
 	Script = "scripts/entity/tactical/enemies/jcc_percht",
 	NameList = this.Const.Strings.JccPerchtNames,
@@ -49,7 +49,7 @@
 	ID = this.Const.EntityType.JccPerchta,
 	Variant = 0,
 	Strength = 35,
-	Cost = 60,
+	Cost = 35,
 	Row = 2,
 	Script = "scripts/entity/tactical/enemies/jcc_perchta"
 };

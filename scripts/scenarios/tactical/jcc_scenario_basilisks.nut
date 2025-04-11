@@ -61,6 +61,7 @@ this.jcc_scenario_basilisks <- this.inherit("scripts/scenarios/tactical/scenario
 			items.equip(armor);
 			items.equip(this.new("scripts/items/weapons/basilisk_hammer"));
 			items.equip(this.new("scripts/items/helmets/hood"));
+			items.equip(this.new("scripts/items/accessory/jcc_basilisk_trophy_item"));
 			items.addToBag(this.new("scripts/items/weapons/dagger"));
 			items.equip(this.new("scripts/items/accessory/armored_wardog_item"));
 		
