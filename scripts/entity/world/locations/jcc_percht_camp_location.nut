@@ -2,7 +2,7 @@ this.jcc_percht_camp_location <- this.inherit("scripts/entity/world/location", {
 	m = {},
 	function getDescription()
 	{
-		return "replace me.";
+		return "Beasts of all kinds gather here, sensing some unseen evil.";
 	}
 
 	function create()

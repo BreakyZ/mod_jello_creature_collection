@@ -82,7 +82,7 @@ this.send_percht_roamers_action <- this.inherit("scripts/factions/faction_action
 		settlement.setLastSpawnTimeToNow();
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "Bestial Hunters", false, this.Const.World.Spawn.JccPerchtHunters, this.Math.min(settlement.getResources(), this.Math.rand(60, 110)));
 		party.getSprite("banner").setBrush(settlement.getBanner());
-		party.setDescription("A group of perchts gathering what the wild offers.");
+		party.setDescription("Horned spirits, said to be appear as the days grow cold and short.");
 		party.setFootprintType(this.Const.World.FootprintsType.Barbarians);
 		party.getFlags().set("IsRandomlySpawned", true);
 		party.getLoot().ArmorParts = this.Math.rand(0, 5);
