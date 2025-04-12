@@ -130,22 +130,22 @@
 			{
 				id = 50,
 				name = "Basilisks",
-				description = "[p=c][img]gfx/ui/events/event_05.png[/img][/p]\n[p=c]Fight against a flock of Basilisks[/p]"
+				description = "[p=c][img]gfx/ui/events/event_127.png[/img][/p]\n[p=c]Fight against a flock of Basilisks[/p]"
 			},
 			{
 				id = 51,
 				name = "Perchts",
-				description = "[p=c][img]gfx/ui/events/event_05.png[/img][/p]\n[p=c]Fight against Perchts and various beasts.[/p]"
+				description = "[p=c][img]gfx/ui/events/event_44.png[/img][/p]\n[p=c]Fight against Perchts and various beasts.[/p]"
 			},			
 			{
 				id = 52,
 				name = "Slimes",
-				description = "[p=c][img]gfx/ui/events/event_05.png[/img][/p]\n[p=c]Fight against Slimes.[/p]"
+				description = "[p=c][img]gfx/ui/events/event_16.png[/img][/p]\n[p=c]Fight against Slimes.[/p]"
 			},			
 			{
 				id = 53,
 				name = "Beastslayers",
-				description = "[p=c][img]gfx/ui/events/event_05.png[/img][/p]\n[p=c]Defend your bestial allies from enemy hunters.[/p]"
+				description = "[p=c][img]gfx/ui/events/event_07.png[/img][/p]\n[p=c]Defend your bestial allies from enemy hunters.[/p]"
 			}
 		]);
 
