@@ -127,5 +127,8 @@
 	"the Unhold-Undoer",
 	"the Verminator",
 	"the Bear-Wrestler",
-	"the Spider-Stomper"
+	"the Spider-Stomper",
+	"Wolfsbane",
+	"Hagsbane",
+	"Hag-Hacker"
 ];

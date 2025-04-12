@@ -459,7 +459,16 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
 
 		return true;
-	}
+	}function onFactionChanged()
+    {
+        this.actor.onFactionChanged();
+        local flip = this.isAlliedWithPlayer();
+        this.getSprite("body").setHorizontalFlipping(flip);
+        this.getSprite("injury").setHorizontalFlipping(flip);
+        this.getSprite("armor").setHorizontalFlipping(flip);
+        this.getSprite("head").setHorizontalFlipping(flip);
+        this.getSprite("helmet").setHorizontalFlipping(flip);
+    }
 
 });
 
