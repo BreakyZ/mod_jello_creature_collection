@@ -236,7 +236,6 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 						"scripts/items/armor_upgrades/additional_padding_upgrade",
 						"scripts/items/armor_upgrades/bone_platings_upgrade",
 						"scripts/items/armor_upgrades/direwolf_pelt_upgrade",
-						"scripts/items/armor_upgrades/barbarian_horn_upgrade",
 						"scripts/items/armor_upgrades/hyena_fur_upgrade",
 						"scripts/items/armor_upgrades/light_padding_replacement_upgrade",
 						"scripts/items/armor_upgrades/mail_patch_upgrade",
