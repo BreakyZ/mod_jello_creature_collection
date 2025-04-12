@@ -1091,6 +1091,7 @@
 		Troops = [
 			{
 				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 16
 			}
 		]
 	},
