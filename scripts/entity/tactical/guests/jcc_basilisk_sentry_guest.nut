@@ -246,6 +246,7 @@ this.jcc_basilisk_sentry_guest <- this.inherit("scripts/entity/tactical/player",
 		head.setBrush("basilisk_sentry_head_01");
 		head.Saturation = body.Saturation;
 		head.Color = body.Color;
+		this.addSprite("injury_body");
 		local injury_body = this.addSprite("injury");
 		injury_body.Visible = false;
 		injury_body.setBrush("basilisk_sentry_01_injured");

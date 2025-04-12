@@ -241,6 +241,7 @@ this.jcc_basilisk_drone_guest <- this.inherit("scripts/entity/tactical/player", 
 		body.varySaturation(0.1);
 		body.varyColor(0.09, 0.09, 0.09);
 		this.addSprite("armor");
+		this.addSprite("injury_body");
 		local head = this.addSprite("head");
 		head.setBrush("basilisk_drone_head_01");
 		head.Saturation = body.Saturation;

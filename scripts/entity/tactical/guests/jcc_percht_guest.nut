@@ -446,10 +446,8 @@ this.jcc_percht_guest <- this.inherit("scripts/entity/tactical/player", {
 
 		local r = this.Math.rand(1, 2);
 
-		this.setSpriteOffset("arms_icon", ::createVec(-7, 0))
-		this.m.spriteOffset = -7;
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_agent");
-		this.m.AIAgent.setActor(this);
+		this.setSpriteOffset("arms_icon", ::createVec(7, 0))
+		this.m.spriteOffset = 7;
 
 		if (r == 1)
 		{
@@ -463,17 +461,21 @@ this.jcc_percht_guest <- this.inherit("scripts/entity/tactical/player", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
 		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge_alt"));
 
+
 		return true;
-	}function onFactionChanged()
+	}
+
+
+	function onFactionChanged()
     {
         this.actor.onFactionChanged();
         local flip = this.isAlliedWithPlayer();
         this.getSprite("body").setHorizontalFlipping(flip);
         this.getSprite("injury").setHorizontalFlipping(flip);
         this.getSprite("injury_body").setHorizontalFlipping(flip);
-        this.getSprite("armor").setHorizontalFlipping(flip);
+        //this.getSprite("armor").setHorizontalFlipping(flip);
         this.getSprite("head").setHorizontalFlipping(flip);
-        this.getSprite("helmet").setHorizontalFlipping(flip);
+        //this.getSprite("helmet").setHorizontalFlipping(flip);
 
         if(flip){
         this.setSpriteOffset("arms_icon", ::createVec(this.m.spriteOffset*-1, 0)); }
