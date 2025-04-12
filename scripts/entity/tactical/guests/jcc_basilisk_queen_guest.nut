@@ -9,6 +9,7 @@ this.jcc_basilisk_queen_guest <- this.inherit("scripts/entity/tactical/player", 
 		this.m.DecapitateSplatterOffset = this.createVec(40, -20);
 		this.m.DecapitateBloodAmount = 3.0;
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
+		this.player.create();
 		this.m.ExcludedInjuries = [
 			"injury.fractured_hand",
 			"injury.crushed_finger",
@@ -61,7 +62,6 @@ this.jcc_basilisk_queen_guest <- this.inherit("scripts/entity/tactical/player", 
 		this.m.SoundPitch = this.Math.rand(0.6, 0.9);
 		this.m.SoundVolumeOverall = 1.45;
 
-		this.player.create();
 		this.m.AIAgent = this.new("scripts/ai/tactical/player_agent");
 		this.m.AIAgent.setActor(this);
 		this.m.IsGuest = false;

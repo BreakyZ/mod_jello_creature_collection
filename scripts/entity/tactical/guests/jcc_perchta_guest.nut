@@ -8,6 +8,7 @@ this.jcc_perchta_guest <- this.inherit("scripts/entity/tactical/player", {
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(25, -25);
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
+		this.player.create();
 		this.m.Sound[this.Const.Sound.ActorEvent.Death] = [
 			"sounds/enemies/percht_death01.wav",
 			"sounds/enemies/percht_death02.wav",
@@ -52,7 +53,6 @@ this.jcc_perchta_guest <- this.inherit("scripts/entity/tactical/player", {
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 2;
 
 
-		this.player.create();
 		this.m.AIAgent = this.new("scripts/ai/tactical/player_agent");
 		this.m.AIAgent.setActor(this);
 		this.m.IsGuest = false;
