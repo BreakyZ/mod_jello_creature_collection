@@ -43,6 +43,28 @@
 		Troops = [
 			{
 				Type = this.Const.World.Spawn.Troops.JccPercht,
+				Num = 12
+			}
+		]
+	},
+	{
+		Body = "figure_percht_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccPercht,
+				Num = 12
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccPerchta,
+				Num = 2
+			}
+		]
+	},
+	{
+		Body = "figure_percht_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccPercht,
 				Num = 2
 			}
 		]
@@ -711,6 +733,14 @@
 			{
 				Type = this.Const.World.Spawn.Troops.JccPerchta,
 				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Spider,
+				Num = 6
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Direwolf,
+				Num = 8
 			}
 		]
 	},
@@ -728,11 +758,19 @@
 		Troops = [
 			{
 				Type = this.Const.World.Spawn.Troops.JccPercht,
-				Num = 1
+				Num = 2
 			},
 			{
 				Type = this.Const.World.Spawn.Troops.Schrat,
 				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Spider,
+				Num = 6
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Direwolf,
+				Num = 8
 			}
 		]
 	},
@@ -746,6 +784,14 @@
 			{
 				Type = this.Const.World.Spawn.Troops.Schrat,
 				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Spider,
+				Num = 6
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Direwolf,
+				Num = 4
 			}
 		]
 	},
@@ -759,6 +805,14 @@
 			{
 				Type = this.Const.World.Spawn.Troops.Schrat,
 				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Spider,
+				Num = 6
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Direwolf,
+				Num = 2
 			}
 		]
 	},
@@ -771,6 +825,14 @@
 			},
 			{
 				Type = this.Const.World.Spawn.Troops.Schrat,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Spider,
+				Num = 6
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Direwolf,
 				Num = 2
 			}
 		]
@@ -921,6 +983,31 @@
 			{
 				Type = this.Const.World.Spawn.Troops.Lindwurm,
 				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Ghoul,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Spider,
+				Num = 6
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+				Num = 2
+			}
+		]
+	},
+	{
+		Body = "figure_percht_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccPercht,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Lindwurm,
+				Num = 1
 			}
 		]
 	}
@@ -978,6 +1065,32 @@
 			{
 				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
 				Num = 15
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 13
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 14
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
 			}
 		]
 	},
@@ -1053,6 +1166,49 @@
 	{
 		Body = "figure_basilisk_03",
 		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskQueen,
+				Num = 1
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_03",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskQueen,
+				Num = 2
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_03",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 7
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskSentry,
+				Num = 5
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskQueen,
+				Num = 1
+			}
+		]
+	},
+	{
+		Body = "figure_basilisk_03",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+				Num = 12
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccBasiliskSentry,
+				Num = 7
+			},
 			{
 				Type = this.Const.World.Spawn.Troops.JccBasiliskQueen,
 				Num = 1
