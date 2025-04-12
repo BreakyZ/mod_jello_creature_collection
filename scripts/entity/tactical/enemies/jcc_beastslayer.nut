@@ -242,10 +242,10 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 
 					local upgrade = this.new(upgrades[this.Math.rand(1, upgrades.len() - 1)]);
 
-					if(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Mainhand).getId()=="weapon.percht_axe")
+					/*if(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Mainhand).getId()=="weapon.percht_axe")
 					{
 						upgrade = "scripts/items/armor_upgrades/protective_runes_upgrade";
-					}
+					}*/
 
 					if(this.Math.rand(1, 100) <= 80){
 						armor.setUpgrade(upgrade);
