@@ -28,6 +28,19 @@
 	}
 ];*/
 
+::Const.World.Spawn.JccBeastslayer <- [
+	{
+		Body = "figure_bandit_01",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccBeastslayer,
+				Num = 1
+			}
+		]
+	},
+];
+
+
 ::Const.World.Spawn.JccPercht <- [
 	{
 		Body = "figure_percht_01",

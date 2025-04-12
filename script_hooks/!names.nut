@@ -118,7 +118,7 @@
 	"Dwayne LaFontant",
 	"Bazuso"
 ];
-::Const.Strings.JccBeastslayerNames <- [
+::Const.Strings.JccBeastslayerTitles <- [
 	"the Witcher",
 	"the Dragonslayer",
 	"the Wurmslayer",

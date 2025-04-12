@@ -99,7 +99,7 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 					}
 					else if (r == 2)
 					{
-						this.m.Items.equip(this.new("scripts/items/weapons/throwing_javelin"));
+						this.m.Items.equip(this.new("scripts/items/weapons/javelin"));
 					}
 
 				r = this.Math.rand(0, 2);
@@ -140,7 +140,7 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 					}
 					else
 					{					
-						this.m.Items.equip(this.new("scripts/items/shields/craftable_schrat_shield"));
+						this.m.Items.equip(this.new("scripts/items/shields/special/craftable_schrat_shield"));
 					}
 					this.m.spawnedWithShield = true;
 				}
@@ -274,7 +274,7 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 					"scripts/items/helmets/headscarf",
 					"scripts/items/helmets/kettle_hat",
 					"scripts/items/helmets/kettle_hat_with_mail",
-					"scripts/items/helmets/bear_headpiece",
+					"scripts/items/helmets/barbarians/bear_headpiece",
 					"scripts/items/helmets/closed_flat_top_helmet",
 					"scripts/items/helmets/barbute_helmet",
 					"scripts/items/helmets/bascinet_with_mail"
@@ -406,7 +406,7 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 		}
 
 		if(this.m.spawnedWithShield){
-			this.m.Items.equip(this.new("scripts/items/shields/craftable_lindwurm_shield"));
+			this.m.Items.equip(this.new("scripts/items/shields/special/craftable_lindwurm_shield"));
 		}
 
 
