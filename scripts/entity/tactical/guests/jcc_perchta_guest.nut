@@ -25,6 +25,13 @@ this.jcc_perchta_guest <- this.inherit("scripts/entity/tactical/player", {
 			"sounds/enemies/percht_hurt03.wav",
 			"sounds/enemies/percht_hurt04.wav",
 			"sounds/enemies/percht_hurt05.wav",
+		];		
+		this.m.Sound[this.Const.Sound.ActorEvent.NoDamageReceived] = [
+			"sounds/enemies/percht_hurt01.wav",
+			"sounds/enemies/percht_hurt02.wav",
+			"sounds/enemies/percht_hurt03.wav",
+			"sounds/enemies/percht_hurt04.wav",
+			"sounds/enemies/percht_hurt05.wav",
 		];
 		this.m.Sound[this.Const.Sound.ActorEvent.Idle] = [
 			"sounds/enemies/percht_idle01.wav",
@@ -316,6 +323,7 @@ this.jcc_perchta_guest <- this.inherit("scripts/entity/tactical/player", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_coup_de_grace"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_backstabber"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_dodge"));
+		this.m.Skills.add(this.new("scripts/skills/effects/dodge_effect"));
 		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
 		b.IsSpecializedInSwords = true;
 		b.IsSpecializedInAxes = true;

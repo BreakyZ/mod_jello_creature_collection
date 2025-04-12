@@ -85,6 +85,7 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		entity.generateName();
 
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/schrat", 13, 13, 14, 14);
+		entity.assignRandomEquipment();
 		entity.setFaction(this.Const.Faction.PlayerAnimals);
 
 		entity = this.spawnEntity("scripts/entity/tactical/guests/jcc_percht_guest", 13, 13, 15, 15);
@@ -310,22 +311,6 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		this.Stash.add(this.new("scripts/items/shields/kite_shield"));
 		this.Stash.add(this.new("scripts/items/shields/kite_shield"));
 		this.Stash.add(this.new("scripts/items/shields/kite_shield"));
-		this.Stash.add(this.new("scripts/items/helmets/hood"));
-		this.Stash.add(this.new("scripts/items/helmets/aketon_cap"));
-		this.Stash.add(this.new("scripts/items/helmets/full_aketon_cap"));
-		this.Stash.add(this.new("scripts/items/helmets/nasal_helmet"));
-		this.Stash.add(this.new("scripts/items/helmets/padded_nasal_helmet"));
-		this.Stash.add(this.new("scripts/items/helmets/nasal_helmet_with_mail"));
-		this.Stash.add(this.new("scripts/items/helmets/mail_coif"));
-		this.Stash.add(this.new("scripts/items/helmets/closed_mail_coif"));
-		this.Stash.add(this.new("scripts/items/helmets/reinforced_mail_coif"));
-		this.Stash.add(this.new("scripts/items/helmets/kettle_hat"));
-		this.Stash.add(this.new("scripts/items/helmets/padded_kettle_hat"));
-		this.Stash.add(this.new("scripts/items/helmets/kettle_hat_with_mail"));
-		this.Stash.add(this.new("scripts/items/helmets/flat_top_helmet"));
-		this.Stash.add(this.new("scripts/items/helmets/flat_top_with_mail"));
-		this.Stash.add(this.new("scripts/items/helmets/full_helm"));
-		this.Stash.add(this.new("scripts/items/helmets/full_helm"));
 		this.Stash.add(this.new("scripts/items/armor/padded_surcoat"));
 		this.Stash.add(this.new("scripts/items/armor/gambeson"));
 		this.Stash.add(this.new("scripts/items/armor/gambeson"));

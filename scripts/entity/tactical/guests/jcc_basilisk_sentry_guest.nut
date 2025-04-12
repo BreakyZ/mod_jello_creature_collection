@@ -33,6 +33,14 @@ this.jcc_basilisk_sentry_guest <- this.inherit("scripts/entity/tactical/player",
 			"sounds/enemies/Basilisk_flee02.wav",
 			"sounds/enemies/Basilisk_flee03.wav"
 		];
+				this.m.Sound[this.Const.Sound.ActorEvent.NoDamageReceived] = [
+			"sounds/enemies/Basilisk_hurt01.wav",
+			"sounds/enemies/Basilisk_hurt02.wav",
+			"sounds/enemies/Basilisk_hurt03.wav",
+			"sounds/enemies/Basilisk_hurt04.wav",
+			"sounds/enemies/Basilisk_hurt05.wav",
+			"sounds/enemies/Basilisk_hurt06.wav"
+		];
 		this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived] = [
 			"sounds/enemies/Basilisk_hurt01.wav",
 			"sounds/enemies/Basilisk_hurt02.wav",

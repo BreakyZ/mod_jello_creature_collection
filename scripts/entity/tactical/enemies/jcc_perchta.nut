@@ -306,7 +306,7 @@ this.jcc_perchta <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_coup_de_grace"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_backstabber"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_dodge"));
+		this.m.Skills.add(this.new("scripts/skills/effects/dodge_effect"));
 		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
 		b.IsSpecializedInSwords = true;
 		b.IsSpecializedInAxes = true;

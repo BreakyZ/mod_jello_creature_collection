@@ -253,6 +253,7 @@ this.jcc_scenario_perchts <- this.inherit("scripts/scenarios/tactical/scenario_t
 
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/schrat", 21, 21, 11, 11);
 		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_perchta", 21, 21, 12, 12);
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
