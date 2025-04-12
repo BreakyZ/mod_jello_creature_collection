@@ -59,3 +59,7 @@ local count = ::Const.AI.Behavior.ID.COUNT;
 });
 
  
+::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_throw_bomb", function ( q ) {
+
+	q.m.PossibleSkills.push("actives.throw_acid_flask");
+});

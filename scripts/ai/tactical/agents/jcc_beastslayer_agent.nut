@@ -45,6 +45,7 @@ this.jcc_beastslayer_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_reap"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_knock_out"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_throw_net"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_throw_bomb"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_lash"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_distract"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_defend_spearwall"));
