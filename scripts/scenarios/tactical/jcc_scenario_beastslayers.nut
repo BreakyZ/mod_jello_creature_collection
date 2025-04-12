@@ -163,19 +163,19 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		}
 
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht", 10, 10, 11, 11);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht", 12, 12, 11, 11);
 		entity.setFaction(this.Const.Faction.PlayerAnimals);
 		entity.assignRandomEquipment();
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf", 10, 10, 12, 12);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf", 12, 12, 12, 12);
 		entity.setFaction(this.Const.Faction.PlayerAnimals);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf_high", 10, 10, 13, 13);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf_high", 12, 12, 14, 14);
 		entity.setFaction(this.Const.Faction.PlayerAnimals);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_perchta", 10, 10, 14, 14);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_perchta", 11, 11, 17, 17);
 		entity.setFaction(this.Const.Faction.PlayerAnimals);
 		entity.assignRandomEquipment();
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone", 10, 10, 15, 15);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone", 11, 11, 11, 11);
 		entity.setFaction(this.Const.Faction.PlayerAnimals);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_sentry", 10, 10, 10, 10);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_sentry", 11, 11, 16, 16);
 		entity.setFaction(this.Const.Faction.PlayerAnimals);
 
 
@@ -220,11 +220,37 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		entity.assignRandomEquipment();
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_beastslayer", x, x, 16, 16);
 		entity.setFaction(this.Const.Faction.Orcs);
+		entity.assignRandomEquipment();				
+		x = x + 1;
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_beastslayer", x, x, 14, 14);
+		entity.setFaction(this.Const.Faction.Orcs);
+		entity.makeMiniboss();
+		entity.generateName();
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_beastslayer", x, x, 15, 15);
+		entity.setFaction(this.Const.Faction.Orcs);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_beastslayer", x, x, 16, 16);
+		entity.setFaction(this.Const.Faction.Orcs);
 		entity.assignRandomEquipment();
 
-
-
-
+		x = x + 1;
+		entity = this.spawnEntity("scripts/entity/tactical/wardog", x, x, 11, 11);
+		entity.setFaction(this.Const.Faction.Orcs);
+		items = entity.getItems();
+		items.equip(this.new("scripts/items/armor/special/wardog_heavy_armor"));
+		entity = this.spawnEntity("scripts/entity/tactical/warhound", x, x, 13, 13);
+		entity.setFaction(this.Const.Faction.Orcs);
+		items = entity.getItems();
+		items.equip(this.new("scripts/items/armor/special/wardog_heavy_armor"));
+		entity = this.spawnEntity("scripts/entity/tactical/wardog", x, x, 14, 14);
+		entity.setFaction(this.Const.Faction.Orcs);
+		items = entity.getItems();
+		items.equip(this.new("scripts/items/armor/special/wardog_heavy_armor"));
+		entity = this.spawnEntity("scripts/entity/tactical/warhound", x, x, 15, 15);
+		entity.setFaction(this.Const.Faction.Orcs);
+		items = entity.getItems();
+		items.equip(this.new("scripts/items/armor/special/wardog_heavy_armor"));
 
 	}
 
