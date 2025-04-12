@@ -7,6 +7,9 @@
 <sprite id="split_man_cursed" ic="FF614551" img="ui\skills\split_man_cursed.png" />
 <sprite id="basilisk_hammer_01" ic="FF614551" img="ui\skills\basilisk_hammer_01.png" />
 <sprite id="basilisk_big_peck" ic="FF614551" img="ui\skills\basilisk_big_peck.png" />
+<sprite id="jcc_peck" ic="FF614551" img="ui\skills\jcc_peck.png" />
+<sprite id="jcc_fowleye" ic="FF614551" img="ui\skills\jcc_fowleye.png" />
+<sprite id="jcc_inject" ic="FF614551" img="ui\skills\jcc_inject.png" />
 
 <!-- Worldmap -->
 
@@ -98,8 +101,8 @@
   <sprite id="bust_perchta_head_injured" offsetY="30" offsetX="-2" ic="FF2A2D2F" width="104" height="142" img="entity\beasts\bust_perchta_head_injured.png" left="-59" right="60" top="-60" bottom="103" />
   <sprite id="bust_perchta_body" offsetY="30" offsetX="-2" ic="FF2A2D2F" width="104" height="142" img="entity\beasts\bust_perchta_body.png"  left="-59" right="60" top="-60" bottom="103" />
   <sprite id="bust_perchta_head" offsetY="30" offsetX="-2" ic="FF2A2D2F" width="104" height="142" img="entity\beasts\bust_perchta_head.png" left="-59" right="60" top="-60" bottom="103" />
-  <sprite id="bust_perchta_body_dead" offsetX="5" offsetY="30" f="6403" ic="FF252930" width="169" height="139" img="entity\beasts\bust_perchta_body_dead.png" left="-79" right="110" top="-116" bottom="56" />  
-  <sprite id="bust_perchta_head_dead" offsetX="5" offsetY="30" f="6403" ic="FF252930" width="169" height="139" img="entity\beasts\bust_perchta_head_dead.png" left="-79" right="110" top="-116" bottom="56" />
+  <sprite id="bust_perchta_body_dead" offsetX="5" offsetY="30" f="6403" ic="FF252930" width="169" height="139" img="entity\beasts\bust_perchta_body_dead.png" left="-85" right="119" top="-137" bottom="65" />  
+  <sprite id="bust_perchta_head_dead" offsetX="5" offsetY="30" f="6403" ic="FF252930" width="169" height="139" img="entity\beasts\bust_perchta_head_dead.png" left="-83" right="117" top="-119" bottom="57" />
 
 <!-- Percht -->
 

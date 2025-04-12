@@ -1,15 +1,14 @@
-this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
+this.jcc_basilisk_queen_guest <- this.inherit("scripts/entity/tactical/player", {
 	m = {},
 	function create()
 	{
-		this.m.Type = this.Const.EntityType.JccBasiliskQueen;
+		this.m.Type = this.Const.EntityType.JccBasiliskQueenGuest;
 		this.m.BloodType = this.Const.BloodType.Red;
 		this.m.XP = this.Const.Tactical.Actor.JccBasiliskQueen.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(40, -20);
 		this.m.DecapitateBloodAmount = 3.0;
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
-		this.actor.create();
 		this.m.ExcludedInjuries = [
 			"injury.fractured_hand",
 			"injury.crushed_finger",
@@ -62,8 +61,14 @@ this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.SoundPitch = this.Math.rand(0.6, 0.9);
 		this.m.SoundVolumeOverall = 1.45;
 
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/jcc_basilisk_queen_agent");
+		this.player.create();
+		this.m.AIAgent = this.new("scripts/ai/tactical/player_agent");
 		this.m.AIAgent.setActor(this);
+		this.m.IsGuest = false;
+		this.m.Talents.resize(this.Const.Attributes.COUNT, 0);
+		this.m.Attributes.resize(this.Const.Attributes.COUNT, [
+			0
+		]);
 
 	}
 
@@ -291,9 +296,9 @@ this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
         local flip = this.isAlliedWithPlayer();
         this.getSprite("body").setHorizontalFlipping(flip);
         this.getSprite("injury").setHorizontalFlipping(flip);
-        this.getSprite("armor").setHorizontalFlipping(flip);
+        //this.getSprite("armor").setHorizontalFlipping(flip);
         this.getSprite("head").setHorizontalFlipping(flip);
-        this.getSprite("helmet").setHorizontalFlipping(flip);
+        //this.getSprite("helmet").setHorizontalFlipping(flip);
     }
 
 

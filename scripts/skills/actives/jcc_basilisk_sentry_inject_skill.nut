@@ -7,11 +7,11 @@ this.jcc_basilisk_sentry_inject_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.jcc_basilisk_sentry_inject";
 		this.m.Name = "Inject"; //check
-		this.m.Description = "no touch poison birb";
+		this.m.Description = "Inject the target with a cocktail of venoms, halting their fatigue regeneration.";
 		this.m.KilledString = "Pecked to death"; //check
-		this.m.Icon = "skills/sentry_inject.png";
-		this.m.IconDisabled = "skills/sentry_inject.png";
-		this.m.Overlay = "sentry_inject";
+		this.m.Icon = "skills/jcc_inject.png";
+		this.m.IconDisabled = "skills/jcc_inject_sw.png";
+		this.m.Overlay = "jcc_inject";
 		this.m.SoundOnUse = [
 			"sounds/enemies/dlc6/snake_attack_01.wav",
 			"sounds/enemies/dlc6/snake_attack_02.wav",

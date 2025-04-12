@@ -7,9 +7,9 @@ this.jcc_basilisk_sentry_fowleye_skill <- this.inherit("scripts/skills/skill", {
 		this.m.ID = "actives.jcc_basilisk_sentry_fowleye";
 		this.m.Name = "Fowl Eye"; //check
 		this.m.Description = "no look at birb";
-		this.m.Icon = "skills/sentry_fowleye.png";
-		this.m.IconDisabled = "sentry_fowleye.png";
-		this.m.Overlay = "active_102"; ///investigate - porobably in actives metadata file
+		this.m.Icon = "skills/jcc_fowleye.png";
+		this.m.IconDisabled = "skills/jcc_fowleye_sw.png";
+		this.m.Overlay = "jcc_fowleye"; ///investigate - porobably in actives metadata file
 		this.m.SoundOnUse = [
 			"sounds/enemies/horror_spell_01.wav",
 			"sounds/enemies/horror_spell_02.wav",

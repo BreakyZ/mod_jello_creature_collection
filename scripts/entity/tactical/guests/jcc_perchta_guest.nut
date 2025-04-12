@@ -1,14 +1,13 @@
-this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
-	m = { spriteOffset = 0 },
+this.jcc_perchta_guest <- this.inherit("scripts/entity/tactical/player", {
+	m = {},
 	function create()
 	{
-		this.m.Type = this.Const.EntityType.JccPercht;
+		this.m.Type = this.Const.EntityType.JccPerchtaGuest;
 		this.m.BloodType = this.Const.BloodType.Red;
-		this.m.XP = this.Const.Tactical.Actor.JccPercht.XP;
+		this.m.XP = this.Const.Tactical.Actor.JccPerchta.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(25, -25);
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
-		this.actor.create();
 		this.m.Sound[this.Const.Sound.ActorEvent.Death] = [
 			"sounds/enemies/percht_death01.wav",
 			"sounds/enemies/percht_death02.wav",
@@ -51,8 +50,16 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 1.7;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 4;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 2;
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_agent");
+
+
+		this.player.create();
+		this.m.AIAgent = this.new("scripts/ai/tactical/player_agent");
 		this.m.AIAgent.setActor(this);
+		this.m.IsGuest = false;
+		this.m.Talents.resize(this.Const.Attributes.COUNT, 0);
+		this.m.Attributes.resize(this.Const.Attributes.COUNT, [
+			0
+		]);
 	}
 
 	function onDeath( _killer, _skill, _tile, _fatalityType )
@@ -208,7 +215,7 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 				{
 					loot = this.new("scripts/items/misc/jcc_krampus_coal_item");
 				}
-				else if (r <= 80)
+				else if (r <= 60)
 				{
 					loot = this.new("scripts/items/misc/jcc_krampus_scalp_item");
 				}
@@ -234,7 +241,7 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 	function generateCorpse( _tile, _fatalityType, _killer )
 	{
 		local corpse = clone this.Const.Corpse;
-		corpse.CorpseName = "A Percht";
+		corpse.CorpseName = "A Perchta";
 		corpse.IsResurrectable = false;
 		corpse.IsConsumable = true;
 		corpse.Items = this.getItems().prepareItemsForCorpse(_killer);
@@ -252,7 +259,7 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 	{
 		this.actor.onInit();
 		local b = this.m.BaseProperties;
-		b.setValues(this.Const.Tactical.Actor.JccPercht);
+		b.setValues(this.Const.Tactical.Actor.JccPerchta);
 
 		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 70)
 		{
@@ -275,20 +282,20 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 		local body_variant = this.Math.rand(1, 2);
 		local head_variant = this.Math.rand(1, 3);
 		local body = this.addSprite("body");
-		body.setBrush("bust_percht_body_0"+body_variant);
+		body.setBrush("bust_perchta_body");
 		body.varySaturation(0.05);
 		body.varyColor(0.07, 0.07, 0.07);
 		local injury_body = this.addSprite("injury_body");
 		injury_body.Visible = false;
-		injury_body.setBrush("bust_percht_body_0"+body_variant+"_injured");
+		injury_body.setBrush("bust_perchta_body_injured");
 		this.addSprite("armor");
 		local head = this.addSprite("head");
-		head.setBrush("bust_percht_head_0"+head_variant);
+		head.setBrush("bust_perchta_head");
 		head.Saturation = body.Saturation;
 		head.Color = body.Color;
 		local injury = this.addSprite("injury");
 		injury.Visible = false;
-		injury.setBrush("bust_percht_head_0"+head_variant+"_injured");
+		injury.setBrush("bust_perchta_head_injured");
 		this.addSprite("helmet");
 		this.addDefaultStatusSprites();
 		this.getSprite("status_rooted").Scale = 0.55;
@@ -305,6 +312,8 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_hold_out"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_coup_de_grace"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_backstabber"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_dodge"));
 		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
 		b.IsSpecializedInSwords = true;
 		b.IsSpecializedInAxes = true;
@@ -316,17 +325,18 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsSpecializedInCleavers = true;
 		b.IsSpecializedInDaggers = true;
 		b.IsAffectedByNight = false;
-
-		//b.IsSpecializedInBows = true;
+		b.IsSpecializedInBows = true;
 		
 
 		//this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge"));		
 		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge_alt"));
 		//this.m.Skills.add(this.new("scripts/skills/actives/charge"));
 
+		//this.m.Skills.add(this.new("scripts/skills/actives/jcc_krampus_yell_skill"));
+
+
 		this.setAlwaysApplySpriteOffset(true);
 		this.setSpriteOffset("arms_icon", ::createVec(-7, 0))
-		this.m.spriteOffset = -7;
 
 		if (this.Const.DLC.Unhold)
 		{
@@ -347,136 +357,49 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 
 
 
-		if (this.Math.rand(1, 100) <= 75)
+
+		if (this.Math.rand(1, 100) <= 65)
 		{
-			if (this.Math.rand(1, 100) <= 45)
-			{
-				this.m.Items.addToBag(this.new("scripts/items/weapons/greenskins/orc_javelin"));
-			}
-			if (this.Math.rand(1, 100) <= 70)
-			{
-				local r = this.Math.rand(1, 2);
 
-				if (r == 1)
-				{
-					weapon = this.new("scripts/items/weapons/percht_flail");
-				}
-				else if (r == 2)
-				{
-					weapon = this.new("scripts/items/weapons/percht_spetum");
-					this.setSpriteOffset("arms_icon", ::createVec(0, 0))
-					this.m.spriteOffset = -0;
-					this.m.Skills.removeByID("actives.krampus_charge_alt");
-				}
-			}
-			else
-			{
-				local r = this.Math.rand(1, 2);
-
-				if (r == 1)
-				{
-					weapon = this.new("scripts/items/weapons/greenskins/orc_wooden_club");
-				}
-				else if (r == 2)
-				{
-					weapon = this.new("scripts/items/weapons/greenskins/orc_metal_club");
-				}
-			}
-
-			if (weapon == null)
-			{
-				weapon = this.new("scripts/items/weapons/greenskins/orc_wooden_club");
-			}
-
-			if (this.m.Items.hasEmptySlot(this.Const.ItemSlot.Mainhand))
-			{
+				weapon = this.new("scripts/items/weapons/percht_whip");
 				this.m.Items.equip(weapon);
-			}
-			else
-			{
-				this.m.Items.addToBag(weapon);
-			}
+
+				if (this.Math.rand(1, 100) <= 40)
+				{
+					this.m.Items.equip(this.new("scripts/items/shields/wooden_shield_old"));
+				}
 		}
 		else
 		{
-			this.m.Items.equip(this.new("scripts/items/weapons/percht_bow"));
-			this.m.Items.equip(this.new("scripts/items/ammo/quiver_of_arrows"));
+				local b = this.m.BaseProperties;
+				b.setValues(this.Const.Tactical.Actor.JccPerchta);
+				b.RangedSkill += 5;
+
+				this.m.Items.equip(this.new("scripts/items/weapons/percht_bow"));
+				this.m.Items.equip(this.new("scripts/items/ammo/quiver_of_arrows"));
 			
-			this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_ranged_agent");
-			this.m.AIAgent.setActor(this);
-			local b = this.m.BaseProperties;
-			b.setValues(this.Const.Tactical.Actor.JccPercht);
-			b.RangedSkill += 5;
-			
-
-			local r = this.Math.rand(1, 2);
-
-			if (r == 1)
-			{
-				this.m.Items.addToBag(this.new("scripts/items/weapons/greenskins/orc_wooden_club"));
-
-			}
-			else if (r == 2)
-			{
-				this.m.Items.addToBag(this.new("scripts/items/weapons/greenskins/orc_metal_club"));
-
-			}
+				this.m.Items.addToBag(this.new("scripts/items/weapons/percht_whip"));
 		}
-
 
 
 	}
 
-	function generateName()
-	{
-		this.m.Name = this.Const.Strings.JccPerchtNames[this.Math.rand(0, this.Const.Strings.JccPerchtNames.len() - 1)] + " " +this.Const.Strings.JccPerchtTitles[this.Math.rand(0, this.Const.Strings.JccPerchtTitles.len() - 1)] ;
-	}
-
-	function makeMiniboss()
-	{
-		if (!this.actor.makeMiniboss())
-		{
-			return false;
-		}
-
-		this.getSprite("miniboss").setBrush("bust_miniboss");
-
-		this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
-
-		local r = this.Math.rand(1, 2);
-
-		this.setSpriteOffset("arms_icon", ::createVec(-7, 0))
-		this.m.spriteOffset = -7;
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_agent");
-		this.m.AIAgent.setActor(this);
-
-		if (r == 1)
-		{
-			this.m.Items.equip(this.new("scripts/items/weapons/named/named_three_headed_flail"));
-
-		}else
-		{
-			this.m.Items.equip(this.new("scripts/items/weapons/named/named_flail"));
-		}
-
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
-		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge_alt"));
-
-		return true;
-	}function onFactionChanged()
+	function onFactionChanged()
     {
         this.actor.onFactionChanged();
         local flip = this.isAlliedWithPlayer();
         this.getSprite("body").setHorizontalFlipping(flip);
         this.getSprite("injury").setHorizontalFlipping(flip);
         this.getSprite("injury_body").setHorizontalFlipping(flip);
-        this.getSprite("armor").setHorizontalFlipping(flip);
+        //this.getSprite("armor").setHorizontalFlipping(flip);
         this.getSprite("head").setHorizontalFlipping(flip);
-        this.getSprite("helmet").setHorizontalFlipping(flip);
-
-        if(flip){
-        this.setSpriteOffset("arms_icon", ::createVec(this.m.spriteOffset*-1, 0)); }
+        //this.getSprite("helmet").setHorizontalFlipping(flip);
     }
+
+    function generateName()
+	{
+		this.m.Name = this.Const.Strings.JccPerchtNames[this.Math.rand(0, this.Const.Strings.JccPerchtNames.len() - 1)] + " " +this.Const.Strings.JccPerchtTitles[this.Math.rand(0, this.Const.Strings.JccPerchtTitles.len() - 1)] ;
+	}
 
 });
 

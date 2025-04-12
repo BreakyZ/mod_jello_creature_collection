@@ -6,7 +6,7 @@ this.jcc_basilisk_big_peck_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.jcc_basilisk_big_peck";
 		this.m.Name = "Big Peck";
-		this.m.Description = "";
+		this.m.Description = "Obliterate the target with a bone-shattering beak, stunning or dazing them if they aren\'t killed outright";
 		this.m.KilledString = "Pecked to death";
 		this.m.Icon = "skills/basilisk_big_peck.png";
 		this.m.IconDisabled = "skills/basilisk_big_peck_sw.png";

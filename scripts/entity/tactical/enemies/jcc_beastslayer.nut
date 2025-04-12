@@ -260,8 +260,8 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 			{
 				local helmets = [
 					"scripts/items/helmets/greatsword_hat",
-					"scripts/items/helmets/feathered_hat",
-					"scripts/items/helmets/hunters_hat",
+					//"scripts/items/helmets/feathered_hat",
+					//"scripts/items/helmets/hunters_hat",
 					"scripts/items/helmets/greatsword_faction_helm",
 					"scripts/items/helmets/hood",
 					"scripts/items/helmets/mail_coif",
@@ -269,7 +269,6 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 					"scripts/items/helmets/headscarf",
 					"scripts/items/helmets/kettle_hat",
 					"scripts/items/helmets/kettle_hat_with_mail",
-					"scripts/items/helmets/barbarians/bear_headpiece",
 					"scripts/items/helmets/closed_flat_top_helmet",
 					"scripts/items/helmets/barbute_helmet",
 					"scripts/items/helmets/bascinet_with_mail"
@@ -336,22 +335,6 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 				"weapons/named/named_warbrand"
 			];
 		}
-		
-
-		if (this.Const.DLC.Unhold)
-		{
-			weapons.extend([
-				"weapons/named/named_two_handed_mace",
-				"weapons/named/named_two_handed_flail"
-			]);
-		}
-
-		if (this.Const.DLC.Wildmen)
-		{
-			weapons.extend([
-				"weapons/named/named_bardiche"
-			]);
-		}
 
 		local armor;
 		r = this.Math.rand(1, 7);
@@ -382,6 +365,8 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 						armor = (this.new("scripts/items/armor/leather_scale_armor"));
 					}
 
+
+		this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Body));
 		armor.setUpgrade(this.new("scripts/items/armor_upgrades/lindwurm_scales_upgrade"));
 		this.m.Items.equip(armor);
 
@@ -390,18 +375,22 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 
 		if (r == 1)
 		{
+			this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
 			this.m.Items.equip(this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]));
 		}
 		else if (r == 2)
 		{
+			this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Head));
 			this.m.Items.equip(this.new("scripts/items/helmets/named/lindwurm_helmet"));
 		}
 		else
 		{
+			this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Body));
 			this.m.Items.equip(this.new("scripts/items/armor/named/lindwurm_armor"));
 		}
 
 		if(this.m.spawnedWithShield==true){
+			this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand));
 			this.m.Items.equip(this.new("scripts/items/shields/special/craftable_lindwurm_shield"));
 		}
 
@@ -411,6 +400,7 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_nimble"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_lone_wolf"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));
+
 		return true;
 	}
 

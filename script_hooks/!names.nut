@@ -116,7 +116,8 @@
 	"Vesemir",
 	"Letho",
 	"Dwayne LaFontant",
-	"Bazuso"
+	"Bazuso",
+	"Werner"
 ];
 ::Const.Strings.JccBeastslayerTitles <- [
 	"the Witcher",
@@ -124,11 +125,15 @@
 	"the Wurmslayer",
 	"the Moonstone",
 	"the Schrat-Splitter",
-	"the Unhold-Undoer",
+	"the Unmaker",
+	"the Slayer",
 	"the Verminator",
 	"the Bear-Wrestler",
-	"the Spider-Stomper",
+	"Spider-Stomper",
 	"Wolfsbane",
 	"Hagsbane",
-	"Hag-Hacker"
+	"Hag-Hacker",
+	"Woodstalker",
+	"of Wurmwald",
+	"the Chicken"
 ];

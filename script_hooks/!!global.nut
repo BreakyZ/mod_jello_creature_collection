@@ -43,3 +43,14 @@ for (local i = -1; i < ::Const.EntityIcon.len(); i++) {
 ::Const.EntityType.JccCytoplasmBlack <-
 	::Const.EntityType.addNew("cyto_black_orientation", "Black Cytoplasm", "Black Cytoplasms", this.Const.FactionType.Beasts);
 
+
+::Const.EntityType.JccBasiliskSentryGuest <-
+	::Const.EntityType.addNew("basilisk_sentry_orientation", "Basilisk Sentry", "Basilisk Sentries", this.Const.FactionType.Player);
+::Const.EntityType.JccBasiliskDroneGuest <-
+	::Const.EntityType.addNew("basilisk_drone_orientation", "Basilisk Drone", "Basilisk Drones", this.Const.FactionType.Player);
+::Const.EntityType.JccBasiliskQueenGuest <-
+	::Const.EntityType.addNew("basilisk_queen_orientation", "Basilisk Queen", "Basilisk Queens", this.Const.FactionType.Player);
+::Const.EntityType.JccPerchtGuest <-
+	::Const.EntityType.addNew("percht_orientation", "Percht", "Perchts", this.Const.FactionType.Player);
+::Const.EntityType.JccPerchtaGuest <-
+	::Const.EntityType.addNew("perchta_orientation", "Perchta", "Perchtas", this.Const.FactionType.Player);

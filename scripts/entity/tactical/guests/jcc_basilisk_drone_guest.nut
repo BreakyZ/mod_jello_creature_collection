@@ -1,15 +1,14 @@
-this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
+this.jcc_basilisk_drone_guest <- this.inherit("scripts/entity/tactical/player", {
 	m = {},
 	function create()
 	{
-		this.m.Type = this.Const.EntityType.JccBasiliskQueen;
+		this.m.Type = this.Const.EntityType.JccBasiliskDroneGuest;
 		this.m.BloodType = this.Const.BloodType.Red;
-		this.m.XP = this.Const.Tactical.Actor.JccBasiliskQueen.XP;
+		this.m.XP = this.Const.Tactical.Actor.JccBasiliskDrone.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(40, -20);
 		this.m.DecapitateBloodAmount = 3.0;
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
-		this.actor.create();
 		this.m.ExcludedInjuries = [
 			"injury.fractured_hand",
 			"injury.crushed_finger",
@@ -59,12 +58,17 @@ this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/Basilisk_fatigue03.wav"
 		];
 
-		this.m.SoundPitch = this.Math.rand(0.6, 0.9);
-		this.m.SoundVolumeOverall = 1.45;
+		this.m.SoundPitch = this.Math.rand(0.9, 1.1);
+		this.m.SoundVolumeOverall = 1.25;
 
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/jcc_basilisk_queen_agent");
+				this.player.create();
+		this.m.AIAgent = this.new("scripts/ai/tactical/player_agent");
 		this.m.AIAgent.setActor(this);
-
+		this.m.IsGuest = false;
+		this.m.Talents.resize(this.Const.Attributes.COUNT, 0);
+		this.m.Attributes.resize(this.Const.Attributes.COUNT, [
+			0
+		]);
 	}
 
 	function playSound( _type, _volume, _pitch = 1.0 )
@@ -172,7 +176,7 @@ this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
 
 			this.spawnTerrainDropdownEffect(_tile);
 			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "A Basilisk Queen";
+			corpse.CorpseName = "A Basilisk Drone";
 			corpse.Tile = _tile;
 			corpse.IsResurrectable = false;
 			corpse.IsConsumable = true;
@@ -193,13 +197,14 @@ this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
 
 				if (r <= 40)
 				{
-					loot = this.new("scripts/items/misc/jcc_basilisk_egg_item");
+					loot = this.new("scripts/items/misc/jcc_basilisk_feathers_item");
 				}
-				else if (r <= 80)
+				else if (r <= 60)
 				{
+					loot = this.new("scripts/items/loot/jcc_basilisk_talon_item");
 					loot = this.new("scripts/items/misc/jcc_basilisk_eye_item");
 				}
-				loot = this.new("scripts/items/loot/jcc_basilisk_crown_item");
+
 				if (loot != null)
 				{
 					loot.drop(_tile);
@@ -220,7 +225,7 @@ this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
 	{
 		this.actor.onInit();
 		local b = this.m.BaseProperties;
-		b.setValues(this.Const.Tactical.Actor.JccBasiliskQueen); 
+		b.setValues(this.Const.Tactical.Actor.JccBasiliskDrone); 
 		b.IsImmuneToDisarm = true;
 		b.IsImmuneToPoison = true;
 
@@ -229,20 +234,20 @@ this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.CurrentProperties = clone b;
 		this.m.ActionPointCosts = this.Const.DefaultMovementAPCost;
 		this.m.FatigueCosts = this.Const.DefaultMovementFatigueCost;
-		this.m.Items.getAppearance().Body = "bust_basilisk_queen_body"; //credit to Wellington for all drone sprites and ideas
+		this.m.Items.getAppearance().Body = "basilisk_drone_01"; //credit to Wellington for all drone sprites and ideas
 		this.addSprite("socket").setBrush("bust_base_beasts");
 		local body = this.addSprite("body");
-		body.setBrush("bust_basilisk_queen_body");
+		body.setBrush("basilisk_drone_01");
 		body.varySaturation(0.1);
 		body.varyColor(0.09, 0.09, 0.09);
 		this.addSprite("armor");
 		local head = this.addSprite("head");
-		head.setBrush("bust_basilisk_queen_head");
+		head.setBrush("basilisk_drone_head_01");
 		head.Saturation = body.Saturation;
 		head.Color = body.Color;
 		local injury_body = this.addSprite("injury");
 		injury_body.Visible = false;
-		injury_body.setBrush("bust_basilisk_queen_injury");
+		injury_body.setBrush("basilisk_drone_01_injured");
 		this.addSprite("helmet");
 		this.addDefaultStatusSprites();
 		this.getSprite("status_rooted").Scale = 0.65;
@@ -254,23 +259,11 @@ this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
 		// this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_second_wind"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_overwhelm"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_crippling_strikes"));
-		//this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_berserk"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_steel_brow"));		
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_battering_ram"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_stalwart"));
-		b.Threat += 5;
-
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_steel_brow"));
 		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_lone_wolf"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_fast_adaption"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_battle_forged"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_fearsome"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_underdog"));
-
-		this.m.Skills.add(this.new("scripts/skills/actives/jcc_basilisk_big_peck_skill"));
-		this.m.Skills.add(this.new("scripts/skills/actives/miasma_skill"));
+		b.Threat += 5;
 
 		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 35)
 		{
@@ -279,23 +272,25 @@ this.jcc_basilisk_queen <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
 		}
 
+		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 50)
+		{
+			// this.m.Skills.add(this.new("scripts/skills/perks/perk_jcc_escape_artist"));
+		}
+
 	}
 
 	function assignRandomEquipment()
 	{
-	}
-
-	function onFactionChanged()
+	}function onFactionChanged()
     {
         this.actor.onFactionChanged();
         local flip = this.isAlliedWithPlayer();
         this.getSprite("body").setHorizontalFlipping(flip);
         this.getSprite("injury").setHorizontalFlipping(flip);
-        this.getSprite("armor").setHorizontalFlipping(flip);
+        //this.getSprite("armor").setHorizontalFlipping(flip);
         this.getSprite("head").setHorizontalFlipping(flip);
-        this.getSprite("helmet").setHorizontalFlipping(flip);
+        //this.getSprite("helmet").setHorizontalFlipping(flip);
     }
-
 
 });
 

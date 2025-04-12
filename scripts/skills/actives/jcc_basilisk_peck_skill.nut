@@ -6,11 +6,11 @@ this.jcc_basilisk_peck_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.jcc_basilisk_peck";
 		this.m.Name = "Peck";
-		this.m.Description = "no touch birb";
+		this.m.Description = "Peck the target with a massive beak to break bones and armor alike.";
 		this.m.KilledString = "Pecked to death";
-		this.m.Icon = "skills/basilisk_peck.png";
-		this.m.IconDisabled = "skills/basilisk_peck.png";
-		this.m.Overlay = "basilisk_peck";
+		this.m.Icon = "skills/jcc_peck.png";
+		this.m.IconDisabled = "skills/jcc_peck_sw.png";
+		this.m.Overlay = "jcc_peck";
 		this.m.SoundOnUse = [
 			"sounds/combat/hammer_strike_01.wav",
 			"sounds/combat/hammer_strike_02.wav",
