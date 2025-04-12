@@ -61,15 +61,9 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		items.equip(this.new("scripts/items/ammo/quiver_of_arrows"));
 		items.addToBag(this.new("scripts/items/weapons/percht_flail"));
 
-		entity = this.spawnEntity("scripts/entity/tactical/guests/jcc_perchta_guest", 13, 13, 11, 11);
+		entity = this.spawnEntity("scripts/entity/tactical/guests/jcc_percht_guest", 13, 13, 11, 11);
 		this.World.getPlayerRoster().add(entity);
 		entity.setFaction(this.Const.Faction.Player);
-		items = entity.getItems();
-		items.equip(this.new("scripts/items/helmets/kettle_hat"));
-		armor = this.new("scripts/items/armor/lamellar_harness");
-		upgrade = this.new("scripts/items/armor_upgrades/direwolf_pelt_upgrade");
-		armor.setUpgrade(upgrade);
-		items.equip(armor);
 		entity.makeMiniboss();
 		entity.generateName();
 
