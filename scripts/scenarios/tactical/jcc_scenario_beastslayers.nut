@@ -162,8 +162,13 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 			items.equip(this.new("scripts/items/weapons/jcc_slime_bardiche"));
 		}
 
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_queen", 2, 2, 15, 15);
+		entity.setFaction(this.Const.Faction.PlayerAnimals);
 
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht", 12, 12, 11, 11);
+		entity.setFaction(this.Const.Faction.PlayerAnimals);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht", 11, 11, 13, 13);
 		entity.setFaction(this.Const.Faction.PlayerAnimals);
 		entity.assignRandomEquipment();
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf", 12, 12, 12, 12);
