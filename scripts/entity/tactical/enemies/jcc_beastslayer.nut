@@ -401,7 +401,7 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 			this.m.Items.equip(this.new("scripts/items/armor/named/lindwurm_armor"));
 		}
 
-		if(this.m.spawnedWithShield){
+		if(this.m.spawnedWithShield==true){
 			this.m.Items.equip(this.new("scripts/items/shields/special/craftable_lindwurm_shield"));
 		}
 

@@ -165,6 +165,8 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_queen", 2, 2, 15, 15);
 		entity.setFaction(this.Const.Faction.PlayerAnimals);
 
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/ghoul", 12, 12, 9, 9);
+		entity.setFaction(this.Const.Faction.PlayerAnimals);
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_percht", 12, 12, 11, 11);
 		entity.setFaction(this.Const.Faction.PlayerAnimals);
 		entity.assignRandomEquipment();
@@ -208,6 +210,7 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_beastslayer", x, x, 17, 17);
 		entity.setFaction(this.Const.Faction.Orcs);
 		entity.assignRandomEquipment();
+
 		x = x + 1;
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_beastslayer", x, x, 12, 12);
 		entity.setFaction(this.Const.Faction.Orcs);
@@ -217,21 +220,23 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		entity.assignRandomEquipment();
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_beastslayer", x, x, 14, 14);
 		entity.setFaction(this.Const.Faction.Orcs);
+		entity.assignRandomEquipment();
 		entity.makeMiniboss();
 		entity.generateName();
-		entity.assignRandomEquipment();
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_beastslayer", x, x, 15, 15);
 		entity.setFaction(this.Const.Faction.Orcs);
 		entity.assignRandomEquipment();
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_beastslayer", x, x, 16, 16);
 		entity.setFaction(this.Const.Faction.Orcs);
-		entity.assignRandomEquipment();				
+		entity.assignRandomEquipment();	
+
 		x = x + 1;
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_beastslayer", x, x, 14, 14);
 		entity.setFaction(this.Const.Faction.Orcs);
+		entity.assignRandomEquipment();
 		entity.makeMiniboss();
 		entity.generateName();
-		entity.assignRandomEquipment();
+
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_beastslayer", x, x, 15, 15);
 		entity.setFaction(this.Const.Faction.Orcs);
 		entity.assignRandomEquipment();
