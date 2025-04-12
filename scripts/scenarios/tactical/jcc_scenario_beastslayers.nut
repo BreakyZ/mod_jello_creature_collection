@@ -40,14 +40,17 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		this.World.getPlayerRoster().add(entity);
 		entity.setFaction(this.Const.Faction.Player);
 		entity.assignRandomEquipment();
+		entity.generateName();
 
 		entity = this.spawnEntity("scripts/entity/tactical/guests/jcc_basilisk_sentry_guest", 12, 12, 13, 13);
 		this.World.getPlayerRoster().add(entity);
 		entity.setFaction(this.Const.Faction.Player);
+		entity.setName("Basilisk Sentry");
 
 		entity = this.spawnEntity("scripts/entity/tactical/guests/jcc_basilisk_queen_guest", 11, 11, 14, 14);
 		this.World.getPlayerRoster().add(entity);
 		entity.setFaction(this.Const.Faction.Player);
+		entity.setName("Basilisk Queen");
 
 		entity = this.spawnEntity("scripts/entity/tactical/guests/jcc_perchta_guest", 11, 11, 15, 15);
 		this.World.getPlayerRoster().add(entity);
@@ -60,6 +63,7 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		items.equip(this.new("scripts/items/weapons/percht_bow"));
 		items.equip(this.new("scripts/items/ammo/quiver_of_arrows"));
 		items.addToBag(this.new("scripts/items/weapons/percht_flail"));
+		entity.generateName();
 
 		entity = this.spawnEntity("scripts/entity/tactical/guests/jcc_percht_guest", 13, 13, 11, 11);
 		this.World.getPlayerRoster().add(entity);
@@ -70,6 +74,7 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		entity = this.spawnEntity("scripts/entity/tactical/guests/jcc_basilisk_drone_guest", 13, 13, 12, 12);
 		this.World.getPlayerRoster().add(entity);
 		entity.setFaction(this.Const.Faction.Player);
+		entity.setName("Basilisk Drone");
 
 		entity = this.spawnEntity("scripts/entity/tactical/guests/jcc_percht_guest", 13, 13, 13, 13);
 		this.World.getPlayerRoster().add(entity);
@@ -77,6 +82,7 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		items = entity.getItems();
 		items.equip(this.new("scripts/items/weapons/percht_axe"));
 		items.equip(this.new("scripts/items/accessory/ghoul_trophy_item"));
+		entity.generateName();
 
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/schrat", 13, 13, 14, 14);
 		entity.setFaction(this.Const.Faction.PlayerAnimals);
@@ -85,14 +91,17 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		this.World.getPlayerRoster().add(entity);
 		entity.setFaction(this.Const.Faction.Player);
 		entity.assignRandomEquipment();
+		entity.generateName();
 
 		entity = this.spawnEntity("scripts/entity/tactical/guests/jcc_basilisk_sentry_guest", 13, 13, 16, 16);
 		this.World.getPlayerRoster().add(entity);
 		entity.setFaction(this.Const.Faction.Player);
+		entity.setName("Basilisk Sentry");
 
 		entity = this.spawnEntity("scripts/entity/tactical/guests/jcc_basilisk_drone_guest", 13, 13, 17, 17);
 		this.World.getPlayerRoster().add(entity);
 		entity.setFaction(this.Const.Faction.Player);
+		entity.setName("Basilisk Drone");
 
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/ghoul", 12, 12, 9, 9);
 		entity.setFaction(this.Const.Faction.PlayerAnimals);
