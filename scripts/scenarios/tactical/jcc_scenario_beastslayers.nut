@@ -7,7 +7,7 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		this.initMap();
 		this.initEntities();
 		this.initStash();
-		this.m.Music = this.Const.Music.BeastsTracks;
+		this.m.Music = this.Const.Music.BanditTracks;
 		local clouds = this.Tactical.getWeather().createCloudSettings();
 		this.Tactical.getCamera().Level = 1;
 		this.Tactical.CameraDirector.addMoveToTileEvent(0, this.Tactical.getTile(15, 14 - 15 / 2), 1, null, null, 0, 100);

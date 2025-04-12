@@ -120,27 +120,23 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 
 			if (this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand) == null)
 			{
-				if (this.Math.rand(1, 100) <= 50)
+				if (this.Math.rand(1, 100) <= 30)
 				{
 
 					this.m.Skills.add(this.new("scripts/skills/actives/indomitable"));
-					r = this.Math.rand(0, 3);
+					r = this.Math.rand(0, 4);
 
 					if (r == 0)
 					{
-						this.m.Items.equip(this.new("scripts/items/shields/wooden_shield_old"));
-					}
-					else if (r == 1)
-					{
 						this.m.Items.equip(this.new("scripts/items/shields/worn_heater_shield"));
 					}
-					else if (r == 2)
-					{
-						this.m.Items.equip(this.new("scripts/items/shields/worn_kite_shield"));
+					else if (r == 1)
+					{						
+						this.m.Items.equip(this.new("scripts/items/shields/special/craftable_schrat_shield"));
 					}
 					else
 					{					
-						this.m.Items.equip(this.new("scripts/items/shields/special/craftable_schrat_shield"));
+						this.m.Items.equip(this.new("scripts/items/shields/wooden_shield_old"));
 					}
 					this.m.spawnedWithShield = true;
 				}
@@ -294,7 +290,8 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 					"scripts/items/accessory/iron_will_potion_item",
 					"scripts/items/accessory/night_vision_elixir_item",
 					"scripts/items/accessory/spider_poison_item",
-					"scripts/items/accessory/antidote_item"
+					"scripts/items/accessory/antidote_item",
+					"scripts/items/accessory/jcc_basilisk_trophy_item"
 				];
 
 				this.m.Items.equip(this.new(accessory[this.Math.rand(1, accessory.len() - 1)]));
