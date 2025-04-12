@@ -228,7 +228,6 @@
 
 
 
-
 ::Const.FactionTrait.Actions[::Const.FactionTrait.Beasts].extend([
 	"scripts/factions/actions/build_percht_camp_action",
 	"scripts/factions/actions/defend_percht_action",

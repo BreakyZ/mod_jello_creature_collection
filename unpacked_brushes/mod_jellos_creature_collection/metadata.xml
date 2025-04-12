@@ -36,6 +36,7 @@
 <sprite id="basilisk_drone_orientation" ic="FF1E2B3A" img="orientation\basilisk_drone_orientation.png" />
 <sprite id="basilisk_sentry_orientation" ic="FF1E2B3A" img="orientation\basilisk_sentry_orientation.png" />
 <sprite id="basilisk_queen_orientation" ic="FF1E2B3A" img="orientation\basilisk_queen_orientation.png" />
+<sprite id="jcc_beastslayer_orientation" ic="FF1E2B3A" img="orientation\jcc_beastslayer_orientation.png" />
 
 <!-- Cytoplasm Small/Medium/Big -->
 

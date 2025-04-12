@@ -10,6 +10,7 @@
 ::Const.AI.Agent.ID.CytoOoze <- "agent.cyto_ooze";
 ::Const.AI.Agent.ID.CytoSoldier <- "agent.cyto_soldier";
 ::Const.AI.Agent.ID.CytoBlack <- "agent.cyto_black";
+::Const.AI.Agent.ID.JccBeastslayer <- "agent.jcc_beastslayer";
 
 local count = ::Const.AI.Behavior.ID.COUNT;
 ::Const.AI.Behavior.ID.SlimeSmack <- count++;

@@ -102,3 +102,11 @@
 	Row = 2,
 	Script = "scripts/entity/tactical/enemies/jcc_cytoplasm_black"
 };
+::Const.World.Spawn.Troops.JccBeastslayer <- {
+	ID = this.Const.EntityType.JccBeastslayer,
+	Variant = 2,
+	Strength = 30,
+	Cost = 20,
+	Row = 2,
+	Script = "scripts/entity/tactical/enemies/jcc_beastslayer"
+};

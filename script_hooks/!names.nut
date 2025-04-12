@@ -53,7 +53,8 @@
 	"of the Underworld",
 	"the Boogeyman",
 	"of the Dark",
-	"the Bump in the Night"
+	"the Bump in the Night",
+	"the Helltaker"
 ];
 ::Const.World.LocationNames.PerchtClearing <- [
 	"Fortified Den",
@@ -107,4 +108,24 @@
 	"The Red Guck",
 	"Glopping Biomass",
 	"Slimed Squire",
+];
+::Const.Strings.JccBeastslayerNames <- [
+	"Geralt",
+	"Siegfried",
+	"Valter",
+	"Vesemir",
+	"Letho",
+	"Dwayne LaFontant",
+	"Bazuso"
+];
+::Const.Strings.JccBeastslayerNames <- [
+	"the Witcher",
+	"the Dragonslayer",
+	"the Wurmslayer",
+	"the Moonstone",
+	"the Schrat-Splitter",
+	"the Unhold-Undoer",
+	"the Verminator",
+	"the Bear-Wrestler",
+	"the Spider-Stomper"
 ];

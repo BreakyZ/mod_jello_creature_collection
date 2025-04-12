@@ -20,6 +20,8 @@ for (local i = -1; i < ::Const.EntityIcon.len(); i++) {
 	return ::Const.FactionType.Generic;
 }
 
+::Const.EntityType.JccBeastslayer <-
+	::Const.EntityType.addNew("jcc_beastslayer_orientation", "Beastslayer", "Beastslayers", this.Const.FactionType.Settlement);
 ::Const.EntityType.JccBasiliskSentry <-
 	::Const.EntityType.addNew("basilisk_sentry_orientation", "Basilisk Sentry", "Basilisk Sentries", this.Const.FactionType.Beasts);
 ::Const.EntityType.JccBasiliskDrone <-

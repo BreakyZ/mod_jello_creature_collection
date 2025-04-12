@@ -93,6 +93,10 @@
 					tacticalState.setScenario(this.new("scripts/scenarios/tactical/jcc_scenario_slimes"));
 					break;
 
+				case 53:
+					tacticalState.setScenario(this.new("scripts/scenarios/tactical/jcc_scenario_beastslayers"));
+					break;
+
 				default:
 					tacticalState.setScenario(this.new("scripts/scenarios/tactical/scenario_combat_basics"));
 					break;
@@ -126,7 +130,7 @@
 			{
 				id = 50,
 				name = "Basilisks",
-				description = "[p=c][img]gfx/ui/events/event_05.png[/img][/p]\n[p=c]Fight against Basilisk Drones[/p]"
+				description = "[p=c][img]gfx/ui/events/event_05.png[/img][/p]\n[p=c]Fight against a flock of Basilisks[/p]"
 			},
 			{
 				id = 51,
@@ -137,6 +141,11 @@
 				id = 52,
 				name = "Slimes",
 				description = "[p=c][img]gfx/ui/events/event_05.png[/img][/p]\n[p=c]Fight against Slimes.[/p]"
+			},			
+			{
+				id = 53,
+				name = "Beastslayers",
+				description = "[p=c][img]gfx/ui/events/event_05.png[/img][/p]\n[p=c]Defend your bestial allies from enemy hunters.[/p]"
 			}
 		]);
 
