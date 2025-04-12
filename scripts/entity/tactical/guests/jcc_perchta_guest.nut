@@ -400,7 +400,7 @@ this.jcc_perchta_guest <- this.inherit("scripts/entity/tactical/player", {
 
     function generateName()
 	{
-		this.m.Name = this.Const.Strings.JccPerchtNames[this.Math.rand(0, this.Const.Strings.JccPerchtNames.len() - 1)] + " " +this.Const.Strings.JccPerchtTitles[this.Math.rand(0, this.Const.Strings.JccPerchtTitles.len() - 1)] ;
+		this.m.Name = this.Const.Strings.JccPerchtaNames[this.Math.rand(0, this.Const.Strings.JccPerchtaNames.len() - 1)] + " " +this.Const.Strings.JccPerchtaTitles[this.Math.rand(0, this.Const.Strings.JccPerchtaTitles.len() - 1)] ;
 	}
 
 });

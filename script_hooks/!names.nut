@@ -29,6 +29,38 @@
 	"Krampus",
 	"Vader Johan"
 ];
+::Const.Strings.JccPerchtaNames <- [
+	"Lilith",
+	"Pandora",
+	"Justice",
+	"Brunhilde"
+];
+::Const.Strings.JccPerchtaTitles <- [
+	"the Harrier",
+	"Bal",
+	"the Great Horned One",
+	"the Child Snatcher",
+	"of the Black Sabbath",
+	"the Maneater",
+	"the Impaler",
+	"Ash-Spitter",
+	"Ur",
+	"the Black",
+	"Coal-Eyes",
+	"the Raucous",
+	"from Below",
+	"the Black Bellows",
+	"the Peeler",
+	"the Anathema",
+	"the King in Yellow",
+	"Sack-Stuffer",
+	"Gore-Spiller",
+	"of the Underworld",
+	"the Boogeyman",
+	"of the Dark",
+	"the Bump in the Night",
+	"the Helltaker"
+];
 ::Const.Strings.JccPerchtTitles <- [
 	"the Harrier",
 	"Bal",
