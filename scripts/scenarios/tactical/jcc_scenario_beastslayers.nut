@@ -306,11 +306,6 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		this.Stash.add(this.new("scripts/items/weapons/crossbow"));
 		this.Stash.add(this.new("scripts/items/weapons/crossbow"));
 		this.Stash.add(this.new("scripts/items/weapons/crossbow"));
-		this.Stash.add(this.new("scripts/items/shields/wooden_shield"));
-		this.Stash.add(this.new("scripts/items/shields/wooden_shield"));
-		this.Stash.add(this.new("scripts/items/shields/kite_shield"));
-		this.Stash.add(this.new("scripts/items/shields/kite_shield"));
-		this.Stash.add(this.new("scripts/items/shields/kite_shield"));
 		this.Stash.add(this.new("scripts/items/armor/padded_surcoat"));
 		this.Stash.add(this.new("scripts/items/armor/gambeson"));
 		this.Stash.add(this.new("scripts/items/armor/gambeson"));
