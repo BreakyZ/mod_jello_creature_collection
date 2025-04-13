@@ -295,6 +295,7 @@ this.jcc_basilisk_drone_guest <- this.inherit("scripts/entity/tactical/player", 
         this.actor.onFactionChanged();
         local flip = this.isAlliedWithPlayer();
         this.getSprite("body").setHorizontalFlipping(flip);
+        this.getSprite("injury_body").setHorizontalFlipping(flip);
         this.getSprite("injury").setHorizontalFlipping(flip);
         //this.getSprite("armor").setHorizontalFlipping(flip);
         this.getSprite("head").setHorizontalFlipping(flip);

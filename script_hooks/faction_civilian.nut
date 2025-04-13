@@ -8,7 +8,7 @@
 	MeleeSkill = 75,
 	RangedSkill = 65,
 	MeleeDefense = 20,
-	RangedDefense = 10,
+	RangedDefense = 0,
 	Initiative = 125,
 	FatigueEffectMult = 1.0,
 	MoraleEffectMult = 1.0,
