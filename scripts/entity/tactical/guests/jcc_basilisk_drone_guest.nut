@@ -197,37 +197,7 @@ this.jcc_basilisk_drone_guest <- this.inherit("scripts/entity/tactical/player", 
 			this.Tactical.Entities.addCorpse(_tile);
 		}
 
-		if (_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals)
-		{
-			local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
 
-			for( local i = 0; i < n; i = ++i )
-			{
-				local r = this.Math.rand(1, 100);
-				local loot;
-
-				if (r <= 40)
-				{
-					loot = this.new("scripts/items/misc/jcc_basilisk_feathers_item");
-				}
-				else if (r <= 60)
-				{
-					loot = this.new("scripts/items/loot/jcc_basilisk_talon_item");
-					loot = this.new("scripts/items/misc/jcc_basilisk_eye_item");
-				}
-
-				if (loot != null)
-				{
-					loot.drop(_tile);
-				}
-			}
-
-			if (this.Math.rand(1, 100) <= 66)
-			{
-				local loot = this.new("scripts/items/supplies/strange_meat_item");
-				loot.drop(_tile);
-			}
-		}
 
 		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
 	}

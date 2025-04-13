@@ -200,7 +200,7 @@ this.split_man_cursed <- this.inherit("scripts/skills/skill", {
 			this.m.ApplyBonusToBodyPart = -1;
 		}
 
-		if (!targetEntity.isNonCombatant() && !backfire && success)
+		if (!targetEntity.isNonCombatant() && !backfire && success && targetEntity.isAlive())
 		{
 			local stagger = this.new("scripts/skills/effects/staggered_effect");
 			targetEntity.getSkills().add(stagger);

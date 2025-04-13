@@ -1,5 +1,7 @@
 this.jcc_percht_guest <- this.inherit("scripts/entity/tactical/player", {
-	m = { spriteOffset = 0 },	function isReallyKilled( _fatalityType )
+	m = { spriteOffset = 0 },	
+
+	function isReallyKilled( _fatalityType )
 	{
 		return true;
 	}
@@ -193,9 +195,9 @@ this.jcc_percht_guest <- this.inherit("scripts/entity/tactical/player", {
 			this.spawnTerrainDropdownEffect(_tile);
 		}
 
-		local deathLoot = this.getItems().getDroppableLoot(_killer);
-		local tileLoot = this.getLootForTile(_killer, deathLoot);
-		this.dropLoot(_tile, tileLoot, !flip);
+		//local deathLoot = this.getItems().getDroppableLoot(_killer);
+		//local tileLoot = this.getLootForTile(_killer, deathLoot);
+		//this.dropLoot(_tile, tileLoot, !flip);
 		local corpse = this.generateCorpse(_tile, _fatalityType, _killer);
 
 		if (_tile == null)
