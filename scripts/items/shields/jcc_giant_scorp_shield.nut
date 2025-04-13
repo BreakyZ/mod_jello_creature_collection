@@ -3,7 +3,7 @@ this.jcc_giant_scorp_shield <- this.inherit("scripts/items/shields/shield", {
 	function create()
 	{
 		this.shield.create();
-		this.m.ID = "shield.schrat";
+		this.m.ID = "shield.jcc_scorp_shield";
 		this.m.Name = "Giant Claw";
 		this.m.Description = "";
 		this.m.AddGenericSkill = true;
@@ -15,15 +15,15 @@ this.jcc_giant_scorp_shield <- this.inherit("scripts/items/shields/shield", {
 		this.m.MeleeDefense = 20;
 		this.m.RangedDefense = 20;
 		this.m.StaminaModifier = 0;
-		this.m.Condition = 32;
-		this.m.ConditionMax = 32;
+		this.m.Condition = 100;
+		this.m.ConditionMax = 100;
 	}
 
 	function updateVariant()
 	{
 		this.m.Sprite = "bust_jcc_giant_scorp_shield_0" + this.m.Variant;
 		this.m.SpriteDamaged = "bust_jcc_giant_scorp_shield_0" + this.m.Variant + "_damaged";
-		this.m.ShieldDecal = "";
+		this.m.ShieldDecal = "bust_jcc_giant_scorp_shield_0" + this.m.Variant + "_destroyed";
 		this.m.IconLarge = "";
 		this.m.Icon = "";
 	}

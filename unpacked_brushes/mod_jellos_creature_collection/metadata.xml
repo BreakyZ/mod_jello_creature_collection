@@ -181,6 +181,8 @@
 <sprite id="bust_jcc_giant_scorp_shield_02"  img="entity\beasts\bust_jcc_giant_scorp_shield_02.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
 <sprite id="bust_jcc_giant_scorp_shield_01_damaged"  img="entity\beasts\bust_jcc_giant_scorp_shield_01_damaged.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
 <sprite id="bust_jcc_giant_scorp_shield_02_damaged"  img="entity\beasts\bust_jcc_giant_scorp_shield_02_damaged.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
+<sprite id="bust_jcc_giant_scorp_shield_01_destroyed"  img="entity\beasts\bust_jcc_giant_scorp_shield_01_destroyed.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
+<sprite id="bust_jcc_giant_scorp_shield_02_destroyed"  img="entity\beasts\bust_jcc_giant_scorp_shield_02_destroyed.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
 
 <!-- Weapons -->
 
