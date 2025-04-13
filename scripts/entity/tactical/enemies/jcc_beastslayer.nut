@@ -259,7 +259,19 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 					"scripts/items/helmets/bascinet_with_mail"
 				];
 
-				this.m.Items.equip(this.new(helmets[this.Math.rand(1, helmets.len() - 1)]));
+				local helm = helmets[this.Math.rand(1, helmets.len() - 1)];
+                local item;
+                if (helm == "scripts/items/helmets/greatsword_faction_helm")
+                {
+                    item = this.new(helm);
+                    item.m.Variant = Math.rand(1,9);
+                    item.updateVariant();
+                }
+                else
+                {
+                    item = this.new(helm);
+                }
+                this.m.Items.equip(item);
 			}
 
 			if (this.Math.rand(1, 100) <= 30)
