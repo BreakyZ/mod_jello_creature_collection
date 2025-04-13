@@ -443,7 +443,7 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 
 		this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
 
-		local r = this.Math.rand(1, 2);
+		local r = this.Math.rand(1, 4);
 
 		this.setSpriteOffset("arms_icon", ::createVec(-7, 0))
 		this.m.spriteOffset = -7;
@@ -454,9 +454,18 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 		{
 			this.m.Items.equip(this.new("scripts/items/weapons/named/named_three_headed_flail"));
 
-		}else
+		}else if (r == 2)
 		{
 			this.m.Items.equip(this.new("scripts/items/weapons/named/named_flail"));
+		}else if (r == 3)
+		{
+			this.m.Items.equip(this.new("scripts/items/weapons/named/named_javelin"));
+			this.m.Items.addToBag(this.new("scripts/items/weapons/percht_flail"));
+		}else
+		{
+			this.m.Items.equip(this.new("scripts/items/weapons/named/named_throwing_axe"));
+			this.m.Items.addToBag(this.new("scripts/items/weapons/percht_flail"));
+
 		}
 
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
