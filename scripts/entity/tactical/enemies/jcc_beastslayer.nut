@@ -160,22 +160,7 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 				}
 			}
 
-			if (this.Math.rand(1, 100) <= 30){
-					r = this.Math.rand(0, 2);
-
-					if (r == 0)
-					{
-						this.m.Items.addToBag(this.new("scripts/items/tools/throwing_net"));
-					}
-					else if (r == 1)
-					{
-						this.m.Items.addToBag(this.new("scripts/items/tools/reinforced_throwing_net"));
-					}
-					else if (r == 2)
-					{
-						this.m.Items.addToBag(this.new("scripts/items/tools/acid_flask_item"));
-					}
-			}
+			
 		}
 
 		//armor
