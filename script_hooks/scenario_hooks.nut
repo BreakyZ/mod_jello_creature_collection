@@ -97,6 +97,11 @@
 					tacticalState.setScenario(this.new("scripts/scenarios/tactical/jcc_scenario_beastslayers"));
 					break;
 
+				case 54:
+					tacticalState.setScenario(this.new("scripts/scenarios/tactical/jcc_scenario_desert"));
+					break;
+
+
 				default:
 					tacticalState.setScenario(this.new("scripts/scenarios/tactical/scenario_combat_basics"));
 					break;
@@ -146,6 +151,11 @@
 				id = 53,
 				name = "Beastslayers",
 				description = "[p=c][img]gfx/ui/events/event_07.png[/img][/p]\n[p=c]Defend your bestial allies from enemy hunters.[/p]"
+			},			
+			{
+				id = 54,
+				name = "Southern Beasts",
+				description = "[p=c][img]gfx/ui/events/event_07.png[/img][/p]\n[p=c]Fight against beasts under the blazing sun.[/p]"
 			}
 		]);
 

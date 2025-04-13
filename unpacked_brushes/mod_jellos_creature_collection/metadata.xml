@@ -157,6 +157,14 @@
 <sprite id="bust_basilisk_queen_head_dead" f="64F6" f1="-5" f2="-25" ic="FF315E5F" img="entity\beasts\bust_basilisk_queen_head_dead.png" left="-94" right="104" top="-50" bottom="79" />
 <!-- Use javs and arrows from sentry -->
 
+<!-- Scorpion -->
+
+<sprite id="bust_scorp_body"  img="entity\beasts\bust_jcc_scorp_body.png" left="-74" right="67" top="-76" bottom="102" offsetX="-5" offsetY="35" ic="FF555758" width="184" height="224" />
+<sprite id="bust_scorp_legs_front"  img="entity\beasts\bust_jcc_scorp_legs_front.png" left="-74" right="67" top="-76" bottom="102" offsetX="-5" offsetY="35" ic="FF555758" width="184" height="224" />
+<sprite id="bust_scorp_legs_back"  img="entity\beasts\bust_jcc_scorp_legs_back.png" left="-74" right="67" top="-76" bottom="102" offsetX="-5" offsetY="35" ic="FF555758" width="184" height="224" />
+<sprite id="bust_scorp_head_01"  img="entity\beasts\bust_jcc_scorp_head_01.png" left="-74" right="67" top="-76" bottom="102" offsetX="-5" offsetY="35" ic="FF555758" width="184" height="224" />
+<sprite id="bust_scorp_injury"  img="entity\beasts\bust_jcc_scorp_injury.png" left="-74" right="67" top="-76" bottom="102" offsetX="-5" offsetY="35" ic="FF555758" width="184" height="224" />
+
 <!-- Weapons -->
 
   <sprite id="icon_percht_spetum_01" offsetY="35" f1="20" f2="-45" ic="FF33404B" width="150" height="160" img="icons\icon_percht_spetum_01.png" left="-55" right="13" />

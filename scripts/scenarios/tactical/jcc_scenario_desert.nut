@@ -7,7 +7,7 @@ this.jcc_scenario_desert <- this.inherit("scripts/scenarios/tactical/scenario_te
 		this.initMap();
 		this.initEntities();
 		this.initStash();
-		this.m.Music = this.Const.Music.BeastsTracks;
+		this.m.Music = this.Const.Music.BeastsTracksSouth;
 		this.Tactical.getCamera().Level = 1;
 		this.Tactical.CameraDirector.addMoveToTileEvent(0, this.Tactical.getTile(15, 14 - 15 / 2), 1, null, null, 0, 100);
 	}
@@ -161,7 +161,15 @@ this.jcc_scenario_desert <- this.inherit("scripts/scenarios/tactical/scenario_te
 			items.equip(this.new("scripts/items/weapons/jcc_slime_bardiche"));
 		}
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_basilisk_drone");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_scorpion");
+		entity.setFaction(this.Const.Faction.Beasts);		
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_scorpion");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_scorpion");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_scorpion");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_scorpion");
 		entity.setFaction(this.Const.Faction.Beasts);
 	}
 
