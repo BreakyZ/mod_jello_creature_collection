@@ -47,6 +47,18 @@ this.jcc_basilisk_sentry_inject_skill <- this.inherit("scripts/skills/skill", {
 		this.m.ChanceSmash = 0;
 	}
 
+		function isUsable()
+	{
+		local mainhand = this.m.Container.getActor().getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand);
+		return (mainhand == null || this.getContainer().hasSkill("effects.disarmed")) && this.skill.isUsable();
+	}
+
+	function isHidden()
+	{
+		local mainhand = this.m.Container.getActor().getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand);
+		return mainhand != null && !this.getContainer().hasSkill("effects.disarmed") || this.skill.isHidden();
+	}
+
 	function getExpectedDamage( _target )
 	{
 		local ret = this.skill.getExpectedDamage(_target);

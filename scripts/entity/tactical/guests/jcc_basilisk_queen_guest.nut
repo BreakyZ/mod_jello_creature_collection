@@ -72,7 +72,7 @@ this.jcc_basilisk_queen_guest <- this.inherit("scripts/entity/tactical/player", 
 
 		this.m.AIAgent = this.new("scripts/ai/tactical/player_agent");
 		this.m.AIAgent.setActor(this);
-		this.m.IsGuest = false;
+		this.m.IsGuest = true;
 		this.m.Talents.resize(this.Const.Attributes.COUNT, 0);
 		this.m.Attributes.resize(this.Const.Attributes.COUNT, [
 			0

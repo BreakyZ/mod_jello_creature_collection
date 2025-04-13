@@ -111,11 +111,11 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/direwolf_high", 12, 12, 19, 19);
 		entity.setFaction(this.Const.Faction.PlayerAnimals);
 
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider", 10, 10, 9, 9);
 		entity.setFaction(this.Const.Faction.PlayerAnimals);
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider", 10, 10, 10, 10);
 		entity.setFaction(this.Const.Faction.PlayerAnimals);	
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/spider", 10, 10, 19, 19);
 		entity.setFaction(this.Const.Faction.PlayerAnimals);			
 
 		{/*
