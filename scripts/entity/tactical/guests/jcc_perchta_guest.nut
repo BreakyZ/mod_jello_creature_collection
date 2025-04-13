@@ -1,5 +1,8 @@
 this.jcc_perchta_guest <- this.inherit("scripts/entity/tactical/player", {
-	m = {},
+	m = {},	function isReallyKilled( _fatalityType )
+	{
+		return true;
+	}
 	function create()
 	{
 		this.m.Type = this.Const.EntityType.JccPerchtaGuest;

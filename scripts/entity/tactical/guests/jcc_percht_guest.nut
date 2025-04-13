@@ -1,5 +1,8 @@
 this.jcc_percht_guest <- this.inherit("scripts/entity/tactical/player", {
-	m = { spriteOffset = 0 },
+	m = { spriteOffset = 0 },	function isReallyKilled( _fatalityType )
+	{
+		return true;
+	}
 	function create()
 	{
 		this.m.Type = this.Const.EntityType.JccPerchtGuest;
