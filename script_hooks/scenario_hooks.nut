@@ -155,7 +155,7 @@
 			{
 				id = 54,
 				name = "Southern Beasts",
-				description = "[p=c][img]gfx/ui/events/event_07.png[/img][/p]\n[p=c]Fight against beasts under the blazing sun.[/p]"
+				description = "[p=c][img]gfx/ui/events/event_161.png[/img][/p]\n[p=c]Fight against beasts under the blazing sun.[/p]"
 			}
 		]);
 

@@ -163,7 +163,24 @@
 <sprite id="bust_scorp_legs_front"  img="entity\beasts\bust_jcc_scorp_legs_front.png" left="-74" right="67" top="-76" bottom="102" offsetX="-5" offsetY="35" ic="FF555758" width="184" height="224" />
 <sprite id="bust_scorp_legs_back"  img="entity\beasts\bust_jcc_scorp_legs_back.png" left="-74" right="67" top="-76" bottom="102" offsetX="-5" offsetY="35" ic="FF555758" width="184" height="224" />
 <sprite id="bust_scorp_head_01"  img="entity\beasts\bust_jcc_scorp_head_01.png" left="-74" right="67" top="-76" bottom="102" offsetX="-5" offsetY="35" ic="FF555758" width="184" height="224" />
-<sprite id="bust_scorp_injury"  img="entity\beasts\bust_jcc_scorp_injury.png" left="-74" right="67" top="-76" bottom="102" offsetX="-5" offsetY="35" ic="FF555758" width="184" height="224" />
+<sprite id="bust_scorp_injured"  img="entity\beasts\bust_jcc_scorp_injury.png" left="-74" right="67" top="-76" bottom="102" offsetX="-5" offsetY="35" ic="FF555758" width="184" height="224" />
+
+<!-- Giant Scorpion -->
+
+<sprite id="bust_giant_scorp_body"  img="entity\beasts\bust_jcc_giant_scorp_body.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
+<sprite id="bust_giant_scorp_injury"  img="entity\beasts\bust_jcc_giant_scorp_injury.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
+<sprite id="bust_giant_scorp_head_01"  img="entity\beasts\bust_jcc_giant_scorp_head_01.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
+<sprite id="bust_giant_scorp_head_02"  img="entity\beasts\bust_jcc_giant_scorp_head_02.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
+<sprite id="bust_giant_scorp_legs_front"  img="entity\beasts\bust_jcc_giant_scorp_legs_front.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
+<sprite id="bust_giant_scorp_legs_back"  img="entity\beasts\bust_jcc_giant_scorp_legs_back.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
+
+<sprite id="bust_giant_scorp_tail_01"  img="entity\beasts\bust_jcc_giant_scorp_tail_01.png" left="-123" right="62" top="-56" bottom="145" ic="FF555758" offsetY="40"/>
+<sprite id="bust_giant_scorp_tail_injury"  img="entity\beasts\bust_jcc_giant_scorp_tail_injury.png" left="-123" right="62" top="-56" bottom="145" ic="FF555758" offsetY="40"/>
+
+<sprite id="bust_jcc_giant_scorp_shield_01"  img="entity\beasts\bust_jcc_giant_scorp_shield_01.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
+<sprite id="bust_jcc_giant_scorp_shield_02"  img="entity\beasts\bust_jcc_giant_scorp_shield_02.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
+<sprite id="bust_jcc_giant_scorp_shield_01_damaged"  img="entity\beasts\bust_jcc_giant_scorp_shield_01_damaged.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
+<sprite id="bust_jcc_giant_scorp_shield_02_damaged"  img="entity\beasts\bust_jcc_giant_scorp_shield_02_damaged.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
 
 <!-- Weapons -->
 
