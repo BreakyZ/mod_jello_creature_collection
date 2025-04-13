@@ -147,12 +147,13 @@
 	"Valter",
 	"Vesemir",
 	"Letho",
-	"Dwayne LaFontant",
+	"Dwayne",
 	"Bazuso",
 	"Werner"
 ];
 ::Const.Strings.JccBeastslayerTitles <- [
 	"the Witcher",
+	"LaFontant"
 	"the Dragonslayer",
 	"the Wurmslayer",
 	"the Moonstone",

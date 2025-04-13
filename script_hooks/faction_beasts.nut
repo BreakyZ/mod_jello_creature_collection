@@ -102,7 +102,7 @@
 ::Const.Tactical.Actor.JccPerchta <- {
 	XP = 355,
 	ActionPoints = 10,
-	Hitpoints = 200,
+	Hitpoints = 269,
 	Bravery = 150,
 	Stamina = 140,
 	MeleeSkill = 70,

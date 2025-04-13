@@ -373,6 +373,9 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 		if (r == 1)
 		{
 			this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
+			if(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand)!=null){
+				this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand));
+			}
 			this.m.Items.equip(this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]));
 		}
 		else if (r == 2)
@@ -391,7 +394,19 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 			this.m.Items.equip(this.new("scripts/items/shields/special/craftable_lindwurm_shield"));
 		}
 
+		if(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand)==null){
 
+			r = this.Math.rand(1, 2);
+
+			if (r == 1)
+			{
+				this.m.Items.equip(this.new("scripts/items/tools/reinforced_throwing_net"));
+			}
+			else
+			{
+				this.m.Items.equip(this.new("scripts/items/tools/acid_flask_item"));
+			}
+		}
 
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_relentless"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_nimble"));
