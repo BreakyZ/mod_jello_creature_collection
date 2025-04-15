@@ -6,11 +6,11 @@ this.krampus_charge <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "actives.krampus_charge";
-		this.m.Name = "Horn Charge";
+		this.m.Name = "Flare Blitz";
 		this.m.Description = "Charge towards a position, ramming a nearby foe with all your might to damage and stagger them.";
-		this.m.Icon = "skills/krampus_charge.png";
-		this.m.IconDisabled = "skills/krampus_charge_sw.png";
-		this.m.Overlay = "krampus_charge";
+		this.m.Icon = "skills/active_52.png";
+		this.m.IconDisabled = "skills/active_52_sw.png";
+		this.m.Overlay = "active_52";
 		this.m.SoundOnUse = [
 			"sounds/enemies/percht_charge01.wav",
 			"sounds/enemies/percht_charge02.wav",

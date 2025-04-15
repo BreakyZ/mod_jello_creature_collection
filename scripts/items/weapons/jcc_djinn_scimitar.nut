@@ -4,8 +4,8 @@ this.jcc_djinn_scimitar <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.jcc_djinn_scimitar";
-		this.m.Name = "Shamshir";
-		this.m.Description = "This well-crafted exotic blade from the south has a curved edge that allows it to cut deep wounds with ease, but makes it less suited for thrusting and penetrating armor. A rare find in these lands.";
+		this.m.Name = "Spirit Stealer";
+		this.m.Description = "This curved sword features an unusually large blade, severing limbs where other weapons would only cause injury. Too heavy for the average man.";
 		this.m.Categories = "Sword, One-Handed";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.ItemType = this.Const.Items.ItemType.Weapon | this.Const.Items.ItemType.MeleeWeapon | this.Const.Items.ItemType.OneHanded;

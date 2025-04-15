@@ -4,8 +4,8 @@ this.jcc_djinn_scimitar_dual <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.jcc_djinn_scimitar";
-		this.m.Name = "Shamshir";
-		this.m.Description = "This well-crafted exotic blade from the south has a curved edge that allows it to cut deep wounds with ease, but makes it less suited for thrusting and penetrating armor. A rare find in these lands.";
+		this.m.Name = "Tooth and Nail";
+		this.m.Description = "";
 		this.m.Categories = "Sword, Two-Handed";
 		this.m.SlotType = this.Const.ItemSlot.Mainhand;
 		this.m.BlockedSlotType = this.Const.ItemSlot.Offhand;

@@ -4,8 +4,8 @@ this.jcc_djinn_polemace <- this.inherit("scripts/items/weapons/weapon", {
 	{
 		this.weapon.create();
 		this.m.ID = "weapon.jcc_djinn_polemace";
-		this.m.Name = "Polemace";
-		this.m.Description = "A long mace that can be used to deliver stunning blows over a distance.";
+		this.m.Name = "Will Crusher";
+		this.m.Description = "This polemace features a crude, metal striking head, it\'s weight making the weapon top-heavy and difficult to handle.";
 		this.m.Categories = "Mace, Two-Handed";
 		this.m.IconLarge = "weapons/melee/jcc_djinn_mace.png";
 		this.m.Icon = "weapons/melee/jcc_djinn_mace_70x70.png";
