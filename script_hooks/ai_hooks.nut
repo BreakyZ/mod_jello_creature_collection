@@ -11,6 +11,7 @@
 ::Const.AI.Agent.ID.CytoSoldier <- "agent.cyto_soldier";
 ::Const.AI.Agent.ID.CytoBlack <- "agent.cyto_black";
 ::Const.AI.Agent.ID.JccBeastslayer <- "agent.jcc_beastslayer";
+::Const.AI.Agent.ID.JccDjinn <- "agent.jcc_djinn";
 
 local count = ::Const.AI.Behavior.ID.COUNT;
 ::Const.AI.Behavior.ID.SlimeSmack <- count++;
@@ -63,104 +64,3 @@ local count = ::Const.AI.Behavior.ID.COUNT;
 
 	q.m.PossibleSkills.push("actives.throw_acid_flask");
 });
-
-
-::mods_hookExactClass("entity/tactical/actor", function(obj)
-	{
-		obj.m.OriginalAgent <- null;
-
-		obj.getBackground <- function() 
-		{
-			return null;
-		}
-		obj.getPerkPoints <- function() 
-		{
-			return 0;
-		}
-		obj.getPerkPointsSpent <- function() 
-		{
-			return 0;
-		}
-		obj.getDaysWithCompany <- function() 
-		{
-			return 0;
-		}
-		obj.getXP <- function()
-		{
-			return this.getXPValue();
-		}
-		obj.getXPForNextLevel <- function() 
-		{
-			return this.getXPValue();
-		}
-		obj.getDailyCost <- function() 
-		{
-			return 0;
-		}
-		obj.getDaysWounded <- function() 
-		{
-			return 0;
-		}
-		obj.isLeveled <- function() 
-		{
-			return false;
-		}
-		obj.getMoodState <- function() 
-		{
-			return 3;
-		}
-		obj.getLevelUps <- function() 
-		{
-			return 0;
-		}
-		obj.isInReserves <- function() 
-		{
-			return false;
-		}
-		obj.isStabled <- function() 
-		{
-			return false;
-		}
-		obj.getRiderID <- function() 
-		{
-			return "";
-		}
-		obj.getTalents <- function() 
-		{
-			return array(::Const.Attributes.COUNT, 0);
-		}
-		obj.isGuest <- function() 
-		{
-			return true;
-		}
-		obj.getPlaceInFormation <- function() 
-		{
-			return 21;
-		}
-		obj.getPercentOnKillOtherActorModifier <- function() 
-		{
-			return 1.0;
-		}
-		obj.getFlatOnKillOtherActorModifier <- function() 
-		{
-			return 1.0;
-		}
-		obj.getRosterTooltip <- function() 
-		{
-			return  [{
-				id = 1,
-				type = "title",
-				text = this.getName()
-			}];
-		}
-		obj.isPlayerControlled = function()
-		{
-			local f = this.getFaction();
-			return this.m.IsControlledByPlayer && (f == ::Const.Faction.Player || f == ::Const.Faction.PlayerAnimals);
-		}
-		local onFactionChanged = obj.onFactionChanged;
-		obj.onFactionChanged = function()
-		{
-			onFactionChanged();
-		}
-	});

@@ -358,7 +358,7 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		this.setSpriteOffset("status_stunned", this.createVec(-5, 30));
 		this.setSpriteOffset("arrow", this.createVec(-5, 30));
 		this.setAlwaysApplySpriteOffset(true);
-		this.setSpriteOffset("shield_icon", ::createVec(-170, 0));
+		this.setSpriteOffset("shield_icon", ::createVec(-160, 0));
 
 		this.m.Skills.add(this.new("scripts/skills/actives/gorge_skill"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));

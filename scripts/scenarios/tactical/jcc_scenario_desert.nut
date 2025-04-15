@@ -175,6 +175,49 @@ this.jcc_scenario_desert <- this.inherit("scripts/scenarios/tactical/scenario_te
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_giant_scorpion");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
+
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn");
+		entity.setFaction(this.Const.Faction.Beasts);
+		entity.assignRandomEquipment();
 	}
 
 	function spawnEntity( _script, _minX = 10, _maxX = 28, _minY = 3, _maxY = 28 )

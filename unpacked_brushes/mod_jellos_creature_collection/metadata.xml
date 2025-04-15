@@ -14,6 +14,7 @@
 <!-- Worldmap -->
 
 <sprite id="figure_percht_01" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_percht_01.png" left="-25" right="34" top="-54" bottom="6" />
+<sprite id="figure_djinn" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_djinn.png" left="-25" right="34" top="-54" bottom="6" />
 
 <sprite id="figure_cytoplasm_01" offsetY="30" ic="FF36678A" width="68" height="106" img="world\party\figure_cytoplasm_01.png" />
 <sprite id="figure_cytoplasm_02" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_02.png"  />
@@ -40,6 +41,7 @@
 <sprite id="basilisk_sentry_orientation" ic="FF1E2B3A" img="orientation\basilisk_sentry_orientation.png" />
 <sprite id="basilisk_queen_orientation" ic="FF1E2B3A" img="orientation\basilisk_queen_orientation.png" />
 <sprite id="jcc_beastslayer_orientation" ic="FF1E2B3A" img="orientation\jcc_beastslayer_orientation.png" />
+<sprite id="djinn_orientation" ic="FF1E2B3A" img="orientation\djinn_orientation.png" />
 
 <!-- Cytoplasm Small/Medium/Big -->
 
@@ -130,6 +132,46 @@
   <sprite id="bust_percht_head_03_bloodpool" offsetX="5" offsetY="30" f="6420" f1="30" f2="-15" width="169" height="139" img="entity\beasts\bust_percht_head_03_bloodpool.png" left="-22" right="70" top="-70" bottom="24" />
   <sprite id="bust_percht_dead_guts" offsetX="-5" offsetY="18" ic="FF191A48" width="238" height="186" img="entity\beasts\bust_percht_dead_guts.png" left="-29" right="31" top="-2" bottom="42" />
 
+<!-- Djinn -->
+
+<sprite id="bust_jcc_djinn_head_01" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_head_01.png" />
+<sprite id="bust_jcc_djinn_head_02" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_head_02.png" />
+<sprite id="bust_jcc_djinn_head_03" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_head_03.png" />
+<sprite id="bust_jcc_djinn_head_01_injury" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_head_01_injury.png" />
+<sprite id="bust_jcc_djinn_head_02_injury" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_head_02_injury.png" />
+<sprite id="bust_jcc_djinn_head_03_injury" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_head_03_injury.png" />
+<sprite id="bust_jcc_djinn_body" offsetY="42" left="-92" right="92" top="-76" bottom="90" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_body.png" />
+<sprite id="bust_jcc_djinn_body_injury" offsetY="42" left="-92" right="92" top="-76" bottom="90" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_body_injury.png" />
+
+<sprite id="bust_jcc_djinn_arm_ring" offsetY="42" left="-92" right="92" top="-76" bottom="90" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_arm_ring.png" />
+<sprite id="bust_jcc_djinn_necklace" offsetY="42" left="-92" right="92" top="-76" bottom="90" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_necklace.png" />
+<sprite id="bust_jcc_djinn_attachment_damaged" offsetY="42" left="-92" right="92" top="-76" bottom="90" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_attachment_damaged.png" />
+<sprite id="bust_jcc_djinn_attachment" offsetY="42" left="-92" right="92" top="-76" bottom="90" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_attachment.png" />
+
+<sprite id="bust_jcc_djinn_armor_01" offsetY="42" left="-92" right="92" top="-76" bottom="90" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_armor_01.png" />
+<sprite id="bust_jcc_djinn_armor_01_damaged" offsetY="42" left="-92" right="92" top="-76" bottom="90" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_armor_01_damaged.png" />
+
+<sprite id="bust_jcc_djinn_armor_02" offsetY="42" left="-92" right="92" top="-76" bottom="90" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_armor_02.png" />
+<sprite id="bust_jcc_djinn_armor_02_damaged" offsetY="42" left="-92" right="92" top="-76" bottom="90" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_armor_02_damaged.png" />
+
+<sprite id="bust_jcc_djinn_light_helmet_01" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_light_helmet_01.png" />
+<sprite id="bust_jcc_djinn_light_helmet_01_damaged" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_light_helmet_01_damaged.png" />
+
+<sprite id="bust_jcc_djinn_light_helmet_02" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_light_helmet_02.png" />
+<sprite id="bust_jcc_djinn_light_helmet_02_damaged" offsetY="42" left="-91" right="96" top="-81" bottom="91"  ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_light_helmet_02_damaged.png" />
+
+<sprite id="bust_jcc_djinn_heavy_helmet_damaged" offsetY="42" left="-94" right="99" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_heavy_helmet_damaged.png" />
+<sprite id="bust_jcc_djinn_heavy_helmet" offsetY="42" left="-94" right="99" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_heavy_helmet.png" />
+
+<sprite id="bust_jcc_djinn_medium_helmet_02" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_med_helmet_02.png" />
+<sprite id="bust_jcc_djinn_medium_helmet_02_damaged" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_med_helmet_02_damaged.png" />
+
+<sprite id="bust_jcc_djinn_medium_helmet_01" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_med_helmet_01.png" />
+<sprite id="bust_jcc_djinn_medium_helmet_01_damaged" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_med_helmet_01_damaged.png" />
+
+
+
+
 <!-- Basilisks -->
 
 <sprite id="basilisk_drone_01" offsetX="-15" offsetY="45" ic="FF24554E" width="104" height="142" img="entity\beasts\basilisk_drone_01.png" />
@@ -177,14 +219,28 @@
 <sprite id="bust_giant_scorp_tail_01"  img="entity\beasts\bust_jcc_giant_scorp_tail_01.png" left="-123" right="62" top="-56" bottom="145" ic="FF555758" offsetY="40"/>
 <sprite id="bust_giant_scorp_tail_injury"  img="entity\beasts\bust_jcc_giant_scorp_tail_injury.png" left="-123" right="62" top="-56" bottom="145" ic="FF555758" offsetY="40"/>
 
-<sprite id="bust_jcc_giant_scorp_shield_01"  img="entity\beasts\bust_jcc_giant_scorp_shield_01.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
-<sprite id="bust_jcc_giant_scorp_shield_02"  img="entity\beasts\bust_jcc_giant_scorp_shield_02.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
+<sprite id="bust_jcc_giant_scorp_shield_01" img="entity\beasts\bust_jcc_giant_scorp_shield_01.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
+<sprite id="bust_jcc_giant_scorp_shield_02" img="entity\beasts\bust_jcc_giant_scorp_shield_02.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
 <sprite id="bust_jcc_giant_scorp_shield_01_damaged"  img="entity\beasts\bust_jcc_giant_scorp_shield_01_damaged.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
 <sprite id="bust_jcc_giant_scorp_shield_02_damaged"  img="entity\beasts\bust_jcc_giant_scorp_shield_02_damaged.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
 <sprite id="bust_jcc_giant_scorp_shield_01_destroyed"  img="entity\beasts\bust_jcc_giant_scorp_shield_01_destroyed.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
-<sprite id="bust_jcc_giant_scorp_shield_02_destroyed"  img="entity\beasts\bust_jcc_giant_scorp_shield_02_destroyed.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
+<sprite id="bust_jcc_giant_scorp_shield_02_destroyed"   img="entity\beasts\bust_jcc_giant_scorp_shield_02_destroyed.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
 
 <!-- Weapons -->
+
+  <sprite id="icon_djinn_hammer" offsetY="41" ic="FF3C4553" width="104" height="142" img="icons\jcc_djinn_hammer.png" left="1" right="61" top="-77" bottom="8" />  
+  <sprite id="icon_djinn_sword_01" offsetY="41" ic="FF6B7887" width="130" height="142" img="icons\jcc_djinn_sword_01.png" left="-8" right="62" top="-77" bottom="28" /> 
+  <sprite id="icon_djinn_sword_02" offsetY="41" ic="FF6B7887" width="130" height="142" img="icons\jcc_djinn_sword_02.png" left="-8" right="62" top="-77" bottom="28" />
+  <sprite id="icon_djinn_mace" offsetY="41" ic="FF394359" width="130" height="142" img="icons\jcc_djinn_mace.png" left="-68" right="12" top="-75" bottom="74" /> 
+  <sprite id="icon_djinn_bigsword" offsetY="41" ic="FF636D7A" width="160" height="142" img="icons\jcc_djinn_bigsword.png" left="-85" right="13" top="-78" bottom="56" />
+  <sprite id="icon_djinn_sword_dual" offsetY="41" ic="FF6B7887" width="130" height="142" img="icons\jcc_djinn_sword_dual.png" left="-25" right="94" top="-97" bottom="43" /> 
+
+  <sprite id="icon_djinn_sword_dual_bloodied" offsetY="41" ic="FF6B7887" width="130" height="142" img="icons\jcc_djinn_sword_dual_bloodied.png" left="-25" right="94" top="-97" bottom="43" /> 
+  <sprite id="icon_djinn_hammer_bloodied" offsetY="40" ic="FF3C4553" width="104" height="142" img="icons\jcc_djinn_hammer_bloodied.png" left="1" right="61" top="-77" bottom="8" />  
+  <sprite id="icon_djinn_scimi_01_bloodied" offsetY="41" ic="FF6B7887" width="130" height="142" img="icons\jcc_djinn_sword_01_bloodied.png" left="-8" right="62" top="-77" bottom="28" /> 
+  <sprite id="icon_djinn_scimi_02_bloodied" offsetY="41" ic="FF6B7887" width="130" height="142" img="icons\jcc_djinn_sword_02_bloodied.png" left="-8" right="62" top="-77" bottom="28" />
+  <sprite id="icon_djinn_mace_bloodied" offsetY="41" ic="FF394359" width="130" height="142" img="icons\jcc_djinn_mace_bloodied.png" left="-68" right="12" top="-75" bottom="74" /> 
+  <sprite id="icon_djinn_bigsword_bloodied" offsetY="41" ic="FF636D7A" width="160" height="142" img="icons\jcc_djinn_bigsword_bloodied.png" left="-85" right="13" top="-78" bottom="56" />
 
   <sprite id="icon_percht_spetum_01" offsetY="35" f1="20" f2="-45" ic="FF33404B" width="150" height="160" img="icons\icon_percht_spetum_01.png" left="-55" right="13" />
   <sprite id="icon_percht_spetum_01_bloodied" offsetY="35" f1="20" f2="-45" ic="FF2F3C4B" width="150" height="160" img="icons\icon_percht_spetum_01_bloodied.png" left="-55" right="13" />

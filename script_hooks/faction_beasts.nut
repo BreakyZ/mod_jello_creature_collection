@@ -226,6 +226,24 @@
 	]
 };
 
+::Const.Tactical.Actor.JccDjinn <- {
+	XP = 355,
+	ActionPoints = 9,
+	Hitpoints = 200,
+	Bravery = 150,
+	Stamina = 140,
+	MeleeSkill = 70,
+	RangedSkill = 60,
+	MeleeDefense = 10,
+	RangedDefense = 5,
+	Initiative = 90,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	FatigueRecoveryRate = 25,
+	Vision = 7,
+	Armor = [20,20
+	]
+};
 
 
 ::Const.FactionTrait.Actions[::Const.FactionTrait.Beasts].extend([

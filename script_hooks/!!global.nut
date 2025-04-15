@@ -42,8 +42,10 @@ for (local i = -1; i < ::Const.EntityIcon.len(); i++) {
 	::Const.EntityType.addNew("cyto_soldier_orientation", "Cytoplasm Soldier", "Cytoplasm Soldiers", this.Const.FactionType.Beasts);
 ::Const.EntityType.JccCytoplasmBlack <-
 	::Const.EntityType.addNew("cyto_black_orientation", "Black Cytoplasm", "Black Cytoplasms", this.Const.FactionType.Beasts);
+::Const.EntityType.JccDjinn <-
+	::Const.EntityType.addNew("djinn_orientation", "Djinni", "Djinn", this.Const.FactionType.Beasts);
 
-
+//guest
 ::Const.EntityType.JccBasiliskSentryGuest <-
 	::Const.EntityType.addNew("basilisk_sentry_orientation", "Basilisk Sentry", "Basilisk Sentries", this.Const.FactionType.Player);
 ::Const.EntityType.JccBasiliskDroneGuest <-
