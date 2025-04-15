@@ -3,7 +3,7 @@ this.jcc_djinn_heavy_helmet <- this.inherit("scripts/items/helmets/helmet", {
 	function create()
 	{
 		this.helmet.create();
-		this.m.Variant = this.Math.rand(1, 2);
+		this.m.Variant = 1;
 		this.updateVariant();
 		this.m.ID = "armor.head.jcc_djinn_heavy_helmet";
 		this.m.Name = "Looted Turban Helmet";

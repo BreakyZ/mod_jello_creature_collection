@@ -58,7 +58,7 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 	function onDeath( _killer, _skill, _tile, _fatalityType )
 	{
 
-		local miasma_effect = {
+		local p = {
 			Type = "fire",
 			Tooltip = "Fire rages here, melting armor and flesh alike",
 			IsPositive = false,
@@ -82,20 +82,22 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 		}
 		else
 		{
-			if (_tile.Properties.Effect != null)
-			{
-				this.Tactical.Entities.removeTileEffect(_tile);
-			}
+if (tile.Properties.Effect != null)
+					{
+						this.Tactical.Entities.removeTileEffect(tile);
+					}
 
-			_tile.Properties.Effect = clone miasma_effect;
-			local particles = [];
+					tile.Properties.Effect = clone p;
+					local particles = [];
 
-			for( local i = 0; i < this.Const.Tactical.MiasmaParticles.len(); i = ++i )
-			{
-				particles.push(this.Tactical.spawnParticleEffect(true, this.Const.Tactical.MiasmaParticles[i].Brushes, _tile, this.Const.Tactical.MiasmaParticles[i].Delay, this.Const.Tactical.MiasmaParticles[i].Quantity, this.Const.Tactical.MiasmaParticles[i].LifeTimeQuantity, this.Const.Tactical.MiasmaParticles[i].SpawnRate, this.Const.Tactical.MiasmaParticles[i].Stages));
-			}
+					for( local i = 0; i < this.Const.Tactical.FireParticles.len(); i = ++i )
+					{
+						particles.push(this.Tactical.spawnParticleEffect(true, this.Const.Tactical.FireParticles[i].Brushes, tile, this.Const.Tactical.FireParticles[i].Delay, this.Const.Tactical.FireParticles[i].Quantity, this.Const.Tactical.FireParticles[i].LifeTimeQuantity, this.Const.Tactical.FireParticles[i].SpawnRate, this.Const.Tactical.FireParticles[i].Stages));
+					}
 
-			this.Tactical.Entities.addTileEffect(_tile, _tile.Properties.Effect, particles);
+					this.Tactical.Entities.addTileEffect(tile, tile.Properties.Effect, particles);
+					tile.clear(this.Const.Tactical.DetailFlag.Scorchmark);
+					tile.spawnDetail("impact_decal", this.Const.Tactical.DetailFlag.Scorchmark, false, true);
 		}
 
 
