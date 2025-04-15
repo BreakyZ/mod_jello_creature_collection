@@ -23,7 +23,7 @@ this.jcc_djinn_polemace <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.StaminaModifier = -25;
 		this.m.RangeMin = 1;
 		this.m.RangeMax = 2;
-		this.m.RangeIdeal = 2;
+		this.m.RangeIdeal = 1;
 		this.m.RegularDamage = 65;
 		this.m.RegularDamageMax = 90;
 		this.m.ArmorDamageMult = 1.3;

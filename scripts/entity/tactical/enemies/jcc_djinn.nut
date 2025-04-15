@@ -300,6 +300,7 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/special/double_grip"));
 		this.m.Skills.add(this.new("scripts/skills/actives/hand_to_hand"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_fearsome"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_battle_forged"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_steel_brow"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_berserk"));
@@ -413,7 +414,7 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 				this.m.Items.equip(this.new("scripts/items/weapons/jcc_djinn_polemace"));
 			}
 		}else{
-			this.m.ActionPoints = 12;
+			this.m.ActionPoints = 13;
 			this.m.Items.equip(this.new("scripts/items/weapons/jcc_djinn_scimitar_dual"));
 			this.m.Skills.add(this.new("scripts/skills/racials/jcc_djinn_dual_racial"));
 
