@@ -13,9 +13,9 @@ this.jcc_djinn_medium_armor <- this.inherit("scripts/items/armor/armor", {
 		this.m.SlotType = this.Const.ItemSlot.Body;
 		this.m.ShowOnCharacter = true;
 		this.m.ImpactSound = this.Const.Sound.ArmorHalfplateImpact;
-		this.m.Condition = 400;
-		this.m.ConditionMax = 400;
-		this.m.StaminaModifier = -30;
+		this.m.Condition = 260;
+		this.m.ConditionMax = 260;
+		this.m.StaminaModifier = -24;
 	}
 
 	function updateVariant()

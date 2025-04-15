@@ -21,9 +21,9 @@ this.jcc_djinn_upgrade <- this.inherit("scripts/items/armor_upgrades/armor_upgra
 		this.m.SpriteCorpseBack = null;
 
 		this.m.Value = 2800;
-		this.m.Condition = 30; //normal would be around 20 to 25
-		this.m.ConditionMax = 30;
-		this.m.StaminaModifier = -3;
+		this.m.Condition = 40; //normal would be around 20 to 25
+		this.m.ConditionMax = 40;
+		this.m.StaminaModifier = -4;
 	}
 
 

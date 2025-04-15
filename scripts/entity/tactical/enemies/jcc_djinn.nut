@@ -57,120 +57,57 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 
 	function onDeath( _killer, _skill, _tile, _fatalityType )
 	{
-		local flip = this.Math.rand(1, 100) < 50;
+
+		local miasma_effect = {
+			Type = "fire",
+			Tooltip = "Fire rages here, melting armor and flesh alike",
+			IsPositive = false,
+			IsAppliedAtRoundStart = false,
+			IsAppliedAtTurnEnd = true,
+			IsAppliedOnMovement = false,
+			IsAppliedOnEnter = false,
+			IsByPlayer = false,
+			Timeout = this.Time.getRound() + 2,
+			Callback = this.Const.Tactical.Common.onApplyFire,
+			function Applicable( _a )
+			{
+				return true;
+			}
+
+		};
+
+		if (_tile.Properties.Effect != null && _tile.Properties.Effect.Type == "fire")
+		{
+			_tile.Properties.Effect.Timeout = this.Time.getRound() + 3;
+		}
+		else
+		{
+			if (_tile.Properties.Effect != null)
+			{
+				this.Tactical.Entities.removeTileEffect(_tile);
+			}
+
+			_tile.Properties.Effect = clone miasma_effect;
+			local particles = [];
+
+			for( local i = 0; i < this.Const.Tactical.MiasmaParticles.len(); i = ++i )
+			{
+				particles.push(this.Tactical.spawnParticleEffect(true, this.Const.Tactical.MiasmaParticles[i].Brushes, _tile, this.Const.Tactical.MiasmaParticles[i].Delay, this.Const.Tactical.MiasmaParticles[i].Quantity, this.Const.Tactical.MiasmaParticles[i].LifeTimeQuantity, this.Const.Tactical.MiasmaParticles[i].SpawnRate, this.Const.Tactical.MiasmaParticles[i].Stages));
+			}
+
+			this.Tactical.Entities.addTileEffect(_tile, _tile.Properties.Effect, particles);
+		}
+
+
+		this.m.BloodType = this.Const.BloodType.Ash;
+		local flip = this.Math.rand(0, 100) < 50;
+		this.m.IsCorpseFlipped = flip;
 
 		if (_tile != null)
 		{
-			this.m.IsCorpseFlipped = flip;
-			local decal;
-			local appearance = this.getItems().getAppearance();
-			local sprite_body = this.getSprite("body");
-			local sprite_head = this.getSprite("head");
-			decal = _tile.spawnDetail(sprite_body.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
-			decal.Color = sprite_body.Color;
-			decal.Saturation = sprite_body.Saturation;
+			local decal = _tile.spawnDetail("bust_skeleton_vampire_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false);
 			decal.Scale = 0.9;
 			decal.setBrightness(0.9);
-
-			if (appearance.CorpseArmor != "")
-			{
-				decal = _tile.spawnDetail(appearance.CorpseArmor, this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.9;
-				decal.setBrightness(0.9);
-			}
-
-			if (_fatalityType != this.Const.FatalityType.Decapitated)
-			{
-				if (!appearance.HideCorpseHead)
-				{
-					decal = _tile.spawnDetail(sprite_head.getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
-					decal.Color = sprite_head.Color;
-					decal.Saturation = sprite_head.Saturation;
-					decal.Scale = 0.9;
-					decal.setBrightness(0.9);
-				}
-
-				if (appearance.HelmetCorpse != "")
-				{
-					decal = _tile.spawnDetail(appearance.HelmetCorpse, this.Const.Tactical.DetailFlag.Corpse, flip);
-					decal.Scale = 0.9;
-					decal.setBrightness(0.9);
-				}
-			}
-			else if (_fatalityType == this.Const.FatalityType.Decapitated)
-			{
-				local layers = [];
-
-				if (!appearance.HideCorpseHead)
-				{
-					layers.push(sprite_head.getBrush().Name + "_dead");
-				}
-
-				if (appearance.HelmetCorpse.len() != 0)
-				{
-					layers.push(appearance.HelmetCorpse);
-				}
-
-				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-50, 30), 180.0, "bust_percht_head_02_dead_bloodpool");
-				local idx = 0;
-
-				if (!appearance.HideCorpseHead)
-				{
-					decap[idx].Color = sprite_head.Color;
-					decap[idx].Saturation = sprite_head.Saturation;
-					decap[idx].Scale = 0.9;
-					decap[idx].setBrightness(0.9);
-					idx = ++idx;
-				}
-
-				if (appearance.HelmetCorpse.len() != 0)
-				{
-					decap[idx].Scale = 0.9;
-					decap[idx].setBrightness(0.9);
-					idx = ++idx;
-				}
-			}
-
-			if (_fatalityType == this.Const.FatalityType.Disemboweled)
-			{
-				if (appearance.CorpseArmor != "")
-				{
-					decal = _tile.spawnDetail(appearance.CorpseArmor + "_guts", this.Const.Tactical.DetailFlag.Corpse, flip);
-				}
-				else
-				{
-					decal = _tile.spawnDetail("bust_percht_dead_guts", this.Const.Tactical.DetailFlag.Corpse, flip);
-				}
-
-				decal.Scale = 0.9;
-			}
-			else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Arrow)
-			{
-				if (appearance.CorpseArmor != "")
-				{
-					decal = _tile.spawnDetail(appearance.CorpseArmor + "_arrows", this.Const.Tactical.DetailFlag.Corpse, flip);
-				}
-				else
-				{
-					decal = _tile.spawnDetail("bust_percht_body_02_dead_arrows", this.Const.Tactical.DetailFlag.Corpse, flip);
-				}
-
-				decal.Scale = 0.9;
-			}
-			else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Javelin)
-			{
-				if (appearance.CorpseArmor != "")
-				{
-					decal = _tile.spawnDetail(appearance.CorpseArmor + "_javelin", this.Const.Tactical.DetailFlag.Corpse, flip);
-				}
-				else
-				{
-					decal = _tile.spawnDetail("bust_percht_body_02_dead_javelin", this.Const.Tactical.DetailFlag.Corpse, flip);
-				}
-
-				decal.Scale = 0.9;
-			}
-
 			this.spawnTerrainDropdownEffect(_tile);
 		}
 
@@ -192,39 +129,11 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
 	}
 
-
 	function getLootForTile( _killer, _loot )
 	{
-		if (_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals)
+		if ((_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals) && this.Math.rand(0, 1) == 1)
 		{
-			local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
-
-			for( local i = 0; i < n; i = ++i )
-			{
-				local r = this.Math.rand(1, 100);
-				local loot;
-
-				if (r <= 40)
-				{
-					loot = this.new("scripts/items/misc/jcc_krampus_coal_item");
-				}
-				else if (r <= 80)
-				{
-					loot = this.new("scripts/items/misc/jcc_krampus_scalp_item");
-				}
-				else
-				{
-					loot = this.new("scripts/items/misc/jcc_krampus_tongue_item");
-				}
-
-				_loot.push(loot);
-			}
-
-			if (this.Math.rand(1, 100) <= 20)
-			{
-				local loot = this.new("scripts/items/loot/jcc_krampus_bell_item");
-				_loot.push(loot);
-			}
+			_loot.push(this.new("scripts/items/misc/vampire_dust_item"));
 		}
 
 		return this.actor.getLootForTile(_killer, _loot);
@@ -234,7 +143,7 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 	function generateCorpse( _tile, _fatalityType, _killer )
 	{
 		local corpse = clone this.Const.Corpse;
-		corpse.CorpseName = "A Percht";
+		corpse.CorpseName = "A Djinni";
 		corpse.IsResurrectable = false;
 		corpse.IsConsumable = true;
 		corpse.Items = this.getItems().prepareItemsForCorpse(_killer);
@@ -356,15 +265,15 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 
 		r = this.Math.rand(1, 100);
 
-		if(r<=40){
+		if(r<=50){
 
 			armor=(this.new("scripts/items/armor/jcc_djinn_heavy_armor"));
 
-		}else if(r<=80){
+		}else if(r<=95){
 
 			armor=(this.new("scripts/items/armor/jcc_djinn_medium_armor"));
 
-		}else if(r<=90){
+		}else{
 
 			armor=(this.new("scripts/items/armor/jcc_djinn_light_armor"));
 		}
@@ -375,6 +284,19 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 			if( this.Math.rand(1, 100)<50){
 				upgrade = this.new("scripts/items/armor_upgrades/jcc_djinn_upgrade");
 				armor.setUpgrade(upgrade);
+			}
+
+			if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 70)
+			{
+				if(upgrade==null && this.Math.rand(1, 100)<70){
+					upgrade = this.new("scripts/items/armor_upgrades/jcc_djinn_upgrade");
+					armor.setUpgrade(upgrade);
+				}
+
+				if (this.World.getTime().Days >= 150)
+				{
+					b.MeleeSkill += 5;
+				}
 			}
 
 			this.m.Items.equip(armor);	
@@ -414,7 +336,8 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 				this.m.Items.equip(this.new("scripts/items/weapons/jcc_djinn_polemace"));
 			}
 		}else{
-			this.m.ActionPoints = 13;
+			
+			this.m.Skills.add(this.new("scripts/skills/perks/perk_overwhelm"));
 			this.m.Items.equip(this.new("scripts/items/weapons/jcc_djinn_scimitar_dual"));
 			this.m.Skills.add(this.new("scripts/skills/racials/jcc_djinn_dual_racial"));
 

@@ -12,9 +12,9 @@ this.jcc_djinn_medium_helmet <- this.inherit("scripts/items/helmets/helmet", {
 		this.m.IconLarge = "";
 		this.m.Icon = "";
 		this.m.ImpactSound = this.Const.Sound.ArmorHalfplateImpact;
-		this.m.Condition = 105;
-		this.m.ConditionMax = 105;
-		this.m.StaminaModifier = -5;
+		this.m.Condition = 255;
+		this.m.ConditionMax = 255;
+		this.m.StaminaModifier = -17;
 	}
 
 	function updateVariant()

@@ -366,7 +366,6 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 					weapon = this.new("scripts/items/weapons/percht_spetum");
 					this.setSpriteOffset("arms_icon", ::createVec(0, 0))
 					this.m.spriteOffset = -0;
-					this.m.Skills.removeByID("actives.krampus_charge_alt");
 				}
 			}
 			else

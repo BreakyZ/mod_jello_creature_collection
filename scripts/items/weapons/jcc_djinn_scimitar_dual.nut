@@ -13,6 +13,7 @@ this.jcc_djinn_scimitar_dual <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.AddGenericSkill = true;
 		this.m.ShowQuiver = false;
 		this.m.ShowArmamentIcon = true;
+		this.m.IsDroppedAsLoot = false;
 		this.m.Value = 1300;
 		this.m.Condition = 57.0;
 		this.m.ConditionMax = 57.0;
