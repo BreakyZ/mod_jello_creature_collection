@@ -17,6 +17,7 @@ this.jcc_djinn_dual_racial <- this.inherit("scripts/skills/skill", {
 	{
 		_properties.MovementAPCostAdditional += 1;
 		_properties.ActionPoints += 4;
+		_properties.FatigueRecoveryRate += 10;
 	}
 
 });
