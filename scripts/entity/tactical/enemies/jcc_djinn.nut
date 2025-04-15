@@ -223,7 +223,7 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_coup_de_grace"));
 		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
-		this.m.Skills.add(this.new("scripts/skills/racial/jcc_djinn_fire_racial"));
+		this.m.Skills.add(this.new("scripts/skills/racials/jcc_djinn_fire_racial"));
 		b.IsSpecializedInSwords = true;
 		b.IsSpecializedInAxes = true;
 		b.IsSpecializedInMaces = true;
