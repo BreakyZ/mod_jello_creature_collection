@@ -82,22 +82,22 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 		}
 		else
 		{
-if (tile.Properties.Effect != null)
+	if (_tile.Properties.Effect != null)
 					{
-						this.Tactical.Entities.removeTileEffect(tile);
+						this.Tactical.Entities.removeTileEffect(_tile);
 					}
 
-					tile.Properties.Effect = clone p;
+					_tile.Properties.Effect = clone p;
 					local particles = [];
 
 					for( local i = 0; i < this.Const.Tactical.FireParticles.len(); i = ++i )
 					{
-						particles.push(this.Tactical.spawnParticleEffect(true, this.Const.Tactical.FireParticles[i].Brushes, tile, this.Const.Tactical.FireParticles[i].Delay, this.Const.Tactical.FireParticles[i].Quantity, this.Const.Tactical.FireParticles[i].LifeTimeQuantity, this.Const.Tactical.FireParticles[i].SpawnRate, this.Const.Tactical.FireParticles[i].Stages));
+						particles.push(this.Tactical.spawnParticleEffect(true, this.Const.Tactical.FireParticles[i].Brushes, _tile, this.Const.Tactical.FireParticles[i].Delay, this.Const.Tactical.FireParticles[i].Quantity, this.Const.Tactical.FireParticles[i].LifeTimeQuantity, this.Const.Tactical.FireParticles[i].SpawnRate, this.Const.Tactical.FireParticles[i].Stages));
 					}
 
-					this.Tactical.Entities.addTileEffect(tile, tile.Properties.Effect, particles);
-					tile.clear(this.Const.Tactical.DetailFlag.Scorchmark);
-					tile.spawnDetail("impact_decal", this.Const.Tactical.DetailFlag.Scorchmark, false, true);
+					this.Tactical.Entities.addTileEffect(_tile, _tile.Properties.Effect, particles);
+					_tile.clear(this.Const.Tactical.DetailFlag.Scorchmark);
+					_tile.spawnDetail("impact_decal", this.Const.Tactical.DetailFlag.Scorchmark, false, true);
 		}
 
 
