@@ -319,7 +319,9 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_hold_out"));
 		this.m.Skills.add(this.new("scripts/skills/actives/slime_smack"));
 		this.m.Skills.add(this.new("scripts/skills/actives/merge_cyto_skill"));
-		this.m.Skills.add(this.new("scripts/skills/effects/perk_captain"));
+//		this.m.Skills.add(this.new("scripts/skills/effects/perk_captain"));
+
+		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
 	}
 
 	function grow( _instant = false )
@@ -526,7 +528,9 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		{
 			this.m.WorldTroop.Party.removeTroop(this.m.WorldTroop);
 		}
-	}function onFactionChanged()
+	}
+
+	/*function onFactionChanged()
     {
         this.actor.onFactionChanged();
         local flip = this.isAlliedWithPlayer();
@@ -535,6 +539,6 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
         this.getSprite("armor").setHorizontalFlipping(flip);
         this.getSprite("head").setHorizontalFlipping(flip);
         this.getSprite("helmet").setHorizontalFlipping(flip);
-    }
+    }*/
  
 });

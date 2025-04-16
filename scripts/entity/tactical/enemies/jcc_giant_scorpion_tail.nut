@@ -540,6 +540,9 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 		{
 			this.m.Body = this.Tactical.getEntityByID(this.m.ParentID);
 			this.m.Items = this.m.Body.m.Items;
+						if(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand)!=null){
+				this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand));
+			}
 		}
 
 		this.actor.onInit();

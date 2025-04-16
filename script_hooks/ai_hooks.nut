@@ -40,10 +40,7 @@ local count = ::Const.AI.Behavior.ID.COUNT;
 	q.m.PossibleSkills.push("actives.jcc_scorp_deathblow");
 });
 
-::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_knock_out", function ( q ) {
 
-	q.m.PossibleSkills.push("actives.jcc_scorp_knock_out");
-});
 
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_engage_melee", function ( q ) {
 
@@ -71,6 +68,7 @@ local count = ::Const.AI.Behavior.ID.COUNT;
 	q.m.PossibleSkills.push("actives.split_man_cursed");
 	q.m.PossibleSkills.push("actives.jcc_scorp_prong");
 	q.m.PossibleSkills.push("actives.jcc_scorp_cleave");
+	q.m.PossibleSkills.push("actives.jcc_scorp_knock_out");
 });
 
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_swing", function ( q ) {

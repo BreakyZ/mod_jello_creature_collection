@@ -13,7 +13,7 @@ this.jcc_giant_scorp_tail_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.Properties.TargetPriorityCounterSkillsMult = 0.75;
 		this.m.Properties.OverallDefensivenessMult = 0.0;
 		this.m.Properties.OverallFormationMult = 0.75;
-		this.m.Properties.EngageTargetAlreadyBeingEngagedMult = 1.0;
+		this.m.Properties.EngageTargetAlreadyBeingEngagedMult = 0.5;
 		this.m.Properties.EngageWhenAlreadyEngagedMult = 0.0;
 		this.m.Properties.EngageLockDownTargetMult = 2.0;
 		this.m.Properties.PreferCarefulEngage = false;
