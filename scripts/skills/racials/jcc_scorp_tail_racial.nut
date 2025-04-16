@@ -83,5 +83,18 @@ this.jcc_scorp_tail_racial <- this.inherit("scripts/skills/skill", {
 		}
 	}
 
+		function onBeforeDamageReceived( _attacker, _skill, _hitInfo, _properties )
+	{
+		if (_skill == null)
+		{
+			return;
+		}
+
+		if (_skill.getID() == "actives.jcc_scorp_shatter")
+		{
+			_properties.DamageReceivedRegularMult *= 0;
+		}
+	}
+
 });
 

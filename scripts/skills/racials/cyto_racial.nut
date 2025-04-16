@@ -27,11 +27,11 @@ this.cyto_racial <- this.inherit("scripts/skills/skill", {
 			return;
 		}
 
-		if (_skill.getID() == "actives.aimed_shot" || _skill.getID() == "actives.quick_shot" || _skill.getID() == "actives.percht_shot")
+		if (_skill.getID() == "actives.aimed_shot" || _skill.getID() == "actives.quick_shot" )
 		{
 			_properties.DamageReceivedRegularMult *= 0.1;
 		}
-		else if (_skill.getID() == "actives.shoot_bolt" || _skill.getID() == "actives.shoot_stake" || _skill.getID() == "actives.sling_stone" || _skill.getID() == "actives.fire_handgonne")
+		else if (_skill.getID() == "actives.shoot_bolt" || _skill.getID() == "actives.shoot_stake" || _skill.getID() == "actives.sling_stone" || _skill.getID() == "actives.fire_handgonne" || _skill.getID() == "actives.percht_shot")
 		{
 			_properties.DamageReceivedRegularMult *= 0.33;
 		}

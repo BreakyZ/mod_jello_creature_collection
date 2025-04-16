@@ -11,10 +11,10 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		DistortAnimationStartTimeA = 0,
 		IsFlipping = false
 	},
-	function getIdealRange()
+	/*function getIdealRange()
 	{
-		return 2;
-	}
+		return 1;
+	}*/
 
 	function getTail()
 	{
@@ -359,7 +359,7 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		this.setSpriteOffset("status_stunned", this.createVec(-5, 30));
 		this.setSpriteOffset("arrow", this.createVec(-5, 30));
 		this.setAlwaysApplySpriteOffset(true);
-		this.setSpriteOffset("shield_icon", ::createVec(-160, 0));
+		this.setSpriteOffset("shield_icon", ::createVec(-165, 0));
 		b.IsSpecializedInCleavers = true;
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_crippling_strikes"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));

@@ -18,10 +18,10 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Body.setCurrentProperties(_c);
 	}
 
-	function getItems()
+	/*function getItems()
 	{
-		return this.m.Body.getItems();
-	}
+		//return this.m.Body.getItems();
+	}*/
 
 	function getHitpoints()
 	{
@@ -125,7 +125,7 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 
 	function getIdealRange()
 	{
-		return 1;
+		return 2;
 	}
 
 	function getOverlayImage()
@@ -539,7 +539,7 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 		if (this.m.ParentID != 0)
 		{
 			this.m.Body = this.Tactical.getEntityByID(this.m.ParentID);
-			this.m.Items = this.m.Body.m.Items;
+			//this.m.Items = this.m.Body.m.Items;
 				
 				if(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand)!=null){
 				this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand));
