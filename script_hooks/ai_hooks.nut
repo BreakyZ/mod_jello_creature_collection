@@ -70,6 +70,7 @@ local count = ::Const.AI.Behavior.ID.COUNT;
 	q.m.PossibleSkills.push("actives.jcc_scorp_prong");
 	q.m.PossibleSkills.push("actives.jcc_scorp_cleave");
 	q.m.PossibleSkills.push("actives.jcc_scorp_knock_out");
+		q.m.PossibleSkills.push("actives.slime_smack");
 });
 
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_swing", function ( q ) {
