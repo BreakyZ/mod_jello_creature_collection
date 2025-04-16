@@ -268,7 +268,7 @@
 ::Const.Tactical.Actor.JccGiantScorp <- {
 	XP = 600,
 	ActionPoints = 8,
-	Hitpoints = 300,
+	Hitpoints = 350,
 	Bravery = 150,
 	Stamina = 400,
 	MeleeSkill = 75,
@@ -280,8 +280,8 @@
 	MoraleEffectMult = 1.0,
 	FatigueRecoveryRate = 30,
 	Armor = [
-		300,
-		300
+		500,
+		500
 	]
 };
 

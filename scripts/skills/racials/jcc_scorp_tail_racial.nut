@@ -66,6 +66,13 @@ this.jcc_scorp_tail_racial <- this.inherit("scripts/skills/skill", {
 	{
 		local num = this.Tactical.Entities.getInstancesOfFaction(this.getContainer().getActor().getFaction()).len();
 		_properties.Bravery += (num - 1) * 3;
+
+		local actor = this.getContainer().getActor();
+
+		if (actor.isArmedWithShield())
+		{
+			_properties.DamageReceivedTotalMult *= 0.7;
+		}
 	}
 
 	function onAnySkillUsed( _skill, _targetEntity, _properties )

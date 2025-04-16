@@ -540,7 +540,8 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 		{
 			this.m.Body = this.Tactical.getEntityByID(this.m.ParentID);
 			this.m.Items = this.m.Body.m.Items;
-						if(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand)!=null){
+				
+				if(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand)!=null){
 				this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand));
 			}
 		}
@@ -605,6 +606,8 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_reach_advantage"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_fearsome"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_battle_forged"));
+
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_underdog"));
 
 	}
 
