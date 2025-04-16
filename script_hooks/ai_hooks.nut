@@ -69,6 +69,13 @@ local count = ::Const.AI.Behavior.ID.COUNT;
     q.m.PossibleSkills.push("actives.jcc_basilisk_sentry_fowleye");
 	q.m.PossibleSkills.push("actives.jcc_basilisk_sentry_inject");
 	q.m.PossibleSkills.push("actives.split_man_cursed");
+	q.m.PossibleSkills.push("actives.jcc_scorp_prong");
+	q.m.PossibleSkills.push("actives.jcc_scorp_cleave");
+});
+
+::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_swing", function ( q ) {
+
+	q.m.PossibleSkills.push("actives.jcc_scorp_shatter");
 });
 
  

@@ -2,8 +2,8 @@ this.jcc_djinn_dual_racial <- this.inherit("scripts/skills/skill", {
 	m = {},
 	function create()
 	{
-		this.m.ID = "racial.flesh_golem";
-		this.m.Name = "Flesh Golem Racial";
+		this.m.ID = "racial.djinn_dual";
+		this.m.Name = "Djinn Dual Wield Racial";
 		this.m.Description = "";
 		this.m.Icon = "";
 		this.m.Type = this.Const.SkillType.Racial | this.Const.SkillType.Perk | this.Const.SkillType.StatusEffect;

@@ -130,7 +130,7 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 
 	function getOverlayImage()
 	{
-		return "lindwurm_tail_orientation";
+		return "giant_scorpion_tail_01_orientation";
 	}
 
 	function create()
@@ -481,6 +481,58 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.Body = null;
 		}
 	}
+	function getDefense( _attackingEntity, _skill, _properties )
+	{
+		local malus = 0;
+		local d = 0;
+		local shieldRangedDefense = 0;
+		local shieldMeleeDefense = 0;
+
+		if (!this.m.CurrentProperties.IsImmuneToSurrounding)
+		{
+			malus = _attackingEntity != null ? this.Math.max(0, _attackingEntity.getCurrentProperties().SurroundedBonus * _attackingEntity.getCurrentProperties().SurroundedBonusMult - this.getCurrentProperties().SurroundedDefense) * this.getSurroundedCount() : this.Math.max(0, 5 - this.getCurrentProperties().SurroundedDefense) * this.getSurroundedCount();
+		}
+
+		local shield = this.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand);
+
+		if (shield != null && shield.isItemType(this.Const.Items.ItemType.Shield))
+		{
+			shieldMeleeDefense = 0;
+			shieldRangedDefense = 0;
+		}
+
+		if (_skill.isRanged())
+		{
+			d = _properties.getRangedDefense();
+
+			if (!_skill.isShieldRelevant())
+			{
+				d = d - shieldRangedDefense;
+			}
+		}
+		else
+		{
+			d = _properties.getMeleeDefense();
+
+			if (!_skill.isShieldRelevant())
+			{
+				d = d - shieldMeleeDefense;
+			}
+		}
+
+		if (d > this.Const.Tactical.Settings.AttributeDefenseSoftCap)
+		{
+			local e = d - this.Const.Tactical.Settings.AttributeDefenseSoftCap;
+			d = this.Const.Tactical.Settings.AttributeDefenseSoftCap + e * 0.5;
+		}
+
+		if (!_skill.isRanged())
+		{
+			d = d - malus;
+		}
+
+		return d;
+	}
 
 	function onInit()
 	{
@@ -492,7 +544,7 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 
 		this.actor.onInit();
 		local b = this.m.BaseProperties;
-		b.setValues(this.Const.Tactical.Actor.Lindwurm);
+		b.setValues(this.Const.Tactical.Actor.JccGiantScorp);
 		b.IsAffectedByNight = false;
 		b.IsImmuneToKnockBackAndGrab = true;
 		b.IsImmuneToStun = true;
@@ -536,16 +588,22 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 		this.addDefaultStatusSprites();
 		this.getSprite("status_rooted").Scale = 0.54;
 		this.setSpriteOffset("status_rooted", this.createVec(0, 0));
-		this.m.Racial = this.new("scripts/skills/racial/lindwurm_racial");
-		this.m.Skills.add(this.m.Racial);
-		this.m.Skills.add(this.new("scripts/skills/actives/tail_slam_skill"));
-		this.m.Skills.add(this.new("scripts/skills/actives/tail_slam_big_skill"));
-		this.m.Skills.add(this.new("scripts/skills/actives/tail_slam_split_skill"));
-		this.m.Skills.add(this.new("scripts/skills/actives/tail_slam_zoc_skill"));
+		//this.m.Racial = this.new("scripts/skills/racial/lindwurm_racial");
+		//this.m.Skills.add(this.m.Racial);
+
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_crippling_strikes"));
+
+
+		this.m.Skills.add(this.new("scripts/skills/racial/spider_racial"));
+		this.m.Skills.add(this.new("scripts/skills/racials/jcc_scorp_tail_racial"));
+		this.m.Skills.add(this.new("scripts/skills/actives/jcc_scorp_prong_skill"));
+		this.m.Skills.add(this.new("scripts/skills/actives/jcc_scorp_shatter_skill"));
 		this.m.Skills.add(this.new("scripts/skills/actives/move_tail_skill"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_hold_out"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_reach_advantage"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_fearsome"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_battle_forged"));
+
 	}
 
 });

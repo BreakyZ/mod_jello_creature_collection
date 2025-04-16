@@ -285,7 +285,7 @@ this.jcc_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		this.actor.onInit();
 		this.setRenderCallbackEnabled(true);
 		local b = this.m.BaseProperties;
-		b.setValues(this.Const.Tactical.Actor.Spider);
+		b.setValues(this.Const.Tactical.Actor.JccScorp);
 		b.IsAffectedByNight = false;
 		b.IsImmuneToPoison = true;
 		b.IsImmuneToDisarm = true;
@@ -358,6 +358,9 @@ this.jcc_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_backstabber"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_fast_adaption"));
 		this.m.Skills.add(this.new("scripts/skills/racial/spider_racial"));
+
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_crippling_strikes"));
+		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
 	}
 
 	function setSize( _s )

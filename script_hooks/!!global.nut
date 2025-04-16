@@ -48,8 +48,6 @@ for (local i = -1; i < ::Const.EntityIcon.len(); i++) {
 	::Const.EntityType.addNew("scorpion_orientation", "Scorpion", "Scorpions", this.Const.FactionType.Beasts);
 ::Const.EntityType.JccGiantScorp <-
 	::Const.EntityType.addNew("giant_scorpion_orientation", "Giant Scorpion", "Giant Scorpions", this.Const.FactionType.Beasts);
-::Const.EntityType.JccGiantScorpTailStinger <-
-	::Const.EntityType.addNew("giant_scorpion_tail_01_orientation", "Giant Scorpion", "Giant Scorpions", this.Const.FactionType.Beasts);
 
 //guest
 ::Const.EntityType.JccBasiliskSentryGuest <-

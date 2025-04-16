@@ -302,7 +302,7 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 	{
 		this.actor.onInit();
 		local b = this.m.BaseProperties;
-		b.setValues(this.Const.Tactical.Actor.Lindwurm);
+		b.setValues(this.Const.Tactical.Actor.JccGiantScorp);
 		this.setRenderCallbackEnabled(true);
 		b.IsAffectedByNight = false;
 		b.IsImmuneToKnockBackAndGrab = true;
@@ -360,13 +360,20 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		this.setAlwaysApplySpriteOffset(true);
 		this.setSpriteOffset("shield_icon", ::createVec(-160, 0));
 
-		this.m.Skills.add(this.new("scripts/skills/actives/gorge_skill"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_crippling_strikes"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));
+		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
+
+		this.m.Skills.add(this.new("scripts/skills/racial/spider_racial"));
+		this.m.Skills.add(this.new("scripts/skills/actives/knock_back"));
+		this.m.Skills.add(this.new("scripts/skills/actives/jcc_scorp_cleave_skill"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_hold_out"));
-		this.m.Skills.add(this.new("scripts/skills/racial/lindwurm_racial"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_reach_advantage"));
+		//this.m.Skills.add(this.new("scripts/skills/racial/lindwurm_racial"));
+		//this.m.Skills.add(this.new("scripts/skills/perks/perk_reach_advantage"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_fearsome"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_underdog"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_battle_forged"));
 
 		if (this.m.Tail == null)
 		{

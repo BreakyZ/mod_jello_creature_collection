@@ -2,7 +2,7 @@ this.jcc_scorp_deathblow_skill <- this.inherit("scripts/skills/skill", {
 	m = {},
 	function create()
 	{
-		this.m.ID = "actives.jcc_scorp_deathblow_skill";
+		this.m.ID = "actives.jcc_scorp_deathblow";
 		this.m.Name = "Stinger Stab";
 		this.m.Description = "Land a deadly hit on a debilitated target to finish it off.";
 		this.m.KilledString = "Stabbed";
@@ -28,7 +28,7 @@ this.jcc_scorp_deathblow_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsTargeted = true;
 		this.m.IsStacking = false;
 		this.m.IsAttack = true;
-		this.m.IsIgnoredAsAOO = true;
+		this.m.IsIgnoredAsAOO = false;
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.PiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.PiercingHead;
