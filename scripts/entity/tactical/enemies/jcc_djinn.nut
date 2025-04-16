@@ -384,6 +384,12 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 
 		//this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_adrenalin"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_overwhelm"));
+
+		this.m.Skills.removeByID("racial.djinn_dual");
+
+		this.m.AIAgent = this.new("scripts/ai/tactical/agents/jcc_djinn_champ_agent");
+		this.m.AIAgent.setActor(this);
 
 
 		return true;

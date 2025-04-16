@@ -15,6 +15,7 @@
 ::Const.AI.Agent.ID.JccGiantScorp <- "agent.jcc_giant_scorp";
 ::Const.AI.Agent.ID.JccGiantScorpTail <- "agent.jcc_giant_scorp_tail";
 ::Const.AI.Agent.ID.JccScorp <- "agent.jcc_scorp";
+::Const.AI.Agent.ID.JccDjinnChamp <- "agent.jcc_djinn_champ";
 
 local count = ::Const.AI.Behavior.ID.COUNT;
 ::Const.AI.Behavior.ID.SlimeSmack <- count++;
@@ -71,6 +72,7 @@ local count = ::Const.AI.Behavior.ID.COUNT;
 	q.m.PossibleSkills.push("actives.jcc_scorp_cleave");
 	q.m.PossibleSkills.push("actives.jcc_scorp_knock_out");
 		q.m.PossibleSkills.push("actives.slime_smack");
+	q.m.PossibleSkills.push("actives.jcc_scorp_deathblow");
 });
 
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_swing", function ( q ) {

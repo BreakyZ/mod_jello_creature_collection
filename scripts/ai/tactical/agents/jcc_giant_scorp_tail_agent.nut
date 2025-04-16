@@ -9,16 +9,17 @@ this.jcc_giant_scorp_tail_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.Properties.TargetPriorityRandomMult = 0.25;
 		this.m.Properties.TargetPriorityDamageMult = 0.25;
 		this.m.Properties.TargetPriorityFleeingMult = 0.5;
-		this.m.Properties.TargetPriorityHittingAlliesMult = 0.25;
+		this.m.Properties.TargetPriorityHittingAlliesMult = 0.0;
 		this.m.Properties.TargetPriorityCounterSkillsMult = 0.75;
 		this.m.Properties.OverallDefensivenessMult = 0.0;
 		this.m.Properties.OverallFormationMult = 0.75;
 		this.m.Properties.EngageTargetAlreadyBeingEngagedMult = 0.5;
 		this.m.Properties.EngageWhenAlreadyEngagedMult = 0.0;
-		this.m.Properties.EngageLockDownTargetMult = 2.0;
+		this.m.Properties.EngageLockDownTargetMult = 0.0;
 		this.m.Properties.PreferCarefulEngage = false;
 		this.m.Properties.EngageRangeIdeal = 2;
 		this.m.Properties.EngageRangeMax = 2;
+		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.MoveTailAlreadyEngagedMult] = 0.0;
 	}
 
 	function onAddBehaviors()
