@@ -481,6 +481,7 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.Body = null;
 		}
 	}
+	/*
 	function getDefense( _attackingEntity, _skill, _properties )
 	{
 		local malus = 0;
@@ -532,7 +533,7 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 		}
 
 		return d;
-	}
+	}*/
 
 	function onInit()
 	{
