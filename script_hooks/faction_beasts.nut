@@ -280,7 +280,7 @@
 	MoraleEffectMult = 1.0,
 	FatigueRecoveryRate = 30,
 	Armor = [
-		500,
+		300,
 		500
 	]
 };

@@ -16,7 +16,7 @@ this.jcc_djinn_dual_racial <- this.inherit("scripts/skills/skill", {
 	function onUpdate( _properties )
 	{
 		_properties.MovementAPCostAdditional += 1;
-		_properties.ActionPoints += 4;
+		_properties.ActionPoints += 3;
 		_properties.FatigueRecoveryRate += 10;
 	}
 
