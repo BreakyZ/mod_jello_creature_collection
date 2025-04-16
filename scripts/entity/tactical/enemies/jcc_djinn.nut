@@ -371,7 +371,7 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 				this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand));
 		}
 
-		local r = this.Math.rand(1, 2);
+		local r = this.Math.rand(1, 3);
 
 		if (r == 1)
 		{
@@ -380,6 +380,9 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 		}else if (r == 2)
 		{
 			this.m.Items.equip(this.new("scripts/items/weapons/named/named_shamshir"));
+		}
+		else{
+			this.m.Items.equip(this.new("scripts/items/weapons/named/named_polemace"));
 		}
 
 		//this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
