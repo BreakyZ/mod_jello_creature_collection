@@ -135,7 +135,7 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 
 	function create()
 	{
-		this.m.Type = this.Const.EntityType.JccGiantScorpTailStinger;
+		this.m.Type = this.Const.EntityType.JccGiantScorp;
 		this.m.BloodType = this.Const.BloodType.Green;
 		this.m.XP = this.Const.Tactical.Actor.JccGiantScorp.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
