@@ -80,6 +80,7 @@ this.jcc_percht_guest <- this.inherit("scripts/entity/tactical/player", {
 	{
 		local flip = this.Math.rand(1, 100) < 50;
 
+
 		if (_tile != null)
 		{
 			this.m.IsCorpseFlipped = flip;

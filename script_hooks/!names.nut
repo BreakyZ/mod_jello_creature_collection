@@ -149,7 +149,16 @@
 	"Letho",
 	"Dwayne",
 	"Bazuso",
-	"Werner"
+	"Werner",
+	"Caellach",
+	"Mordred",
+	"Esparr",
+	"Hektor",
+	"Gotz",
+	"Uther",
+	"Orion",
+	"Chulainn",
+	"Lobo"
 ];
 ::Const.Strings.JccBeastslayerTitles <- [
 	"the Witcher",
@@ -168,7 +177,9 @@
 	"Hag-Hacker",
 	"Woodstalker",
 	"of Wurmwald",
-	"the Chicken"
+	"the Chicken",
+	"the Robin",
+	"the Tiger-Eye"
 ];
 
 ::Const.Strings.JccDjinnNames <- [
@@ -194,5 +205,7 @@
 	"the Red One",
 	"Two Thunders",
 	"the Prosperous",
-	"of the One Thousand and One Nights"
+	"of the One Thousand and One Nights",
+	"the Ifrit",
+	"Shaitan"
 ];

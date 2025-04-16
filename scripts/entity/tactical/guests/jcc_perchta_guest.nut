@@ -298,9 +298,9 @@ this.jcc_perchta_guest <- this.inherit("scripts/entity/tactical/player", {
 		local injury_body = this.addSprite("injury_body");
 		injury_body.Visible = false;
 		injury_body.setBrush("bust_perchta_body_injured");
+		this.addSprite("armor_upgrade_back");
 		this.addSprite("armor");
-		this.addSprite("upgrade_back");
-		this.addSprite("upgrade_front");
+		this.addSprite("armor_upgrade_front");
 		local head = this.addSprite("head");
 		head.setBrush("bust_perchta_head");
 		head.Saturation = body.Saturation;
