@@ -3,67 +3,77 @@ this.jcc_scorp_tail_racial <- this.inherit("scripts/skills/skill", {
 	function create()
 	{
 		this.m.ID = "racial.scorp_tail";
-		this.m.Name = "Scorpion Tail Racial";
-		this.m.Description = "";
+		this.m.Name = "Poison";
+		this.m.Description = "TODO";
 		this.m.Icon = "";
-		this.m.Type = this.Const.SkillType.Racial | this.Const.SkillType.Perk | this.Const.SkillType.StatusEffect;
+		this.m.SoundOnUse = [
+			"sounds/enemies/dlc2/giant_spider_poison_01.wav",
+			"sounds/enemies/dlc2/giant_spider_poison_02.wav"
+		];
+		this.m.Type = this.Const.SkillType.Racial | this.Const.SkillType.Perk;
 		this.m.Order = this.Const.SkillOrder.Last;
 		this.m.IsActive = false;
 		this.m.IsStacking = false;
 		this.m.IsHidden = true;
 	}
 
-	function getDefense( _attackingEntity, _skill, _properties )
+	function onTargetHit( _skill, _targetEntity, _bodyPart, _damageInflictedHitpoints, _damageInflictedArmor )
 	{
-		local malus = 0;
-		local d = 0;
-		local shieldRangedDefense = 0;
-		local shieldMeleeDefense = 0;
-
-		if (!this.m.CurrentProperties.IsImmuneToSurrounding)
+		if (!_targetEntity.isAlive())
 		{
-			malus = _attackingEntity != null ? this.Math.max(0, _attackingEntity.getCurrentProperties().SurroundedBonus * _attackingEntity.getCurrentProperties().SurroundedBonusMult - this.getCurrentProperties().SurroundedDefense) * this.getSurroundedCount() : this.Math.max(0, 5 - this.getCurrentProperties().SurroundedDefense) * this.getSurroundedCount();
+			return;
 		}
 
-		local shield = this.getItems().getItemAtSlot(this.Const.ItemSlot.Offhand);
-
-		if (shield != null && shield.isItemType(this.Const.Items.ItemType.Shield))
+		if (_targetEntity.getCurrentProperties().IsImmuneToPoison || _damageInflictedHitpoints < this.Const.Combat.PoisonEffectMinDamage || _targetEntity.getHitpoints() <= 0)
 		{
-			shieldMeleeDefense = 0;
-			shieldRangedDefense = 0;
+			return;
 		}
 
-		if (_skill.isRanged())
+		if (_targetEntity.getFlags().has("undead"))
 		{
-			d = _properties.getRangedDefense();
+			return;
+		}
 
-			if (!_skill.isShieldRelevant())
+		if(_skill.getID()=="actives.jcc_scorp_knock_out"){
+			return;
+		}
+
+		if (!_targetEntity.isHiddenToPlayer())
+		{
+			if (this.m.SoundOnUse.len() != 0)
 			{
-				d = d - shieldRangedDefense;
+				this.Sound.play(this.m.SoundOnUse[this.Math.rand(0, this.m.SoundOnUse.len() - 1)], this.Const.Sound.Volume.RacialEffect * 1.5, _targetEntity.getPos());
 			}
+
+			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_targetEntity) + " is poisoned");
+		}
+
+		this.spawnIcon("status_effect_54", _targetEntity.getTile());
+		local poison = _targetEntity.getSkills().getSkillByID("effects.spider_poison");
+
+		if (poison == null)
+		{
+			local effect = this.new("scripts/skills/effects/spider_poison_effect");
+			_targetEntity.getSkills().add(effect);
 		}
 		else
 		{
-			d = _properties.getMeleeDefense();
-
-			if (!_skill.isShieldRelevant())
-			{
-				d = d - shieldMeleeDefense;
-			}
+			poison.resetTime();
 		}
+	}
 
-		if (d > this.Const.Tactical.Settings.AttributeDefenseSoftCap)
+	function onUpdate( _properties )
+	{
+		local num = this.Tactical.Entities.getInstancesOfFaction(this.getContainer().getActor().getFaction()).len();
+		_properties.Bravery += (num - 1) * 3;
+	}
+
+	function onAnySkillUsed( _skill, _targetEntity, _properties )
+	{
+		if (_targetEntity.getSkills().hasSkill("effects.web"))
 		{
-			local e = d - this.Const.Tactical.Settings.AttributeDefenseSoftCap;
-			d = this.Const.Tactical.Settings.AttributeDefenseSoftCap + e * 0.5;
+			_properties.DamageDirectMult *= 2.0;
 		}
-
-		if (!_skill.isRanged())
-		{
-			d = d - malus;
-		}
-
-		return d;
 	}
 
 });

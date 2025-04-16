@@ -227,7 +227,7 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 		damage = this.Math.max(0, this.Math.max(damage, this.Math.min(_hitInfo.DamageMinimum, _hitInfo.DamageMinimum * p.DamageReceivedTotalMult)));
 		_hitInfo.DamageInflictedHitpoints = damage;
 		this.m.Body.m.Skills.onDamageReceived(_attacker, _hitInfo.DamageInflictedHitpoints, _hitInfo.DamageInflictedArmor);
-		this.m.Racial.onDamageReceived(_attacker, _hitInfo.DamageInflictedHitpoints, _hitInfo.DamageInflictedArmor);
+		//this.m.Racial.onDamageReceived(_attacker, _hitInfo.DamageInflictedHitpoints, _hitInfo.DamageInflictedArmor);
 
 		if (armorDamage > 0 && !this.isHiddenToPlayer())
 		{
@@ -597,7 +597,6 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_crippling_strikes"));
 
 
-		this.m.Skills.add(this.new("scripts/skills/racial/spider_racial"));
 		this.m.Skills.add(this.new("scripts/skills/racials/jcc_scorp_tail_racial"));
 		this.m.Skills.add(this.new("scripts/skills/actives/jcc_scorp_prong_skill"));
 		this.m.Skills.add(this.new("scripts/skills/actives/jcc_scorp_shatter_skill"));

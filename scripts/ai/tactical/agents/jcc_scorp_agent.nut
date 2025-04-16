@@ -12,7 +12,9 @@ this.jcc_scorp_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.Properties.TargetPriorityHittingAlliesMult = 0.1;
 		this.m.Properties.TargetPriorityCounterSkillsMult = 0.75;
 		this.m.Properties.OverallDefensivenessMult = 0.0;
+		this.m.Properties.TargetPriorityDebilitatedMult = 1.33;
 		this.m.Properties.OverallFormationMult = 0.5;
+		this.m.Properties.TargetPriorityFinishOpponentMult = 3.0;
 		this.m.Properties.EngageAgainstSpearwallMult = 1.0;
 		this.m.Properties.EngageTargetMultipleOpponentsMult = 1.33;
 		this.m.Properties.EngageFlankingMult = 1.6;

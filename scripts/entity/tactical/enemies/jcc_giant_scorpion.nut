@@ -359,7 +359,7 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		this.setSpriteOffset("arrow", this.createVec(-5, 30));
 		this.setAlwaysApplySpriteOffset(true);
 		this.setSpriteOffset("shield_icon", ::createVec(-160, 0));
-
+		b.IsSpecializedInCleavers = true;
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_crippling_strikes"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));
 		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));

@@ -88,8 +88,8 @@ this.jcc_scorp_prong_skill <- this.inherit("scripts/skills/skill", {
 			_properties.MeleeSkill += 10;
 
 
-				_properties.DamageRegularMin += 60;
-				_properties.DamageRegularMax += 90;
+				_properties.DamageRegularMin += 65;
+				_properties.DamageRegularMax += 120;
 				_properties.DamageArmorMult += 1.3;
 			
 

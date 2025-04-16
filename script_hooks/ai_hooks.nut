@@ -13,6 +13,7 @@
 ::Const.AI.Agent.ID.JccBeastslayer <- "agent.jcc_beastslayer";
 ::Const.AI.Agent.ID.JccDjinn <- "agent.jcc_djinn";
 ::Const.AI.Agent.ID.JccGiantScorp <- "agent.jcc_giant_scorp";
+::Const.AI.Agent.ID.JccGiantScorpTail <- "agent.jcc_giant_scorp_tail";
 ::Const.AI.Agent.ID.JccScorp <- "agent.jcc_scorp";
 
 local count = ::Const.AI.Behavior.ID.COUNT;

@@ -3,7 +3,7 @@ this.jcc_giant_scorp_tail_agent <- this.inherit("scripts/ai/tactical/agent", {
 	function create()
 	{
 		this.agent.create();
-		this.m.ID = this.Const.AI.Agent.ID.JccGiantScorp;
+		this.m.ID = this.Const.AI.Agent.ID.JccGiantScorpTail;
 		this.m.Properties.TargetPriorityHitchanceMult = 0.5;
 		this.m.Properties.TargetPriorityHitpointsMult = 0.25;
 		this.m.Properties.TargetPriorityRandomMult = 0.25;
