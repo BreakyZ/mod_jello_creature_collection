@@ -170,3 +170,29 @@
 	"of Wurmwald",
 	"the Chicken"
 ];
+
+::Const.Strings.JccDjinnNames <- [
+	"Hatschi Bratschi",
+	"Al-Madhab",
+	"Al-Abyad",
+	"Al-Ahmar",
+	"Barqan",
+	"Samhures",
+	"Zawba\'ah",
+	"Maymun",
+	"Jaffar"
+];
+
+::Const.Strings.JccDjinnTitles <- [
+	"the Soot-Spitter",
+	"the Wishmaster",
+	"the Deceiver",
+	"Plaguebringer",
+	"the Blue Blaze",
+	"the Golden One",
+	"the White One",
+	"the Red One",
+	"Two Thunders",
+	"the Prosperous",
+	"of the One Thousand and One Nights"
+];

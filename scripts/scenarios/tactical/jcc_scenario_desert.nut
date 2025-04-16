@@ -182,6 +182,8 @@ this.jcc_scenario_desert <- this.inherit("scripts/scenarios/tactical/scenario_te
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();
+		entity.generateName();
+		entity.makeMiniboss();
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_djinn_low");
 		entity.setFaction(this.Const.Faction.Beasts);
 		entity.assignRandomEquipment();

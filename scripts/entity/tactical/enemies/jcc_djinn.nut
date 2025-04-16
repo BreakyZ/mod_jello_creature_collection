@@ -351,7 +351,7 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 
 	function generateName()
 	{
-		this.m.Name = this.Const.Strings.JccPerchtNames[this.Math.rand(0, this.Const.Strings.JccPerchtNames.len() - 1)] + " " +this.Const.Strings.JccPerchtTitles[this.Math.rand(0, this.Const.Strings.JccPerchtTitles.len() - 1)] ;
+		this.m.Name = this.Const.Strings.JccDjinnNames[this.Math.rand(0, this.Const.Strings.JccDjinnNames.len() - 1)] + " " +this.Const.Strings.JccDjinnTitles[this.Math.rand(0, this.Const.Strings.JccDjinnTitles.len() - 1)] ;
 	}
 
 	function makeMiniboss()
@@ -363,35 +363,28 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 
 		this.getSprite("miniboss").setBrush("bust_miniboss");
 
-		this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
+		if(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Mainhand)!=null){
+				this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Mainhand));
+		}
+		
+		if(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand)!=null){
+				this.m.Items.unequip(this.m.Items.getItemAtSlot(this.Const.ItemSlot.Offhand));
+		}
 
-		local r = this.Math.rand(1, 4);
-
-		this.setSpriteOffset("arms_icon", ::createVec(-7, 0))
-		this.m.spriteOffset = -7;
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_agent");
-		this.m.AIAgent.setActor(this);
+		local r = this.Math.rand(1, 2);
 
 		if (r == 1)
 		{
-			this.m.Items.equip(this.new("scripts/items/weapons/named/named_three_headed_flail"));
+			this.m.Items.equip(this.new("scripts/items/weapons/named/named_two_handed_scimitar"));
 
 		}else if (r == 2)
 		{
-			this.m.Items.equip(this.new("scripts/items/weapons/named/named_flail"));
-		}else if (r == 3)
-		{
-			this.m.Items.equip(this.new("scripts/items/weapons/named/named_javelin"));
-			this.m.Items.addToBag(this.new("scripts/items/weapons/percht_flail"));
-		}else
-		{
-			this.m.Items.equip(this.new("scripts/items/weapons/named/named_throwing_axe"));
-			this.m.Items.addToBag(this.new("scripts/items/weapons/percht_flail"));
-
+			this.m.Items.equip(this.new("scripts/items/weapons/named/named_shamshir"));
 		}
 
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
-		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge_alt"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_adrenaline"));
+
 
 		return true;
 	}
