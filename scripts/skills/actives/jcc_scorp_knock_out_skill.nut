@@ -34,7 +34,7 @@ this.jcc_scorp_knock_out_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsStacking = false;
 		this.m.IsAttack = true;
 		this.m.IsIgnoredAsAOO = true;
-		this.m.IsWeaponSkill = true;
+		this.m.IsWeaponSkill = false;
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
 		this.m.DirectDamageMult = 0.4;
@@ -87,7 +87,7 @@ this.jcc_scorp_knock_out_skill <- this.inherit("scripts/skills/skill", {
 	function onUse( _user, _targetTile )
 	{
 		local target = _targetTile.getEntity();
-		this.spawnAttackEffect(_targetTile, this.Const.Tactical.AttackEffectBash);
+		this.spawnAttackEffect(_targetTile, this.Const.Tactical.AttackEffectSlash);
 		local success = this.attackEntity(_user, target);
 
 		if (!_user.isAlive() || _user.isDying())
@@ -97,7 +97,8 @@ this.jcc_scorp_knock_out_skill <- this.inherit("scripts/skills/skill", {
 
 		if (success && target.isAlive())
 		{
-			if ((_user.getCurrentProperties().IsSpecializedInMaces || this.Math.rand(1, 100) <= this.m.StunChance) && !target.getCurrentProperties().IsImmuneToStun && !target.getSkills().hasSkill("effects.stunned"))
+			local r = Math.rand(1, 100);
+			if ( !target.getCurrentProperties().IsImmuneToStun && !target.getSkills().hasSkill("effects.stunned") && r<=50)
 			{
 				local stun = this.new("scripts/skills/effects/stunned_effect");
 				target.getSkills().add(stun);
@@ -106,7 +107,26 @@ this.jcc_scorp_knock_out_skill <- this.inherit("scripts/skills/skill", {
 				{
 					this.Tactical.EventLog.log(stun.getLogEntryOnAdded(this.Const.UI.getColorizedEntityName(_user), this.Const.UI.getColorizedEntityName(target)));
 				}
+			} 
+			else {
+				if (!tile.getEntity().getCurrentProperties().IsImmuneToDaze)
+				{
+					local stun = target.getSkills().getSkillByID("effects.dazed");
+					local shouldLog = stun == null || stun.getTurns() < 2;
 
+					if (stun == null)
+					{
+						stun = this.new("scripts/skills/effects/dazed_effect");
+						target.getSkills().add(stun);
+					}
+
+					stun.setTurns(this.Math.max(stun.getTurns(), 2));
+
+					if (!_user.isHiddenToPlayer() && _targetTile.IsVisibleForPlayer)
+					{
+						this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + " struck a blow that leaves " + this.Const.UI.getColorizedEntityName(_targetTile.getEntity()) + " dazed");
+					}
+				}
 			}
 		}
 

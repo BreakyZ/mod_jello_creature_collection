@@ -34,7 +34,7 @@ this.jcc_scorp_tail_racial <- this.inherit("scripts/skills/skill", {
 			return;
 		}
 
-		if(_skill.getID()!="actives.jcc_scorp_prong" && _skill.getID()!="actives.jcc_scorp_deathblow"){
+		if(_skill.getID()!="actives.jcc_scorp_prong" && _skill.getID()!="actives.jcc_scorp_deathblow" && _skill.getID()!="actives.jcc_scorp_throw_spear" ){
 			return;
 		}
 

@@ -17,6 +17,7 @@ this.jcc_giant_scorp_tail_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.Properties.EngageWhenAlreadyEngagedMult = 0.0;
 		this.m.Properties.EngageLockDownTargetMult = 0.0;
 		this.m.Properties.PreferCarefulEngage = false;
+		this.m.Properties.EngageTargetMultipleOpponentsMult = 0.0;
 		this.m.Properties.EngageRangeIdeal = 2;
 		this.m.Properties.EngageRangeMax = 2;
 		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.MoveTailAlreadyEngagedMult] = 0.0;
@@ -27,7 +28,7 @@ this.jcc_giant_scorp_tail_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_break_free"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_move_tail"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_default"));
-		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_swing"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_swing"));	
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_thresh"));
 		this.getBehavior(this.Const.AI.Behavior.ID.Swing).m.MinTargets = 1;
 		this.getBehavior(this.Const.AI.Behavior.ID.Thresh).m.MinTargets = 3;

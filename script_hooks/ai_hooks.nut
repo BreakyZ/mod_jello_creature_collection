@@ -59,6 +59,7 @@ local count = ::Const.AI.Behavior.ID.COUNT;
 
 	q.m.PossibleSkills.push("actives.percht_shot");
 	q.m.PossibleSkills.push("actives.cyto_gunk_shot");
+	q.m.PossibleSkills.push("actives.jcc_scorp_throw_spear");
 });
 
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_default", function ( q ) {

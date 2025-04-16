@@ -12,7 +12,7 @@ this.jcc_giant_scorp_shield <- this.inherit("scripts/items/shields/shield", {
 		this.m.Variant = 1;
 		this.updateVariant();
 		this.m.Value = 0;
-		this.m.MeleeDefense = 20;
+		this.m.MeleeDefense = 30;
 		this.m.RangedDefense = 20;
 		this.m.StaminaModifier = 0;
 		this.m.Condition = 86;
