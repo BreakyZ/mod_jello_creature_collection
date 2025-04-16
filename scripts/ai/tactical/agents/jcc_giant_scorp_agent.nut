@@ -14,10 +14,10 @@ this.jcc_giant_scorp_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.Properties.OverallDefensivenessMult = 0.0;
 		this.m.Properties.OverallFormationMult = 0.0;
 		this.m.Properties.OverallMagnetismMult = 0.0;
-		this.m.Properties.EngageTargetAlreadyBeingEngagedMult = 1.75;
+		this.m.Properties.EngageTargetAlreadyBeingEngagedMult = 5.75;
 		this.m.Properties.EngageLockDownTargetMult = 2.0;
-		this.m.Properties.EngageTargetArmedWithRangedWeaponMult = 1.0;
-		this.m.Properties.EngageTargetMultipleOpponentsMult = 1.0;
+		this.m.Properties.EngageTargetArmedWithRangedWeaponMult = 5.0;
+		this.m.Properties.EngageTargetMultipleOpponentsMult = 5.0;
 		this.m.Properties.PreferCarefulEngage = false;
 		this.m.Properties.EngageRangeMin = 1;
 		this.m.Properties.EngageRangeMax = 1;

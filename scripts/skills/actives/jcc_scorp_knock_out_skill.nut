@@ -117,8 +117,8 @@ this.jcc_scorp_knock_out_skill <- this.inherit("scripts/skills/skill", {
 	{
 		if (_skill == this)
 		{
-			_properties.DamageRegularMin += 30;
-			_properties.DamageRegularMax += 40;
+			_properties.DamageRegularMin += 15;
+			_properties.DamageRegularMax += 30;
 			_properties.DamageArmorMult += 1.0;
 			_properties.FatigueDealtPerHitMult += 2.0;
 		}

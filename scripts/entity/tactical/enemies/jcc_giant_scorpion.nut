@@ -306,6 +306,7 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		this.setRenderCallbackEnabled(true);
 		b.IsAffectedByNight = false;
 		b.IsImmuneToKnockBackAndGrab = true;
+				b.IsImmuneToPoison = true;
 		b.IsImmuneToStun = true;
 		b.IsMovable = false;
 		b.IsImmuneToRoot = true;

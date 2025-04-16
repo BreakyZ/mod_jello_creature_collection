@@ -35,7 +35,7 @@ this.jcc_scorp_cleave_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsWeaponSkill = true;
 		this.m.InjuriesOnBody = this.Const.Injury.CuttingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.CuttingHead;
-		this.m.DirectDamageMult = 0.5;
+		this.m.DirectDamageMult = 0.6;
 		this.m.ActionPointCost = 4;
 		this.m.FatigueCost = 12;
 		this.m.MinRange = 1;

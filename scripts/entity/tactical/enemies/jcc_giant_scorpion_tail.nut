@@ -551,6 +551,7 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 		b.setValues(this.Const.Tactical.Actor.JccGiantScorp);
 		b.IsAffectedByNight = false;
 		b.IsImmuneToKnockBackAndGrab = true;
+				b.IsImmuneToPoison = true;
 		b.IsImmuneToStun = true;
 		b.IsMovable = false;
 		b.IsImmuneToDisarm = true;

@@ -324,15 +324,6 @@ this.jcc_scorp_shatter_skill <- this.inherit("scripts/skills/skill", {
 	{
 		if (_skill == this)
 		{
-			if (!this.getContainer().getActor().getCurrentProperties().IsSpecializedInHammers)
-			{
-				_properties.MeleeSkill -= 10;
-			}
-			else
-			{
-				_properties.MeleeSkill -= 5;
-			}
-
 
 				_properties.DamageRegularMin += 50;
 				_properties.DamageRegularMax += 70;
