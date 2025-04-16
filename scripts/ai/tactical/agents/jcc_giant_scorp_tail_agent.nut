@@ -19,7 +19,6 @@ this.jcc_giant_scorp_tail_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.Properties.PreferCarefulEngage = false;
 		this.m.Properties.EngageRangeIdeal = 2;
 		this.m.Properties.EngageRangeMax = 2;
-		this.m.Properties.EngageRangeMin = 1;
 	}
 
 	function onAddBehaviors()
