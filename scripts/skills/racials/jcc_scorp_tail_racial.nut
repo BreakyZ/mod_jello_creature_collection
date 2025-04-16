@@ -71,6 +71,8 @@ this.jcc_scorp_tail_racial <- this.inherit("scripts/skills/skill", {
 
 		if (actor.isArmedWithShield())
 		{
+			_properties.MeleeDefense += 20;
+			_properties.RangedDefense += 20;
 			_properties.DamageReceivedTotalMult *= 0.7;
 		}
 	}
