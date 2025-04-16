@@ -109,7 +109,7 @@ this.jcc_scorp_knock_out_skill <- this.inherit("scripts/skills/skill", {
 				}
 			} 
 			else {
-				if (!tile.getEntity().getCurrentProperties().IsImmuneToDaze)
+				if (!target.getCurrentProperties().IsImmuneToDaze)
 				{
 					local stun = target.getSkills().getSkillByID("effects.dazed");
 					local shouldLog = stun == null || stun.getTurns() < 2;

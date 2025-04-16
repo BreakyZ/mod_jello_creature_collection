@@ -33,7 +33,7 @@ this.jcc_scorp_deathblow_skill <- this.inherit("scripts/skills/skill", {
 		this.m.InjuriesOnBody = this.Const.Injury.PiercingBody;
 		this.m.InjuriesOnHead = this.Const.Injury.PiercingHead;
 		this.m.DirectDamageMult = 0.3;
-		this.m.ActionPointCost = 4;
+		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 10;
 		this.m.MinRange = 1;
 		this.m.MaxRange = 1;
@@ -83,7 +83,8 @@ this.jcc_scorp_deathblow_skill <- this.inherit("scripts/skills/skill", {
 			if(targetStatus.hasSkill("effects.dazed") || targetStatus.hasSkill("effects.stunned") || targetStatus.hasSkill("effects.sleeping") || targetStatus.hasSkill("effects.net") || targetStatus.hasSkill("effects.web") || targetStatus.hasSkill("effects.rooted"))
 			{
 				_properties.DamageTotalMult *= 1.33;
-				_properties.DamageDirectAdd += 0.2;
+				_properties.DamageDirectAdd += 0.3;
+				_properties.MeleeSkill += 10;
 			}
 		}
 	}
