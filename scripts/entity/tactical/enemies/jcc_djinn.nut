@@ -382,8 +382,8 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.Items.equip(this.new("scripts/items/weapons/named/named_shamshir"));
 		}
 
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_adrenaline"));
+		//this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_adrenalin"));
 
 
 		return true;

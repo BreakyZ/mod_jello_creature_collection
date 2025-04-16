@@ -365,6 +365,8 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));
 		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
 
+
+		this.m.Skills.add(this.new("scripts/skills/racials/jcc_scorp_tail_racial"));
 		this.m.Skills.add(this.new("scripts/skills/actives/knock_back"));
 		this.m.Skills.add(this.new("scripts/skills/actives/jcc_scorp_cleave_skill"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
