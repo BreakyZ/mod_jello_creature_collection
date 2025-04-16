@@ -15,6 +15,8 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 
 	function setCurrentProperties( _c )
 	{
+		_c.MeleeDefense = getCurrentProperties().MeleeDefense;
+		_c.RangedDefense = getCurrentProperties().RangedDefense;
 		this.m.Body.setCurrentProperties(_c);
 	}
 
