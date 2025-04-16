@@ -391,6 +391,8 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 
 		this.m.Skills.removeByID("racial.djinn_dual");
 
+
+
 		this.m.AIAgent = this.new("scripts/ai/tactical/agents/jcc_djinn_champ_agent");
 		this.m.AIAgent.setActor(this);
 
@@ -398,6 +400,11 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 		return true;
 	}
 
+
+	function getIdealRange()
+	{
+		return 1;
+	}
 	/*
 	function onFactionChanged()
     {
