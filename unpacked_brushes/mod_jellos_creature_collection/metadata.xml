@@ -16,6 +16,9 @@
 <sprite id="figure_percht_01" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_percht_01.png" left="-25" right="34" top="-54" bottom="6" />
 <sprite id="figure_djinn" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_djinn.png" left="-25" right="34" top="-54" bottom="6" />
 
+<sprite id="figure_scorpion" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_scorpion.png" left="-25" right="34" top="-54" bottom="6" />
+<sprite id="figure_giant_scorpion" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_giant_scorpion.png" left="-25" right="34" top="-54" bottom="6" />
+
 <sprite id="figure_cytoplasm_01" offsetY="30" ic="FF36678A" width="68" height="106" img="world\party\figure_cytoplasm_01.png" />
 <sprite id="figure_cytoplasm_02" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_02.png"  />
 <sprite id="figure_cytoplasm_03" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_03.png"  />
@@ -42,6 +45,9 @@
 <sprite id="basilisk_queen_orientation" ic="FF1E2B3A" img="orientation\basilisk_queen_orientation.png" />
 <sprite id="jcc_beastslayer_orientation" ic="FF1E2B3A" img="orientation\jcc_beastslayer_orientation.png" />
 <sprite id="djinn_orientation" ic="FF1E2B3A" img="orientation\djinn_orientation.png" />
+<sprite id="scorpion_orientation" ic="FF1E2B3A" img="orientation\scorpion_orientation.png" />
+<sprite id="giant_scorpion_orientation" ic="FF1E2B3A" img="orientation\giant_scorpion_orientation.png" />
+<sprite id="giant_scorpion_tail_01_orientation" ic="FF1E2B3A" img="orientation\giant_scorpion_tail_01_orientation.png" />
 
 <!-- Cytoplasm Small/Medium/Big -->
 

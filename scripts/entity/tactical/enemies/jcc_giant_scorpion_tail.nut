@@ -135,9 +135,9 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 
 	function create()
 	{
-		this.m.Type = this.Const.EntityType.Lindwurm;
+		this.m.Type = this.Const.EntityType.JccGiantScorpTailStinger;
 		this.m.BloodType = this.Const.BloodType.Green;
-		this.m.XP = this.Const.Tactical.Actor.Lindwurm.XP;
+		this.m.XP = this.Const.Tactical.Actor.JccGiantScorp.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(-10, -25);
 		this.m.DecapitateBloodAmount = 1.0;
@@ -167,10 +167,10 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 2.0;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Attack] = 2.0;
 		this.m.SoundPitch = this.Math.rand(95, 105) * 0.01;
-		this.getFlags().add("body_immune_to_acid");
-		this.getFlags().add("head_immune_to_acid");
-		this.getFlags().add("lindwurm");
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/lindwurm_tail_agent");
+		//this.getFlags().add("body_immune_to_acid");
+		//this.getFlags().add("head_immune_to_acid");
+		//this.getFlags().add("lindwurm");
+		this.m.AIAgent = this.new("scripts/ai/tactical/agents/jcc_giant_scorp_tail_agent");
 		this.m.AIAgent.setActor(this);
 	}
 

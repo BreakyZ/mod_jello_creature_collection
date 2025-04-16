@@ -12,9 +12,9 @@ this.jcc_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 	},
 	function create()
 	{
-		this.m.Type = this.Const.EntityType.Spider;
+		this.m.Type = this.Const.EntityType.JccScorp;
 		this.m.BloodType = this.Const.BloodType.Green;
-		this.m.XP = this.Const.Tactical.Actor.Spider.XP;
+		this.m.XP = this.Const.Tactical.Actor.JccScorp.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.DecapitateSplatterOffset = this.createVec(20, -15);
 		this.m.DecapitateBloodAmount = 1.0;
@@ -80,7 +80,7 @@ this.jcc_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 0.7;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 2.0;
 		this.m.SoundPitch = this.Math.rand(95, 105) * 0.01;
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/spider_agent");
+		this.m.AIAgent = this.new("scripts/ai/tactical/agents/jcc_scorp_agent");
 		this.m.AIAgent.setActor(this);
 	}
 
@@ -348,9 +348,12 @@ this.jcc_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		this.setSpriteOffset("status_stunned", this.createVec(0, -20));
 		this.setSpriteOffset("arrow", this.createVec(0, -20));
 		this.setSize(this.Math.rand(70, 90) * 0.01);
-		this.m.Skills.add(this.new("scripts/skills/actives/spider_bite_skill"));
-		this.m.Skills.add(this.new("scripts/skills/actives/web_skill"));
-		this.m.Skills.add(this.new("scripts/skills/actives/footwork"));
+		
+		this.m.Skills.add(this.new("scripts/skills/actives/jcc_scorp_knock_out_skill"));
+		this.m.Skills.add(this.new("scripts/skills/actives/jcc_scorp_deathblow_skill"));
+		//this.m.Skills.add(this.new("scripts/skills/actives/footwork"));
+
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_battle_forged"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_backstabber"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_fast_adaption"));

@@ -12,6 +12,8 @@
 ::Const.AI.Agent.ID.CytoBlack <- "agent.cyto_black";
 ::Const.AI.Agent.ID.JccBeastslayer <- "agent.jcc_beastslayer";
 ::Const.AI.Agent.ID.JccDjinn <- "agent.jcc_djinn";
+::Const.AI.Agent.ID.JccGiantScorp <- "agent.jcc_giant_scorp";
+::Const.AI.Agent.ID.JccScorp <- "agent.jcc_scorp";
 
 local count = ::Const.AI.Behavior.ID.COUNT;
 ::Const.AI.Behavior.ID.SlimeSmack <- count++;
@@ -31,6 +33,16 @@ local count = ::Const.AI.Behavior.ID.COUNT;
 
 	q.m.PossibleSkills.push("actives.krampus_charge");
 	q.m.PossibleSkills.push("actives.krampus_charge_alt");
+});
+
+::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_deathblow", function ( q ) {
+
+	q.m.PossibleSkills.push("actives.jcc_scorp_deathblow");
+});
+
+::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_knock_out", function ( q ) {
+
+	q.m.PossibleSkills.push("actives.jcc_scorp_knock_out");
 });
 
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_engage_melee", function ( q ) {

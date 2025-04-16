@@ -245,6 +245,46 @@
 	]
 };
 
+::Const.Tactical.Actor.JccScorp <- {
+	XP = 125,
+	ActionPoints = 11,
+	Hitpoints = 50,
+	Bravery = 45,
+	Stamina = 130,
+	MeleeSkill = 60,
+	RangedSkill = 0,
+	MeleeDefense = 10,
+	RangedDefense = 10,
+	Initiative = 140,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	FatigueRecoveryRate = 20,
+	Armor = [
+		130,
+		130
+	]
+};
+
+::Const.Tactical.Actor.JccGiantScorp <- {
+	XP = 600,
+	ActionPoints = 8,
+	Hitpoints = 300,
+	Bravery = 150,
+	Stamina = 400,
+	MeleeSkill = 75,
+	RangedSkill = 0,
+	MeleeDefense = 10,
+	RangedDefense = -10,
+	Initiative = 80,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	FatigueRecoveryRate = 30,
+	Armor = [
+		300,
+		300
+	]
+};
+
 
 ::Const.FactionTrait.Actions[::Const.FactionTrait.Beasts].extend([
 	"scripts/factions/actions/build_percht_camp_action",
