@@ -218,7 +218,7 @@ this.jcc_dragon <- this.inherit("scripts/entity/tactical/actor", {
 		local b = this.m.BaseProperties;
 		b.setValues(this.Const.Tactical.Actor.JccDragon); 
 		b.IsImmuneToDisarm = true;
-		b.IsImmuneToPoison = true;
+		//b.IsImmuneToPoison = true;
 		b.IsImmuneToFire = true;
 
 		this.m.ActionPoints = b.ActionPoints;
