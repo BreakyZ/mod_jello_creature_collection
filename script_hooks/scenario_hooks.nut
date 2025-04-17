@@ -163,7 +163,7 @@
 			{
 				id = 55,
 				name = "Dragons",
-				description = "[p=c][img]gfx/ui/events/event_161.png[/img][/p]\n[p=c]Fight against dragons.[/p]"
+				description = "[p=c][img]gfx/ui/events/event_66.png[/img][/p]\n[p=c]Fight against dragons.[/p]"
 			}
 		]);
 
