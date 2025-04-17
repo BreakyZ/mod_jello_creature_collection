@@ -14,7 +14,7 @@ this.jcc_scenario_dragons <- this.inherit("scripts/scenarios/tactical/scenario_t
 
 	function initMap()
 	{
-		local testMap = this.MapGen.get("tactical.steppe");
+		local testMap = this.MapGen.get("tactical.mountain");
 		local minX = testMap.getMinX();
 		local minY = testMap.getMinY();
 		this.Tactical.resizeScene(minX, minY);
