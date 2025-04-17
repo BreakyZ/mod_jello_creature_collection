@@ -311,10 +311,18 @@
 	"scripts/factions/actions/defend_percht_action",
 	"scripts/factions/actions/send_percht_ambushers_action",
 	"scripts/factions/actions/send_percht_roamers_action",
+	"scripts/factions/actions/build_djinn_camp_action",
+	"scripts/factions/actions/defend_djinn_action",
+	"scripts/factions/actions/send_djinn_ambushers_action",
+	"scripts/factions/actions/send_djinn_roamers_action",
 ]);
+
 ::Const.FactionTrait.Actions[::Const.FactionTrait.Settlement].push("scripts/factions/actions/jcc_hunting_basilisks_action");
 
 ::Const.PerchtBanners <- [
 	"banner_beasts_01"
 ];
 
+::Const.DjinnBanners <- [
+	"banner_beasts_01"
+];

@@ -108,7 +108,7 @@
 					}
 				}
 
-				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 5, 100, 1000, 3, 0, _nearTile, 0.7);
+				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 5, 100, 1000, 3, 0, _nearTile, 0.0);
 
 				if (tile == null)
 				{

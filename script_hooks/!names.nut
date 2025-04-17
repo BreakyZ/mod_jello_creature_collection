@@ -209,3 +209,8 @@
 	"the Ifrit",
 	"Shaitan"
 ];
+
+::Const.World.LocationNames.DjinnMirage <- [
+	"Red Sands",
+	"Mirror\'s Edge"
+];

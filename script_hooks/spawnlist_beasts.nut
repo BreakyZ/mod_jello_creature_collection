@@ -1399,6 +1399,271 @@
 	}
 ];
 
+::Const.World.Spawn.JccDjinn <- [
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_djinn",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinnLOW,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Hyena,
+				Num = 4
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_djinn",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinnLOW,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Hyena,
+				Num = 4
+			},
+						{
+				Type = this.Const.World.Spawn.Troops.Serpent,
+				Num = 1
+			}
+		]
+	},	
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_djinn",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinnLOW,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Hyena,
+				Num = 5
+			},
+						{
+				Type = this.Const.World.Spawn.Troops.Serpent,
+				Num = 1
+			}
+		]
+	},	
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_djinn",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinnLOW,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Hyena,
+				Num = 5
+			},
+						{
+				Type = this.Const.World.Spawn.Troops.Serpent,
+				Num = 2
+			}
+		]
+	},	
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_djinn",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinnLOW,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Hyena,
+				Num = 6
+			},
+						{
+				Type = this.Const.World.Spawn.Troops.Serpent,
+				Num = 2
+			}
+		]
+	},	
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_djinn",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinn,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Hyena,
+				Num = 6
+			},
+						{
+				Type = this.Const.World.Spawn.Troops.Serpent,
+				Num = 2
+			}
+		]
+	},	
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_djinn",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinn,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Hyena,
+				Num = 2
+			},
+						{
+				Type = this.Const.World.Spawn.Troops.Serpent,
+				Num = 2
+			}
+		]
+	},	
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_djinn",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinn,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinnLOW,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Hyena,
+				Num = 2
+			},
+						{
+				Type = this.Const.World.Spawn.Troops.Serpent,
+				Num = 2
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_djinn",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinn,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinnLOW,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Hyena,
+				Num = 2
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_djinn",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinn,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinnLOW,
+				Num = 3
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Hyena,
+				Num = 3
+			},
+						{
+				Type = this.Const.World.Spawn.Troops.Serpent,
+				Num = 2
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_djinn",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinn,
+				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinnLOW,
+				Num = 3
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.HyenaHIGH,
+				Num = 3
+			},
+						{
+				Type = this.Const.World.Spawn.Troops.Serpent,
+				Num = 2
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_djinn",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinn,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinnLOW,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.HyenaHIGH,
+				Num = 3
+			},
+						{
+				Type = this.Const.World.Spawn.Troops.Serpent,
+				Num = 2
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_djinn",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinn,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.JccDjinnLOW,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.HyenaHIGH,
+				Num = 3
+			},
+						{
+				Type = this.Const.World.Spawn.Troops.Serpent,
+				Num = 4
+			}
+		]
+	}];
+
 function onCostCompare( _t1, _t2 )
 {
 	if (_t1.Cost < _t2.Cost)
@@ -1446,3 +1711,4 @@ function calculateCosts( _p )
 this.calculateCosts(this.Const.World.Spawn.JccPercht);
 this.calculateCosts(this.Const.World.Spawn.JccBasilisk);
 this.calculateCosts(this.Const.World.Spawn.JccDragon);
+this.calculateCosts(this.Const.World.Spawn.JccDjinn);
