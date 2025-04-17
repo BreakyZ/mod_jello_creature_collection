@@ -265,7 +265,7 @@ this.jcc_dragon <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_berserk"));
 
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_battering_ram"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_stalwart"));
+		//this.m.Skills.add(this.new("scripts/skills/perks/perk_stalwart"));
 
 		b.Threat += 5;
 
