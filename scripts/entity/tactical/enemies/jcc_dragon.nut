@@ -176,29 +176,29 @@ this.jcc_dragon <- this.inherit("scripts/entity/tactical/actor", {
 
 			for( local i = 0; i < n; i = ++i )
 			{
-				local r = this.Math.rand(1, 100);
-				local loot;
 
-				if (r <= 40)
-				{
-					loot = this.new("scripts/items/misc/jcc_basilisk_egg_item");
-				}
-				else if (r <= 80)
-				{
-					loot = this.new("scripts/items/misc/jcc_basilisk_eye_item");
-				}
-				loot = this.new("scripts/items/loot/jcc_basilisk_crown_item");
-				if (loot != null)
-				{
-					loot.drop(_tile);
-				}
+					local r = this.Math.rand(1, 100);
+					local loot;
+
+					if (r <= 35)
+					{
+						loot = this.new("scripts/items/misc/jcc_fiery_blood_item");
+					}
+					else if (r <= 70)
+					{
+						loot = this.new("scripts/items/misc/jcc_dragon_scales_item");
+					}
+					else
+					{
+						loot = this.new("scripts/items/misc/lindwurm_bones_item");
+					}
+
+					_loot.push(loot);
+				
 			}
 
-			if (this.Math.rand(1, 100) <= 66)
-			{
-				local loot = this.new("scripts/items/supplies/strange_meat_item");
-				loot.drop(_tile);
-			}
+				_loot.push(this.new("scripts/items/loot/jcc_princess_item"));
+			
 		}
 
 		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
