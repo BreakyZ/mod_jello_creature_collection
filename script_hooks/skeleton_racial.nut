@@ -1,4 +1,4 @@
-::ModJelloCreatureCollection.HooksMod.hook("scripts/skills/racials/skeleton_racial", function ( q )
+::ModJelloCreatureCollection.HooksMod.hook("scripts/skills/racial/skeleton_racial", function ( q )
 {
 	q.onBeforeDamageReceived = @(__original) function ( _attacker, _skill, _hitInfo, _properties )
 	{
