@@ -288,7 +288,7 @@
 ::Const.Tactical.Actor.JccDragon <- {
 	XP = 800,
 	ActionPoints = 8,
-	Hitpoints = 1100,
+	Hitpoints = 11,
 	Bravery = 180,
 	Stamina = 400,
 	MeleeSkill = 70,

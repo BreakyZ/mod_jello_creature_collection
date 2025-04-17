@@ -149,12 +149,12 @@ this.jcc_dragon <- this.inherit("scripts/entity/tactical/actor", {
 			}
 			else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Arrow)
 			{
-				decal = _tile.spawnDetail(sprite_body.getBrush().Name + "_dead_arrows", this.Const.Tactical.DetailFlag.Corpse, flip);
+				decal = _tile.spawnDetail("bear_01_dead_arrows", this.Const.Tactical.DetailFlag.Corpse, flip);
 				decal.Scale = 0.9;
 			}
 			else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Javelin)
 			{
-				decal = _tile.spawnDetail(sprite_body.getBrush().Name + "_dead_javelin", this.Const.Tactical.DetailFlag.Corpse, flip);
+				decal = _tile.spawnDetail("bear_01_dead_javelin", this.Const.Tactical.DetailFlag.Corpse, flip);
 				decal.Scale = 0.9;
 			}
 

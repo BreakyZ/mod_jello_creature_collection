@@ -65,6 +65,13 @@
 <sprite id="bust_jcc_dragon_head_03" offsetY="31" ic="FF336182" width="340" height="558" img="entity\beasts\jcc_dragon_head_03.png" left="-98" right="125" top="-62" bottom="141"/>
 <sprite id="bust_jcc_dragon_injured" offsetY="31" ic="FF336182" width="340" height="558" img="entity\beasts\jcc_dragon_injured.png" left="-98" right="125" top="-62" bottom="141"/>
 
+<sprite id="bust_jcc_dragon_body_01_dead" f="64FF" ic="FF295850" img="entity\beasts\jcc_dragon_body_01_dead.png" left="-126" right="116" top="-96" bottom="117" />
+<sprite id="bust_jcc_dragon_head_01_dead" f="64FF" ic="FF295850" img="entity\beasts\jcc_dragon_head_01_dead.png" left="-126" right="116" top="-96" bottom="117" />
+<sprite id="bust_jcc_dragon_body_02_dead" f="64FF" ic="FF295850" img="entity\beasts\jcc_dragon_body_02_dead.png" left="-126" right="116" top="-96" bottom="117" />
+<sprite id="bust_jcc_dragon_head_02_dead" f="64FF" ic="FF295850" img="entity\beasts\jcc_dragon_head_02_dead.png" left="-126" right="116" top="-96" bottom="117" />
+<sprite id="bust_jcc_dragon_body_03_dead" f="64FF" ic="FF295850" img="entity\beasts\jcc_dragon_body_03_dead.png" left="-126" right="116" top="-96" bottom="117" />
+<sprite id="bust_jcc_dragon_head_03_dead" f="64FF" ic="FF295850" img="entity\beasts\jcc_dragon_head_03_dead.png" left="-126" right="116" top="-96" bottom="117" />
+
 <!-- Cytoplasm Small/Medium/Big -->
 
 <sprite id="bust_cytoplasm_small_body" offsetY="30" ic="FF336182" width="340" height="558" img="entity\beasts\bust_cytoplasm_small_body.png" left="-46" right="48" top="-49" bottom="43" />
