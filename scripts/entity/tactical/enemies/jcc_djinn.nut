@@ -176,12 +176,14 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 		}*/
 
 
+		b.IsImmuneToFire = true;
 		this.m.ActionPoints = b.ActionPoints;
 		this.m.Hitpoints = b.Hitpoints;
 		this.m.CurrentProperties = clone b;
 		this.m.ActionPointCosts = this.Const.DefaultMovementAPCost;
 		this.m.FatigueCosts = this.Const.DefaultMovementFatigueCost;
 		//this.m.Items.getAppearance().Body = "bust_orc_01_body";
+		
 		this.addSprite("socket").setBrush("bust_base_beasts");
 		local body_variant = this.Math.rand(1, 2);
 		local head_variant = this.Math.rand(1, 3);

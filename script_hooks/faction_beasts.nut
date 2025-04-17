@@ -285,6 +285,26 @@
 	]
 };
 
+::Const.Tactical.Actor.JccDragon <- {
+	XP = 800,
+	ActionPoints = 8,
+	Hitpoints = 1100,
+	Bravery = 180,
+	Stamina = 400,
+	MeleeSkill = 70,
+	RangedSkill = 65,
+	MeleeDefense = 10,
+	RangedDefense = -10,
+	Initiative = 80,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	FatigueRecoveryRate = 30,
+	Armor = [
+		200,
+		300
+	]
+};
+
 
 ::Const.FactionTrait.Actions[::Const.FactionTrait.Beasts].extend([
 	"scripts/factions/actions/build_percht_camp_action",

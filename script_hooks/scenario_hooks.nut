@@ -101,6 +101,9 @@
 					tacticalState.setScenario(this.new("scripts/scenarios/tactical/jcc_scenario_desert"));
 					break;
 
+				case 55:
+					tacticalState.setScenario(this.new("scripts/scenarios/tactical/jcc_scenario_dragons"));
+					break;
 
 				default:
 					tacticalState.setScenario(this.new("scripts/scenarios/tactical/scenario_combat_basics"));
@@ -156,6 +159,11 @@
 				id = 54,
 				name = "Southern Beasts",
 				description = "[p=c][img]gfx/ui/events/event_161.png[/img][/p]\n[p=c]Fight against beasts under the blazing sun.[/p]"
+			},
+			{
+				id = 55,
+				name = "Dragons",
+				description = "[p=c][img]gfx/ui/events/event_161.png[/img][/p]\n[p=c]Fight against dragons.[/p]"
 			}
 		]);
 

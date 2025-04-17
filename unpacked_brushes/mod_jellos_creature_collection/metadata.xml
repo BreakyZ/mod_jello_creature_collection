@@ -19,6 +19,9 @@
 <sprite id="figure_scorpion" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_scorpion.png" left="-25" right="34" top="-54" bottom="6" />
 <sprite id="figure_giant_scorpion" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_giant_scorpion.png" left="-25" right="34" top="-54" bottom="6" />
 
+<sprite id="figure_jcc_dragon" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_jcc_dragon.png" left="-25" right="34" top="-54" bottom="6" />
+
+
 <sprite id="figure_cytoplasm_01" offsetY="30" ic="FF36678A" width="68" height="106" img="world\party\figure_cytoplasm_01.png" />
 <sprite id="figure_cytoplasm_02" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_02.png"  />
 <sprite id="figure_cytoplasm_03" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_03.png"  />
@@ -48,6 +51,19 @@
 <sprite id="scorpion_orientation" ic="FF1E2B3A" img="orientation\scorpion_orientation.png" />
 <sprite id="giant_scorpion_orientation" ic="FF1E2B3A" img="orientation\giant_scorpion_orientation.png" />
 <sprite id="giant_scorpion_tail_01_orientation" ic="FF1E2B3A" img="orientation\giant_scorpion_tail_01_orientation.png" />
+<sprite id="jcc_dragon_01_orientation" ic="FF1E2B3A" img="orientation\jcc_dragon_01_orientation.png" />
+<sprite id="jcc_dragon_02_orientation" ic="FF1E2B3A" img="orientation\jcc_dragon_02_orientation.png" />
+<sprite id="jcc_dragon_03_orientation" ic="FF1E2B3A" img="orientation\jcc_dragon_03_orientation.png" />
+
+<!-- Dragon -->
+
+<sprite id="bust_jcc_dragon_body_01" offsetY="31" ic="FF336182" width="340" height="558" img="entity\beasts\jcc_dragon_body_01.png" left="-98" right="125" top="-62" bottom="141" />
+<sprite id="bust_jcc_dragon_head_01" offsetY="31" ic="FF336182" width="340" height="558" img="entity\beasts\jcc_dragon_head_01.png" left="-98" right="125" top="-62" bottom="141"/>
+<sprite id="bust_jcc_dragon_body_02" offsetY="31" ic="FF336182" width="340" height="558" img="entity\beasts\jcc_dragon_body_02.png" left="-98" right="125" top="-62" bottom="141"/>
+<sprite id="bust_jcc_dragon_head_02" offsetY="31" ic="FF336182" width="340" height="558" img="entity\beasts\jcc_dragon_head_02.png" left="-98" right="125" top="-62" bottom="141"/>
+<sprite id="bust_jcc_dragon_body_03" offsetY="31" ic="FF336182" width="340" height="558" img="entity\beasts\jcc_dragon_body_03.png" left="-98" right="125" top="-62" bottom="141"/>
+<sprite id="bust_jcc_dragon_head_03" offsetY="31" ic="FF336182" width="340" height="558" img="entity\beasts\jcc_dragon_head_03.png" left="-98" right="125" top="-62" bottom="141"/>
+<sprite id="bust_jcc_dragon_injured" offsetY="31" ic="FF336182" width="340" height="558" img="entity\beasts\jcc_dragon_injured.png" left="-98" right="125" top="-62" bottom="141"/>
 
 <!-- Cytoplasm Small/Medium/Big -->
 
