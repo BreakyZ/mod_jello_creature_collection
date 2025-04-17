@@ -4,7 +4,7 @@ this.jcc_dragon_scales_item <- this.inherit("scripts/items/item", {
 	{
 		this.item.create();
 		this.m.ID = "misc.jcc_dragon_scales";
-		this.m.Name = "Lindwurm Scales";
+		this.m.Name = "Dragon Scales";
 		this.m.Description = "The shimmering red scales of a dragon are among the most reputable trophies a beast hunter can bring home from his adventures.";
 		this.m.Icon = "misc/jcc_dragon_scales_item.png";
 		this.m.SlotType = this.Const.ItemSlot.None;
