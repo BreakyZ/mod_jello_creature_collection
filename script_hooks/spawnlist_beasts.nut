@@ -1231,6 +1231,174 @@
 	}
 ];
 
+::Const.World.Spawn.JccDragon <- [
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_dragon",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDragon,
+				Num = 1
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_dragon",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDragon,
+				Num = 1
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_dragon",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDragon,
+				Num = 2
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_dragon",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDragon,
+				Num = 2
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_dragon",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDragon,
+				Num = 3
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_dragon",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDragon,
+				Num = 3
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_dragon",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDragon,
+				Num = 4
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_dragon",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDragon,
+				Num = 5
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_dragon",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDragon,
+				Num = 6
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_dragon",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDragon,
+				Num = 7
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_dragon",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDragon,
+				Num = 8
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_dragon",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDragon,
+				Num = 9
+			}
+		]
+	},	
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_dragon",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDragon,
+				Num = 10
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_dragon",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDragon,
+				Num = 11
+			}
+		]
+	},
+	{
+		Cost = 0,
+		MovementSpeedMult = 0.75,
+		Body = "figure_jcc_dragon",
+		Troops = [
+			{
+				Type = this.Const.World.Spawn.Troops.JccDragon,
+				Num = 12
+			}
+		]
+	}
+];
+
 function onCostCompare( _t1, _t2 )
 {
 	if (_t1.Cost < _t2.Cost)

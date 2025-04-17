@@ -38,7 +38,7 @@
 			local party = _action.getFaction().spawnEntity(tile, "Basilisks", false, this.Const.World.Spawn.JccBasilisk, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
 			party.getSprite("banner").setBrush("banner_beasts_01");
 			party.setDescription("A chaotic swarm of basilisks");
-			party.setFootprintType(this.Const.World.FootprintsType.Basilisks);
+			party.setFootprintType(this.Const.World.FootprintsType.Unholds);
 			party.setSlowerAtNight(true);
 			party.setUsingGlobalVision(false);
 			party.setLooting(false);
@@ -87,5 +87,59 @@
 		this.m.Options.push(beast);
 		this.m.BeastsLow.push(beast);
 
+		beast = function ( _action, _nearTile = null )
+			{
+				if (this.World.getTime().Days < 10 && _nearTile == null)
+				{
+					return false;
+				}
+
+				local isTundraAllowed = this.Math.rand(1, 100) <= 20;
+				local disallowedTerrain = [];
+
+				for( local i = 0; i < this.Const.World.TerrainType.COUNT; i = ++i )
+				{
+					if (i == this.Const.World.TerrainType.Mountain || i == this.Const.World.TerrainType.Tundra )
+					{
+					}
+					else
+					{
+						disallowedTerrain.push(i);
+					}
+				}
+
+				local tile = _action.getTileToSpawnLocation(10, disallowedTerrain, 5, 100, 1000, 3, 0, _nearTile, 0.7);
+
+				if (tile == null)
+				{
+					return false;
+				}
+
+				if (_action.getDistanceToNextAlly(tile) <= distanceToNextAlly / (_nearTile == null ? 1 : 2))
+				{
+					return false;
+				}
+
+				local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
+				local party = _action.getFaction().spawnEntity(tile, "Drache", false, this.Const.World.Spawn.JccDragon, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
+				party.getSprite("banner").setBrush("banner_beasts_01");
+				party.setDescription("Fire-breathing dragons burning all in their path.");
+				party.setFootprintType(this.Const.World.FootprintsType.Lindwurms);
+				party.setSlowerAtNight(true);
+				party.setUsingGlobalVision(false);
+				party.setLooting(false);
+				local roam = this.new("scripts/ai/world/orders/roam_order");
+				roam.setNoTerrainAvailable();
+				roam.setTerrain(this.Const.World.TerrainType.Tundra, true);
+				roam.setTerrain(this.Const.World.TerrainType.Mountain, true);
+				roam.setTerrain(this.Const.World.TerrainType.Hills, true);
+
+
+				party.getController().addOrder(roam);
+				return true;
+			};
+
+		this.m.Options.push(beast);
+		this.m.BeastsHigh.push(beast);
 	}
 });
