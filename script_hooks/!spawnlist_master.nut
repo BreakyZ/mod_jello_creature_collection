@@ -34,7 +34,7 @@
 	Script = "scripts/entity/tactical/enemies/jcc_basilisk_queen"
 };
 
-::Const.World.Spawn.Troops.JccDragon = {
+::Const.World.Spawn.Troops.JccDragon <- {
 		ID = this.Const.EntityType.JccDragon,
 		Variant = 0,
 		Strength = 100,

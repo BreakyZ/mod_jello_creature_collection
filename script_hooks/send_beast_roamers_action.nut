@@ -99,7 +99,7 @@
 
 				for( local i = 0; i < this.Const.World.TerrainType.COUNT; i = ++i )
 				{
-					if (i == this.Const.World.TerrainType.Mountain || i == this.Const.World.TerrainType.Tundra )
+					if (i == this.Const.World.TerrainType.Mountain || i == this.Const.World.TerrainType.Tundra || i == this.Const.World.TerrainType.Hills )
 					{
 					}
 					else
