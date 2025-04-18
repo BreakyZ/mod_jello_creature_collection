@@ -79,6 +79,7 @@ this.send_djinn_roamers_action <- this.inherit("scripts/factions/faction_action"
 		}
 
 		local settlement = this.pickWeightedRandom(settlements);
+		if(settlement==null){return true;}
 		settlement.setLastSpawnTimeToNow();
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "Bestial Hunters", false, this.Const.World.Spawn.JccDjinn, this.Math.min(settlement.getResources(), this.Math.rand(60, 110)));
 		party.getSprite("banner").setBrush(settlement.getBanner());

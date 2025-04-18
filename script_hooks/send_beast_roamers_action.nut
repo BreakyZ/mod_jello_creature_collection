@@ -36,6 +36,7 @@
 
 			local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
 			local party = _action.getFaction().spawnEntity(tile, "Basilisks", false, this.Const.World.Spawn.JccBasilisk, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
+			this.logInfo("Spawned Jcc Basilisks");
 			party.getSprite("banner").setBrush("banner_beasts_01");
 			party.setDescription("A chaotic swarm of basilisks");
 			party.setFootprintType(this.Const.World.FootprintsType.Unholds);
@@ -122,6 +123,7 @@
 
 				local distanceToNextSettlement = _action.getDistanceToSettlements(tile);
 				local party = _action.getFaction().spawnEntity(tile, "Drache", false, this.Const.World.Spawn.JccDragon, this.Math.rand(80, 120) * _action.getScaledDifficultyMult() * this.Math.maxf(0.7, this.Math.minf(1.5, distanceToNextSettlement / 14.0)));
+				this.logInfo("Spawned Jcc Dragons");
 				party.getSprite("banner").setBrush("banner_beasts_01");
 				party.setDescription("Fire-breathing dragons burning all in their path.");
 				party.setFootprintType(this.Const.World.FootprintsType.Lindwurms);

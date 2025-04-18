@@ -89,6 +89,7 @@ this.send_percht_ambushers_action <- this.inherit("scripts/factions/faction_acti
 		}
 
 		local settlement = this.pickWeightedRandom(settlements);
+		if(settlement==null){return true;}
 		settlement.setLastSpawnTimeToNow();
 		local mult = this.World.FactionManager.isCivilWar() ? 1.1 : 1.0;
 		local party = this.getFaction().spawnEntity(settlement.getTile(), "Bestial Despoilers", false, this.Const.World.Spawn.JccPercht, this.Math.rand(75, 120) * this.getReputationToDifficultyLightMult() * mult);
