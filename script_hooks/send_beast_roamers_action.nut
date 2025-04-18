@@ -100,7 +100,7 @@
 
 				for( local i = 0; i < this.Const.World.TerrainType.COUNT; i = ++i )
 				{
-					if (i == this.Const.World.TerrainType.Mountain || i == this.Const.World.TerrainType.Tundra || i == this.Const.World.TerrainType.Hills )
+					if (i == this.Const.World.TerrainType.Mountains || i == this.Const.World.TerrainType.Tundra || i == this.Const.World.TerrainType.Hills )
 					{
 					}
 					else
@@ -133,7 +133,7 @@
 				local roam = this.new("scripts/ai/world/orders/roam_order");
 				roam.setNoTerrainAvailable();
 				roam.setTerrain(this.Const.World.TerrainType.Tundra, true);
-				roam.setTerrain(this.Const.World.TerrainType.Mountain, true);
+				roam.setTerrain(this.Const.World.TerrainType.Mountains, true);
 				roam.setTerrain(this.Const.World.TerrainType.Hills, true);
 
 
