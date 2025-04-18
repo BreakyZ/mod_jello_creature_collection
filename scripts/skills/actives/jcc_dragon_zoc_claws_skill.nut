@@ -35,9 +35,7 @@ this.jcc_dragon_zoc_claws_skill <- this.inherit("scripts/skills/skill", {
 
 	function onUpdate( _properties )
 	{
-		_properties.DamageRegularMin += 25;
-		_properties.DamageRegularMax += 40;
-		_properties.DamageArmorMult *= 0.75;
+
 		//local size = this.getContainer().getActor().getSize();
 	}
 
@@ -45,6 +43,16 @@ this.jcc_dragon_zoc_claws_skill <- this.inherit("scripts/skills/skill", {
 	{
 		this.spawnAttackEffect(_targetTile, this.Const.Tactical.AttackEffectClaws);
 		return this.attackEntity(_user, _targetTile.getEntity());
+	}
+
+	function onAnySkillUsed( _skill, _targetEntity, _properties )
+	{
+		if (_skill == this)
+		{
+			_properties.DamageRegularMin += 25;
+			_properties.DamageRegularMax += 40;
+			_properties.DamageArmorMult *= 0.75;
+		}
 	}
 
 });
