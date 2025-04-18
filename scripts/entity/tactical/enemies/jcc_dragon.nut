@@ -12,39 +12,45 @@ this.jcc_dragon <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
 		this.actor.create();
 		this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived] = [
-			"sounds/enemies/lindwurm_hurt_01.wav",
-			"sounds/enemies/lindwurm_hurt_02.wav",
-			"sounds/enemies/lindwurm_hurt_03.wav",
-			"sounds/enemies/lindwurm_hurt_04.wav"
+			"sounds/enemies/jcc_dragon_hurt_01.wav",
+			"sounds/enemies/jcc_dragon_hurt_02.wav",
+			"sounds/enemies/jcc_dragon_hurt_03.wav",
+			"sounds/enemies/jcc_dragon_hurt_04.wav",
+			"sounds/enemies/jcc_dragon_hurt_05.wav",
+			"sounds/enemies/jcc_dragon_hurt_06.wav"
 		];
 		this.m.Sound[this.Const.Sound.ActorEvent.Death] = [
-			"sounds/enemies/lindwurm_death_01.wav",
-			"sounds/enemies/lindwurm_death_02.wav",
-			"sounds/enemies/lindwurm_death_03.wav",
-			"sounds/enemies/lindwurm_death_04.wav"
+			"sounds/enemies/jcc_dragon_death_01.wav",
+			"sounds/enemies/jcc_dragon_death_02.wav",
+			"sounds/enemies/jcc_dragon_death_03.wav"
 		];
 		this.m.Sound[this.Const.Sound.ActorEvent.Flee] = [
-			"sounds/enemies/lindwurm_flee_01.wav",
-			"sounds/enemies/lindwurm_flee_02.wav",
-			"sounds/enemies/lindwurm_flee_03.wav",
-			"sounds/enemies/lindwurm_flee_04.wav"
+			"sounds/enemies/jcc_dragon_flee_01.wav",
+			"sounds/enemies/jcc_dragon_flee_02.wav",
+			"sounds/enemies/jcc_dragon_flee_03.wav",
+			"sounds/enemies/jcc_dragon_flee_04.wav"
 		];
 		this.m.Sound[this.Const.Sound.ActorEvent.Idle] = [
-			"sounds/enemies/lindwurm_idle_01.wav",
-			"sounds/enemies/lindwurm_idle_02.wav",
-			"sounds/enemies/lindwurm_idle_03.wav",
-			"sounds/enemies/lindwurm_idle_04.wav",
-			"sounds/enemies/lindwurm_idle_05.wav",
-			"sounds/enemies/lindwurm_idle_06.wav",
-			"sounds/enemies/lindwurm_idle_07.wav",
-			"sounds/enemies/lindwurm_idle_08.wav",
-			"sounds/enemies/lindwurm_idle_09.wav",
-			"sounds/enemies/lindwurm_idle_10.wav",
-			"sounds/enemies/lindwurm_idle_11.wav"
+			"sounds/enemies/jcc_dragon_idle_01.wav",
+			"sounds/enemies/jcc_dragon_idle_02.wav",
+			"sounds/enemies/jcc_dragon_idle_03.wav",
+			"sounds/enemies/jcc_dragon_idle_04.wav",
+			"sounds/enemies/jcc_dragon_idle_05.wav",
+			"sounds/enemies/jcc_dragon_idle_06.wav",
+			"sounds/enemies/jcc_dragon_idle_07.wav",
+			"sounds/enemies/jcc_dragon_idle_08.wav",
+			"sounds/enemies/jcc_dragon_idle_09.wav"
 		];
-		this.m.Sound[this.Const.Sound.ActorEvent.Move] = this.m.Sound[this.Const.Sound.ActorEvent.Idle];
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 1.5;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 1.5;
+		this.m.Sound[this.Const.Sound.ActorEvent.Move]= [
+			"sounds/enemies/jcc_dragon_move_01.wav",
+			"sounds/enemies/jcc_dragon_move_02.wav",
+			"sounds/enemies/jcc_dragon_move_03.wav",
+			"sounds/enemies/jcc_dragon_move_04.wav",
+			"sounds/enemies/jcc_dragon_move_05.wav",
+			"sounds/enemies/jcc_dragon_move_06.wav",
+		];
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 1.0;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 1.0;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Flee] = 1.5;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 2.0;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 1.5;
@@ -159,6 +165,8 @@ this.jcc_dragon <- this.inherit("scripts/entity/tactical/actor", {
 			}
 
 			this.spawnTerrainDropdownEffect(_tile);
+			local tileLoot = this.getLootForTile(_killer, []);
+			this.dropLoot(_tile, tileLoot, !flip);
 			local corpse = clone this.Const.Corpse;
 			corpse.CorpseName = "A Drache";
 			corpse.Tile = _tile;
@@ -170,6 +178,14 @@ this.jcc_dragon <- this.inherit("scripts/entity/tactical/actor", {
 			this.Tactical.Entities.addCorpse(_tile);
 		}
 
+
+
+		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+	}
+
+
+		function getLootForTile( _killer, _loot )
+	{
 		if (_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals)
 		{
 			local n = 1 + (!this.Tactical.State.isScenarioMode() && this.Math.rand(1, 100) <= this.World.Assets.getExtraLootChance() ? 1 : 0);
@@ -192,16 +208,18 @@ this.jcc_dragon <- this.inherit("scripts/entity/tactical/actor", {
 					{
 						loot = this.new("scripts/items/misc/lindwurm_bones_item");
 					}
-
 					_loot.push(loot);
+
+					if(this.Math.rand(1, 100) <= 33){
+						_loot.push(this.new("scripts/items/loot/jcc_princess_item"));
+					}
 				
 			}
 
-				_loot.push(this.new("scripts/items/loot/jcc_princess_item"));
 			
 		}
 
-		this.actor.onDeath(_killer, _skill, _tile, _fatalityType);
+		return this.actor.getLootForTile(_killer, _loot);
 	}
 
 	function getOverlayImage()

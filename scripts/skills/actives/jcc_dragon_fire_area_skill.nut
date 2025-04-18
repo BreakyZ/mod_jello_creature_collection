@@ -14,10 +14,9 @@ this.jcc_dragon_fire_area_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IconDisabled = "skills/active_203_sw.png";
 		this.m.Overlay = "active_203";
 		this.m.SoundOnFire = [
-			"sounds/combat/dlc6/fire_gonne_01.wav",
-			"sounds/combat/dlc6/fire_gonne_02.wav",
-			"sounds/combat/dlc6/fire_gonne_03.wav",
-			"sounds/combat/dlc6/fire_gonne_04.wav"
+			"sounds/enemies/jcc_dragon_fire_breath_01.wav",
+			"sounds/enemies/jcc_dragon_fire_breath_02.wav",
+			"sounds/enemies/jcc_dragon_fire_breath_03.wav",
 		];
 		this.m.SoundOnHit = [
 			"sounds/combat/dlc6/fire_gonne_hit_01.wav",
@@ -28,7 +27,7 @@ this.jcc_dragon_fire_area_skill <- this.inherit("scripts/skills/skill", {
 		this.m.SoundOnHitDelay = 0;
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.OffensiveTargeted;
-		this.m.Delay = 750;
+		this.m.Delay = 850;
 		this.m.IsSerialized = false;
 		this.m.IsActive = true;
 		this.m.IsTargeted = true;

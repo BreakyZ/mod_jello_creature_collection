@@ -10,12 +10,9 @@ this.jcc_dragon_zoc_claws_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IconDisabled = "skills/active_21_sw.png";
 		this.m.Overlay = "active_21";
 		this.m.SoundOnUse = [
-			"sounds/enemies/ghoul_claws_01.wav",
-			"sounds/enemies/ghoul_claws_02.wav",
-			"sounds/enemies/ghoul_claws_03.wav",
-			"sounds/enemies/ghoul_claws_04.wav",
-			"sounds/enemies/ghoul_claws_05.wav",
-			"sounds/enemies/ghoul_claws_06.wav"
+			"sounds/enemies/jcc_dragon_claw_01.wav",
+			"sounds/enemies/jcc_dragon_claw_02.wav",
+			"sounds/enemies/jcc_dragon_claw_03.wav",
 		];
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.OffensiveTargeted;

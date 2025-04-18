@@ -9,10 +9,9 @@ this.jcc_dragon_firejet_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IconDisabled = "skills/active_202_sw.png";
 		this.m.Overlay = "active_202";
 		this.m.SoundOnUse = [
-			"sounds/combat/dlc6/fire_lance_01.wav",
-			"sounds/combat/dlc6/fire_lance_02.wav",
-			"sounds/combat/dlc6/fire_lance_03.wav",
-			"sounds/combat/dlc6/fire_lance_04.wav"
+			"sounds/enemies/jcc_dragon_fire_jet_01.wav",
+			"sounds/enemies/jcc_dragon_fire_jet_02.wav",
+			"sounds/enemies/jcc_dragon_fire_jet_03.wav",
 		];
 		this.m.SoundOnHit = [
 			"sounds/combat/dlc6/fire_hit_01.wav",
