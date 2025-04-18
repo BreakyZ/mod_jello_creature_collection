@@ -1021,6 +1021,14 @@
 			{
 				Type = this.Const.World.Spawn.Troops.Lindwurm,
 				Num = 1
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+				Num = 2
+			},
+			{
+				Type = this.Const.World.Spawn.Troops.Ghoul,
+				Num = 4
 			}
 		]
 	}
