@@ -45,7 +45,7 @@ this.build_djinn_camp_action <- this.inherit("scripts/factions/faction_action", 
 		local maxY = 0.2;
 
 			local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries, [ this.Const.World.TerrainType.Steppe, this.Const.World.TerrainType.Plains 
-			], 8, 1000, 1000, 7, 7, null, minY, maxY);
+			], 16, 1000, 1000, 7, 7, null, minY, maxY);
 
 			if (tile != null)
 			{

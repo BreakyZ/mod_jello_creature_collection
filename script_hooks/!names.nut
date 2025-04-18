@@ -214,3 +214,8 @@
 	"Red Sands",
 	"Mirror\'s Edge"
 ];
+
+::Const.World.LocationNames.DjinnGrotto <- [
+	"Deceiver\'s Grotto",
+	"Eternal Reward"
+];
