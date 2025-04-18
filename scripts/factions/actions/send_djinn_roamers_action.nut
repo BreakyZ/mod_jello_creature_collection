@@ -67,7 +67,7 @@ this.send_djinn_roamers_action <- this.inherit("scripts/factions/faction_action"
 
 		foreach( s in _faction.getSettlements() )
 		{
-			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF() || s.getTypeID() != "location.jcc_djinn_camp")
 			{
 				continue;
 			}

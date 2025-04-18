@@ -23,7 +23,7 @@ this.defend_percht_action <- this.inherit("scripts/factions/faction_action", {
 				continue;
 			}
 
-			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF() || s.getTypeID() != "location.jcc_percht_camp")
 			{
 				continue;
 			}

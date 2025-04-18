@@ -77,7 +77,7 @@ this.send_percht_ambushers_action <- this.inherit("scripts/factions/faction_acti
 				continue;
 			}
 
-			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF())
+			if (s.getLastSpawnTime() + 300.0 > this.Time.getVirtualTimeF() || s.getTypeID() != "location.jcc_percht_camp")
 			{
 				continue;
 			}
