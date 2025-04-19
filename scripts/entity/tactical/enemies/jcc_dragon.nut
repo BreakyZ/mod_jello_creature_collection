@@ -50,7 +50,7 @@ this.jcc_dragon <- this.inherit("scripts/entity/tactical/actor", {
 			"sounds/enemies/jcc_dragon_move_06.wav",
 		];
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 1.0;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 1.0;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 1.7;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Flee] = 1.5;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 2.0;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 1.5;
