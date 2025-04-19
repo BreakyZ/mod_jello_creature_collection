@@ -174,7 +174,7 @@ this.jcc_cytoplasm_ooze <- this.inherit("scripts/entity/tactical/actor", {
 		this.addDefaultStatusSprites();
 		this.getSprite("status_rooted").Scale = 0.45;
 		this.setSpriteOffset("status_rooted", this.createVec(-4, 7));
-		this.m.Skills.add(this.new("scripts/skills/racials/cyto_racial"));
+		this.m.Skills.add(this.new("scripts/skills/racials/cyto_racial_no_merge"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_backstabber"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_hold_out"));

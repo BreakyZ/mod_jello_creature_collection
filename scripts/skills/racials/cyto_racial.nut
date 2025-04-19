@@ -20,6 +20,34 @@ this.cyto_racial <- this.inherit("scripts/skills/skill", {
         //actor.checkMorale(1, 20);
     }
 
+    function onUpdate( _properties )
+	{
+		local size = this.getContainer().getActor().getSize();
+
+		if (size == 2)
+		{
+			_properties.Hitpoints += 110;
+			_properties.MeleeSkill += 10;
+			_properties.MeleeDefense -= 5;
+			_properties.Bravery += 60;
+			_properties.Stamina += 100;
+			_properties.RangedDefense -= 5;
+			_properties.Initiative -= 10;
+		}
+		else if (size == 3)
+		{
+			_properties.Hitpoints += 330;
+			_properties.MeleeSkill += 15;
+			_properties.MeleeDefense -= 10;
+			_properties.Bravery += 100;
+			_properties.Stamina += 300;
+			_properties.RangedDefense -= 15;
+			_properties.Initiative -= 20;
+		}
+		local actor = this.getContainer().getActor();
+
+	}
+
 	function onBeforeDamageReceived( _attacker, _skill, _hitInfo, _properties )
 	{
 		if (_skill == null)
