@@ -236,6 +236,8 @@
 <sprite id="bust_scorp_legs_back"  img="entity\beasts\bust_jcc_scorp_legs_back.png" left="-74" right="67" top="-76" bottom="102" offsetX="-5" offsetY="35" ic="FF555758" width="184" height="224" />
 <sprite id="bust_scorp_head_01"  img="entity\beasts\bust_jcc_scorp_head_01.png" left="-74" right="67" top="-76" bottom="102" offsetX="-5" offsetY="35" ic="FF555758" width="184" height="224" />
 <sprite id="bust_scorp_injured"  img="entity\beasts\bust_jcc_scorp_injury.png" left="-74" right="67" top="-76" bottom="102" offsetX="-5" offsetY="35" ic="FF555758" width="184" height="224" />
+  <sprite id="bust_jcc_scorpion_body_dead" offsetX="5" offsetY="30" f="6403" ic="FF252930" width="169" height="139" img="entity\beasts\bust_jcc_scorpion_body_dead.png" left="-85" right="119" top="-137" bottom="65" />  
+  <sprite id="bust_jcc_scorpion_head_dead" offsetX="5" offsetY="30" f="6403" ic="FF252930" width="169" height="139" img="entity\beasts\bust_jcc_scorpion_head_dead.png" left="-83" right="117" top="-119" bottom="57" />
 
 <!-- Giant Scorpion -->
 
@@ -245,6 +247,10 @@
 <sprite id="bust_giant_scorp_head_02"  img="entity\beasts\bust_jcc_giant_scorp_head_02.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
 <sprite id="bust_giant_scorp_legs_front"  img="entity\beasts\bust_jcc_giant_scorp_legs_front.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
 <sprite id="bust_giant_scorp_legs_back"  img="entity\beasts\bust_jcc_giant_scorp_legs_back.png" left="-122" right="122" top="-100" bottom="100" ic="FF3B675E" />
+
+<sprite id="bust_jcc_giant_scorp_body_dead" offsetY="30" f="64FF" ic="FF295850" img="entity\beasts\jcc_giant_scorp_body_dead.png" left="-126" right="116" top="-96" bottom="117" />
+<sprite id="bust_jcc_giant_scorp_head_01_dead" offsetY="30" f="64FF" ic="FF295850" img="entity\beasts\jcc_giant_scorp_head_01_dead.png" left="-126" right="116" top="-96" bottom="117" />
+<sprite id="bust_jcc_giant_scorp_head_02_dead" offsetY="30" f="64FF" ic="FF295850" img="entity\beasts\jcc_giant_scorp_head_02_dead.png" left="-126" right="116" top="-96" bottom="117" />
 
 <sprite id="bust_giant_scorp_tail_01"  img="entity\beasts\bust_jcc_giant_scorp_tail_01.png" left="-123" right="62" top="-56" bottom="145" ic="FF555758" offsetY="40"/>
 <sprite id="bust_giant_scorp_tail_injury"  img="entity\beasts\bust_jcc_giant_scorp_tail_injury.png" left="-123" right="62" top="-56" bottom="145" ic="FF555758" offsetY="40"/>

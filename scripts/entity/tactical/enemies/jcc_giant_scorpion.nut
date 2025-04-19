@@ -9,7 +9,8 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		DistortTargetC = null,
 		DistortTargetPrevC = this.createVec(0, 0),
 		DistortAnimationStartTimeA = 0,
-		IsFlipping = false
+		IsFlipping = false,
+		headVariant=1
 	},
 	/*function getIdealRange()
 	{
@@ -124,14 +125,14 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.IsCorpseFlipped = flip;
 			local body = this.getSprite("body");
 			local head = this.getSprite("head");
-			decal = _tile.spawnDetail("bust_lindwurm_body_01_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
+			decal = _tile.spawnDetail("bust_jcc_giant_scorp_body_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = body.Color;
 			decal.Saturation = body.Saturation;
 			decal.Scale = 0.95;
 
 			if (_fatalityType != this.Const.FatalityType.Decapitated)
 			{
-				decal = _tile.spawnDetail("bust_lindwurm_head_01_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
+				decal = _tile.spawnDetail("bust_jcc_giant_scorp_head_0"+this.m.headVariant+"_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 				decal.Color = head.Color;
 				decal.Saturation = head.Saturation;
 				decal.Scale = 0.95;
@@ -181,7 +182,12 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 
 	function assignRandomEquipment()
 	{
-			this.m.Items.equip(this.new("scripts/items/shields/jcc_giant_scorp_shield"));
+				local shield = "scripts/items/shields/jcc_giant_scorp_shield";
+                local item;
+                    item = this.new(shield);
+                    item.m.Variant = this.m.headVariant;
+                    item.updateVariant();
+                this.m.Items.equip(item);
 
 	}
 
@@ -346,8 +352,9 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		legs_front.Saturation = body.Saturation;
 		legs_back.Color = body.Color;
 		legs_back.Saturation = body.Saturation;
+		this.m.headVariant = this.Math.rand(1,2);
 		local head = this.addSprite("head");
-		head.setBrush("bust_giant_scorp_head_0" + this.Math.rand(1, 1));
+		head.setBrush("bust_giant_scorp_head_0" + this.m.headVariant);
 		head.Color = body.Color;
 		head.Saturation = body.Saturation;
 		local injury = this.addSprite("injury");
@@ -363,11 +370,11 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsSpecializedInCleavers = true;
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_crippling_strikes"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_shield_bash"));
 		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
 
 
 		this.m.Skills.add(this.new("scripts/skills/racials/jcc_scorp_tail_racial"));
-		this.m.Skills.add(this.new("scripts/skills/actives/knock_back"));
 		this.m.Skills.add(this.new("scripts/skills/actives/jcc_scorp_cleave_skill"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_hold_out"));

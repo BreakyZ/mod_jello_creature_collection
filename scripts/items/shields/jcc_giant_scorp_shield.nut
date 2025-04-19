@@ -28,5 +28,11 @@ this.jcc_giant_scorp_shield <- this.inherit("scripts/items/shields/shield", {
 		this.m.Icon = "";
 	}
 
+	function onEquip()
+	{
+		this.shield.onEquip();
+		this.addSkill(this.new("scripts/skills/actives/knock_back"));
+	}
+
 });
 

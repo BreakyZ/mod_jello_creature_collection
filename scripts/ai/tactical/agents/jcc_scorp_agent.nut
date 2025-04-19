@@ -38,6 +38,7 @@ this.jcc_scorp_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_disengage"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_throw_net"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_default"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_defend"));
 	}
 
 	function onUpdate()

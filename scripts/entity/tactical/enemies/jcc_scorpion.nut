@@ -136,7 +136,7 @@ this.jcc_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.IsCorpseFlipped = flip;
 			local body = this.getSprite("body");
 			local head = this.getSprite("head");
-			decal = _tile.spawnDetail("bust_spider_body_01_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
+			decal = _tile.spawnDetail("bust_jcc_scorpion_body_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = body.Color;
 			decal.Saturation = body.Saturation;
 			decal.Scale = 0.9 * this.m.Size;
@@ -144,7 +144,7 @@ this.jcc_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 
 			if (_fatalityType != this.Const.FatalityType.Decapitated)
 			{
-				decal = _tile.spawnDetail("bust_spider_head_01_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
+				decal = _tile.spawnDetail("bust_jcc_scorpion_head_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 				decal.Color = head.Color;
 				decal.Saturation = head.Saturation;
 				decal.Scale = 0.9 * this.m.Size;
@@ -184,7 +184,7 @@ this.jcc_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 			else if (_fatalityType == this.Const.FatalityType.Decapitated)
 			{
 				local layers = [
-					"bust_spider_head_01_dead"
+					"bust_jcc_scorpion_head_dead"
 				];
 				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-50, -10), 0.0, "bust_spider_head_01_dead_bloodpool");
 				decap[0].Color = head.Color;
