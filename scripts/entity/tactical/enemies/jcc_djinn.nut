@@ -176,6 +176,13 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 		}*/
 
 
+		if (this.World.getTime().Days >= 150)
+		{
+			b.MeleeSkill += 5;
+		}
+
+
+
 		b.IsImmuneToFire = true;
 		this.m.ActionPoints = b.ActionPoints;
 		this.m.Hitpoints = b.Hitpoints;
@@ -307,22 +314,38 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.Items.equip(armor);	
 		}
 	
+		local helmetChance = 0;
 
-		r = this.Math.rand(1, 100);
+		if (this.World.getTime().Days != null)
+		{
+			helmetChance = this.World.getTime().Days;
 
-		if(r<=30){
-
-			this.m.Items.equip(this.new("scripts/items/helmets/jcc_djinn_heavy_helmet"));
-
-		}else if(r<=60){
-
-			this.m.Items.equip(this.new("scripts/items/helmets/jcc_djinn_medium_helmet"));
-
-		}else if(r<=90){
-
-			this.m.Items.equip(this.new("scripts/items/helmets/jcc_djinn_light_helmet"));
-
+			if (this.World.getTime().Days < 30)
+			{
+				helmetChance = 0;
+			}
 		}
+
+		
+		if(this.Math.rand(1, 100)<=helmetChance){
+
+			r = this.Math.rand(1, 100);
+
+			if(r<=30){
+
+				this.m.Items.equip(this.new("scripts/items/helmets/jcc_djinn_heavy_helmet"));
+
+			}else if(r<=60){
+
+				this.m.Items.equip(this.new("scripts/items/helmets/jcc_djinn_medium_helmet"));
+
+			}else if(r<=90){
+
+				this.m.Items.equip(this.new("scripts/items/helmets/jcc_djinn_light_helmet"));
+
+			}
+		}
+		
 
 		if(this.Math.rand(1, 100)<40){
 			if(this.Math.rand(1, 100)<50){
