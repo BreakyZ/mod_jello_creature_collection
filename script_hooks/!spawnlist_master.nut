@@ -7,7 +7,7 @@
 	Script = "scripts/entity/tactical/enemies/jcc_basilisk_drone"
 };
 
-::Const.World.Spawn.Troops.JccBasiliskDroneLow <- {
+::Const.World.Spawn.Troops.JccBasiliskDroneLOW <- {
 	ID = this.Const.EntityType.JccBasiliskDrone,
 	Variant = 0,
 	Strength = 20,
@@ -136,4 +136,22 @@
 	Cost = 35,
 	Row = 2,
 	Script = "scripts/entity/tactical/enemies/jcc_djinn_low",
+};
+
+::Const.World.Spawn.Troops.JccScorpion <-  {
+		ID = this.Const.EntityType.JccScorp,
+		Variant = 0,
+		Strength = 16,
+		Cost = 15,
+		Row = -1,
+		Script = "scripts/entity/tactical/enemies/jcc_scorpion"
+};
+
+::Const.World.Spawn.Troops.JccGiantScorp <-  {
+		ID = this.Const.EntityType.JccGiantScorp,
+		Variant = 0,
+		Strength = 16,
+		Cost = 15,
+		Row = -1,
+		Script = "scripts/entity/tactical/enemies/jcc_giant_scorpion"
 };
