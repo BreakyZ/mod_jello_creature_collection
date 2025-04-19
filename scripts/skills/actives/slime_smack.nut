@@ -80,7 +80,7 @@ this.slime_smack <- this.inherit("scripts/skills/skill", {
 			{	
 				_properties.DamageRegularMin = 45;
 				_properties.DamageRegularMax = 55;
-				_properties.DamageArmorMult = 0.7;
+				_properties.DamageArmorMult = 1.0;
 			
 				this.m.DirectDamageMult = 0.5;
 			}
