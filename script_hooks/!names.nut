@@ -212,7 +212,13 @@
 
 ::Const.World.LocationNames.DjinnMirage <- [
 	"Red Sands",
-	"Mirror\'s Edge"
+	"Mirror\'s Edge",
+	"Spirit Oasis",
+	"Djinn\'s Communion",
+	"Refracted Oasis",
+	"Hope\'s End",
+	"Spirit Waters",
+	"Bloodied Sands"
 ];
 
 ::Const.World.LocationNames.DjinnGrotto <- [
