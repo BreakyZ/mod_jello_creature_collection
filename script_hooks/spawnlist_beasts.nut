@@ -31,7 +31,8 @@
 ::Const.World.Spawn.JccBeastslayer <- [];
 
 
-	for (local i = 7; i <= 30; i++){
+	for (local i = 7; i <= 30; i++)
+	{
 		::Const.World.Spawn.JccBeastslayer.push({
 	        Body = "figure_bandit_01",
 	        Troops = [
@@ -39,8 +40,10 @@
 	                Type = this.Const.World.Spawn.Troops.JccBeastslayer,
 	                Num = i
 	            }
-	       ]
-	});
+	       	]
+		});
+	}
+
 
 
 ::Const.World.Spawn.JccPercht <- [];
@@ -212,7 +215,7 @@ for (local i = 1; i <= 13; i++){
 		       ]
 		});
 		for(local l = 1; l<=3; l++){
-					::Const.World.Spawn.JccPercht.push({
+			::Const.World.Spawn.JccPercht.push({
 		        Body = "figure_percht_01",
 		        Troops = [
 		            {
@@ -259,7 +262,7 @@ for (local i = 1; i <= 13; i++){
 				       ]
 				});
 		}
-				::Const.World.Spawn.JccPercht.push({
+		::Const.World.Spawn.JccPercht.push({
 		        Body = "figure_percht_01",
 		        Troops = [
 		            {
@@ -456,7 +459,7 @@ for (local i = 1; i <= 13; i++){
 		            }
 		       ]
 		});
-				::Const.World.Spawn.JccPercht.push({
+		::Const.World.Spawn.JccPercht.push({
 		        Body = "figure_percht_01",
 		        Troops = [
 		            {
@@ -531,7 +534,7 @@ for (local i = 1; i <= 13; i++){
 		            }
 		       ]
 		});
-				::Const.World.Spawn.JccPercht.push({
+		::Const.World.Spawn.JccPercht.push({
 		        Body = "figure_percht_01",
 		        Troops = [
 		            {
@@ -819,8 +822,9 @@ for (local i = 1; i <= 13; i++){
 		            }
 		       ]
 		});
+		
 		for(local l = 1; l<=3; l++){
-					::Const.World.Spawn.JccPercht.push({
+			::Const.World.Spawn.JccPercht.push({
 		        Body = "figure_percht_01",
 		        Troops = [
 		            {
@@ -849,7 +853,7 @@ for (local i = 1; i <= 13; i++){
 		            }
 		       ]
 				});
-				::Const.World.Spawn.JccPercht.push({
+			::Const.World.Spawn.JccPercht.push({
 				        Body = "figure_percht_01",
 				        Troops = [
 				            {
@@ -866,16 +870,18 @@ for (local i = 1; i <= 13; i++){
 				            },
 				            {
 				                Type = this.Const.World.Spawn.Troops.GhoulHIGH,
-				                Num = j-1
+				                Num = l-1
 				            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            }
+				            {
+				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Num = num
+				            }
 				       ]
 				});
 		}
-				::Const.World.Spawn.JccPercht.push({
+		
+		/*
+		::Const.World.Spawn.JccPercht.push({
 		        Body = "figure_percht_01",
 		        Troops = [
 		            {
@@ -1108,7 +1114,7 @@ for (local i = 1; i <= 13; i++){
 		            }
 		       ]
 		});
-				::Const.World.Spawn.JccPercht.push({
+		::Const.World.Spawn.JccPercht.push({
 		        Body = "figure_percht_01",
 		        Troops = [
 		            {
@@ -1220,7 +1226,7 @@ for (local i = 1; i <= 13; i++){
 		            }
 		       ]
 		});
-				::Const.World.Spawn.JccPercht.push({
+		::Const.World.Spawn.JccPercht.push({
 		        Body = "figure_percht_01",
 		        Troops = [
 		            {
@@ -1348,1525 +1354,1527 @@ for (local i = 1; i <= 13; i++){
 		            }
 		       ]
 		});
-	}
+	}*/
+
 
 	foreach (x in [1,2,3,4]){
-			for (local j = 3; j <= 15; j++){
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i+1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.GhoulLOW,
-		                Num = j
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.GhoulLOW,
-		                Num = j
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i+1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.GhoulLOW,
-		                Num = j
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Ghoul,
-		                Num = j
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i+1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.GhoulLOW,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Ghoul,
-		                Num = j-1
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		for(local l = 1; l<=3; l++){
+		for (local j = 3; j <= 15; j++){
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i+1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.GhoulLOW,
+			                Num = j
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.GhoulLOW,
+			                Num = j
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i+1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.GhoulLOW,
+			                Num = j
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Ghoul,
+			                Num = j
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i+1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.GhoulLOW,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Ghoul,
+			                Num = j-1
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			for(local l = 1; l<=3; l++){
+						::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Ghoul,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.GhoulHIGH,
+			                Num = l
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+					});
 					::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Ghoul,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.GhoulHIGH,
-		                Num = l
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-				});
-				::Const.World.Spawn.JccPercht.push({
-				        Body = "figure_percht_01",
-				        Troops = [
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPercht,
-				                Num = i+1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-				                Num = j
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.GhoulLOW,
-				                Num = j
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.GhoulHIGH,
-				                Num = j-1
-				            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-				       ]
-				});
+					        Body = "figure_percht_01",
+					        Troops = [
+					            {
+					                Type = this.Const.World.Spawn.Troops.JccPercht,
+					                Num = i+1
+					            },
+					            {
+					                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+					                Num = j
+					            },
+					            {
+					                Type = this.Const.World.Spawn.Troops.GhoulLOW,
+					                Num = j
+					            },
+					            {
+					                Type = this.Const.World.Spawn.Troops.GhoulHIGH,
+					                Num = l-1
+					            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+					       ]
+					});
+			}
+					::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i+1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.GhoulLOW,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Ghoul,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+4
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+4
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+6
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Ghoul,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+5
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j+5
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j+2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+4
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j+5
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+9
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+10
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+					::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j+5
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Ghoul,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+9
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j+5
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+12
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i+2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j+9
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+12
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i+2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j+4
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+12
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+					::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j+7
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j+3
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Ghoul,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+12
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i+1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j+6
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+9
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i+3
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j+12
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+14
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i+3
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+6
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
 		}
-				::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i+1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.GhoulLOW,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Ghoul,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+4
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+4
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+6
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Ghoul,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+5
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j+5
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j+2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+4
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j+5
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+9
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+10
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-				::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j+5
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Ghoul,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+9
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j+5
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+12
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i+2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j+9
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+12
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i+2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j+4
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+12
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-				::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j+7
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j+3
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Ghoul,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+12
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i+1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j+6
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+9
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i+3
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j+12
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+14
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i+3
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+6
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-	}
 
-	foreach (num in [1,2,3,4]){
-			for (local j = 3; j <= 15; j++){
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i+1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.GhoulLOW,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.GhoulLOW,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i+1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.GhoulLOW,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Ghoul,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i+1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.GhoulLOW,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Ghoul,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		for(local l = 1; l<=3; l++){
+		foreach (num in [1,2,3,4]){
+				for (local j = 3; j <= 15; j++){
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i+1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.GhoulLOW,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.GhoulLOW,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i+1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.GhoulLOW,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Ghoul,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i+1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.GhoulLOW,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Ghoul,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			for(local l = 1; l<=3; l++){
+						::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Ghoul,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.GhoulHIGH,
+			                Num = l
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			      	 ]
+					});
 					::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Ghoul,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.GhoulHIGH,
-		                Num = l
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-				});
-				::Const.World.Spawn.JccPercht.push({
-				        Body = "figure_percht_01",
-				        Troops = [
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPercht,
-				                Num = i+1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-				                Num = j
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.GhoulLOW,
-				                Num = j
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.GhoulHIGH,
-				                Num = j-1
-				            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-				       ]
-				});
+					        Body = "figure_percht_01",
+					        Troops = [
+					            {
+					                Type = this.Const.World.Spawn.Troops.JccPercht,
+					                Num = i+1
+					            },
+					            {
+					                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+					                Num = j
+					            },
+					            {
+					                Type = this.Const.World.Spawn.Troops.GhoulLOW,
+					                Num = j
+					            },
+					            {
+					                Type = this.Const.World.Spawn.Troops.GhoulHIGH,
+					                Num = l-1
+					            },
+					            {
+					                Type = this.Const.World.Spawn.Troops.Schrat,
+					                Num = num
+					            },	            
+					            {
+					                Type = this.Const.World.Spawn.Troops.JccPerchta,
+					                Num = x
+					            }
+					       ]
+					});
+					}
+					::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i+1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.GhoulLOW,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Ghoul,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+4
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+4
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+6
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Ghoul,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+4
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+4
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+6
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+					::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Ghoul,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+4
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+4
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+6
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+					::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Ghoul,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+4
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Direwolf,
+			                Num = j-1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+4
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
+			::Const.World.Spawn.JccPercht.push({
+			        Body = "figure_percht_01",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPercht,
+			                Num = i
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+			                Num = j-2
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Spider,
+			                Num = j+6
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Lindwurm,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccDragon,
+			                Num = 1
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Num = num
+			            },	            
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccPerchta,
+			                Num = x
+			            }
+			       ]
+			});
 		}
-				::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i+1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.GhoulLOW,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Ghoul,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+4
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+4
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+6
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Ghoul,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+4
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+4
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+6
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-				::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Ghoul,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+4
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+4
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+6
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-				::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Ghoul,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+4
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Direwolf,
-		                Num = j-1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+4
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-		::Const.World.Spawn.JccPercht.push({
-		        Body = "figure_percht_01",
-		        Troops = [
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPercht,
-		                Num = i
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-		                Num = j-2
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Spider,
-		                Num = j+6
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Lindwurm,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccDragon,
-		                Num = 1
-		            },
-		            {
-		                Type = this.Const.World.Spawn.Troops.Schrat,
-		                Num = num
-		            },	            
-		            {
-		                Type = this.Const.World.Spawn.Troops.JccPerchta,
-		                Num = x
-		            }
-		       ]
-		});
-	}
+
 	}
 
 }
