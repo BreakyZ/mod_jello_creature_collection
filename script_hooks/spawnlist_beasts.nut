@@ -2940,7 +2940,7 @@ foreach (num in [1, 3, 5, 7, 12, 13, 14, 15, 16])
 	        Troops = [
 	            {
 	                Type = this.Const.World.Spawn.Troops.JccBasiliskDroneLOW,
-	                Num = num
+	                Num = num+2
 	            },
 	            {
 	                Type = this.Const.World.Spawn.Troops.JccBasiliskQueen,
@@ -2953,7 +2953,7 @@ foreach (num in [1, 3, 5, 7, 12, 13, 14, 15, 16])
 	        Troops = [
 	            {
 	                Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
-	                Num = num
+	                Num = num+2
 	            },
 	            {
 	                Type = this.Const.World.Spawn.Troops.JccBasiliskQueen,
@@ -2966,7 +2966,7 @@ foreach (num in [1, 3, 5, 7, 12, 13, 14, 15, 16])
 	        Troops = [
 	            {
 	                Type = this.Const.World.Spawn.Troops.JccBasiliskDroneLOW,
-	                Num = num
+	                Num = num+2
 	            },
 	            {
 	                Type = this.Const.World.Spawn.Troops.JccBasiliskQueen,
@@ -3031,7 +3031,7 @@ foreach (num in [1, 3, 5, 7, 12, 13, 14, 15, 16])
 				        Troops = [
 				            {
 				                Type = this.Const.World.Spawn.Troops.JccBasiliskDroneLOW,
-				                Num = num
+				                Num = num+2
 				            },
 				            {
 				                Type = this.Const.World.Spawn.Troops.JccBasiliskQueen,
@@ -3048,7 +3048,7 @@ foreach (num in [1, 3, 5, 7, 12, 13, 14, 15, 16])
 				        Troops = [
 				            {
 				                Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
-				                Num = num
+				                Num = num+2
 				            },
 				            {
 				                Type = this.Const.World.Spawn.Troops.JccBasiliskQueen,
@@ -3065,7 +3065,7 @@ foreach (num in [1, 3, 5, 7, 12, 13, 14, 15, 16])
 				        Troops = [
 				            {
 				                Type = this.Const.World.Spawn.Troops.JccBasiliskDroneLOW,
-				                Num = num
+				                Num = num+2
 				            },
 				            {
 				                Type = this.Const.World.Spawn.Troops.JccBasiliskQueen,
