@@ -10,7 +10,7 @@ this.jcc_krampus_bell_item <- this.inherit("scripts/items/item", {
 		this.m.SlotType = this.Const.ItemSlot.None;
 		this.m.ItemType = this.Const.Items.ItemType.Misc | this.Const.Items.ItemType.Loot;
 		this.m.IsDroppedAsLoot = true;
-		this.m.Value = 450;
+		this.m.Value = 350;
 	}
 
 	function getTooltip()

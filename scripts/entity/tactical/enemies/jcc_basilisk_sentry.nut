@@ -260,6 +260,8 @@ this.jcc_basilisk_sentry <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_backstabber"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_footwork"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_coup_de_grace"));
+		
+		this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
 		b.Threat += 5; //remove
 
 		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 35)
