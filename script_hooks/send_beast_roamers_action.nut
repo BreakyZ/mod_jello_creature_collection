@@ -48,8 +48,8 @@
 			roam.setTerrain(this.Const.World.TerrainType.Forest, true);
 			roam.setTerrain(this.Const.World.TerrainType.SnowyForest, false);
 			roam.setTerrain(this.Const.World.TerrainType.LeaveForest, true);
-			roam.setTerrain(this.Const.World.TerrainType.SwampForest, true);
-			roam.setTerrain(this.Const.World.TerrainType.SwampGreen, true);
+			//roam.setTerrain(this.Const.World.TerrainType.SwampForest, true);
+			//roam.setTerrain(this.Const.World.TerrainType.SwampGreen, true);
 			roam.setTerrain(this.Const.World.TerrainType.Hills, true);
 			local r = this.Math.rand(1, 20);
 			if (r == 1)
