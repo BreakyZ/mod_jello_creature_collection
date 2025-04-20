@@ -123,8 +123,8 @@
 ::Const.World.Spawn.Troops.JccDjinn <- {
 	ID = this.Const.EntityType.JccDjinn,
 	Variant = 1,
-	Strength = 45,
-	Cost = 45,
+	Strength = 35,
+	Cost = 35,
 	Row = 2,
 	Script = "scripts/entity/tactical/enemies/jcc_djinn",
 };

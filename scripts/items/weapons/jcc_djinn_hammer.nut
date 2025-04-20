@@ -5,7 +5,7 @@ this.jcc_djinn_hammer <- this.inherit("scripts/items/weapons/weapon", {
 		this.weapon.create();
 		this.m.ID = "weapon.jcc_djinn_hammer";
 		this.m.Name = "Earth Shaker";
-		this.m.Description = "A heavy piece of sandstone, swung as a hammer to break away bones and metal alike. Too unwieldy for human hands.";
+		this.m.Description = "A heavy piece of sandstone, swung as a hammer to break away at bones and metal alike. Too unwieldy for human hands.";
 		this.m.Categories = "Hammer, One-Handed";
 		this.m.IconLarge = "weapons/melee/jcc_djinn_hammer.png";
 		this.m.Icon = "weapons/melee/jcc_djinn_hammer_70x70.png";
