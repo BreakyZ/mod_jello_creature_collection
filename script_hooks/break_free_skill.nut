@@ -58,9 +58,9 @@
 			this.getContainer().removeByID("effects.net");
 			this.getContainer().removeByID("effects.rooted");
 			this.getContainer().removeByID("effects.web");
+			this.getContainer().removeByID("effects.jcc_cyto_engulf");
 			this.getContainer().removeByID("effects.kraken_ensnare");
 			this.getContainer().removeByID("effects.serpent_ensnare");
-			this.getContainer().removeByID("effects.jcc_cyto_engulf");
 			this.removeSelf();
 			return true;
 		}
