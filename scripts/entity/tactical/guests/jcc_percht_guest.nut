@@ -78,6 +78,7 @@ this.jcc_percht_guest <- this.inherit("scripts/entity/tactical/player", {
 
 	function onDeath( _killer, _skill, _tile, _fatalityType )
 	{
+		
 		local flip = this.Math.rand(1, 100) < 50;
 
 
@@ -311,6 +312,14 @@ this.jcc_percht_guest <- this.inherit("scripts/entity/tactical/player", {
 		local injury = this.addSprite("injury");
 		injury.Visible = false;
 		injury.setBrush("bust_percht_head_0"+head_variant+"_injured");
+			local sprite_hair = this.addSprite("hair");
+			local sprite_beard = this.addSprite("beard");
+			local sprite_beard_top = this.addSprite("beard_top");
+			local sprite_surcoat = this.addSprite("surcoat");
+			local sprite_accessory = this.addSprite("accessory");
+			local sprite_accessory_special = this.addSprite("accessory_special");
+			local sprite_body_tattoo = this.addSprite("tattoo_body");
+			local sprite_head_tattoo = this.addSprite("tattoo_head");
 		this.addSprite("helmet");
 		this.addDefaultStatusSprites();
 		this.getSprite("status_rooted").Scale = 0.55;

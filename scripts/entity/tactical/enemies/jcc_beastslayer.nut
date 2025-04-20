@@ -164,6 +164,8 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 		}
 
 		//armor
+		local heavyArmor=true;
+
 		{
 			if(this.Math.rand(1, 100) <= 20){
 				r = this.Math.rand(1, 2);
@@ -186,14 +188,17 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 					if (r == 1)
 					{
 						armor = this.new("scripts/items/armor/ragged_dark_surcoat");
+						heavyArmor=false;
 					}
 					else if (r == 2)
 					{
 						armor = (this.new("scripts/items/armor/blotched_gambeson"));
+						heavyArmor=false;
 					}
 					else if (r == 3)
 					{
 						armor = (this.new("scripts/items/armor/patched_mail_shirt"));
+						heavyArmor=false;
 					}
 					else if (r == 4)
 					{
@@ -212,7 +217,9 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 						armor = (this.new("scripts/items/armor/leather_scale_armor"));
 					}
 
-					local upgrades = [
+					local upgrades;
+					if(heavyArmor){
+						upgrades = [
 						"scripts/items/armor_upgrades/jcc_basilisk_cloak",
 						"scripts/items/armor_upgrades/additional_padding_upgrade",
 						"scripts/items/armor_upgrades/bone_platings_upgrade",
@@ -223,7 +230,18 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 						"scripts/items/armor_upgrades/unhold_fur_upgrade",
 						"scripts/items/armor_upgrades/joint_cover_upgrade",
 						"scripts/items/armor_upgrades/protective_runes_upgrade"
-					];
+						];
+					}
+					else{
+						upgrades = [
+						"scripts/items/armor_upgrades/jcc_basilisk_cloak",
+						"scripts/items/armor_upgrades/bone_platings_upgrade",
+						"scripts/items/armor_upgrades/direwolf_pelt_upgrade",
+						"scripts/items/armor_upgrades/hyena_fur_upgrade",
+						"scripts/items/armor_upgrades/protective_runes_upgrade"
+						];
+					}
+					 
 
 					local upgrade = this.new(upgrades[this.Math.rand(1, upgrades.len() - 1)]);
 
@@ -243,7 +261,10 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 
 			if (this.Math.rand(1, 100) <= 95)
 			{
-				local helmets = [
+
+				local helmets 
+				if(heavyArmor){
+					helmets= [
 					"scripts/items/helmets/greatsword_hat",
 					//"scripts/items/helmets/feathered_hat",
 					//"scripts/items/helmets/hunters_hat",
@@ -258,6 +279,16 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 					"scripts/items/helmets/barbute_helmet",
 					"scripts/items/helmets/bascinet_with_mail"
 				];
+				}
+				else{
+					helmets= [
+					"scripts/items/helmets/greatsword_hat",
+					//"scripts/items/helmets/feathered_hat",
+					//"scripts/items/helmets/hunters_hat",
+					"scripts/items/helmets/hood",
+					"scripts/items/helmets/headscarf",
+					"scripts/items/helmets/kettle_hat"];
+				}
 
 				local helm = helmets[this.Math.rand(1, helmets.len() - 1)];
                 local item;

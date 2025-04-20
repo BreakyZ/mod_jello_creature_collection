@@ -11,7 +11,7 @@
 	ID = this.Const.EntityType.JccBasiliskDrone,
 	Variant = 0,
 	Strength = 20,
-	Cost = 20,
+	Cost = 25,
 	Row = 0,
 	Script = "scripts/entity/tactical/enemies/jcc_basilisk_drone_low"
 };
