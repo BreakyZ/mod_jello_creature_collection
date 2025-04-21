@@ -15,7 +15,7 @@ this.jcc_krampus_tongue_item <- this.inherit("scripts/items/item", {
 
 	function playInventorySound( _eventType )
 	{
-		this.Sound.play("sounds/combat/unhold_regenerate_01.wav", this.Const.Sound.Volume.Inventory);
+		this.Sound.play("sounds/enemies/unhold_regenerate_01.wav", this.Const.Sound.Volume.Inventory);
 	}
 
 	function getSellPriceMult()
