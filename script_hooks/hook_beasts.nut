@@ -15,6 +15,7 @@ foreach (beast in beasts)
         {
             __original();
             this.m.Skills.add(this.new("scripts/skills/effects/captain_effect"));
+            this.m.Flags.add("jccBeast");
         }
 
         q.onFactionChanged <- function ()

@@ -9,7 +9,8 @@ this.perchta_agent <- this.inherit("scripts/ai/tactical/agents/percht_agent", {
 	function onAddBehaviors()
 	{
 		this.percht_agent.onAddBehaviors();
-		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_call_of_the_wild"));
+		//this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_call_of_the_wild"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_boost_morale"));
 	}
 
 	function onUpdate()

@@ -43,6 +43,11 @@ local count = ::Const.AI.Behavior.ID.COUNT;
 	q.m.PossibleSkills.push("actives.jcc_scorp_deathblow");
 });
 
+::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_boost_morale", function ( q ) {
+
+	q.m.PossibleSkills.push("actives.perchta_whip");
+});
+
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_split", function ( q ) {
 
 	q.m.PossibleSkills.push("actives.jcc_dragon_firejet");
