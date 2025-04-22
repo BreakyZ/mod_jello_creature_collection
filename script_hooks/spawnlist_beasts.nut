@@ -73,7 +73,7 @@ for (local i = 1; i <= 13; i++){
 	       ]
 		});
 	}
-	for (local j = 3; j <= 15; j++){
+	for (local j = 3; j <= 7; j++){
 		::Const.World.Spawn.JccPercht.push({
 		        Body = "figure_percht_01",
 		        Troops = [
@@ -650,7 +650,7 @@ for (local i = 1; i <= 13; i++){
 
 
 	foreach (num in [1,2,3,4]){
-		for (local j = 3; j <= 15; j++){
+		for (local j = 3; j <= 7; j++){
 			::Const.World.Spawn.JccPercht.push({
 			        Body = "figure_percht_01",
 			        Troops = [
@@ -1360,7 +1360,7 @@ for (local i = 1; i <= 13; i++){
 
 	
 	foreach (x in [1,2]){
-		for (local j = 3; j <= 15; j++){
+		for (local j = 3; j <= 7; j++){
 			::Const.World.Spawn.JccPercht.push({
 			        Body = "figure_percht_01",
 			        Troops = [
@@ -2065,7 +2065,7 @@ for (local i = 1; i <= 13; i++){
 		}
 
 		foreach (num in [1,2,3,4]){
-			for (local j = 3; j <= 15; j++){
+			for (local j = 3; j <= 7; j++){
 				::Const.World.Spawn.JccPercht.push({
 				        Body = "figure_percht_01",
 				        Troops = [

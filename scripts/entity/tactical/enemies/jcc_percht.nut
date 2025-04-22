@@ -468,6 +468,7 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 		}
 
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_backstabber"));
 		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge_alt"));
 
 		return true;
