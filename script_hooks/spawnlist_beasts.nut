@@ -663,7 +663,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = j
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -684,7 +684,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = j-2
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -701,7 +701,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = j
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -722,7 +722,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = j
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -747,7 +747,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = j
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -768,7 +768,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = j
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -793,7 +793,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = j
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -818,7 +818,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = j-1
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -849,7 +849,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = l
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            }
 				       ]
@@ -874,7 +874,7 @@ for (local i = 1; i <= 13; i++){
 						                Num = l
 						            },
 						            {
-						                Type = this.Const.World.Spawn.Troops.Schrat,
+						                Type = this.Const.World.Spawn.Troops.JccSchrat,
 						                Num = num
 						            }
 						       ]
@@ -902,7 +902,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = j
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -931,7 +931,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = j
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -956,7 +956,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = j+4
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -977,7 +977,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = j+4
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -998,7 +998,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = j+6
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -1031,7 +1031,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = 1
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -1060,7 +1060,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = 1
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -1085,7 +1085,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = 1
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -1110,7 +1110,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = 1
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -1143,7 +1143,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = 1
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -1172,7 +1172,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = 1
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -1197,7 +1197,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = 1
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -1222,7 +1222,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = 1
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -1259,7 +1259,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = 1
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -1292,7 +1292,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = 1
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -1321,7 +1321,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = 1
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -1350,7 +1350,7 @@ for (local i = 1; i <= 13; i++){
 			                Num = 1
 			            },
 			            {
-			                Type = this.Const.World.Spawn.Troops.Schrat,
+			                Type = this.Const.World.Spawn.Troops.JccSchrat,
 			                Num = num
 			            }
 			       ]
@@ -2078,7 +2078,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = j
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2103,7 +2103,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = j-2
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2124,7 +2124,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = j
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2149,7 +2149,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = j
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2178,7 +2178,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = j
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2203,7 +2203,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = j
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2232,7 +2232,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = j
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2261,7 +2261,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = j-1
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2295,7 +2295,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = l
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2324,7 +2324,7 @@ for (local i = 1; i <= 13; i++){
 						                Num = l
 						            },
 						            {
-						                Type = this.Const.World.Spawn.Troops.Schrat,
+						                Type = this.Const.World.Spawn.Troops.JccSchrat,
 						                Num = num
 						            },	            
 						            {
@@ -2354,7 +2354,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = j
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2387,7 +2387,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = j
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2416,7 +2416,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = j+4
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2441,7 +2441,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = j+4
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2466,263 +2466,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = j+6
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
-				                Num = num
-				            },	            
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPerchta,
-				                Num = x
-				            }
-				       ]
-				});
-				::Const.World.Spawn.JccPercht.push({
-				        Body = "figure_percht_01",
-				        Troops = [
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPercht,
-				                Num = i
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Direwolf,
-				                Num = j-1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-				                Num = j-2
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Ghoul,
-				                Num = j
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Spider,
-				                Num = j
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Lindwurm,
-				                Num = 1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
-				                Num = num
-				            },	            
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPerchta,
-				                Num = x
-				            }
-				       ]
-				});
-				::Const.World.Spawn.JccPercht.push({
-				        Body = "figure_percht_01",
-				        Troops = [
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPercht,
-				                Num = i
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Direwolf,
-				                Num = j-1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-				                Num = j-2
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Spider,
-				                Num = j+4
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Lindwurm,
-				                Num = 1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
-				                Num = num
-				            },	            
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPerchta,
-				                Num = x
-				            }
-				       ]
-				});
-				::Const.World.Spawn.JccPercht.push({
-				        Body = "figure_percht_01",
-				        Troops = [
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPercht,
-				                Num = i
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Direwolf,
-				                Num = j-1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Spider,
-				                Num = j+4
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Lindwurm,
-				                Num = 1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
-				                Num = num
-				            },	            
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPerchta,
-				                Num = x
-				            }
-				       ]
-				});
-				::Const.World.Spawn.JccPercht.push({
-				        Body = "figure_percht_01",
-				        Troops = [
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPercht,
-				                Num = i
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-				                Num = j-2
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Spider,
-				                Num = j+6
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Lindwurm,
-				                Num = 1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
-				                Num = num
-				            },	            
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPerchta,
-				                Num = x
-				            }
-				       ]
-				});
-				::Const.World.Spawn.JccPercht.push({
-				        Body = "figure_percht_01",
-				        Troops = [
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPercht,
-				                Num = i
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Direwolf,
-				                Num = j-1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-				                Num = j-2
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Ghoul,
-				                Num = j
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Spider,
-				                Num = j
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccDragon,
-				                Num = 1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
-				                Num = num
-				            },	            
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPerchta,
-				                Num = x
-				            }
-				       ]
-				});
-				::Const.World.Spawn.JccPercht.push({
-				        Body = "figure_percht_01",
-				        Troops = [
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPercht,
-				                Num = i
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Direwolf,
-				                Num = j-1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-				                Num = j-2
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Spider,
-				                Num = j+4
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccDragon,
-				                Num = 1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
-				                Num = num
-				            },	            
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPerchta,
-				                Num = x
-				            }
-				       ]
-				});
-				::Const.World.Spawn.JccPercht.push({
-				        Body = "figure_percht_01",
-				        Troops = [
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPercht,
-				                Num = i
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Direwolf,
-				                Num = j-1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Spider,
-				                Num = j+4
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccDragon,
-				                Num = 1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
-				                Num = num
-				            },	            
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPerchta,
-				                Num = x
-				            }
-				       ]
-				});
-				::Const.World.Spawn.JccPercht.push({
-				        Body = "figure_percht_01",
-				        Troops = [
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccPercht,
-				                Num = i
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
-				                Num = j-2
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Spider,
-				                Num = j+6
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.JccDragon,
-				                Num = 1
-				            },
-				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2759,11 +2503,267 @@ for (local i = 1; i <= 13; i++){
 				                Num = 1
 				            },
 				            {
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
+				                Num = num
+				            },	            
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPerchta,
+				                Num = x
+				            }
+				       ]
+				});
+				::Const.World.Spawn.JccPercht.push({
+				        Body = "figure_percht_01",
+				        Troops = [
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPercht,
+				                Num = i
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Direwolf,
+				                Num = j-1
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+				                Num = j-2
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Spider,
+				                Num = j+4
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Lindwurm,
+				                Num = 1
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
+				                Num = num
+				            },	            
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPerchta,
+				                Num = x
+				            }
+				       ]
+				});
+				::Const.World.Spawn.JccPercht.push({
+				        Body = "figure_percht_01",
+				        Troops = [
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPercht,
+				                Num = i
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Direwolf,
+				                Num = j-1
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Spider,
+				                Num = j+4
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Lindwurm,
+				                Num = 1
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
+				                Num = num
+				            },	            
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPerchta,
+				                Num = x
+				            }
+				       ]
+				});
+				::Const.World.Spawn.JccPercht.push({
+				        Body = "figure_percht_01",
+				        Troops = [
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPercht,
+				                Num = i
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+				                Num = j-2
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Spider,
+				                Num = j+6
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Lindwurm,
+				                Num = 1
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
+				                Num = num
+				            },	            
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPerchta,
+				                Num = x
+				            }
+				       ]
+				});
+				::Const.World.Spawn.JccPercht.push({
+				        Body = "figure_percht_01",
+				        Troops = [
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPercht,
+				                Num = i
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Direwolf,
+				                Num = j-1
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+				                Num = j-2
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Ghoul,
+				                Num = j
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Spider,
+				                Num = j
+				            },
+				            {
 				                Type = this.Const.World.Spawn.Troops.JccDragon,
 				                Num = 1
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
+				                Num = num
+				            },	            
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPerchta,
+				                Num = x
+				            }
+				       ]
+				});
+				::Const.World.Spawn.JccPercht.push({
+				        Body = "figure_percht_01",
+				        Troops = [
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPercht,
+				                Num = i
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Direwolf,
+				                Num = j-1
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+				                Num = j-2
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Spider,
+				                Num = j+4
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccDragon,
+				                Num = 1
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
+				                Num = num
+				            },	            
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPerchta,
+				                Num = x
+				            }
+				       ]
+				});
+				::Const.World.Spawn.JccPercht.push({
+				        Body = "figure_percht_01",
+				        Troops = [
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPercht,
+				                Num = i
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Direwolf,
+				                Num = j-1
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Spider,
+				                Num = j+4
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccDragon,
+				                Num = 1
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
+				                Num = num
+				            },	            
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPerchta,
+				                Num = x
+				            }
+				       ]
+				});
+				::Const.World.Spawn.JccPercht.push({
+				        Body = "figure_percht_01",
+				        Troops = [
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPercht,
+				                Num = i
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+				                Num = j-2
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Spider,
+				                Num = j+6
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccDragon,
+				                Num = 1
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
+				                Num = num
+				            },	            
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPerchta,
+				                Num = x
+				            }
+				       ]
+				});
+				::Const.World.Spawn.JccPercht.push({
+				        Body = "figure_percht_01",
+				        Troops = [
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccPercht,
+				                Num = i
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Direwolf,
+				                Num = j-1
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+				                Num = j-2
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Ghoul,
+				                Num = j
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Spider,
+				                Num = j
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.Lindwurm,
+				                Num = 1
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccDragon,
+				                Num = 1
+				            },
+				            {
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2800,7 +2800,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = 1
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2833,7 +2833,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = 1
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {
@@ -2866,7 +2866,7 @@ for (local i = 1; i <= 13; i++){
 				                Num = 1
 				            },
 				            {
-				                Type = this.Const.World.Spawn.Troops.Schrat,
+				                Type = this.Const.World.Spawn.Troops.JccSchrat,
 				                Num = num
 				            },	            
 				            {

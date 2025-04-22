@@ -344,43 +344,63 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 	{
 		local r;
 		local weapon;
-
+		local rng = 45;
 
 
 		if (this.Math.rand(1, 100) <= 75)
 		{
-			if (this.Math.rand(1, 100) <= 45)
+			if (this.World.getTime().Days >= 35)
+			{
+				rng=65;
+			}
+			if (this.Math.rand(1, 100) <= rng)
 			{
 				this.m.Items.addToBag(this.new("scripts/items/weapons/greenskins/orc_javelin"));
 			}
-			if (this.Math.rand(1, 100) <= 70)
+			if (this.World.getTime().Days >= 60)
 			{
-				local r = this.Math.rand(1, 2);
+						local r = this.Math.rand(1, 2);
+						if (r == 1)
+						{
+							weapon = this.new("scripts/items/weapons/percht_flail");
+						}
+						else if (r == 2)
+						{
+							weapon = this.new("scripts/items/weapons/percht_spetum");
+							this.setSpriteOffset("arms_icon", ::createVec(0, 0))
+							this.m.spriteOffset = -0;
+						}
+			}else{
+				if (this.Math.rand(1, 100) <= 70)
+					{
+						local r = this.Math.rand(1, 2);
 
-				if (r == 1)
-				{
-					weapon = this.new("scripts/items/weapons/percht_flail");
-				}
-				else if (r == 2)
-				{
-					weapon = this.new("scripts/items/weapons/percht_spetum");
-					this.setSpriteOffset("arms_icon", ::createVec(0, 0))
-					this.m.spriteOffset = -0;
-				}
-			}
-			else
-			{
-				local r = this.Math.rand(1, 2);
+						if (r == 1)
+						{
+							weapon = this.new("scripts/items/weapons/percht_flail");
+						}
+						else if (r == 2)
+						{
+							weapon = this.new("scripts/items/weapons/percht_spetum");
+							this.setSpriteOffset("arms_icon", ::createVec(0, 0))
+							this.m.spriteOffset = -0;
+						}
+					}
+					else
+					{
+						local r = this.Math.rand(1, 2);
 
-				if (r == 1)
-				{
-					weapon = this.new("scripts/items/weapons/greenskins/orc_wooden_club");
-				}
-				else if (r == 2)
-				{
-					weapon = this.new("scripts/items/weapons/greenskins/orc_metal_club");
-				}
+						if (r == 1)
+						{
+							weapon = this.new("scripts/items/weapons/greenskins/orc_wooden_club");
+						}
+						else if (r == 2)
+						{
+							weapon = this.new("scripts/items/weapons/greenskins/orc_metal_club");
+						}
+					}
 			}
+			
 
 			if (weapon == null)
 			{

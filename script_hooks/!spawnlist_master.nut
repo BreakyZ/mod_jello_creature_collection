@@ -155,3 +155,12 @@
 		Row = -1,
 		Script = "scripts/entity/tactical/enemies/jcc_giant_scorpion"
 };
+
+::Const.World.Spawn.Troops.JccSchrat = {
+		ID = this.Const.EntityType.Schrat,
+		Variant = 0,
+		Strength = 70,
+		Cost = 70,
+		Row = -1,
+		Script = "scripts/entity/tactical/enemies/jcc_schrat"
+	},

@@ -50,7 +50,7 @@ for (local i = -1; i < ::Const.EntityIcon.len(); i++) {
 	::Const.EntityType.addNew("giant_scorpion_orientation", "Giant Scorpion", "Giant Scorpions", this.Const.FactionType.Beasts);
 ::Const.EntityType.JccDragon <-
 	::Const.EntityType.addNew("jcc_dragon_01_orientation", "Drache", "Drachen", this.Const.FactionType.Beasts);
-
+	
 //guest
 ::Const.EntityType.JccBasiliskSentryGuest <-
 	::Const.EntityType.addNew("basilisk_sentry_orientation", "Basilisk Sentry", "Basilisk Sentries", this.Const.FactionType.Player);
