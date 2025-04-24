@@ -71,7 +71,7 @@ local count = ::Const.AI.Behavior.ID.COUNT;
 
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_throw_net", function ( q ) {
 
-	q.m.PossibleSkills.push("actives.jcc_cyto_engulf_skill");
+	q.m.PossibleSkills.push("actives.jcc_cyto_engulf");
 });
 
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_bow", function ( q ) {
