@@ -120,7 +120,8 @@
 ::Const.World.LocationNames.PerchtCastle <- [
 	"Child-Eater Hall",
 	"Hall of Hell",
-	"Greenbeard\'s Walls"
+	"Greenbeard\'s Walls",
+	"Hall of the Mountain King"
 ];
 ::Const.Strings.JccSlimeNames <- [
 	"Bodysnatcher",
