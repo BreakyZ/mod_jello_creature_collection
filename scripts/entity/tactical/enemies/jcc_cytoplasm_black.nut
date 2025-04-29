@@ -1,10 +1,32 @@
 this.jcc_cytoplasm_black <- this.inherit("scripts/entity/tactical/actor", {
-	m = 
-	{
+	m = {
+		Mode = 0,
 		Size = 2,
 		Variant = 1,
-		ScaleStartTime = 0,
+		ScaleStartTime = 0
 	},
+
+	function setMode( _m )
+	{
+		this.m.Mode = _m;
+
+		if (this.isPlacedOnMap())
+		{
+			if (this.m.Mode == 0 && _m == 1)
+			{
+				this.m.IsUsingZoneOfControl = true;
+				this.setZoneOfControl(this.getTile(), true);
+			}
+
+			this.onUpdateInjuryLayer();
+		}
+	}
+
+	function getMode()
+	{
+		return this.m.Mode;
+	}
+
 	function getSize()
 	{
 		return this.m.Size;

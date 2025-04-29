@@ -1,5 +1,6 @@
 this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/effects/serpent_ensnare_effect", {
 	m = {
+		Mode = 0,
 		LastRoundApplied = 0,
 		SpriteScaleBackup = 1.0,
 		OnRemoveCallback = null,
@@ -15,6 +16,11 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/effects/serpent_ensn
 			"sounds/combat/poison_applied_01.wav",
 			"sounds/combat/poison_applied_02.wav"
 		];
+	}
+
+	function setMode( _f )
+	{
+		this.m.Mode = _f;
 	}
 
 	function getTooltip()
@@ -62,7 +68,7 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/effects/serpent_ensn
 				local hitInfo = clone this.Const.Tactical.HitInfo;
 				hitInfo.DamageRegular = 0;
 				hitInfo.DamageArmor = damage;
-				hitInfo.DamageDirect = 1.0;
+				hitInfo.DamageDirect = 0.0;
 				hitInfo.BodyPart = this.Const.BodyPart.Head;
 				hitInfo.BodyDamageMult = 1.0;
 				hitInfo.FatalityChanceMult = 0.0;
@@ -79,7 +85,7 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/effects/serpent_ensn
 			{
 				local damage = actor.getArmor(this.Const.BodyPart.Body) * 0.2;
 				local hitInfo = clone this.Const.Tactical.HitInfo;
-				hitInfo.DamageRegular = 10;
+				hitInfo.DamageRegular = 0;
 				hitInfo.DamageArmor = damage;
 				hitInfo.DamageDirect = 0.0;
 				hitInfo.BodyPart = this.Const.BodyPart.Body;
@@ -90,6 +96,19 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/effects/serpent_ensn
 				{
 					damage_applied = true;
 				}
+
+				this.getContainer().getActor().onDamageReceived(this.getContainer().getActor(), this, hitInfo);
+			}
+
+			if (damage_applied)
+			{
+				local hitInfo = clone this.Const.Tactical.HitInfo;
+				hitInfo.DamageRegular = 10;
+				hitInfo.DamageArmor = 0;
+				hitInfo.DamageDirect = 1.0;
+				hitInfo.BodyPart = this.Const.BodyPart.Body;
+				hitInfo.BodyDamageMult = 1.0;
+				hitInfo.FatalityChanceMult = 0.0;
 
 				this.getContainer().getActor().onDamageReceived(this.getContainer().getActor(), this, hitInfo);
 			}
@@ -106,34 +125,6 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/effects/serpent_ensn
 					this.Tactical.spawnParticleEffect(true, this.Const.Tactical.AcidParticles[i].Brushes, this.getContainer().getActor().getTile(), this.Const.Tactical.AcidParticles[i].Delay, this.Const.Tactical.AcidParticles[i].Quantity, this.Const.Tactical.AcidParticles[i].LifeTimeQuantity, this.Const.Tactical.AcidParticles[i].SpawnRate, this.Const.Tactical.AcidParticles[i].Stages);
 				}
 			}
-		}
-	}
-
-	function onAdded()
-	{
-		local actor = this.getContainer().getActor();
-		local sprite1 = actor.getSprite("status_rooted");
-		local sprite2 = actor.getSprite("status_rooted_back");
-		this.m.SpriteScaleBackup = sprite1.Scale;
-		sprite1.Scale = 1.0;
-		sprite2.Scale = 1.0;
-		this.Tactical.TurnSequenceBar.pushEntityBack(this.getContainer().getActor().getID());
-
-		if (this.m.ParentID != null)
-		{
-			this.Tactical.TurnSequenceBar.pushEntityBack(this.m.ParentID);
-		}
-	}
-
-	function onRemoved()
-	{
-		local actor = this.getContainer().getActor();
-		actor.getSprite("status_rooted").Scale = this.m.SpriteScaleBackup;
-		actor.getSprite("status_rooted_back").Scale = this.m.SpriteScaleBackup;
-
-		if (this.m.OnRemoveCallback != null && !this.Tactical.Entities.isCombatFinished())
-		{
-			this.m.OnRemoveCallback(this.m.OnRemoveCallbackData);
 		}
 	}
 });
