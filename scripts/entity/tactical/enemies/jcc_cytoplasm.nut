@@ -107,9 +107,7 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 
 			if (freeTiles.len() != 0)
 			{
-				local n = 2;
-				n = --n;
-
+				local n = 1;
 				while (n >= 0 && freeTiles.len() >= 1)
 				{
 					local r = this.Math.rand(0, freeTiles.len() - 1);
@@ -117,7 +115,7 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 					freeTiles.remove(r);
 					local rock = this.Tactical.spawnEntity("scripts/entity/tactical/enemies/jcc_cytoplasm", tile.Coords.X, tile.Coords.Y);
 					rock.setFaction(this.getFaction());
-
+					n = --n;
 					if (this.getWorldTroop() != null && ("Party" in this.getWorldTroop()) && this.getWorldTroop().Party != null && !this.m.WorldTroop.Party.isNull())
 					{
 						local e;

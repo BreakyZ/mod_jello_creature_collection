@@ -8,7 +8,7 @@
 ::ModJelloCreatureCollection.HooksMod.require("mod_msu >= 1.2.6");
 
 
-::ModJelloCreatureCollection.HooksMod.queue(">mod_msu", function()
+::ModJelloCreatureCollection.HooksMod.queue(">mod_msu", ">mod_cultists", function()
 {
 	// define mod class of this mod
 	::ModJelloCreatureCollection.Mod <- ::MSU.Class.Mod(::ModJelloCreatureCollection.ID, ::ModJelloCreatureCollection.Version, ::ModJelloCreatureCollection.Name);

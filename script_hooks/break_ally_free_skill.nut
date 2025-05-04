@@ -21,7 +21,7 @@
 					{
 						local entity = tile.getEntity();
 
-						if (entity.getSkills().hasSkill("effects.jcc_cyto_engulf"))
+						if (entity.getSkills().hasSkill("effects.serpent_ensnare"))
 						{
 							this.m.Icon = "skills/active_157.png"; // we don't have an icon yet
 							this.m.IconDisabled = "skills/active_157_sw.png"; // we don't have an icon yet
@@ -49,7 +49,7 @@
 			return false;
 		}
 
-		if (target.getSkills().hasSkill("effects.jcc_cyto_engulf"))
+		if (target.getSkills().hasSkill("effects.serpent_ensnare"))
 		{
 			return true;
 		}
@@ -61,7 +61,7 @@
 	{
 		local target = _targetTile.getEntity();
 
-		if (target.getSkills().hasSkill("effects.net"))
+		if (target.getSkills().hasSkill("effects.serpent_ensnare"))
 		{
 			this.spawnIcon("status_effect_99", _targetTile); // no effect icon yet
 		}
