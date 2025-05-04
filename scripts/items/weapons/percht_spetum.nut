@@ -32,6 +32,18 @@ this.percht_spetum <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.FatigueOnSkillUse = 5;
 	}
 
+	function getTooltip()
+	{
+		local result = this.weapon.getTooltip();
+		result.push({
+			id = 8,
+			type = "text",
+			icon = "ui/icons/damage_received.png",
+			text = "Dealing at least "+this.Const.Combat.MinDamageToApplyBleeding+" damage will inflict bleeding"
+		});
+		return result;
+	}
+
 	function onEquip()
 	{
 		this.weapon.onEquip();
@@ -45,6 +57,29 @@ this.percht_spetum <- this.inherit("scripts/items/weapons/weapon", {
 		spearwall.setFatigueCost(spearwall.getFatigueCostRaw() + 5);
 		spearwall.m.ActionPointCost = 6;
 		this.addSkill(spearwall);
+	}
+
+	function onDamageDealt( _target, _skill, _hitInfo )
+	{
+		if (_target.getCurrentProperties().IsImmuneToBleeding || _hitInfo.DamageInflictedHitpoints <= this.Const.Combat.MinDamageToApplyBleeding || _target.getHitpoints() <= 0)
+			return;
+
+		if (!_target.isAlive())
+			return;
+
+		if (_target.getFlags().has("undead"))
+			return;
+
+		if (!_target.isHiddenToPlayer())
+		{
+			
+			this.Sound.play(this.m.BleedingSounds[this.Math.rand(0, this.m.BleedingSounds.len() - 1)], this.Const.Sound.Volume.Skill, _user.getPos());
+
+			//this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_target) + " is poisoned");
+		}
+
+		_target.getSkills().add(this.new("scripts/skills/effects/bleeding_effect"));
+
 	}
 
 });
