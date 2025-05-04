@@ -2884,6 +2884,93 @@ for (local i = 1; i <= 13; i++){
 
 //Basilisk
 
+::Const.World.Spawn.JccBasiliskEarly <- [];
+
+foreach (num in [1, 3, 5, 7, 12, 13, 14, 15, 16])
+{
+	   ::Const.World.Spawn.JccBasiliskEarly.push({
+	        Body = "figure_basilisk_01",
+	        Troops = [
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+	                Num = num
+	            }
+	       ]
+	   });
+
+
+		   ::Const.World.Spawn.JccBasiliskEarly.push({
+	        Body = "figure_basilisk_01",
+	        Troops = [
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccBasiliskDroneLOW,
+	                Num = num
+	            }
+	       ]
+	   });
+
+		   ::Const.World.Spawn.JccBasiliskEarly.push({
+	        Body = "figure_basilisk_01",
+	        Troops = [
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccBasiliskDroneLOW,
+	                Num = num
+	            },
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+	                Num = num
+	            }
+	       ]
+	   });
+
+	for (local i = 1; i <= 12; i++)
+	{
+	    ::Const.World.Spawn.JccBasiliskEarly.push({
+	        Body = "figure_basilisk_02",
+	        Troops = [
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+	                Num = num
+	            }, 
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccBasiliskSentry,
+	                Num = i
+	            }
+	        ]
+	    });
+	    ::Const.World.Spawn.JccBasiliskEarly.push({
+	        Body = "figure_basilisk_02",
+	        Troops = [
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccBasiliskDroneLOW,
+	                Num = num
+	            },
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccBasiliskDrone,
+	                Num = num
+	            }, 
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccBasiliskSentry,
+	                Num = i
+	            }
+	        ]
+	    });
+	    ::Const.World.Spawn.JccBasiliskEarly.push({
+	        Body = "figure_basilisk_02",
+	        Troops = [
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccBasiliskDroneLOW,
+	                Num = num
+	            }, 
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccBasiliskSentry,
+	                Num = i
+	            }
+	        ]
+	    });
+	}
+}
+
 ::Const.World.Spawn.JccBasilisk <- [
 		{
 	        Body = "figure_basilisk_03",

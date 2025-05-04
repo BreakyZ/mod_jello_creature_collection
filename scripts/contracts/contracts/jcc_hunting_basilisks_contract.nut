@@ -394,7 +394,7 @@ this.jcc_hunting_basilisks_contract <- this.inherit("scripts/contracts/contract"
 		this.m.Screens.push({
 			ID = "Success",
 			Title = "On your return...",
-			Text = "[img]gfx/ui/events/event_85.png[/img]{%employer% greets you as you enter the room. While he remains solemn his nose suggests otherwise. A decorated servant stands by with a bag of crowns, this is almost a ceremony of sorts. %SPEECH_ON%Well done Sellsword! We all appreciate you ridding us of these...what did you call them, Wellington?%SPEECH_OFF% The steward looks at %employer% sheepishly. %SPEECH_ON%Cockatrices, Sir.%SPEECH_OFF% Two guards look at one another at the doorway almost out of your view, grinning ear-to-ear. %SPEECH_ON%Thank you for your expertise here, Sellsword!%SPEECH_OFF% Before you can correct him, a coin bag arrives in your hands and you are quickly escorted out of the hall. A servant rapidly cleans the filth left in %companyname%\'s wake.\n\n Some of the peasants bring you food and drink as further thanks before you leave.}",
+			Text = "[img]gfx/ui/events/event_85.png[/img]{%employer% greets you as you enter the room. While he remains solemn, his nose suggests otherwise. A decorated servant stands by with a bag of crowns, this is almost a ceremony of sorts. %SPEECH_ON%Well done Sellsword! We all appreciate you ridding us of these...what did you call them, %randomname%?%SPEECH_OFF% The steward looks at %employer% sheepishly. %SPEECH_ON%Cockatrices, Sir.%SPEECH_OFF% Two guards look at one another at the doorway almost out of your view, grinning ear-to-ear. %SPEECH_ON%Thank you for your expertise here, Sellsword!%SPEECH_OFF% Before you can correct him, a coin bag arrives in your hands and you are quickly escorted out of the hall. A servant rapidly cleans the filth left in %companyname%\'s wake.\n\n Some of the peasants bring you food and drink as further thanks before you leave.}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -515,7 +515,11 @@ this.jcc_hunting_basilisks_contract <- this.inherit("scripts/contracts/contract"
 		}
 
 		local tile = this.getTileToSpawnLocation(playerTile, numWoods >= 12 ? 6 : 3, 9, disallowedTerrain);
-		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "Basilisks", false, this.Const.World.Spawn.JccBasilisk, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+		local party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "Basilisks", false, this.Const.World.Spawn.JccBasiliskEarly, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+		if (this.World.getTime().Days >= 45)
+		{
+			 party = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).spawnEntity(tile, "Basilisks", false, this.Const.World.Spawn.JccBasilisk, 110 * this.getDifficultyMult() * this.getScaledDifficultyMult());
+		}
 		party.setDescription("A stampede of basilisks hunting for food");
 		party.setFootprintType(this.Const.World.FootprintsType.Direwolves);
 		party.setAttackableByAI(false);
