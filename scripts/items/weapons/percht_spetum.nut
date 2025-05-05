@@ -27,7 +27,7 @@ this.percht_spetum <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.StaminaModifier = -22;
 		this.m.RangeMin = 1;
 		this.m.RangeMax = 2;
-		this.m.RangeIdeal = 1;
+		this.m.RangeIdeal = 2;
 		this.m.RegularDamage = 60;
 		this.m.RegularDamageMax = 85;
 		this.m.ArmorDamageMult = 1.1;
