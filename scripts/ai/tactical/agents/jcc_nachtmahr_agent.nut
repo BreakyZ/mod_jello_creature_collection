@@ -6,10 +6,10 @@ this.jcc_nachtmahr_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.ID = this.Const.AI.Agent.ID.JccNachtmahr;
 		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.AttackDefault] = 1.0;
 		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.Horror] = 2.0;
-		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.EngageMelee] = 0.65;
+		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.EngageMelee] = 0.75;
 		//this.m.Properties.TargetPriorityHitchanceMult = 0.0;
-		this.m.Properties.TargetPriorityHitpointsMult = 0.05;
-		this.m.Properties.TargetPriorityRandomMult = 0.85;
+		this.m.Properties.TargetPriorityHitpointsMult = 0.45;
+		this.m.Properties.TargetPriorityRandomMult = 0.75;
 		this.m.Properties.TargetPriorityDamageMult = 0.25;
 		this.m.Properties.TargetPriorityFleeingMult = 1.0;
 		this.m.Properties.TargetPriorityHittingAlliesMult = 0.1;
@@ -56,7 +56,7 @@ this.jcc_nachtmahr_agent <- this.inherit("scripts/ai/tactical/agent", {
 	function onUpdate()
 	{
 		if(this.m.Cooldown==0){
-			this.m.Properties.EngageRangeMin = 2;
+			this.m.Properties.EngageRangeMin = 1;
 			this.m.Properties.EngageRangeMax = 3;
 			this.m.Properties.EngageRangeIdeal = this.Math.rand(2,3);
 		}else{
