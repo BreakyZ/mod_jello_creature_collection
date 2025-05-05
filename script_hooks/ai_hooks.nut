@@ -18,6 +18,7 @@
 ::Const.AI.Agent.ID.JccDjinnChamp <- "agent.jcc_djinn_champ";
 ::Const.AI.Agent.ID.JccDragon <- "agent.jcc_dragon";
 ::Const.AI.Agent.ID.JccNachtmahr <- "agent.jcc_nachtmahr";
+::Const.AI.Agent.ID.JccNoble <- "agent.jcc_noble";
 
 local count = ::Const.AI.Behavior.ID.COUNT;
 ::Const.AI.Behavior.ID.SlimeSmack <- count++;

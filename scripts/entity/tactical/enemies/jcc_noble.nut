@@ -22,7 +22,7 @@ this.jcc_noble <- this.inherit("scripts/entity/tactical/human", {
 		this.m.Hairs = this.Const.Hair.CommonMale;
 		this.m.HairColors = this.Const.HairColors.All;
 		this.m.Beards = this.Const.Beards.Tidy;
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/military_standard_bearer_agent");
+		this.m.AIAgent = this.new("scripts/ai/tactical/agents/jcc_noble_agent");
 		this.m.AIAgent.setActor(this);
 	}
 
