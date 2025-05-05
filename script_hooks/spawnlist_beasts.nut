@@ -45,6 +45,57 @@
 	}
 
 
+//Scorpions
+
+::Const.World.Spawn.JccScorpionsEarly <- [];
+
+	for (local i = 7; i <= 32; i++)
+	{
+		::Const.World.Spawn.JccScorpionsEarly.push({
+	        Body = "figure_scorpion",
+	        Troops = [
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccScorpion,
+	                Num = i
+	            }
+	       	]
+		});
+	}
+
+::Const.World.Spawn.JccScorpions <- [];
+
+	for (local i = 7; i <= 32; i++)
+	{
+		::Const.World.Spawn.JccScorpions.push({
+	        Body = "figure_scorpion",
+	        Troops = [
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccScorpion,
+	                Num = i
+	            }
+	       	]
+		});
+		
+		for (local j = 1; i <= 3; i++)
+		{
+			::Const.World.Spawn.JccScorpions.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccGiantScorp,
+		                Num = j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccScorpion,
+		                Num = i
+	            	}
+		       	]
+			});
+		}
+	}
+
+
+//Percht
 
 ::Const.World.Spawn.JccPercht <- [];
 

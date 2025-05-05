@@ -6,8 +6,8 @@ this.jcc_nachtmahr_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.ID = this.Const.AI.Agent.ID.JccNachtmahr;
 		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.AttackDefault] = 1.0;
 		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.Horror] = 2.0;
-		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.EngageMelee] = 0.75;
-		//this.m.Properties.TargetPriorityHitchanceMult = 0.0;
+		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.EngageMelee] = 1.0;
+		this.m.Properties.TargetPriorityHitchanceMult = 0.1;
 		this.m.Properties.TargetPriorityHitpointsMult = 0.45;
 		this.m.Properties.TargetPriorityRandomMult = 0.75;
 		this.m.Properties.TargetPriorityDamageMult = 0.25;
@@ -24,9 +24,9 @@ this.jcc_nachtmahr_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.Properties.EngageTargetArmedWithRangedWeaponMult = 1.0;
 		this.m.Properties.EngageTargetAlreadyBeingEngagedMult = 0.5;
 		this.m.Properties.EngageLockDownTargetMult = 1.0;
-		this.m.Properties.OverallDefensivenessMult = 0.5;
+		this.m.Properties.OverallDefensivenessMult = 0.2;
 		this.m.Properties.TargetPriorityCounterSkillsMult = 2.0;
-		this.m.Properties.PreferWait = true;
+		//this.m.Properties.PreferWait = true;
 		this.m.Properties.PreferCarefulEngage = true;
 		this.m.Properties.TargetPriorityBraveryMult = 0.4;
 		this.m.Properties.OverallHideMult = 2.0;
@@ -55,10 +55,11 @@ this.jcc_nachtmahr_agent <- this.inherit("scripts/ai/tactical/agent", {
 
 	function onUpdate()
 	{
-		if(this.m.Cooldown==0){
+		if(this.m.Cooldown<=0){
 			this.m.Properties.EngageRangeMin = 1;
 			this.m.Properties.EngageRangeMax = 3;
-			this.m.Properties.EngageRangeIdeal = this.Math.rand(2,3);
+			this.m.Properties.EngageRangeIdeal = this.Math.rand(2,3);			
+			this.m.Properties.PreferWait = false;	
 		}else{
 			this.m.Properties.EngageRangeMin = 1;
 			this.m.Properties.EngageRangeMax = 1;
