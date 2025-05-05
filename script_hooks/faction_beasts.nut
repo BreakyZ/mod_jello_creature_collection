@@ -120,6 +120,7 @@
 	]
 };
 
+/*
 ::Const.Tactical.Actor.JccCytoplasm <- {
 	XP = 150,
 	ActionPoints = 8,
@@ -139,7 +140,7 @@
 		0,
 		0
 	]
-};
+};*/
 
 ::Const.Tactical.Actor.JccCytoplasm <- {
 	XP = 150,

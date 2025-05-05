@@ -44,6 +44,780 @@
 		});
 	}
 
+//Cytoplasms
+
+::Const.World.Spawn.JccCytoplasms <- [];
+
+	//Small
+
+	for (local i = 7; i <= 32; i++)
+	{
+		::Const.World.Spawn.JccCytoplasms.push({
+	        Body = "figure_scorpion",
+	        Troops = [
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+	                Num = i
+	            }
+	       	]
+		});
+
+		for (local j = 1; j <= 6; j++)
+		{
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+		                Num = j
+		            }
+		       	]
+			});
+
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+		                Num = j
+		            }
+		       	]
+			});
+
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+		                Num = j+1
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+		                Num = j
+		            }
+		       	]
+			});
+
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+		                Num = j+1
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+		                Num = j
+		            }
+		       	]
+			});
+
+			for (local x = 1; x <= 5; x++)
+			{
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            }
+			       	]
+				});
+
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            }
+			       	]
+				});
+
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+			                Num = j+1+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            }
+			       	]
+				});
+
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+			                Num = j+1+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            }
+			       	]
+				});
+			}
+		}
+
+	}
+
+
+	//Medium
+
+	for (local i = 7; i <= 32; i++)
+	{
+		::Const.World.Spawn.JccCytoplasms.push({
+	        Body = "figure_scorpion",
+	        Troops = [
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+	                Num = i
+	            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            }
+	       	]
+		});
+
+		for (local j = 1; j <= 6; j++)
+		{
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+		                Num = j
+		            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            }
+		       	]
+			});
+
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+		                Num = j
+		            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            }
+		       	]
+			});
+
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+		                Num = j+1
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+		                Num = j
+		            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            }
+		       	]
+			});
+
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+		                Num = j+1
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+		                Num = j
+		            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            }
+		       	]
+			});
+
+			for (local x = 1; x <= 5; x++)
+			{
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            }
+			       	]
+				});
+
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            }
+			       	]
+				});
+
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+			                Num = j+1+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            }
+			       	]
+				});
+
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+			                Num = j+1+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            }
+			       	]
+				});
+			}
+		}
+
+	}
+
+	//Big
+
+		for (local i = 7; i <= 32; i++)
+	{
+		::Const.World.Spawn.JccCytoplasms.push({
+	        Body = "figure_scorpion",
+	        Troops = [
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+	                Num = i
+	            }
+	       	]
+		});
+
+		for (local j = 1; j <= 6; j++)
+		{
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+		                Num = j
+		            }
+		       	]
+			});
+
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+		                Num = j
+		            }
+		       	]
+			});
+
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+		                Num = j+1
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+		                Num = j
+		            }
+		       	]
+			});
+
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+		                Num = j+1
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+		                Num = j
+		            }
+		       	]
+			});
+
+			for (local x = 1; x <= 5; x++)
+			{
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            }
+			       	]
+				});
+
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            }
+			       	]
+				});
+
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+			                Num = j+1+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            }
+			       	]
+				});
+
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+			                Num = j+1+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            }
+			       	]
+				});
+			}
+		}
+
+	}
+	for (local i = 7; i <= 32; i++)
+	{
+		::Const.World.Spawn.JccCytoplasms.push({
+	        Body = "figure_scorpion",
+	        Troops = [
+	            {
+	                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+	                Num = i
+	            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmHIGH,
+			                Num = i-6
+			            }
+	       	]
+		});
+
+		for (local j = 1; j <= 6; j++)
+		{
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+		                Num = j
+		            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmHIGH,
+			                Num = i-6
+			            }
+		       	]
+			});
+
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+		                Num = j
+		            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmHIGH,
+			                Num = i-6
+			            }
+		       	]
+			});
+
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+		                Num = j+1
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+		                Num = j
+		            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmHIGH,
+			                Num = i-6
+			            }
+		       	]
+			});
+
+			::Const.World.Spawn.JccCytoplasms.push({
+		        Body = "figure_scorpion",
+		        Troops = [
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+		                Num = i+j
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+		                Num = j+1
+		            },
+		            {
+		                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+		                Num = j
+		            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmHIGH,
+			                Num = i-6
+			            }
+		       	]
+			});
+
+			for (local x = 1; x <= 5; x++)
+			{
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmHIGH,
+			                Num = i-6
+			            }
+			       	]
+				});
+
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmHIGH,
+			                Num = i-6
+			            }
+			       	]
+				});
+
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+			                Num = j+1+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmHIGH,
+			                Num = i-6
+			            }
+			       	]
+				});
+
+				::Const.World.Spawn.JccCytoplasms.push({
+			        Body = "figure_scorpion",
+			        Troops = [
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasm,
+			                Num = i+j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmSoldier,
+			                Num = j+1+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmOoze,
+			                Num = j+x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmBlack,
+			                Num = x
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmMEDIUM,
+			                Num = i-5
+			            },
+			            {
+			                Type = this.Const.World.Spawn.Troops.JccCytoplasmHIGH,
+			                Num = i-6
+			            }
+			       	]
+				});
+			}
+		}
+
+	}
+
 
 //Scorpions
 
