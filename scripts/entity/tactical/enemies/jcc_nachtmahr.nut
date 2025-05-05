@@ -303,11 +303,11 @@ this.jcc_nachtmahr <- this.inherit("scripts/entity/tactical/actor", {
 		this.getSprite("status_rooted").Scale = 0.55;
 		this.setSpriteOffset("status_rooted", this.createVec(0, 10));
 		//this.m.Skills.add(this.new("scripts/skills/actives/sleep_skill"));
-		this.m.Skills.add(this.new("scripts/skills/actives/nightmare_skill"));
+		this.m.Skills.add(this.new("scripts/skills/actives/jcc_nightmare_skill"));
 		this.m.Skills.add(this.new("scripts/skills/actives/jcc_nachtmahr_sleep_paralysis_skill"));
 		this.m.Skills.add(this.new("scripts/skills/actives/jcc_nachtmahr_teleport_skill"));
 		this.m.Skills.add(this.new("scripts/skills/racials/jcc_nachtmahr_racial"));		
-		this.m.Skills.add(this.new("scripts/skills/racials/jcc_nachtmahr_drain_racial"));		
+		//this.m.Skills.add(this.new("scripts/skills/racials/jcc_nachtmahr_drain_racial"));		
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_captain"));
 
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_relentless"));
@@ -316,6 +316,12 @@ this.jcc_nachtmahr <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_fearsome"));
 
 		this.m.Skills.add(this.new("scripts/skills/actives/jcc_nachtmahr_claws_skill"));
+
+		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 110)
+		{
+			b.MeleeSkill += 5;
+			b.DamageTotalMult += 0.1;
+		}
 
 	}
 

@@ -1,5 +1,9 @@
 this.percht_spetum <- this.inherit("scripts/items/weapons/weapon", {
-	m = {},
+	m = {		BleedingSounds = [
+			"sounds/combat/rupture_blood_01.wav",
+			"sounds/combat/rupture_blood_02.wav",
+			"sounds/combat/rupture_blood_03.wav"
+		]},
 	function create()
 	{
 		this.weapon.create();
@@ -73,13 +77,23 @@ this.percht_spetum <- this.inherit("scripts/items/weapons/weapon", {
 		if (!_target.isHiddenToPlayer())
 		{
 			
-			this.Sound.play(this.m.BleedingSounds[this.Math.rand(0, this.m.BleedingSounds.len() - 1)], this.Const.Sound.Volume.Skill, _user.getPos());
+			this.Sound.play(this.m.BleedingSounds[this.Math.rand(0, this.m.BleedingSounds.len() - 1)], this.Const.Sound.Volume.Skill, _target.getPos());
 
 			//this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_target) + " is poisoned");
 		}
 
 		_target.getSkills().add(this.new("scripts/skills/effects/bleeding_effect"));
 
+	}
+
+	function addResources()
+	{
+		this.weapon.addResources();
+
+		foreach( r in this.m.BleedingSounds )
+		{
+			this.Tactical.addResource(r);
+		}
 	}
 
 });

@@ -261,6 +261,7 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 			if (this.World.getTime().Days >= 150)
 			{
 				b.RangedSkill += 5;
+				b.DamageTotalMult += 0.1;
 			}
 		}
 
