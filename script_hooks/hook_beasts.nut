@@ -5,7 +5,8 @@ local beasts = [
     "direwolf_high",
     "ghoul_medium",
     "ghoul_high",
-    "schrat_small"
+    "schrat_small",
+    "alp"
 ];
 		
 foreach (beast in beasts)

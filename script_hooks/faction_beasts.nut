@@ -305,6 +305,27 @@
 	]
 };
 
+::Const.Tactical.Actor.JccNachtmahr <- {
+	XP = 400,
+	ActionPoints = 11,
+	Hitpoints = 500,
+	Bravery = 130,
+	Stamina = 400,
+	MeleeSkill = 70,
+	RangedSkill = 0,
+	MeleeDefense = 17,
+	RangedDefense = 10,
+	Initiative = 105,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	FatigueRecoveryRate = 30,
+	Vision = 7,
+	Armor = [
+		0,
+		0
+	]
+};
+
 
 ::Const.FactionTrait.Actions[::Const.FactionTrait.Beasts].extend([
 	"scripts/factions/actions/build_percht_camp_action",

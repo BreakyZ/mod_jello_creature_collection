@@ -13,20 +13,7 @@ this.jcc_drive_away_perchts_contract <- this.inherit("scripts/contracts/contract
 		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 7.0;
 	}
 
-	function generateName()
-	{
-		local vars = [
-			[
-				"randomname",
-				this.Const.Strings.CharacterNames[this.Math.rand(0, this.Const.Strings.CharacterNames.len() - 1)]
-			],
-			[
-				"randomtown",
-				this.Const.World.LocationNames.VillageWestern[this.Math.rand(0, this.Const.World.LocationNames.VillageWestern.len() - 1)]
-			]
-		];
-		return this.buildTextFromTemplate(this.Const.Strings.BanditLeaderNames[this.Math.rand(0, this.Const.Strings.BanditLeaderNames.len() - 1)], vars);
-	}
+
 
 	function onImportIntro()
 	{
@@ -38,10 +25,10 @@ this.jcc_drive_away_perchts_contract <- this.inherit("scripts/contracts/contract
 		local banditcamp = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts).getNearestSettlement(this.m.Home.getTile());
 
 		if(banditcamp.getTypeID() != "location.jcc_djinn_camp"){
-
+			this.Flags.set("IsPerchtCamp", true);
 		}
 		else{
-
+			this.Flags.set("IsPerchtCamp", false);
 		}
 
 		this.m.Destination = this.WeakTableRef(banditcamp);
@@ -101,12 +88,21 @@ this.jcc_drive_away_perchts_contract <- this.inherit("scripts/contracts/contract
 
 				if (this.World.Assets.getBusinessReputation() >= 500 && this.Contract.getDifficultyMult() >= 0.95 && this.Math.rand(1, 100) <= 20)
 				{
-					this.Flags.set("IsRobberBaronPresent", true);
+					this.Flags.set("IsLindwurmFight", true);
 
-					if (this.World.Assets.getBusinessReputation() > 600 && this.Math.rand(1, 100) <= 50)
+					/*if (this.World.Assets.getBusinessReputation() > 600 && this.Math.rand(1, 100) <= 50)
 					{
 						this.Flags.set("IsBountyHunterPresent", true);
-					}
+					}*/
+				}
+				else if (this.World.Assets.getBusinessReputation() >= 500 && this.Contract.getDifficultyMult() >= 0.95 && this.Math.rand(1, 100) <= 20)
+				{
+					this.Flags.set("IsHexenFight", true);
+
+					/*if (this.World.Assets.getBusinessReputation() > 600 && this.Math.rand(1, 100) <= 50)
+					{
+						this.Flags.set("IsBountyHunterPresent", true);
+					}*/
 				}
 
 				this.Contract.setScreen("Overview");
@@ -144,6 +140,11 @@ this.jcc_drive_away_perchts_contract <- this.inherit("scripts/contracts/contract
 						this.Contract.setScreen("Volunteer1");
 						this.World.Contracts.showActiveContract();
 					}*/
+					if (this.Math.rand(1, 100) <= 10)
+					{
+						this.Contract.setScreen("Survivors1");
+						this.World.Contracts.showActiveContract();
+					}
 
 					this.Contract.setState("Return");
 				}
@@ -179,20 +180,21 @@ this.jcc_drive_away_perchts_contract <- this.inherit("scripts/contracts/contract
 				{
 					this.World.Contracts.showCombatDialog();
 				}*/
+				this.World.Contracts.showCombatDialog();
 			}
 
 			function onRobberBaronPlaced( _entity, _tag )
-			{
+			{/*
 				_entity.getFlags().set("IsRobberBaron", true);
-				_entity.setName(this.Flags.get("RobberBaronName"));
+				_entity.setName(this.Flags.get("RobberBaronName"));*/
 			}
 
 			function onActorKilled( _actor, _killer, _combatID )
 			{
-				if (_actor.getFlags().get("IsRobberBaron") == true)
+				/*if (_actor.getFlags().get("IsRobberBaron") == true)
 				{
 					this.Flags.set("IsRobberBaronDead", true);
-				}
+				}*/
 			}
 
 		});
@@ -246,12 +248,12 @@ this.jcc_drive_away_perchts_contract <- this.inherit("scripts/contracts/contract
 
 			function onRetreatedFromCombat( _combatID )
 			{
-				if (_combatID == "BountyHunters")
+				/*if (_combatID == "BeastSlayers")
 				{
 					this.Flags.set("IsBountyHunterPresent", false);
 					this.Flags.set("IsBountyHunterRetreat", true);
 					this.Flags.set("IsRobberBaronDead", false);
-				}
+				}*/
 			}
 
 		});
@@ -293,7 +295,7 @@ this.jcc_drive_away_perchts_contract <- this.inherit("scripts/contracts/contract
 			}
 
 		});
-		this.m.Screens.push({
+		/*this.m.Screens.push({
 			ID = "AttackRobberBaron",
 			Title = "Before the attack...",
 			Text = "[img]gfx/ui/events/event_54.png[/img]{While spying on the brigand encampment, you notice the profile of a man you\'ve heard the locals almost fervently describing: it is %robberbaron%, a famed robber baron that terrorizes these parts. He\'s got a retinue of brutish looking men following him everywhere he goes.\n\nYou wager his head is worth a few extra crowns. | You didn\'t plan to see him, but it\'s no doubt the man himself: %robberbaron% is at the brigands\' encampment. The famed killer is apparently paying a visit to one of his criminal offshoots, studiously marching around the thieves, pointing his finger to this or that, remarking about the quality of that and this.\n\nA few bodyguards follow him everywhere. You estimate that between him and the rest of the brigands, there\'s about %totalenemy% men mucking about. | The contract was just to wipe out the brigands, but it appears another, much heavier carrot has been added to the stick: %robberbaron%, the infamous killer and road raider, is at the camp. Followed by a bodyguard, the robber baron seems to be assessing one of his criminal outfits.\n\nYou wonder how much %robberbaron%\'s head would weigh in crowns... | %robberbaron%. It\'s him, you know it. Eyeing through a spyglass, you can easily see the silhouette of the infamous robber baron as he moves about the brigands\' encampment. He wasn\'t in your plans, nor mentioned in the contract, but there\'s little doubt that if you bring his head back to town you\'ll be getting a little extra for your troubles. | While spying on the brigands - you count about %totalenemy% men moving about - you spot a figure you did not at all expect: %robberbaron%, the infamous robber baron. The man and his bodyguard detail must be inspecting the state of the camp.\n\nWhat luck! If you could take his head back to your employer, you might just earn yourself a little bonus.}",
@@ -350,7 +352,7 @@ this.jcc_drive_away_perchts_contract <- this.inherit("scripts/contracts/contract
 					Text = "{You\'ll have to pay with blood if you want it so badly. | If you want your head to join this one, go on, take your chances.}",
 					function getResult()
 					{
-						this.TempFlags.set("IsBountyHunterTriggered", true);
+						//this.TempFlags.set("IsBountyHunterTriggered", true);
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						local tile = this.World.State.getPlayer().getTile();
 						local p = this.Const.Tactical.CombatInfo.getClone();
@@ -402,35 +404,35 @@ this.jcc_drive_away_perchts_contract <- this.inherit("scripts/contracts/contract
 
 				}
 			]
-		});
+		});*/
 		this.m.Screens.push({
 			ID = "Survivors1",
 			Title = "After the battle...",
-			Text = "[img]gfx/ui/events/event_22.png[/img]{With the battle drawing to a close, a few enemies drop to their knees and beg for mercy. %randombrother% looks to you for what to do next. | After the battle, your men round-up what brigands remain. The survivors beg for their lives. One looks more like a kid than a man, but he is the quietest of them all. | Realizing their defeat, the few last standing brigands drop their weapons and ask for mercy. You now wonder what they would do were the shoe on the other foot. | The battle\'s over, but decisions are still yet to be made: a few brigands survived the battle. %randombrother% stands over one, his sword to the prisoner\'s neck, and he asks you what you wish to do.}",
+			Text = "[img]gfx/ui/events/event_22.png[/img]{With their dark masters slain, the remaining beasts make for the trees - save for one. A wolf, the runt of the litter perhaps, is staring you down, tilting it\'s head as if to ask how you to intend to deal with it. You can use all the help you can get these days, so you decide to beckon it closer with a sliver of meat. It hungrily snatches it from your hands and guzzles it down before looking up expectantly. Obliging the beast, you throw another piece of meat. When it looks towards you to ask for a third meal you tell it to fuck off and go to leave, the wolf happily prancing by your side. | The battle has all but ended when you spot %randombrother% trying to wrestle his boot from a wolf\'s jaws. The rest of the %companyname% are just about to start placing bets, when the beast wins the tug-of-war and begins to run off. Stopping short of the thicket\'s edge, the wolf turns to look back at your company and - to your surprise - brazenly approaches you, dropping the chewed-out, drool-covered boot in front of your feet.%randombrother% slaps your shoulder with a grin.%SPEECH_ON%Maybe you can teach it to fetch your shoes when we get back.%SPEECH_OFF%Aye, maybe.}",
 			Image = "",
 			List = [],
 			Options = [
 				{
-					Text = "Slit their throats.",
-					function getResult()
+					Text = "Welcome to the company.",
+					function getResult( _event )
 					{
-						this.World.Assets.addMoralReputation(-1);
-						return "Survivors2";
+						return 0;
 					}
-
-				},
-				{
-					Text = "Take their arms and chase them away.",
-					function getResult()
-					{
-						this.World.Assets.addMoralReputation(2);
-						return "Survivors3";
-					}
-
 				}
-			]
+			],
+			function start( _event )
+			{
+				local item = this.new("scripts/items/accessory/wolf_item");
+				item.m.Name = "Coal the Wolf";
+				this.World.Assets.getStash().add(item);
+				this.List.push({
+					id = 10,
+					icon = "ui/items/" + item.getIcon(),
+					text = "You gain " + item.getName()
+				});
+			}
 		});
-		this.m.Screens.push({
+		/*this.m.Screens.push({
 			ID = "Survivors2",
 			Title = "After the battle...",
 			Text = "[img]gfx/ui/events/event_22.png[/img]{Altruism is for the naive. You have the prisoners slaughtered. | You recall how many times brigands slew hapless merchants. The thought is barely out of your mind when you give the order to have the prisoners executed. They pipe up a brief protest, but it is cut short by swords and spears. | You turn away.%SPEECH_ON%Through their necks. Make it quick.%SPEECH_OFF%The mercenaries follow the order and you soon here the gargling of dying men. It is not quick at all. | You shake your head \'no\'. The prisoners cry out, but the men are already upon them, hacking and slashing and stabbing. The lucky ones are decapitated before they can even realize the immediacy of their own demise. Those with some fight in them suffer to the very end. | Mercy requires time. Time to look over your shoulder. Time to wonder if it was the right decision. You\'ve no time. You\'ve no mercy. The prisoners are executed and that takes little time at all.}",
@@ -555,7 +557,7 @@ this.jcc_drive_away_perchts_contract <- this.inherit("scripts/contracts/contract
 				this.Contract.m.Dude = null;
 			}
 
-		});
+		});*/
 		this.m.Screens.push({
 			ID = "Success1",
 			Title = "On your return...",
@@ -586,11 +588,13 @@ this.jcc_drive_away_perchts_contract <- this.inherit("scripts/contracts/contract
 					icon = "ui/icons/asset_money.png",
 					text = "You gain [color=" + this.Const.UI.Color.PositiveEventValue + "]" + this.Contract.m.Reward + "[/color] Crowns"
 				});
+
+
 				this.Contract.m.SituationID = this.Contract.resolveSituation(this.Contract.m.SituationID, this.Contract.m.Home, this.List);
 			}
 
 		});
-		this.m.Screens.push({
+		/*this.m.Screens.push({
 			ID = "Success2",
 			Title = "On your return...",
 			Text = "[img]gfx/ui/events/event_04.png[/img]{You throw the criminal\'s head on %employer%\'s table. With a grin, you point at it.%SPEECH_ON%That\'s %robberbaron%.%SPEECH_OFF%%employer% stands up and unveils the burlap sack covering the trophy. He nods.%SPEECH_ON%Aye, that\'s him alright. I guess you\'ll be getting extra for that.%SPEECH_OFF%You\'re paid a tidy sum of %reward% crowns for killing the brigands as well as destroying the leadership of many nearby syndicates. | %employer% leans back as you enter his room, carrying a head by its hair. Luckily, it is not dripping.%SPEECH_ON%This here is %robberbaron%. Or should I say was?%SPEECH_OFF%Slowly standing, %employer% takes a cursory look.%SPEECH_ON%\'Was\' works... So, not only did you destroy the brigands\' rat hole, but you\'ve brought me the head of their leader. That is some mighty fine work, sellsword, and you\'ll be getting extra for this.%SPEECH_OFF%The man forks over a satchel of %original_reward% crowns and then takes a purse off his own self and pitches it toward you. | You hold %robberbaron%\'s head up, its sloped gaze turning to the ropes of bloodied hair. A slow smile etches across %employer%\'s face.%SPEECH_ON%You know what you\'ve done, sellsword? Do you know how much relief you\'ve brought to these parts just by removing that man\'s head from his shoulders? You\'ll be getting more than what you bargained for! %original_reward% crowns for the original task and...%SPEECH_OFF%The man slides a chunky purse across his table.%SPEECH_ON%A little something for that... extra weight you\'ve been carrying around.%SPEECH_OFF%}",
@@ -623,11 +627,15 @@ this.jcc_drive_away_perchts_contract <- this.inherit("scripts/contracts/contract
 				this.Contract.m.SituationID = this.Contract.resolveSituation(this.Contract.m.SituationID, this.Contract.m.Home, this.List);
 			}
 
-		});
+		});*/
 	}
 
 	function onPrepareVariables( _vars )
 	{
+		_vars.push([
+			"location",
+			this.m.Flags.get("DestinationName")
+		]);
 		_vars.push([
 			"reward",
 			this.m.Reward
@@ -635,10 +643,6 @@ this.jcc_drive_away_perchts_contract <- this.inherit("scripts/contracts/contract
 		_vars.push([
 			"original_reward",
 			this.m.OriginalReward
-		]);
-		_vars.push([
-			"robberbaron",
-			this.m.Flags.get("RobberBaronName")
 		]);
 		_vars.push([
 			"totalenemy",
@@ -654,7 +658,7 @@ this.jcc_drive_away_perchts_contract <- this.inherit("scripts/contracts/contract
 	{
 		if (this.m.SituationID == 0)
 		{
-			this.m.SituationID = this.m.Home.addSituation(this.new("scripts/entity/world/settlements/situations/ambushed_trade_routes_situation"));
+			this.m.SituationID = this.m.Home.addSituation(this.new("scripts/entity/world/settlements/situations/disappearing_villagers_situation"));
 		}
 	}
 

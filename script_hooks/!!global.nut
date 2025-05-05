@@ -50,6 +50,10 @@ for (local i = -1; i < ::Const.EntityIcon.len(); i++) {
 	::Const.EntityType.addNew("giant_scorpion_orientation", "Giant Scorpion", "Giant Scorpions", this.Const.FactionType.Beasts);
 ::Const.EntityType.JccDragon <-
 	::Const.EntityType.addNew("jcc_dragon_01_orientation", "Drache", "Drachen", this.Const.FactionType.Beasts);
+::Const.EntityType.JccNoble <-
+	::Const.EntityType.addNew("knight_orientation", "Noble", "Nobles", this.Const.FactionType.NobleHouse);
+::Const.EntityType.JccNachtmahr <-
+	::Const.EntityType.addNew("nachtmahr_orientation", "Nachtmahr", "Nachtmahrs", this.Const.FactionType.Beasts);
 	
 //guest
 ::Const.EntityType.JccBasiliskSentryGuest <-

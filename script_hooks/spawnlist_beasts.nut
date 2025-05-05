@@ -3172,6 +3172,93 @@ foreach (num in [1, 3, 5, 7, 12, 13, 14, 15, 16])
 	}
 }
 
+//Geist Wild Hunt
+
+::Const.World.Spawn.JccGeist <- [
+		{
+	    	MovementSpeedMult = 0.8,
+			VisibilityMult = 1.0,
+			VisionMult = 0.8,
+			Body = "figure_zombie_02",
+	        Troops = [
+	            {
+	                Type = this.Const.World.Spawn.Troops.Ghost,
+	                Num = 1
+	            }
+	       ]
+	   }
+];
+
+//Nachtmahr
+
+for (local i = 4; i <= 14; i++)
+{
+	    ::Const.World.Spawn.Alps.push({
+			Body = "figure_nachtmahr",
+			Troops = [
+				{
+					Type = this.Const.World.Spawn.Troops.Alp,
+					Num = i
+				},
+				{
+					Type = this.Const.World.Spawn.Troops.JccNachtmahr,
+					Num = 1
+				}
+			]
+	    });
+	    ::Const.World.Spawn.Alps.push({
+			Body = "figure_nachtmahr",
+			Troops = [
+				{
+					Type = this.Const.World.Spawn.Troops.Alp,
+					Num = i
+				},
+				{
+					Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+					Num = i-2
+				},
+				{
+					Type = this.Const.World.Spawn.Troops.JccNachtmahr,
+					Num = 1
+				}
+			]
+	    });
+}
+
+for (local i = 2; i <= 4; i++)
+{
+	    ::Const.World.Spawn.Alps.push({
+			Body = "figure_nachtmahr",
+			Troops = [
+				{
+					Type = this.Const.World.Spawn.Troops.Alp,
+					Num = 14
+				},
+				{
+					Type = this.Const.World.Spawn.Troops.JccNachtmahr,
+					Num = i
+				}
+			]
+	    });
+	    ::Const.World.Spawn.Alps.push({
+			Body = "figure_nachtmahr",
+			Troops = [
+				{
+					Type = this.Const.World.Spawn.Troops.Alp,
+					Num = 10
+				},
+				{
+					Type = this.Const.World.Spawn.Troops.DirewolfHIGH,
+					Num = 5
+				},
+				{
+					Type = this.Const.World.Spawn.Troops.JccNachtmahr,
+					Num = i
+				}
+			]
+	    });
+}
+
 //Dragon
 
 ::Const.World.Spawn.JccDragon <- [];
@@ -5838,3 +5925,4 @@ this.calculateCosts(this.Const.World.Spawn.JccPercht);
 this.calculateCosts(this.Const.World.Spawn.JccBasilisk);
 this.calculateCosts(this.Const.World.Spawn.JccDragon);
 this.calculateCosts(this.Const.World.Spawn.JccDjinn);
+this.calculateCosts(this.Const.World.Spawn.Alps); //hopefully works

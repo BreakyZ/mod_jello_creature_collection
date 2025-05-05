@@ -21,6 +21,7 @@
 
 <sprite id="figure_jcc_dragon" offsetY="30" ic="FF2A426E" width="68" height="106" img="world\party\figure_jcc_dragon.png" left="-28" right="31" top="-56" bottom="4" />
 
+<sprite id="figure_nachtmahr" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_nachtmahr.png" left="-54" right="30" top="-56" bottom="24" />
 
 <sprite id="figure_cytoplasm_01" offsetY="30" ic="FF36678A" width="68" height="106" img="world\party\figure_cytoplasm_01.png" />
 <sprite id="figure_cytoplasm_02" offsetY="30" ic="FF376686" width="68" height="106" img="world\party\figure_cytoplasm_02.png"  />
@@ -55,6 +56,17 @@
 <sprite id="jcc_dragon_01_orientation" ic="FF1E2B3A" img="orientation\jcc_dragon_01_orientation.png" />
 <sprite id="jcc_dragon_02_orientation" ic="FF1E2B3A" img="orientation\jcc_dragon_02_orientation.png" />
 <sprite id="jcc_dragon_03_orientation" ic="FF1E2B3A" img="orientation\jcc_dragon_03_orientation.png" />
+<sprite id="nachtmahr_orientation" ic="FF1E2B3A" img="orientation\nachtmahr_orientation.png" />
+
+
+<!-- Nachtmahr -->
+<sprite id="jcc_nachtmahr_effect_body" offsetY="35" ic="FF697792" width="174" height="214" img="effects\jcc_nachtmahr_effect_body.png" left="-64" right="62" top="-73" bottom="91" />
+
+<sprite id="bust_jcc_nachtmahr_body" offsetY="35" ic="FF697792" width="174" height="214" img="entity\beasts\bust_jcc_nachtmahr_body.png" left="-64" right="62" top="-73" bottom="91" />
+<sprite id="bust_jcc_nachtmahr_head" offsetY="35" ic="FF697792" width="174" height="214" img="entity\beasts\bust_jcc_nachtmahr_head.png" left="-64" right="62" top="-73" bottom="91"  />
+<sprite id="bust_jcc_nachtmahr_injury" offsetY="35" ic="FF697792" width="174" height="214" img="entity\beasts\bust_jcc_nachtmahr_injury.png" left="-64" right="62" top="-73" bottom="91"  />
+<sprite id="bust_jcc_nachtmahr_body_dead" offsetY="20" f="6403" ic="FF515C75" width="169" height="139" img="entity\beasts\bust_jcc_nachtmahr_body_dead.png" left="-86" right="78" top="-65" bottom="55" />
+<sprite id="bust_jcc_nachtmahr_head_dead" offsetY="20" f="6401" f1="30" f2="-25" ic="FF61718A" width="169" height="139" img="entity\beasts\bust_jcc_nachtmahr_head_dead.png" left="-4" right="89" top="-73" bottom="20" />
 
 <!-- Dragon -->
 

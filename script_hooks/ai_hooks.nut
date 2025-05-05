@@ -17,6 +17,7 @@
 ::Const.AI.Agent.ID.JccScorp <- "agent.jcc_scorp";
 ::Const.AI.Agent.ID.JccDjinnChamp <- "agent.jcc_djinn_champ";
 ::Const.AI.Agent.ID.JccDragon <- "agent.jcc_dragon";
+::Const.AI.Agent.ID.JccNachtmahr <- "agent.jcc_nachtmahr";
 
 local count = ::Const.AI.Behavior.ID.COUNT;
 ::Const.AI.Behavior.ID.SlimeSmack <- count++;
@@ -37,6 +38,17 @@ local count = ::Const.AI.Behavior.ID.COUNT;
 	q.m.PossibleSkills.push("actives.krampus_charge");
 	q.m.PossibleSkills.push("actives.krampus_charge_alt");
 });
+
+::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_alp_teleport", function ( q ) {
+
+	q.m.PossibleSkills.push("actives.jcc_nachtmahr_teleport");
+});
+
+::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_horror", function ( q ) {
+
+	q.m.PossibleSkills.push("actives.jcc_nachtmahr_sleep_paralysis");
+});
+
 
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_deathblow", function ( q ) {
 
@@ -91,9 +103,10 @@ local count = ::Const.AI.Behavior.ID.COUNT;
 	q.m.PossibleSkills.push("actives.jcc_scorp_prong");
 	q.m.PossibleSkills.push("actives.jcc_scorp_cleave");
 	q.m.PossibleSkills.push("actives.jcc_scorp_knock_out");
-		q.m.PossibleSkills.push("actives.slime_smack");
+	q.m.PossibleSkills.push("actives.slime_smack");
 	q.m.PossibleSkills.push("actives.jcc_scorp_deathblow");
 	q.m.PossibleSkills.push("actives.jcc_dragon_bite_fling");
+	q.m.PossibleSkills.push("actives.jcc_nachtmahr_claws_skill");
 });
 
 ::ModJelloCreatureCollection.HooksMod.hook("scripts/ai/tactical/behaviors/ai_attack_swing", function ( q ) {

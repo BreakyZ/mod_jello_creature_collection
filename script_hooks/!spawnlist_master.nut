@@ -120,6 +120,15 @@
 	Script = "scripts/entity/tactical/enemies/jcc_beastslayer"
 };
 
+::Const.World.Spawn.Troops.JccNoble <- {
+	ID = this.Const.EntityType.JccNoble,
+	Variant = 2,
+	Strength = 30,
+	Cost = 20,
+	Row = 2,
+	Script = "scripts/entity/tactical/enemies/jcc_noble"
+};
+
 ::Const.World.Spawn.Troops.JccDjinn <- {
 	ID = this.Const.EntityType.JccDjinn,
 	Variant = 1,
@@ -163,4 +172,13 @@
 		Cost = 70,
 		Row = -1,
 		Script = "scripts/entity/tactical/enemies/jcc_schrat"
+};
+
+::Const.World.Spawn.Troops.JccNachtmahr <- {
+	ID = this.Const.EntityType.JccNachtmahr,
+	Variant = 0,
+	Strength = 50,
+	Cost = 50,
+	Row = -2,
+	Script = "scripts/entity/tactical/enemies/jcc_nachtmahr"
 };
