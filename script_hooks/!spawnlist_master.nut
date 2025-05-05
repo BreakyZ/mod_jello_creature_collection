@@ -182,3 +182,21 @@
 	Row = -2,
 	Script = "scripts/entity/tactical/enemies/jcc_nachtmahr"
 };
+
+::Const.World.Spawn.Troops.JccWardog <- {
+		ID = this.Const.EntityType.Wardog,
+		Variant = 0,
+		Strength = 9,
+		Cost = 8,
+		Row = 0,
+		Script = "scripts/entity/tactical/jcc_wardog"
+};
+
+::Const.World.Spawn.Troops.JccWarhound <- {
+		ID = this.Const.EntityType.Warhound,
+		Variant = 0,
+		Strength = 9,
+		Cost = 8,
+		Row = 0,
+		Script = "scripts/entity/tactical/jcc_warhound"
+};
