@@ -216,7 +216,7 @@ this.percht_shot <- this.inherit("scripts/skills/skill", {
 		{
 			_properties.RangedSkill += this.m.AdditionalAccuracy;
 			_properties.HitChanceAdditionalWithEachTile += -2 + this.m.AdditionalHitChance;
-			_properties.DamageRegularMult *= 1.1;
+			_properties.DamageRegularMult *= 1.15;
 
 			if (_properties.IsSharpshooter)
 			{
