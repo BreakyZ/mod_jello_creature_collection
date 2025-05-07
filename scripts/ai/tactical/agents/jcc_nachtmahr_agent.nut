@@ -64,9 +64,10 @@ this.jcc_nachtmahr_agent <- this.inherit("scripts/ai/tactical/agent", {
 			this.m.Properties.EngageRangeMin = 1;
 			this.m.Properties.EngageRangeMax = 1;
 			this.m.Properties.EngageRangeIdeal = 1;
+			this.m.Properties.PreferCarefulEngage = false;
 		}
 
-		if(this.m.Actor.getActionPoints()<3){
+		if(this.m.Actor.getActionPoints()<=3){
 			this.m.Properties.PreferWait = true;
 		}
 		else
