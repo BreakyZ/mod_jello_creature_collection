@@ -21,7 +21,7 @@ this.jcc_schrat_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.Properties.OverallMagnetismMult = 0.0;
 		this.m.Properties.EngageTargetMultipleOpponentsMult = 2.0;
 		this.m.Properties.EngageTargetAlreadyBeingEngagedMult = 1.1;
-		this.m.Properties.EngageTargetArmedWithRangedWeaponMult = 0.75;
+		this.m.Properties.EngageTargetArmedWithRangedWeaponMult = 0.25;
 		this.m.Properties.EngageRangeMin = 1;
 		this.m.Properties.EngageRangeMax = 1;
 		this.m.Properties.EngageRangeIdeal = 1;
