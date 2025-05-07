@@ -304,7 +304,9 @@ this.jcc_percht_guest <- this.inherit("scripts/entity/tactical/player", {
 		local injury_body = this.addSprite("injury_body");
 		injury_body.Visible = false;
 		injury_body.setBrush("bust_percht_body_0"+body_variant+"_injured");
+		this.addSprite("armor_upgrade_back");
 		this.addSprite("armor");
+		this.addSprite("armor_upgrade_front");
 			local sprite_surcoat = this.addSprite("surcoat");
 			local sprite_accessory = this.addSprite("accessory");
 			local sprite_accessory_special = this.addSprite("accessory_special");
@@ -507,7 +509,10 @@ this.jcc_percht_guest <- this.inherit("scripts/entity/tactical/player", {
         //this.getSprite("armor").setHorizontalFlipping(flip);
         this.getSprite("head").setHorizontalFlipping(flip);
         //this.getSprite("helmet").setHorizontalFlipping(flip);
-
+    	this.getSprite("armor").Scale = 1.15;
+        foreach (x in ["armor","armor_upgrade_back","armor_upgrade_front"]){
+   			this.setSpriteOffset(x, this.createVec(0, 7));
+        }
         if(flip){
         this.setSpriteOffset("arms_icon", ::createVec(this.m.spriteOffset*-1, 0)); }
     }
