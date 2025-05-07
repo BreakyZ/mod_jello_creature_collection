@@ -1,7 +1,7 @@
 this.jcc_nachtmahr_guest <- this.inherit("scripts/entity/tactical/player", {
 	m = {},		function isReallyKilled( _fatalityType )
 	{
-		return true;
+		return true; //whole enemy is very broken as player unit because of reliance on ai, requires major rewrites
 	}
 	function create()
 	{
@@ -67,7 +67,7 @@ this.jcc_nachtmahr_guest <- this.inherit("scripts/entity/tactical/player", {
 			"sounds/enemies/dlc2/alp_flee_03.wav",
 			"sounds/enemies/dlc2/alp_flee_04.wav",
 			"sounds/enemies/dlc2/alp_flee_05.wav"
-		];
+		];this.m.Sound[this.Const.Sound.ActorEvent.Fatigue]=this.m.Sound[this.Const.Sound.ActorEvent.Idle];
 		this.m.SoundPitch = this.Math.rand(70, 90) * 0.01;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 2.0;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Other1] = 1.0;
@@ -307,6 +307,7 @@ this.jcc_nachtmahr_guest <- this.inherit("scripts/entity/tactical/player", {
 		local body = this.addSprite("body");
 		body.setBrush("bust_jcc_nachtmahr_body");
 		body.varySaturation(0.2);
+		this.addSprite("injury_body");
 		local head = this.addSprite("head");
 		head.setBrush("bust_jcc_nachtmahr_head");
 		head.Saturation = body.Saturation;

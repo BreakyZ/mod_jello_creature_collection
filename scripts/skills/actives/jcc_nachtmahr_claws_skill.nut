@@ -7,7 +7,7 @@ this.jcc_nachtmahr_claws_skill <- this.inherit("scripts/skills/skill", {
 		this.m.Description = "Long and sharp claws that can tear flesh with ease.";
 		this.m.KilledString = "Ripped to shreds";
 		this.m.Icon = "skills/nachtmahr_claw.png";
-		this.m.IconDisabled = "skills/nachtmahr_claw.png";
+		this.m.IconDisabled = "skills/nachtmahr_claw_sw.png";
 		this.m.Overlay = "nachtmahr_claw";
 		this.m.SoundOnUse = [
 			"sounds/enemies/nachtmahr_claws_01.wav",

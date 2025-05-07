@@ -5,10 +5,10 @@ this.jcc_nachtmahr_sleep_paralysis_skill <- this.inherit("scripts/skills/skill",
 	function create()
 	{
 		this.m.ID = "actives.jcc_nachtmahr_sleep_paralysis";
-		this.m.Name = "Horror";
+		this.m.Name = "Sleep Paralysis";
 		this.m.Description = "";
 		this.m.Icon = "skills/nachtmahr_paralysis.png";
-		this.m.IconDisabled = "skills/nachtmahr_paralysis.png";
+		this.m.IconDisabled = "skills/nachtmahr_paralysis_sw.png";
 		this.m.Overlay = "nachtmahr_paralysis";
 		this.m.SoundOnUse = [
 			"sounds/enemies/horror_spell_01.wav",

@@ -69,7 +69,7 @@ this.jcc_basilisk_drone_guest <- this.inherit("scripts/entity/tactical/player", 
 			"sounds/enemies/Basilisk_fatigue02.wav",
 			"sounds/enemies/Basilisk_fatigue03.wav"
 		];
-
+		this.m.Sound[this.Const.Sound.ActorEvent.Fatigue]=this.m.Sound[this.Const.Sound.ActorEvent.Move];
 		this.m.SoundPitch = this.Math.rand(0.9, 1.1);
 		this.m.SoundVolumeOverall = 1.25;
 

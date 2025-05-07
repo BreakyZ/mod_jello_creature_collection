@@ -57,7 +57,7 @@ this.jcc_percht_guest <- this.inherit("scripts/entity/tactical/player", {
 			"sounds/enemies/percht_move02.wav",
 			"sounds/enemies/percht_move03.wav",
 			"sounds/enemies/percht_move04.wav"
-		];
+		];this.m.Sound[this.Const.Sound.ActorEvent.Fatigue]=this.m.Sound[this.Const.Sound.ActorEvent.Move];
 		this.m.SoundPitch = 1.0;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 1.7;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 1.7;

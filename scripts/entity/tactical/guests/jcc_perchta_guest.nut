@@ -28,7 +28,7 @@ this.jcc_perchta_guest <- this.inherit("scripts/entity/tactical/player", {
 			"sounds/enemies/percht_hurt03.wav",
 			"sounds/enemies/percht_hurt04.wav",
 			"sounds/enemies/percht_hurt05.wav",
-		];		
+		];	this.m.Sound[this.Const.Sound.ActorEvent.Fatigue]=this.m.Sound[this.Const.Sound.ActorEvent.Move];	
 		this.m.Sound[this.Const.Sound.ActorEvent.NoDamageReceived] = [
 			"sounds/enemies/percht_hurt01.wav",
 			"sounds/enemies/percht_hurt02.wav",

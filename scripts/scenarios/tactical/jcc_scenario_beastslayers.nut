@@ -47,10 +47,9 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		entity.setFaction(this.Const.Faction.Player);
 		entity.setName("Basilisk Sentry");
 
-		entity = this.spawnEntity("scripts/entity/tactical/guests/jcc_nachtmahr_guest", 11, 11, 13, 13);
-		this.World.getPlayerRoster().add(entity);
-		entity.setFaction(this.Const.Faction.Player);
-		entity.setName("Nachtmahr");
+		entity = this.spawnEntity("scripts/entity/tactical/enemies/jcc_nachtmahr", 11, 11, 13, 13);
+		//this.World.getPlayerRoster().add(entity);
+		entity.setFaction(this.Const.Faction.PlayerAnimals);
 
 
 		entity = this.spawnEntity("scripts/entity/tactical/guests/jcc_basilisk_queen_guest", 11, 11, 14, 14);
