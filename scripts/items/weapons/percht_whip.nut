@@ -30,14 +30,19 @@ this.percht_whip <- this.inherit("scripts/items/weapons/weapon", {
 		this.m.FatigueOnSkillUse = 5;
 	}
 
+
 	function onEquip()
 	{
 		this.weapon.onEquip();
 		local skill = this.new("scripts/skills/actives/whip_skill");
-		skill.m.Icon = "skills/active_171.png";
-		skill.m.IconDisabled = "skills/active_171_sw.png";
-		skill.m.Overlay = "active_171";
-		this.addSkill(skill);
+        skill.m.Icon = "skills/active_171.png";
+        skill.m.IconDisabled = "skills/active_171_sw.png";
+        skill.m.Overlay = "active_171";
+        skill.m.SoundOnUse = [			
+        	"sounds/combat/percht_whip_01.wav",
+			"sounds/combat/percht_whip_02.wav",
+			"sounds/combat/percht_whip_03.wav"];
+        this.addSkill(skill);
 		local skill = this.new("scripts/skills/actives/disarm_skill");
 		this.addSkill(skill);
 	}

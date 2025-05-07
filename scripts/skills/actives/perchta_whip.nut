@@ -11,9 +11,9 @@ this.perchta_whip <- this.inherit("scripts/skills/skill", {
 		this.m.IconDisabled = "skills/active_72_sw.png";
 		this.m.Overlay = "active_72";
 		this.m.SoundOnUse = [
-			"sounds/enemies/goblin_whip_00.wav",
-			"sounds/enemies/goblin_whip_01.wav",
-			"sounds/enemies/goblin_whip_02.wav"
+			"sounds/combat/dlc6/whip_slave_01.wav",
+			"sounds/combat/dlc6/whip_slave_02.wav",
+			"sounds/combat/dlc6/whip_slave_03.wav"
 		];
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.OffensiveTargeted;
@@ -58,7 +58,8 @@ this.perchta_whip <- this.inherit("scripts/skills/skill", {
 			this.onDelayedEffect(target);
 		}
 
-		local target = _targetTile.getEntity();
+
+
 		local hitInfo = clone this.Const.Tactical.HitInfo;
 		hitInfo.DamageRegular = this.Math.rand(1, 3);
 		hitInfo.DamageDirect = 1.0;
@@ -71,19 +72,42 @@ this.perchta_whip <- this.inherit("scripts/skills/skill", {
 		return true;
 	}
 
+
 	function onDelayedEffect( _target )
 	{
-		if (_target.getMoraleState() == this.Const.MoraleState.Fleeing)
+
+		local target = _target;
+
+		if (target.isAlive() && !target.isDying())
 		{
-			_target.checkMorale(this.Const.MoraleState.Steady - this.Const.MoraleState.Fleeing, 9000);
+			if (_target.getMoraleState() == this.Const.MoraleState.Fleeing)
+			{
+				_target.checkMorale(this.Const.MoraleState.Steady - this.Const.MoraleState.Fleeing, 9000);
+			}
+			else
+			{
+				_target.checkMorale(10, 9000);
+			}
+
+			local effect = _target.getSkills().getSkillByID("effects.killing_frenzy");
+
+			if (effect != null)
+			{
+				effect.reset();
+			}
+			else
+			{
+				_target.getSkills().add(this.new("scripts/skills/effects/killing_frenzy_effect"));
+			}
+			this.spawnIcon("perk_36", _target.getTile());
 		}
-		else
-		{
-			_target.checkMorale(10, 9000);
+				if(this.Math.rand(1,100)<50){
+			this.Sound.play("sounds/enemies/percht_hurt05.wav", this.Const.Sound.Volume.Skill, _target.getTile());
+		}else{
+			this.Sound.play("sounds/enemies/percht_hurt03.wav", this.Const.Sound.Volume.Skill, _target.getTile());
 		}
 
-		local buff = this.new("scripts/skills/effects/killing_frenzy_effect");
-		_target.getSkills().add(buff);
+
 	}
 
 });
