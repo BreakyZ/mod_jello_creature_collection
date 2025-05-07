@@ -1,5 +1,9 @@
 this.jcc_nightmare_skill <- this.inherit("scripts/skills/skill", {
-	m = {},
+	m = {SoundsA = [
+			"sounds/enemies/vampire_life_drain_01.wav",
+			"sounds/enemies/vampire_life_drain_02.wav",
+			"sounds/enemies/vampire_life_drain_03.wav"
+		]},
 	function create()
 	{
 		this.m.ID = "actives.jcc_nightmare";
@@ -106,6 +110,15 @@ this.jcc_nightmare_skill <- this.inherit("scripts/skills/skill", {
 		return true;
 	}
 
+	function addResources()
+	{
+		foreach( r in this.m.SoundsA )
+		{
+			this.Tactical.addResource(r);
+		}
+
+	}
+
 	function onDelayedEffect( _tag )
 	{
 		local targetTile = _tag.TargetTile;
@@ -130,6 +143,8 @@ this.jcc_nightmare_skill <- this.inherit("scripts/skills/skill", {
 
 		if (!actor.isHiddenToPlayer())
 		{
+
+			this.Sound.play(this.m.SoundsA[this.Math.rand(0, this.m.SoundsA.len() - 1)], this.Const.Sound.Volume.Skill, _user.getPos());
 
 			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(actor) + " heals for " + this.Math.min(actor.getHitpointsMax() - actor.getHitpoints(), this.Math.round(_damageInflictedHitpoints * 1.0)) + " points");
 		}

@@ -1,5 +1,9 @@
 this.jcc_nachtmahr_claws_skill <- this.inherit("scripts/skills/skill", {
-	m = {},
+	m = {		BleedingSounds = [
+			"sounds/combat/rupture_blood_01.wav",
+			"sounds/combat/rupture_blood_02.wav",
+			"sounds/combat/rupture_blood_03.wav"
+		]},
 	function create()
 	{
 		this.m.ID = "actives.jcc_nachtmahr_claws_skill";
@@ -32,7 +36,15 @@ this.jcc_nachtmahr_claws_skill <- this.inherit("scripts/skills/skill", {
 		this.m.ChanceDisembowel = 33;
 		this.m.ChanceSmash = 0;
 	}
+	function addResources()
+	{
+		this.skill.addResources();
 
+		foreach( r in this.m.BleedingSounds )
+		{
+			this.Tactical.addResource(r);
+		}
+	}
 	function onUpdate( _properties )
 	{
 
@@ -42,7 +54,11 @@ this.jcc_nachtmahr_claws_skill <- this.inherit("scripts/skills/skill", {
 	function onUse( _user, _targetTile )
 	{
 		this.spawnAttackEffect(_targetTile, this.Const.Tactical.AttackEffectClaws);
-		return this.attackEntity(_user, _targetTile.getEntity());
+		local success = this.attackEntity(_user, _targetTile.getEntity());
+		if(success){
+			this.Sound.play(this.m.BleedingSounds[this.Math.rand(0, this.m.BleedingSounds.len() - 1)], 0.75, _user.getPos());
+		}
+		return success;
 	}
 
 	function getExpectedDamage( _target )
