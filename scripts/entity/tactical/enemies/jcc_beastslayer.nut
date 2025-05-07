@@ -123,7 +123,9 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 				if (this.Math.rand(1, 100) <= 30)
 				{
 
-					this.m.Skills.add(this.new("scripts/skills/actives/indomitable"));
+					this.m.Skills.add(this.new("scripts/skills/actives/indomitable"));					
+					this.m.Skills.add(this.new("scripts/skills/perks/perk_indomitable"));
+
 					r = this.Math.rand(0, 4);
 
 					if (r == 0)

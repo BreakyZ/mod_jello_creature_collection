@@ -473,11 +473,15 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (r == 1)
 		{
-			this.m.Items.equip(this.new("scripts/items/weapons/named/named_three_headed_flail"));
+			this.m.Items.equip(this.new("scripts/items/weapons/named/named_three_headed_flail"));			
+			this.m.Skills.add(this.new("scripts/skills/perks/perk_devastating_strikes"));
+
 
 		}else if (r == 2)
 		{
 			this.m.Items.equip(this.new("scripts/items/weapons/named/named_flail"));
+			this.m.Skills.add(this.new("scripts/skills/perks/perk_devastating_strikes"));
+
 		}else if (r == 3)
 		{
 			this.m.Items.equip(this.new("scripts/items/weapons/named/named_javelin"));
