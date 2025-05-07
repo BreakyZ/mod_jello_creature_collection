@@ -31,7 +31,7 @@ this.jcc_basilisk_drone_guest <- this.inherit("scripts/entity/tactical/player", 
 			"sounds/enemies/Basilisk_death02.wav",
 			"sounds/enemies/Basilisk_death03.wav"
 		];
-		this.m.Sound[this.Const.Sound.ActorEvent.Flee] = [ //i've spelt this with a capital B as thats what the files are right now. I can't seem to change the file names on git so im changing them here otherwise this whole process crashes on start when this entity is involved. We should change B to lowercase for all .wav files at a later date - Luft, 24/10/23. Fuck me.
+		this.m.Sound[this.Const.Sound.ActorEvent.Flee] = [ //i've spelt this with a capital B as thats what the files are right now. I can't seem to change the file names on git so im changing them here otherwise this whole process crashes on start when this entity is involved. We should change B to lowercase for all .wav files at a later date - Luft, 24/10/23. Fuck me. //lol - jello, 7/5/25
 			"sounds/enemies/Basilisk_flee01.wav",
 			"sounds/enemies/Basilisk_flee02.wav",
 			"sounds/enemies/Basilisk_flee03.wav"

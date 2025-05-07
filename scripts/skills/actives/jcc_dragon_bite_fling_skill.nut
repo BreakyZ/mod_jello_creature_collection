@@ -6,7 +6,7 @@ this.jcc_dragon_bite_fling_skill <- this.inherit("scripts/skills/skill", {
 		this.m.Name = "Deathroll";
 		this.m.Description = "";
 		this.m.Icon = "skills/active_111.png";
-		this.m.IconDisabled = "skills/active_111.png";
+		this.m.IconDisabled = "skills/active_111_sw.png";
 		this.m.Overlay = "active_111";
 		this.m.SoundOnUse = [
 			"sounds/enemies/lindwurm_gorge_01.wav",
