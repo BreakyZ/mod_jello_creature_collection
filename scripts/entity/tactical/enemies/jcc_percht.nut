@@ -473,32 +473,39 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (r == 1)
 		{
-			this.m.Items.equip(this.new("scripts/items/weapons/named/named_three_headed_flail"));			
-			this.m.Skills.add(this.new("scripts/skills/perks/perk_devastating_strikes"));
+			this.m.Items.equip(this.new("scripts/items/weapons/named/named_three_headed_flail"));	
 
 
 		}else if (r == 2)
 		{
 			this.m.Items.equip(this.new("scripts/items/weapons/named/named_flail"));
-			this.m.Skills.add(this.new("scripts/skills/perks/perk_devastating_strikes"));
 
 		}else if (r == 3)
 		{
 			this.m.Items.equip(this.new("scripts/items/weapons/named/named_javelin"));
 			this.m.Items.addToBag(this.new("scripts/items/weapons/percht_flail"));
-		}else
+			this.m.Items.addToBag(this.new("scripts/items/weapons/greenskins/orc_javelin"));
+			this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_ranged_agent");
+			this.m.AIAgent.setActor(this);
+		}
+		else
 		{
 			this.m.Items.equip(this.new("scripts/items/weapons/named/named_throwing_axe"));
 			this.m.Items.addToBag(this.new("scripts/items/weapons/percht_flail"));
-
+			this.m.Items.addToBag(this.new("scripts/items/weapons/greenskins/orc_javelin"));
+			this.m.AIAgent = this.new("scripts/ai/tactical/agents/percht_ranged_agent");
+			this.m.AIAgent.setActor(this);
 		}
 
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_head_hunter"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_fast_adaption"));
-		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge_alt"));
+		//this.m.Skills.add(this.new("scripts/skills/perks/perk_fast_adaption"));
+		this.m.Skills.add(this.new("scripts/skills/actives/krampus_charge_alt"));		
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_devastating_strikes"));
 
 		return true;
-	}function onFactionChanged()
+	}
+
+	function onFactionChanged()
     {
         this.actor.onFactionChanged();
         local flip = this.isAlliedWithPlayer();
