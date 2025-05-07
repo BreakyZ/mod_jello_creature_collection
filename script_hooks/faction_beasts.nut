@@ -340,6 +340,7 @@
 ]);
 
 ::Const.FactionTrait.Actions[::Const.FactionTrait.Settlement].push("scripts/factions/actions/jcc_hunting_basilisks_action");
+::Const.FactionTrait.Actions[::Const.FactionTrait.Settlement].push("scripts/factions/actions/jcc_drive_away_percht_action");
 
 ::Const.PerchtBanners <- [
 	"banner_beasts_01"

@@ -23,8 +23,6 @@
 	"Pan",
 	"Samail",
 	"Rubezahl",
-	"Gil\'dan",
-	"Kil\'jaeden",
 	"Moloch",
 	"Krampus",
 	"Vader Johan"
@@ -37,14 +35,12 @@
 ];
 ::Const.Strings.JccPerchtaTitles <- [
 	"the Harrier",
-	"Bal",
 	"the Great Horned One",
 	"the Child Snatcher",
 	"of the Black Sabbath",
 	"the Maneater",
 	"the Impaler",
 	"Ash-Spitter",
-	"Ur",
 	"the Black",
 	"Coal-Eyes",
 	"the Raucous",
@@ -63,14 +59,12 @@
 ];
 ::Const.Strings.JccPerchtTitles <- [
 	"the Harrier",
-	"Bal",
 	"the Great Horned One",
 	"the Child Snatcher",
 	"of the Black Sabbath",
 	"the Maneater",
 	"the Impaler",
 	"Ash-Spitter",
-	"Ur",
 	"the Black",
 	"Coal-Eyes",
 	"the Raucous",
@@ -192,7 +186,9 @@
 	"Samhures",
 	"Zawba\'ah",
 	"Maymun",
-	"Jaffar"
+	"Jaffar",
+	"Gil\'dan",
+	"Kil\'jaeden"
 ];
 
 ::Const.Strings.JccDjinnTitles <- [

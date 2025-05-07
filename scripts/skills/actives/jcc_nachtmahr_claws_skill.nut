@@ -6,13 +6,13 @@ this.jcc_nachtmahr_claws_skill <- this.inherit("scripts/skills/skill", {
 		this.m.Name = "Gloom Claws";
 		this.m.Description = "Long and sharp claws that can tear flesh with ease.";
 		this.m.KilledString = "Ripped to shreds";
-		this.m.Icon = "skills/active_21.png";
-		this.m.IconDisabled = "skills/active_21_sw.png";
-		this.m.Overlay = "active_21";
+		this.m.Icon = "skills/nachtmahr_claw.png";
+		this.m.IconDisabled = "skills/nachtmahr_claw.png";
+		this.m.Overlay = "nachtmahr_claw";
 		this.m.SoundOnUse = [
-			"sounds/enemies/jcc_dragon_claw_01.wav",
-			"sounds/enemies/jcc_dragon_claw_02.wav",
-			"sounds/enemies/jcc_dragon_claw_03.wav",
+			"sounds/enemies/nachtmahr_claws_01.wav",
+			"sounds/enemies/nachtmahr_claws_02.wav",
+			"sounds/enemies/nachtmahr_claws_03.wav",
 		];
 		this.m.Type = this.Const.SkillType.Active;
 		this.m.Order = this.Const.SkillOrder.OffensiveTargeted;

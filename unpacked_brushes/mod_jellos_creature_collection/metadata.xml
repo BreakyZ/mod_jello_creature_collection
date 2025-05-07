@@ -10,6 +10,8 @@
 <sprite id="jcc_peck" ic="FF614551" img="ui\skills\jcc_peck.png" />
 <sprite id="jcc_fowleye" ic="FF614551" img="ui\skills\jcc_fowleye.png" />
 <sprite id="jcc_inject" ic="FF614551" img="ui\skills\jcc_inject.png" />
+<sprite id="nachtmahr_claw" ic="FF614551" img="ui\skills\nachtmahr_claw.png" />
+<sprite id="nachtmahr_paralysis" ic="FF614551" img="ui\skills\nachtmahr_paralysis.png" />
 
 <!-- Worldmap -->
 
