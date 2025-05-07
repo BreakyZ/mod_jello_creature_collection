@@ -39,7 +39,7 @@ this.jcc_drive_away_percht_action <- this.inherit("scripts/factions/faction_acti
 					tooFar = true;
 					break;
 				}
-				else if (myTile.getDistanceTo(b.getTile()) <= 15)
+				else if (myTile.getDistanceTo(b.getTile()) <= 18)
 				{
 					tooFar = false;
 					break;
