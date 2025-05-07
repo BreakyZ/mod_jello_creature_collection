@@ -4,7 +4,7 @@
 	for (local i = 7; i <= 26; i++)
 	{
 		::Const.World.Spawn.JccBeastslayer.push({
-	        Body = "figure_bandit_01",
+	        Body = "figure_player_11",
 	        Troops = [
 	            {
 	                Type = this.Const.World.Spawn.Troops.JccBeastslayer,
@@ -16,7 +16,7 @@
 		for (local j = 1; j <= 7; j++)
 		{
 			::Const.World.Spawn.JccBeastslayer.push({
-	        Body = "figure_bandit_01",
+	        Body = "figure_player_11",
 	        Troops = [
 	            {
 	                Type = this.Const.World.Spawn.Troops.JccBeastslayer,
@@ -30,7 +30,7 @@
 			});
 
 			::Const.World.Spawn.JccBeastslayer.push({
-	        Body = "figure_bandit_01",
+	        Body = "figure_player_11",
 	        Troops = [
 	            {
 	                Type = this.Const.World.Spawn.Troops.JccBeastslayer,
@@ -44,7 +44,7 @@
 			});
 
 			::Const.World.Spawn.JccBeastslayer.push({
-	        Body = "figure_bandit_01",
+	        Body = "figure_player_11",
 	        Troops = [
 	            {
 	                Type = this.Const.World.Spawn.Troops.JccBeastslayer,

@@ -263,7 +263,9 @@ this.jcc_basilisk_drone_guest <- this.inherit("scripts/entity/tactical/player", 
 
 	function assignRandomEquipment()
 	{
-	}function onFactionChanged()
+	}
+
+	function onFactionChanged()
     {
         this.actor.onFactionChanged();
         local flip = this.isAlliedWithPlayer();

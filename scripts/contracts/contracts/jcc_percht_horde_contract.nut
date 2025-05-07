@@ -1,4 +1,4 @@
-this.jcc_percht_wild_hunt_contract <- this.inherit("scripts/contracts/contract", {
+this.jcc_percht_horde_contract <- this.inherit("scripts/contracts/contract", {
 	m = {
 		Destination = null,
 		Threat = null,
@@ -21,8 +21,8 @@ this.jcc_percht_wild_hunt_contract <- this.inherit("scripts/contracts/contract",
 			this.m.DifficultyMult = this.Math.rand(115, 135) * 0.01;
 		}
 
-		this.m.Type = "contract.jcc_wild_hunt";
-		this.m.Name = "The Wild Hunt";
+		this.m.Type = "contract.jcc_percht_horde";
+		this.m.Name = "Percht Hunt";
 		this.m.TimeOut = this.Time.getVirtualTimeF() + this.World.getTime().SecondsPerDay * 5.0;
 		this.m.MakeAllSpawnsAttackableByAIOnceDiscovered = true;
 	}
@@ -56,8 +56,8 @@ this.jcc_percht_wild_hunt_contract <- this.inherit("scripts/contracts/contract",
 			function start()
 			{
 				this.Contract.m.BulletpointsObjectives = [
-					"Stop the Wild Hunt\'s rampage",
-					"It was last reported to be in the region of %region%, %direction% from you"
+					"Stop the Perchts\' rampage",
+					"They were last reported to be in the region of %region%, %direction% from you"
 				];
 
 				if (this.Math.rand(1, 100) <= this.Const.Contracts.Settings.IntroChance)
@@ -75,9 +75,9 @@ this.jcc_percht_wild_hunt_contract <- this.inherit("scripts/contracts/contract",
 				this.World.Assets.addMoney(this.Contract.m.Payment.getInAdvance());
 				local f = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Beasts);
 				local nearest_base = f.getNearestSettlement(this.World.State.getPlayer().getTile());
-				local party = f.spawnEntity(nearest_base.getTile(), "Wild Hunt", false, this.Const.World.Spawn.JccPercht, 125 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
+				local party = f.spawnEntity(nearest_base.getTile(), "Percht Horde", false, this.Const.World.Spawn.JccPercht, 166 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
 				party.setDescription("A wild horde of beasts, ravaging the countryside and devouring all in sight.");
-				//party.getSprite("body").setBrush("figure_wildman_04");
+				party.getSprite("body").setBrush("figure_percht_01");
 				party.setVisibilityMult(2.0);
 
 
@@ -97,7 +97,7 @@ this.jcc_percht_wild_hunt_contract <- this.inherit("scripts/contracts/contract",
 				party.getLoot().Ammo = this.Math.rand(10, 30);
 				party.addToInventory("supplies/roots_and_berries_item");
 				party.addToInventory("supplies/dried_fruits_item");
-				party.addToInventory("supplies/pickled_mushrooms_item");
+				party.addToInventory("supplies/strange_meat_item");
 				party.getSprite("banner").setBrush(nearest_base.getBanner());
 				party.setAttackableByAI(false);
 				local c = party.getController();
@@ -126,8 +126,8 @@ this.jcc_percht_wild_hunt_contract <- this.inherit("scripts/contracts/contract",
 			{
 				this.Contract.m.BulletpointsObjectives.clear();
 				this.Contract.m.BulletpointsObjectives = [
-					"Stop the Wild Hunt\'s rampage",
-					"It was last spotted around %region%, %terrain% %direction% from you, near %nearest_town%"
+					"Stop the Perchts\' rampage",
+					"They were last spotted around %region%, %terrain% %direction% from you, near %nearest_town%"
 				];
 
 				if (this.Contract.m.Destination != null && !this.Contract.m.Destination.isNull())
@@ -180,7 +180,7 @@ this.jcc_percht_wild_hunt_contract <- this.inherit("scripts/contracts/contract",
 					this.Flags.set("IsAGreaterThreat", false);
 					_dest.getController().getBehavior(this.Const.World.AI.Behavior.ID.Attack).setEnabled(true);
 					local properties = this.World.State.getLocalCombatProperties(this.World.State.getPlayer().getPos());
-					properties.Music = this.Const.Music.BarbarianTracks;
+					properties.Music = this.Const.Music.BeastsTracks;
 					this.World.Contracts.startScriptedCombat(properties, this.Contract.m.IsPlayerAttacking, true, true);
 				}
 			}
@@ -192,7 +192,7 @@ this.jcc_percht_wild_hunt_contract <- this.inherit("scripts/contracts/contract",
 			{
 				this.Contract.m.BulletpointsObjectives.clear();
 				this.Contract.m.BulletpointsObjectives = [
-					"Travel with the Wild Hunt to destroy the Beastslayers"
+					"Travel with the Perchts to destroy the Beastslayers"
 				];
 
 				if (this.Contract.m.Destination != null && !this.Contract.m.Destination.isNull())
@@ -511,11 +511,13 @@ this.jcc_percht_wild_hunt_contract <- this.inherit("scripts/contracts/contract",
 			function start()
 			{
 				local playerTile = this.World.State.getPlayer().getTile();
-				local nearest_undead = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Undead).getNearestSettlement(playerTile);
+				//local nearest_undead = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Undead).getNearestSettlement(playerTile);
 				local tile = this.Contract.getTileToSpawnLocation(playerTile, 9, 15);
-				local party = this.World.FactionManager.getFaction(nearest_undead.getFaction()).spawnEntity(tile, "The Untoward", false, this.Const.World.Spawn.UndeadArmy, 260 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
-				party.getSprite("banner").setBrush(nearest_undead.getBanner());
-				party.setDescription("A legion of walking dead, back to claim from the living what was once theirs.");
+				//local party = this.World.FactionManager.getFaction(nearest_undead.getFaction()).spawnEntity(tile, "Beastslayers", false, this.Const.World.Spawn.UndeadArmy, 260 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
+				
+				local party = this.Const.Faction.Enemy.spawnEntity(tile, "Beastslayers", false, this.Const.World.Spawn.JccBeastslayer, 260 * this.Contract.getDifficultyMult() * this.Contract.getScaledDifficultyMult(), this.Contract.getMinibossModifier());
+				party.getSprite("banner").setBrush("banner_01");
+				party.setDescription("A band of beastslayers. They ready their weapons as you draw near.");
 				party.setSlowerAtNight(false);
 				party.setUsingGlobalVision(false);
 				party.setLooting(false);

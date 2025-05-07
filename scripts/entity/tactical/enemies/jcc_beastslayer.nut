@@ -76,8 +76,8 @@ this.jcc_beastslayer <- this.inherit("scripts/entity/tactical/human", {
 					"weapons/two_handed_mace",
 					"weapons/two_handed_hammer",
 					"weapons/longaxe",
-					"weapons/basilisk_hammer",
-					"weapons/percht_axe"
+					"weapons/basilisk_hammer"/*,
+					"weapons/percht_axe"*/
 					];
 
 				this.m.Items.equip(this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]));

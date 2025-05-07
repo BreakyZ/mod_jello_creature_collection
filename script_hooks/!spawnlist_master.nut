@@ -41,13 +41,13 @@
 		Cost = 90,
 		Row = -1,
 		Script = "scripts/entity/tactical/enemies/jcc_dragon"
-	}
+};
 
 ::Const.World.Spawn.Troops.JccPercht <- {
 	ID = this.Const.EntityType.JccPercht,
 	Variant = 1,
 	Strength = 35,
-	Cost = 35,
+	Cost = 32,
 	Row = 2,
 	Script = "scripts/entity/tactical/enemies/jcc_percht",
 	NameList = this.Const.Strings.JccPerchtNames,
@@ -58,7 +58,7 @@
 	ID = this.Const.EntityType.JccPerchta,
 	Variant = 0,
 	Strength = 35,
-	Cost = 35,
+	Cost = 32,
 	Row = 2,
 	Script = "scripts/entity/tactical/enemies/jcc_perchta"
 };

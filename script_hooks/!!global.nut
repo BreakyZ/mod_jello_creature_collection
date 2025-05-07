@@ -66,3 +66,8 @@ for (local i = -1; i < ::Const.EntityIcon.len(); i++) {
 	::Const.EntityType.addNew("percht_orientation", "Percht", "Perchts", this.Const.FactionType.Player);
 ::Const.EntityType.JccPerchtaGuest <-
 	::Const.EntityType.addNew("perchta_orientation", "Perchta", "Perchtas", this.Const.FactionType.Player);
+::Const.EntityType.JccDragonGuest <-
+	::Const.EntityType.addNew("jcc_dragon_01_orientation", "Drache", "Drachen", this.Const.FactionType.Player);
+::Const.EntityType.JccNachtmahrGuest <-
+	::Const.EntityType.addNew("nachtmahr_orientation", "Nachtmahr", "Nachtmahrs", this.Const.FactionType.Player);
+	
