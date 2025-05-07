@@ -143,7 +143,7 @@
 			{
 				id = 51,
 				name = "Perchts",
-				description = "[p=c][img]gfx/ui/events/event_44.png[/img][/p]\n[p=c]Fight against Perchts and various beasts.[/p]"
+				description = "[p=c][img]gfx/ui/events/jcc_event_01.png[/img][/p]\n[p=c]Fight against Perchts and various beasts.[/p]"
 			},			
 			{
 				id = 52,

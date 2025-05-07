@@ -305,6 +305,9 @@ this.jcc_percht_guest <- this.inherit("scripts/entity/tactical/player", {
 		injury_body.Visible = false;
 		injury_body.setBrush("bust_percht_body_0"+body_variant+"_injured");
 		this.addSprite("armor");
+			local sprite_surcoat = this.addSprite("surcoat");
+			local sprite_accessory = this.addSprite("accessory");
+			local sprite_accessory_special = this.addSprite("accessory_special");
 		local head = this.addSprite("head");
 		head.setBrush("bust_percht_head_0"+head_variant);
 		head.Saturation = body.Saturation;
@@ -315,9 +318,6 @@ this.jcc_percht_guest <- this.inherit("scripts/entity/tactical/player", {
 			local sprite_hair = this.addSprite("hair");
 			local sprite_beard = this.addSprite("beard");
 			local sprite_beard_top = this.addSprite("beard_top");
-			local sprite_surcoat = this.addSprite("surcoat");
-			local sprite_accessory = this.addSprite("accessory");
-			local sprite_accessory_special = this.addSprite("accessory_special");
 			local sprite_body_tattoo = this.addSprite("tattoo_body");
 			local sprite_head_tattoo = this.addSprite("tattoo_head");
 		this.addSprite("helmet");

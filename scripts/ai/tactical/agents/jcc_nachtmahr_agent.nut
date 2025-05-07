@@ -5,7 +5,7 @@ this.jcc_nachtmahr_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.agent.create();
 		this.m.ID = this.Const.AI.Agent.ID.JccNachtmahr;
 		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.AttackDefault] = 1.0;
-		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.Horror] = 2.0;
+		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.Horror] = 1.5;
 		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.EngageMelee] = 1.0;
 		this.m.Properties.TargetPriorityHitchanceMult = 0.1;
 		this.m.Properties.TargetPriorityHitpointsMult = 0.45;
@@ -67,7 +67,7 @@ this.jcc_nachtmahr_agent <- this.inherit("scripts/ai/tactical/agent", {
 			this.m.Properties.PreferCarefulEngage = false;
 		}
 
-		if(this.m.Actor.getActionPoints()<=3){
+		if(this.m.Actor.getActionPoints()<3){
 			this.m.Properties.PreferWait = true;
 		}
 		else
