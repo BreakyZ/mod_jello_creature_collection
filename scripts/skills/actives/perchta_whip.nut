@@ -58,6 +58,16 @@ this.perchta_whip <- this.inherit("scripts/skills/skill", {
 			this.onDelayedEffect(target);
 		}
 
+		local target = _targetTile.getEntity();
+		local hitInfo = clone this.Const.Tactical.HitInfo;
+		hitInfo.DamageRegular = this.Math.rand(1, 3);
+		hitInfo.DamageDirect = 1.0;
+		hitInfo.BodyPart = this.Const.BodyPart.Body;
+		hitInfo.BodyDamageMult = 1.0;
+		hitInfo.FatalityChanceMult = 0.0;
+		target.onDamageReceived(_user, this, hitInfo);
+
+
 		return true;
 	}
 

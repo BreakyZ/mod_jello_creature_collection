@@ -27,6 +27,8 @@ this.percht_ranged_agent <- this.inherit("scripts/ai/tactical/agent", {
 
 	function onAddBehaviors()
 	{
+		
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_defend_rotation"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_flee"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_retreat"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_engage_ranged"));
