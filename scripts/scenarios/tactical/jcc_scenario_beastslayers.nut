@@ -80,6 +80,9 @@ this.jcc_scenario_beastslayers <- this.inherit("scripts/scenarios/tactical/scena
 		entity.setFaction(this.Const.Faction.Player);
 		entity.makeMiniboss();
 		entity.generateName();
+		//items = entity.getItems();
+		//items.equip(this.new("scripts/items/armor/jcc_djinn_heavy_armor"));
+
 
 		entity = this.spawnEntity("scripts/entity/tactical/guests/jcc_basilisk_drone_guest", 13, 13, 12, 12);
 		this.World.getPlayerRoster().add(entity);

@@ -25,7 +25,8 @@
 	"Rubezahl",
 	"Moloch",
 	"Krampus",
-	"Vader Johan"
+	"Vader Johan",
+	"Faust"
 ];
 ::Const.Strings.JccPerchtaNames <- [
 	"Lilith",
