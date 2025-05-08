@@ -2691,11 +2691,56 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.Ethnicity = _in.readU8();
 			this.m.Gender = _in.readU8();
 			this.m.VoiceSet = _in.readU8();
-			this.m.Sound[this.Const.Sound.ActorEvent.NoDamageReceived] = this.Const.HumanSounds[this.m.VoiceSet].NoDamageReceived;
-			this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived] = this.Const.HumanSounds[this.m.VoiceSet].DamageReceived;
-			this.m.Sound[this.Const.Sound.ActorEvent.Death] = this.Const.HumanSounds[this.m.VoiceSet].Death;
-			this.m.Sound[this.Const.Sound.ActorEvent.Fatigue] = this.Const.HumanSounds[this.m.VoiceSet].Fatigue;
-			this.m.Sound[this.Const.Sound.ActorEvent.Flee] = this.Const.HumanSounds[this.m.VoiceSet].Fatigue;
+this.m.Sound[this.Const.Sound.ActorEvent.Death] = [
+			"sounds/enemies/percht_death01.wav",
+			"sounds/enemies/percht_death02.wav",
+			"sounds/enemies/percht_death03.wav",
+			"sounds/enemies/percht_death04.wav"
+		];
+		this.m.Sound[this.Const.Sound.ActorEvent.Flee] = [
+			"sounds/enemies/percht_flee01.wav",
+			"sounds/enemies/percht_flee02.wav"
+		];
+		this.m.Sound[this.Const.Sound.ActorEvent.NoDamageReceived] = [
+			"sounds/enemies/percht_hurt01.wav",
+			"sounds/enemies/percht_hurt02.wav",
+			"sounds/enemies/percht_hurt03.wav",
+			"sounds/enemies/percht_hurt04.wav",
+			"sounds/enemies/percht_hurt05.wav",
+		];
+		this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived] = [
+			"sounds/enemies/percht_hurt01.wav",
+			"sounds/enemies/percht_hurt02.wav",
+			"sounds/enemies/percht_hurt03.wav",
+			"sounds/enemies/percht_hurt04.wav",
+			"sounds/enemies/percht_hurt05.wav",
+		];
+		this.m.Sound[this.Const.Sound.ActorEvent.Idle] = [
+			"sounds/enemies/percht_idle01.wav",
+			"sounds/enemies/percht_idle02.wav",
+			"sounds/enemies/percht_idle03.wav",
+			"sounds/enemies/percht_idle04.wav",
+			"sounds/enemies/percht_idle05.wav",
+			"sounds/enemies/percht_idle06.wav",
+			"sounds/enemies/percht_idle07.wav",
+			"sounds/enemies/percht_idle08.wav",
+			"sounds/enemies/percht_idle09.wav",
+			"sounds/enemies/percht_idle10.wav",
+			"sounds/enemies/percht_idle11.wav",
+			"sounds/enemies/percht_idle12.wav"
+		];
+		this.m.Sound[this.Const.Sound.ActorEvent.Move] = [
+			"sounds/enemies/percht_move01.wav",
+			"sounds/enemies/percht_move02.wav",
+			"sounds/enemies/percht_move03.wav",
+			"sounds/enemies/percht_move04.wav"
+		];
+		this.m.Sound[this.Const.Sound.ActorEvent.Fatigue]=this.m.Sound[this.Const.Sound.ActorEvent.Move];
+		this.m.SoundPitch = 1.0;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 1.7;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 1.7;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 4;
+		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 2;
 			_in.readBool();
 		}
 		else

@@ -208,11 +208,12 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 		//this.World.Assets.updateLook(10);
 		this.World.getCamera().setPos(this.World.State.m.Player.getPos());
 		local f = nearestVillage.getFactionOfType(this.Const.FactionType.NobleHouse);
-		f.addPlayerRelation(-20.0, "Heard of your recent dealings");
+		//f.addPlayerRelation(-20.0, "Heard of your recent failures");
 		this.Time.scheduleEvent(this.TimeUnit.Real, 1000, function ( _tag )
 		{
 			this.Music.setTrackList(this.Const.Music.BeastsTracks, this.Const.Music.CrossFadeTime);
-			//this.World.Events.fire("event.jcc_player_percht_intro");
+			this.World.Events.fire("event.jcc_player_percht_intro");
+			//this.World.Events.fire("event.early_access_scenario_intro");
 		}, null);
 	}
 
