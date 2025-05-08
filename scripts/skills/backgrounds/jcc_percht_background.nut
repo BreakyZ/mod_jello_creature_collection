@@ -145,6 +145,10 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 			Initiative = [
 				4,
 				2
+			],
+			ActionPoints =
+			[
+				1,1
 			]
 		};
 		return c;
@@ -169,7 +173,7 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 				local item = items.getItemAtSlot(this.Const.ItemSlot.Body);
 				item.drop();
 			}
-			
+
 			items.getData()[this.Const.ItemSlot.Head][0] = -1;
 			items.getData()[this.Const.ItemSlot.Body][0] = -1;
 

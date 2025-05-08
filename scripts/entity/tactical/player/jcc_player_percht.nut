@@ -1772,7 +1772,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 			return false;
 		}
 
-		local perk = this.Const.Perks.findById(_id);
+		local perk = this.Const.PerchtPerks.findById(_id);
 
 		if (this.m.PerkPointsSpent >= perk.Unlocks)
 		{
@@ -1796,7 +1796,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 			numPerks = numPerks + this.m.PerksUnlocked[_category][j];
 		}
 
-		if (numPerks < this.Const.Perks.UnlockRequirementsPerTier[_tier])
+		if (numPerks < this.Const.PerchtPerks.UnlockRequirementsPerTier[_tier])
 		{
 			return false;
 		}
