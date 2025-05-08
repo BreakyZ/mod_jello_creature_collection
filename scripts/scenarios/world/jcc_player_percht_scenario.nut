@@ -41,7 +41,7 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 		percht.m.HireTime = this.Time.getVirtualTimeF();
 		while (names.find(percht.getNameOnly()) != null)
 		{
-			percht.setName(this.Const.Strings.JccPerchtNames[this.Math.rand(0, this.Const.Strings.JccPerchtNames.len() - 1)]);
+			percht.setName(this.Const.Strings.JccPerchtPlayerNames[this.Math.rand(0, this.Const.Strings.JccPerchtPlayerNames.len() - 1)]);
 		}
 		names.push(percht.getNameOnly());
 

@@ -102,10 +102,12 @@ this.perchta_whip <- this.inherit("scripts/skills/skill", {
 			this.spawnIcon("perk_36", _target.getTile());
 		}
 				if(this.Math.rand(1,100)<50){
-			this.Sound.play("sounds/enemies/percht_hurt05.wav", this.Const.Sound.Volume.Skill, _target.getTile());
+			this.Sound.play("sounds/enemies/percht_hurt05.wav", 1, _target.getTile());
 		}else{
-			this.Sound.play("sounds/enemies/percht_hurt03.wav", this.Const.Sound.Volume.Skill, _target.getTile());
+			this.Sound.play("sounds/enemies/percht_hurt03.wav", 1, _target.getTile());
 		}
+
+		//this.Sound.play(_target.Const.Sound.ActorEvent.DamageReceived, 1, _target.getTile())
 
 
 	}
