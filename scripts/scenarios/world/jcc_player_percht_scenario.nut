@@ -121,7 +121,9 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 		bros[2].m.Talents = [];		
 		bros[2].m.PerkPoints = 0;
 		bros[2].m.LevelUps = 0;
-		bros[2].m.Level = 1;
+		bros[2].m.Level = 1;		
+		bros[2].getSkills().add(this.new("scripts/skills/actives/krampus_charge_alt"));
+
 		local talents = bros[2].getTalents();
 		talents.resize(this.Const.Attributes.COUNT, 0);
 		talents[this.Const.Attributes.MeleeSkill] = 2;
@@ -221,7 +223,15 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 		}, null);
 	}
 
-	function onInit()
+	function onHired( _bro )
+	{
+		if (_bro.getBackground().getID() == "background.jcc_percht")
+		{
+			_bro.getSkills().add(this.new("scripts/skills/actives/krampus_charge_alt"));
+		}
+	}
+
+	/*function onInit()
 	{
 		for( local i = 5; i <= 8; i = ++i )
 		{
@@ -229,7 +239,7 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 			//this.World.Assets.m.TerrainTypeVisionRadiusMult[i] *= 1.5;
 			//this.World.Assets.m.TerrainTypeVisibilityMult[i] *= 0.5;
 		}
-	}
+	}*/
 
 });
 
