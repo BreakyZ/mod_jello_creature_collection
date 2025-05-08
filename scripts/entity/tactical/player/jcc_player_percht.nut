@@ -1736,7 +1736,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 			return true;
 		}
 
-		local perk = this.Const.Perks.findById(_id);
+		local perk = this.Const.PerchtPerks.findById(_id);
 
 		if (perk == null)
 		{

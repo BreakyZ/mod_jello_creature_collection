@@ -141,7 +141,7 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 		//this.World.Assets.getStash().add(this.new("scripts/items/misc/werewolf_pelt_item"));
 		//this.World.Assets.getStash().add(this.new("scripts/items/misc/werewolf_pelt_item"));
 		//this.World.Assets.getStash().add(this.new("scripts/items/accessory/night_vision_elixir_item"));
-		this.World.Assets.m.Money = this.Math.round(this.World.Assets.m.Money * 0.75);
+		this.World.Assets.m.Money = this.World.Assets.m.Money / 2 - (this.World.Assets.getEconomicDifficulty() == 0 ? 0 : 100);
 		this.World.Assets.m.ArmorParts = 0;
 		this.World.Assets.m.Medicine = this.World.Assets.m.Medicine / 3;
 		this.World.Assets.m.Ammo = this.World.Assets.m.Ammo / 2;
