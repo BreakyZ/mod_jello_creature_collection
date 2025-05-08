@@ -133,7 +133,7 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Ammo));
 		local wep = this.new("scripts/items/weapons/percht_flail")
 		items.equip(wep);
-
+		//items.getItemAtSlot(this.Const.ItemSlot.Mainhand).m.Condition=48;
 
 		this.World.Assets.m.BusinessReputation = 200;
 		this.World.Assets.getStash().add(this.new("scripts/items/supplies/strange_meat_item"));
@@ -142,8 +142,7 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 		//this.World.Assets.getStash().add(this.new("scripts/items/misc/werewolf_pelt_item"));
 		//this.World.Assets.getStash().add(this.new("scripts/items/misc/werewolf_pelt_item"));
 		//this.World.Assets.getStash().add(this.new("scripts/items/accessory/night_vision_elixir_item"));
-		local moneyMod = this.Math.rand(2, 3);
-		this.World.Assets.m.Money = this.World.Assets.m.Money / moneyMod;
+		this.World.Assets.m.Money = this.World.Assets.m.Money / 2 - 350;
 		this.World.Assets.m.ArmorParts = 0;
 		this.World.Assets.m.Medicine = this.World.Assets.m.Medicine / 3;
 		this.World.Assets.m.Ammo = this.World.Assets.m.Ammo / 2;
@@ -226,7 +225,7 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 	{
 		for( local i = 5; i <= 8; i = ++i )
 		{
-			//this.World.Assets.m.TerrainTypeSpeedMult[i] *= 1.2;
+			this.World.Assets.m.TerrainTypeSpeedMult[i] *= 1.2;
 			//this.World.Assets.m.TerrainTypeVisionRadiusMult[i] *= 1.5;
 			//this.World.Assets.m.TerrainTypeVisibilityMult[i] *= 0.5;
 		}
