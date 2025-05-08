@@ -1,5 +1,10 @@
 this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character_background", {
-	m = {},
+	m = {
+		HeadArmorBoost = 66,
+		HeadDamageTaken = 0,
+		BodyArmorBoost = 66,
+		BodyDamageTaken = 0
+	},
 	function create()
 	{
 		this.character_background.create();
@@ -38,7 +43,40 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 		this.m.Level = this.Math.rand(1, 3);
 		this.m.IsCombatBackground = true;
 	}
+	function onCombatStarted()
+	{
+		this.m.HeadDamageTaken = 0;
+		this.m.BodyDamageTaken = 0;
+	}
 
+	function onCombatFinished()
+	{
+		this.m.HeadDamageTaken = 0;
+		this.m.BodyDamageTaken = 0;
+	}
+	function onBeforeDamageReceived( _attacker, _skill, _hitInfo, _properties )
+	{
+		if (_hitInfo.BodyPart == this.Const.BodyPart.Head)
+		{
+			if (this.m.HeadDamageTaken >= this.m.HeadArmorBoost)
+			{
+				return;
+			}
+
+			_properties.DamageArmorReduction += this.m.HeadArmorBoost - this.m.HeadDamageTaken;
+			this.m.HeadDamageTaken += _hitInfo.DamageArmor;
+		}
+		else if (_hitInfo.BodyPart == this.Const.BodyPart.Body)
+		{
+			if (this.m.BodyDamageTaken >= this.m.BodyArmorBoost)
+			{
+				return;
+			}
+
+			_properties.DamageArmorReduction += this.m.BodyArmorBoost - this.m.BodyDamageTaken;
+			this.m.BodyDamageTaken += _hitInfo.DamageArmor;
+		}
+	}
 	function getTooltip()
 	{
 		return [
@@ -222,7 +260,11 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 		this.character_background.onUpdate(_properties);
 		_properties.IsAffectedByNight = false;
 		_properties.MoraleCheckBravery[1] += 20;
-		_properties.ActionPoints += 1;
+		_properties.ActionPoints += 1;		
+		_properties.Armor[this.Const.BodyPart.Head] += this.Math.max(0.0, this.m.HeadArmorBoost - this.m.HeadDamageTaken);
+		_properties.Armor[this.Const.BodyPart.Body] += this.Math.max(0.0, this.m.BodyArmorBoost - this.m.BodyDamageTaken);
+		_properties.ArmorMax[this.Const.BodyPart.Head] += this.m.HeadArmorBoost;
+		_properties.ArmorMax[this.Const.BodyPart.Body] += this.m.BodyArmorBoost;
 	}
 
 });
