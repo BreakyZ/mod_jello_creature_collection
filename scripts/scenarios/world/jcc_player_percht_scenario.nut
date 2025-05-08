@@ -4,7 +4,7 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 	{
 		this.m.ID = "scenario.jcc_player_percht";
 		this.m.Name = "Pactsworn";
-		this.m.Description = "[p=c][img]gfx/ui/events/jcc_event_01.png[/img][/p][p]A series of bad contracts has left the company destitute and most men corpses. Having had enough of relying on the old gods\' favor, you instead enter a covenant with the dark things that stalk the forests, desperate to rebuild the company with their aid.\n\n[color=#bcad8c]Dire Straits:[/color] Start with two maimed mercenaries with damaged equipment, as well as a Percht.\n[color=#bcad8c]Stalkers:[/color] You move faster, see farther and are harder to spot while in forests.\n[color=#bcad8c]Pactsworn:[/color] Perchts will routinely appear to make demands or join your company... at a price.[/p]";
+		this.m.Description = "[p=c][img]gfx/ui/events/jcc_event_01.png[/img][/p][p]A series of bad contracts has left the company destitute and most men corpses. Having had enough of relying on the old gods\' favor, you instead enter a covenant with the dark things that stalk the forests, desperate to rebuild the company with their aid.\n\n[color=#bcad8c]Last Leg:[/color] Start with two maimed mercenaries and damaged equipment, as well as a Percht.\n[color=#bcad8c]Stalkers:[/color] You move faster, see farther and are harder to spot while in forests.\n[color=#bcad8c]Pactsworn:[/color] Perchts will routinely appear to make demands or join your company... at a price.[/p]";
 		this.m.Difficulty = 3;
 		this.m.Order = 2104;
 		this.m.IsFixedLook = true;
