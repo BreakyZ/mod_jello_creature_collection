@@ -118,7 +118,10 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 		bros[2].getSkills().add(this.new("scripts/skills/traits/loyal_trait"));
 		bros[2].getBackground().m.RawDescription = "%name% is both reward and punishment for your lifetime of toil, a towering enforcer to unleash upon your foes. He stands silent and ominous, watching you as a hound would a cat, but appears earnest in his loyalty to you.";
 		bros[2].setPlaceInFormation(5);
-		bros[2].m.Talents = [];
+		bros[2].m.Talents = [];		
+		bros[2].m.PerkPoints = 0;
+		bros[2].m.LevelUps = 0;
+		bros[2].m.Level = 1;
 		local talents = bros[2].getTalents();
 		talents.resize(this.Const.Attributes.COUNT, 0);
 		talents[this.Const.Attributes.MeleeSkill] = 2;
@@ -141,7 +144,7 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 		this.World.Assets.m.Money = this.Math.round(this.World.Assets.m.Money * 0.75);
 		this.World.Assets.m.ArmorParts = 0;
 		this.World.Assets.m.Medicine = this.World.Assets.m.Medicine / 3;
-		this.World.Assets.m.Ammo = this.World.Assets.m.ArmorParts / 2;
+		this.World.Assets.m.Ammo = this.World.Assets.m.Ammo / 2;
 	}
 
 	function onSpawnPlayer()
