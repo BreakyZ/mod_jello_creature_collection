@@ -1,4 +1,7 @@
 
+
+//::Const.CharacterBackgrounds.push("jcc_percht_background");
+
 ::Const.PerchtPerks.Perks <- [
 	[
 		{

@@ -145,10 +145,6 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 			Initiative = [
 				4,
 				2
-			],
-			ActionPoints =
-			[
-				1,1
 			]
 		};
 		return c;
@@ -226,6 +222,7 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 		this.character_background.onUpdate(_properties);
 		_properties.IsAffectedByNight = false;
 		_properties.MoraleCheckBravery[1] += 20;
+		_properties.ActionPoints += 1;
 	}
 
 });
