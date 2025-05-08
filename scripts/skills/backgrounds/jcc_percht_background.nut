@@ -5,11 +5,11 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 		this.character_background.create();
 		this.m.ID = "background.jcc_percht";
 		this.m.Name = "Percht";
-		this.m.Icon = "ui/backgrounds/background_22.png";
+		this.m.Icon = "ui/backgrounds/jcc_background_01.png";
 		this.m.BackgroundDescription = "Perchts are dark spirits given flesh, with strength and resolve greater than any man\'s.";
 		this.m.GoodEnding = "After fulfilling your end of the pact and retiring, %name% supposedly decided to stay in the mercenary life, having discovered a taste for mead and gold as opposed to flesh and blood. The %companyname% has since gained much infamy for the bloodthirsty, horned beast fighting in it\'s ranks. You hope he gets along well with the men.";
-		this.m.BadEnding = "You found an out from the pact you so foolishly struck, and promptly left the men to fend for themselves. %name% is said to have deserted the %companyname%, the company finding itself ambushed by beasts shortly thereafter. Last you heard, a group of beastslayers returned from a hunt with a head matching his description.";
-		this.m.HiringCost = 0;
+		this.m.BadEnding = "You found an out from the pact you had so foolishly struck, and promptly left the men to fend for themselves. %name% is said to have deserted the %companyname%, the company finding itself ambushed by beasts shortly thereafter. Last you heard, a group of beastslayers returned from a hunt with a head matching his description.";
+		this.m.HiringCost = 100;
 		this.m.DailyCost = 35;
 		this.m.Excluded = [
 			"trait.weasel",
@@ -30,11 +30,11 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 			"trait.superstitious",
 			"trait.asthmatic"
 		];
-		this.m.Faces = [];
-		this.m.Hairs = [];
-		this.m.HairColors = [];
-		this.m.Beards = [];
-		this.m.Bodies = [];
+		this.m.Faces = null;
+		this.m.Hairs = null;
+		this.m.HairColors = null;
+		this.m.Beards = null;
+		this.m.Bodies = ["bust_percht_body_0"];
 		this.m.Level = this.Math.rand(1, 3);
 		this.m.IsCombatBackground = true;
 	}
@@ -131,8 +131,8 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 				10
 			],
 			RangedSkill = [
-				4,
-				3
+				9,
+				7
 			],
 			MeleeDefense = [
 				6,
@@ -153,6 +153,25 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 	function onAdded()
 	{
 		this.character_background.onAdded();
+
+		local items = this.getContainer().getActor().getItems();
+			//ineloquent solution for forcing the item assigned to any of these slots via hotkey to be unassigned and returned to ground or stash. We squish this code later.
+			//Note that 'item.unequip();' does not work.
+
+			if (items.getItemAtSlot(this.Const.ItemSlot.Head))
+			{
+				local item = items.getItemAtSlot(this.Const.ItemSlot.Head);
+				item.drop();
+			}
+
+			if (items.getItemAtSlot(this.Const.ItemSlot.Body))
+			{
+				local item = items.getItemAtSlot(this.Const.ItemSlot.Body);
+				item.drop();
+			}
+			
+			items.getData()[this.Const.ItemSlot.Head][0] = -1;
+			items.getData()[this.Const.ItemSlot.Body][0] = -1;
 
 		/*if (this.Math.rand(0, 3) == 3)
 		{

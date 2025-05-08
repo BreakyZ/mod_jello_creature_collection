@@ -185,7 +185,8 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.body.varySaturation(0.25);
 		this.m.body.varyColor(0.06, 0.06, 0.06);
 
-		this.addSprite("helmet");
+		this.addSprite("helmet");		
+		this.addSprite("helmet_damage");
 
 		this.addDefaultStatusSprites();
 		this.getSprite("status_rooted").Scale = 0.45;

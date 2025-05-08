@@ -272,7 +272,8 @@ this.jcc_percht <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.ActionPointCosts = this.Const.DefaultMovementAPCost;
 		this.m.FatigueCosts = this.Const.DefaultMovementFatigueCost;
 		//this.m.Items.getAppearance().Body = "bust_orc_01_body";
-		this.addSprite("socket").setBrush("bust_base_beasts");
+		this.addSprite("socket").setBrush("bust_base_beasts");		
+		this.addSprite("quiver");
 		local body_variant = this.Math.rand(1, 2);
 		local head_variant = this.Math.rand(1, 3);
 		local body = this.addSprite("body");

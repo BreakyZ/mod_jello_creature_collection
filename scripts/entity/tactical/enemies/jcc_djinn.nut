@@ -213,7 +213,8 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 		local injury = this.addSprite("injury");
 		injury.Visible = false;
 		injury.setBrush("bust_jcc_djinn_head_0"+head_variant+"_injury");
-		this.addSprite("helmet");
+		this.addSprite("helmet");		
+		this.addSprite("helmet_damage");
 		this.addDefaultStatusSprites();
 		this.getSprite("status_rooted").Scale = 0.55;
 

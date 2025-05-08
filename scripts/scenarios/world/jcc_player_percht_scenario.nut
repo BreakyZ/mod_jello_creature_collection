@@ -25,7 +25,7 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 			local bro;
 			bro = roster.create("scripts/entity/tactical/player");
 			bro.m.HireTime = this.Time.getVirtualTimeF();
-			bro.worsenMood(1.5, "Most of the company was lost in a rout");
+			bro.worsenMood(1.0, "Most of the company was lost in a rout");
 			bro.worsenMood(1.0, "Was forced into a dark pact");
 
 			while (names.find(bro.getNameOnly()) != null)
@@ -37,7 +37,7 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 		}
 
 		local percht;
-		percht = roster.create("scripts/entity/tactical/player");
+		percht = roster.create("scripts/entity/tactical/player/jcc_player_percht");
 		percht.m.HireTime = this.Time.getVirtualTimeF();
 		while (names.find(percht.getNameOnly()) != null)
 		{
@@ -85,7 +85,7 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 		bros[1].setPlaceInFormation(4);
 		bros[1].addInjury(this.Const.Injury.Brawl);
 		bros[1].addHeavyInjury();
-		bros[1].getBaseProperties().Bravery += 15;
+		bros[1].getBaseProperties().Bravery += 25;
 		bros[1].m.Talents = [];
 		bros[1].m.PerkPoints = 1;
 		bros[1].m.LevelUps = 1;
@@ -112,10 +112,11 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 
 
 		bros[2].setStartValuesEx([
+			//"raider_background"
 			"jcc_percht_background"
 		]);		
 		bros[2].getSkills().add(this.new("scripts/skills/traits/loyal_trait"));
-		bros[2].getBackground().m.RawDescription = "%name% is both your reward and punishment, a towering enforcer to send at your foes... and to ensure you do not forget your obligations. He stands silent and ominous, watching you as a hound would a cat, but appears earnest in his loyalty to you.";
+		bros[2].getBackground().m.RawDescription = "%name% is both reward and punishment for your lifetime of toil, a towering enforcer to unleash upon your foes. He stands silent and ominous, watching you as a hound would a cat, but appears earnest in his loyalty to you.";
 		bros[2].setPlaceInFormation(5);
 		bros[2].m.Talents = [];
 		local talents = bros[2].getTalents();
@@ -204,14 +205,14 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 		while (1);
 
 		this.World.State.m.Player = this.World.spawnEntity("scripts/entity/world/player_party", spawnTile.Coords.X, spawnTile.Coords.Y);
-		this.World.Assets.updateLook(10);
+		//this.World.Assets.updateLook(10);
 		this.World.getCamera().setPos(this.World.State.m.Player.getPos());
 		local f = nearestVillage.getFactionOfType(this.Const.FactionType.NobleHouse);
-		//f.addPlayerRelation(-20.0, "Heard rumors of you poaching in their woods");
+		f.addPlayerRelation(-20.0, "Heard of your recent dealings");
 		this.Time.scheduleEvent(this.TimeUnit.Real, 1000, function ( _tag )
 		{
-			this.Music.setTrackList(this.Const.Music.IntroTracks, this.Const.Music.CrossFadeTime);
-			this.World.Events.fire("event.rangers_scenario_intro");
+			this.Music.setTrackList(this.Const.Music.BeastsTracks, this.Const.Music.CrossFadeTime);
+			//this.World.Events.fire("event.jcc_player_percht_intro");
 		}, null);
 	}
 
@@ -219,7 +220,7 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 	{
 		for( local i = 5; i <= 8; i = ++i )
 		{
-			this.World.Assets.m.TerrainTypeSpeedMult[i] *= 1.2;
+			//this.World.Assets.m.TerrainTypeSpeedMult[i] *= 1.2;
 			//this.World.Assets.m.TerrainTypeVisionRadiusMult[i] *= 1.5;
 			//this.World.Assets.m.TerrainTypeVisibilityMult[i] *= 0.5;
 		}
