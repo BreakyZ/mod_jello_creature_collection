@@ -32,6 +32,7 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.DecapitateBloodAmount = 2.0;
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
 		this.actor.create();
+		//this.m.IsUsingCustomRendering = true;
 		this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived] = [
 			"sounds/enemies/lindwurm_hurt_01.wav",
 			"sounds/enemies/lindwurm_hurt_02.wav",
@@ -115,6 +116,28 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.IsFlipping = !this.m.IsFlipping;
 		}
 	}
+
+	function setSize( _s )
+	{
+		this.m.Size = _s;
+		this.m.DecapitateBloodAmount = _s * 0.75;
+		this.getSprite("body").Scale = _s;
+		this.getSprite("head").Scale = _s;
+		this.getSprite("injury").Scale = _s;
+		this.getSprite("status_rooted").Scale = _s * 0.65;
+		this.getSprite("status_rooted_back").Scale = _s * 0.65;
+		this.getSprite("legs_back").Scale = _s;
+		this.getSprite("legs_front").Scale = _s;
+		local offset = this.createVec(0, -10.0 * (1.0 - _s));
+		this.setSpriteOffset("body", offset);
+		this.setSpriteOffset("head", offset);
+		this.setSpriteOffset("injury", offset);
+		this.setSpriteOffset("status_rooted", this.createVec(7, 10 - 10.0 * (1.0 - _s)));
+		this.setSpriteOffset("status_rooted_back", this.createVec(7, 10 - 10.0 * (1.0 - _s)));
+		this.setSpriteOffset("legs_back", offset);
+		this.setSpriteOffset("legs_front", offset);
+	}
+
 	function onDeath( _killer, _skill, _tile, _fatalityType )
 	{
 		local flip = this.Math.rand(0, 100) < 50;
@@ -128,35 +151,35 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 			decal = _tile.spawnDetail("bust_jcc_giant_scorp_body_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = body.Color;
 			decal.Saturation = body.Saturation;
-			decal.Scale = 0.95;
+			decal.Scale = 0.95 * this.m.Size;
 
 			if (_fatalityType != this.Const.FatalityType.Decapitated)
 			{
 				decal = _tile.spawnDetail("bust_jcc_giant_scorp_head_0"+this.m.headVariant+"_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 				decal.Color = head.Color;
 				decal.Saturation = head.Saturation;
-				decal.Scale = 0.95;
+				decal.Scale = 0.95* this.m.Size;
 			}
 			else if (_fatalityType == this.Const.FatalityType.Decapitated)
 			{
 				local layers = [
 					head.getBrush().Name + "_dead"
 				];
-				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(0, 0), 0.0, "bust_lindwurm_head_01_bloodpool");
+				local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(0, 0), 0.0, "bust_unhold_head_01_bloodpool");
 				decap[0].Color = head.Color;
 				decap[0].Saturation = head.Saturation;
-				decap[0].Scale = 0.95;
+				decap[0].Scale = 0.95* this.m.Size;
 			}
 
 			if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Arrow)
 			{
-				decal = _tile.spawnDetail("bust_lindwurm_body_01_dead_arrows", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.95;
+				decal = _tile.spawnDetail("bust_unhold_body_01_dead_arrows", this.Const.Tactical.DetailFlag.Corpse, flip);
+				decal.Scale = 0.95 * this.m.Size;
 			}
 			else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Javelin)
 			{
-				decal = _tile.spawnDetail("bust_lindwurm_body_01_dead_javelin", this.Const.Tactical.DetailFlag.Corpse, flip);
-				decal.Scale = 0.95;
+				decal = _tile.spawnDetail("bust_unhold_body_01_dead_javelin", this.Const.Tactical.DetailFlag.Corpse, flip);
+				decal.Scale = 0.95 * this.m.Size;
 			}
 
 			this.spawnTerrainDropdownEffect(_tile);
@@ -366,7 +389,7 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		this.setSpriteOffset("status_stunned", this.createVec(-5, 30));
 		this.setSpriteOffset("arrow", this.createVec(-5, 30));
 		this.setAlwaysApplySpriteOffset(true);
-		this.setSpriteOffset("shield_icon", ::createVec(-165, 0));		
+		this.setSpriteOffset("shield_icon", ::createVec(-135, 0));		
 		//this.getSprite("shield_icon").Rotation = -13.0;
 
 		b.IsSpecializedInCleavers = true;
@@ -422,6 +445,9 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 				this.m.Tail.getSprite("body").Saturation = body.Saturation;
 			}
 		}
+
+		this.setSize(0.85);
+		this.getSprite("shield_icon").Scale = 0.8;
 	}
 
 	function onMovementFinish( _tile )

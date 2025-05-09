@@ -576,6 +576,8 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 		local body = this.addSprite("body");
 		body.setBrush("bust_giant_scorp_tail_01");
 
+		this.getSprite("body").Scale=0.85;
+
 		if (this.Math.rand(0, 100) < 90)
 		{
 			body.varySaturation(0.2);
@@ -592,6 +594,8 @@ this.jcc_giant_scorpion_tail <- this.inherit("scripts/entity/tactical/actor", {
 		local injury = this.addSprite("injury");
 		injury.Visible = false;
 		injury.setBrush("bust_giant_scorp_tail_injury");
+
+		this.getSprite("injury").Scale=0.85;
 		local body_blood = this.addSprite("body_blood");
 		this.addDefaultStatusSprites();
 		this.getSprite("status_rooted").Scale = 0.54;

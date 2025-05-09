@@ -15,6 +15,7 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 	{
 		this.m.Type = this.Const.EntityType.JccCytoplasmSoldier;
 		this.m.BloodType = this.Const.BloodType.Red;
+		//this.m.BloodColor = this.createColor("#e08341");
 		this.m.XP = this.Const.Tactical.Actor.JccCytoplasmSoldier.XP;
 		this.m.BloodSplatterOffset = this.createVec(0, 0);
 		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
