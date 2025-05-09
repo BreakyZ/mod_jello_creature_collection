@@ -35,10 +35,10 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 			"trait.superstitious",
 			"trait.asthmatic"
 		];
-		this.m.Faces = null;
-		this.m.Hairs = null;
-		this.m.HairColors = null;
-		this.m.Beards = null;
+		this.m.Faces = [];
+		this.m.Hairs = [];
+		this.m.HairColors = [];
+		this.m.Beards = [];
 		this.m.Bodies = ["bust_percht_body_0"];
 		this.m.Level = this.Math.rand(1, 3);
 		this.m.IsCombatBackground = true;

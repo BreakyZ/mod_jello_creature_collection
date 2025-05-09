@@ -136,8 +136,8 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Offhand));
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Ammo));
 		local wep = this.new("scripts/items/weapons/percht_flail")
+		wep.setCondition(48);
 		items.equip(wep);
-		//items.getItemAtSlot(this.Const.ItemSlot.Mainhand).m.Condition=48;
 
 		this.World.Assets.m.BusinessReputation = 200;
 		this.World.Assets.getStash().add(this.new("scripts/items/supplies/strange_meat_item"));
