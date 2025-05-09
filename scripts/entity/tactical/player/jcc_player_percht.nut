@@ -1052,13 +1052,13 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 				decal.Color = sprite_head.Color;
 				decal.Saturation = sprite_head.Saturation;
 
-				if (tattoo_body.HasBrush)
+				/*if (tattoo_body.HasBrush)
 				{
 					decal = stub.addSprite("tattoo_body");
 					decal.setBrush(tattoo_body.getBrush().Name + "_dead");
 					decal.Color = tattoo_body.Color;
 					decal.Saturation = tattoo_body.Saturation;
-				}
+				}*/
 
 				if (appearance.CorpseArmor != "")
 				{
@@ -1465,7 +1465,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 		bandage1.Visible = false;
 		bandage1.setBrush("bandage_clean_01");
 		local body_blood = this.addSprite("body_blood");
-		body_blood.setBrush("bust_percht_body_0" + this.m.Body + "_injured");
+		body_blood.setBrush("bust_body_bloodied_02");
 		body_blood.Visible = false;
 		this.addSprite("permanent_injury_3");
 		this.addSprite("permanent_injury_2");
