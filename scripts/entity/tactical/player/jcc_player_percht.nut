@@ -1438,6 +1438,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 		bandage3.Visible = false;
 		bandage3.setBrush("bandage_clean_03");
 		this.addSprite("shaft");
+		this.addSprite("permanent_injury_1");
 		local head = this.addSprite("head");
 		head.setBrush("bust_percht_head_0" + this.m.Head);	
 		head.Saturation = body.Saturation;
@@ -1453,12 +1454,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 		local injury_head = this.addSprite("injury");
 		injury_head.Visible = false;
 		injury_head.setBrush("bust_percht_head_0" + this.m.Head + "_injured");
-		this.addSprite("permanent_injury_3");
-		this.addSprite("permanent_injury_2");
-		//local beard = this.addSprite("beard");
-		//local hair = this.addSprite("hair");
-		this.addSprite("permanent_injury_4");
-		this.addSprite("permanent_injury_1");
+
 		//this.addSprite("helmet");
 		//this.addSprite("helmet_damage");
 		this.addSprite("accessory");
@@ -1471,6 +1467,11 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 		local body_blood = this.addSprite("body_blood");
 		body_blood.setBrush("bust_percht_body_0" + this.m.Body + "_injured");
 		body_blood.Visible = false;
+		this.addSprite("permanent_injury_3");
+		this.addSprite("permanent_injury_2");
+		//local beard = this.addSprite("beard");
+		//local hair = this.addSprite("hair");
+		this.addSprite("permanent_injury_4");
 		local body_dirt = this.addSprite("dirt");
 		body_dirt.setBrush("");
 		body_dirt.Visible = false;
@@ -1508,6 +1509,10 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.Items.setUnlockedBagSlots(2);
 		this.m.Skills.add(this.new("scripts/skills/special/bag_fatigue"));
 		this.setDiscovered(true);
+		this.setSpriteOffset("permanent_injury_1", this.createVec(9, -2));
+		this.setSpriteOffset("permanent_injury_3", this.createVec(9, -5));
+		this.setSpriteOffset("permanent_injury_2", this.createVec(9, -2));
+		this.setSpriteOffset("permanent_injury_4", this.createVec(9, -2));
 	}
 
 	function onFactionChanged()
