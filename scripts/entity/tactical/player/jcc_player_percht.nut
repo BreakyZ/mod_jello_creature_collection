@@ -219,7 +219,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/player", {
 
 					if (_fatalityType == this.Const.FatalityType.Smashed)
 					{
-						stub.addSprite("smashed").setBrush("bust_head_smashed_01");
+						//stub.addSprite("smashed").setBrush("bust_head_smashed_01");
 					}
 					else if (appearance.HelmetCorpse != "")
 					{
