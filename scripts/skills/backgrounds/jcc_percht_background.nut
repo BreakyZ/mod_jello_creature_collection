@@ -107,6 +107,12 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 				type = "text",
 				icon = "ui/icons/vision.png",
 				text = "Unaffected by nighttime"
+			},			
+			{
+				id = 17,
+				type = "text",
+				icon = "ui/icons/fatigue.png",
+				text = "Recovers an additional 6 fatigue per turn"
 			}
 		];
 	}
@@ -265,6 +271,7 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 		_properties.Armor[this.Const.BodyPart.Body] += this.Math.max(0.0, this.m.BodyArmorBoost - this.m.BodyDamageTaken);
 		_properties.ArmorMax[this.Const.BodyPart.Head] += this.m.HeadArmorBoost;
 		_properties.ArmorMax[this.Const.BodyPart.Body] += this.m.BodyArmorBoost;
+		_properties.FatigueRecoveryRate += 6;
 	}
 
 });

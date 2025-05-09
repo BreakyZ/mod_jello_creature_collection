@@ -718,13 +718,13 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (p > 0.67)
 		{
-			this.setDirty(this.m.IsDirty || injury.Visible || injury_body.Visible);
+			//this.setDirty(this.m.IsDirty || injury.Visible || injury_body.Visible);
 			injury.Visible = false;
 			injury_body.Visible = false;
 		}
 		else
 		{
-			this.setDirty(this.m.IsDirty || !injury.Visible || !injury_body.Visible);
+			//this.setDirty(this.m.IsDirty || !injury.Visible || !injury_body.Visible);
 			injury.Visible = true;
 			injury_body.Visible = true;
 
@@ -757,7 +757,6 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.BloodType = this.Const.BloodType.Red;
 
 		//this.human.create();
-		//this.getFlags().add("human");
 		this.actor.create();
 		this.m.Sound[this.Const.Sound.ActorEvent.Death] = [
 			"sounds/enemies/percht_death01.wav",
@@ -810,6 +809,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 4;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 2;
 
+		this.getFlags().add("human");
 		this.getFlags().add("jccPlayerPercht");
 		this.getFlags().set("PotionLastUsed", 0.0);
 		this.getFlags().set("PotionsUsed", 0);
@@ -1551,8 +1551,14 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 		this.getSprite("bandage_2").setHorizontalFlipping(flip);
 		this.getSprite("bandage_3").setHorizontalFlipping(flip);
 
-        if(flip){
-        this.setSpriteOffset("arms_icon", ::createVec(this.m.spriteOffset*-1, 0)); }
+        //if(flip){
+        //this.setSpriteOffset("arms_icon", ::createVec(this.m.spriteOffset*-1, 0)); }
+        this.setSpriteOffset("arms_icon", ::createVec(this.m.spriteOffset, 0));		
+        this.setSpriteOffset("permanent_injury_1", this.createVec(9, -2));
+		this.setSpriteOffset("permanent_injury_3", this.createVec(9, -5));
+		this.setSpriteOffset("permanent_injury_2", this.createVec(9, -2));
+		this.setSpriteOffset("permanent_injury_4", this.createVec(9, -2));		
+		this.setAlwaysApplySpriteOffset(true);
     }
 
 	function onActorKilled( _actor, _tile, _skill )
@@ -2521,7 +2527,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 		}
 
 		this.getSkills().update();
-		this.setDirty(true);
+		//this.setDirty(true);
 
 		if (b.MeleeSkill >= 90)
 		{
