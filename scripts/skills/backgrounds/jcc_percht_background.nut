@@ -140,7 +140,7 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 	function updateAppearance()
 	{
 		local actor = this.getContainer().getActor();
-		local tattoo_body = actor.getSprite("tattoo_body");
+		//local tattoo_body = actor.getSprite("tattoo_body");
 
 		/*if (tattoo_body.HasBrush)
 		{
@@ -153,12 +153,12 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 	{
 		local c = {
 			Hitpoints = [
-				220,
-				250
+				250,
+				237
 			],
 			Bravery = [
-				12,
-				10
+				44,
+				40
 			],
 			Stamina = [
 				15,

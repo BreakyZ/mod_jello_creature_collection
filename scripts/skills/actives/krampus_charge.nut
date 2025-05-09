@@ -309,7 +309,7 @@ this.krampus_charge <- this.inherit("scripts/skills/skill", {
 
 			if (_tag.Skill.m.SoundOnHit.len() != 0)
 			{
-				this.Sound.play(_tag.Skill.m.SoundOnHit[this.Math.rand(0, _tag.Skill.m.SoundOnHit.len() - 1)], this.Const.Sound.Volume.Skill, victim.getPos());
+				this.Sound.play(_tag.Skill.m.SoundOnHit[this.Math.rand(0, _tag.Skill.m.SoundOnHit.len() - 1)], this.Const.Sound.Volume.Skill, myTile);
 			}
 
 			if (!victim.isHiddenToPlayer())

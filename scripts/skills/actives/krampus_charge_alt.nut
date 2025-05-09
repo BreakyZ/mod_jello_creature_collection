@@ -62,7 +62,13 @@ this.krampus_charge_alt <- this.inherit("scripts/skills/skill", {
 				id = 7,
 				type = "text",
 				icon = "ui/icons/special.png",
-				text = "Has a [color=" + this.Const.UI.Color.PositiveValue + "]" + 100 + "%[/color] chance to stun on a hit"
+				text = "Has a [color=" + this.Const.UI.Color.PositiveValue + "]" + 100 + "%[/color] chance to stun"
+			},			
+			{
+				id = 8,
+				type = "text",
+				icon = "ui/icons/special.png",
+				text = "Shielded enemies may resist the stun"
 			}
 		];
 	}

@@ -1423,7 +1423,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 		body.setBrush("bust_percht_body_0" + this.m.Body);	
 		body.varySaturation(0.05);
 		body.varyColor(0.07, 0.07, 0.07);
-		this.addSprite("tattoo_body");
+		//this.addSprite("tattoo_body");
 		this.addSprite("scar_body");
 		local injury_body = this.addSprite("injury_body");
 		injury_body.Visible = false;
@@ -1517,7 +1517,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 		this.getSprite("background").setHorizontalFlipping(flip);
 		this.getSprite("quiver").setHorizontalFlipping(flip);
 		this.getSprite("body").setHorizontalFlipping(!flip);
-		this.getSprite("tattoo_body").setHorizontalFlipping(flip);
+		//this.getSprite("tattoo_body").setHorizontalFlipping(flip);
 		this.getSprite("injury_body").setHorizontalFlipping(!flip);
 		//this.getSprite("armor").setHorizontalFlipping(flip);
 		this.getSprite("surcoat").setHorizontalFlipping(flip);
@@ -1736,7 +1736,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 			return true;
 		}
 
-		local perk = this.Const.PerchtPerks.findById(_id);
+		local perk = this.Const.Perks.findById(_id);
 
 		if (perk == null)
 		{
@@ -1772,7 +1772,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 			return false;
 		}
 
-		local perk = this.Const.PerchtPerks.findById(_id);
+		local perk = this.Const.Perks.findById(_id);
 
 		if (this.m.PerkPointsSpent >= perk.Unlocks)
 		{
@@ -1796,7 +1796,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 			numPerks = numPerks + this.m.PerksUnlocked[_category][j];
 		}
 
-		if (numPerks < this.Const.PerchtPerks.UnlockRequirementsPerTier[_tier])
+		if (numPerks < this.Const.Perks.UnlockRequirementsPerTier[_tier])
 		{
 			return false;
 		}

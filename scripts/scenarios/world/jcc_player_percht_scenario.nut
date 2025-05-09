@@ -123,7 +123,7 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 		bros[2].m.LevelUps = 0;
 		bros[2].m.Level = 1;		
 		bros[2].getSkills().add(this.new("scripts/skills/actives/krampus_charge_alt"));
-
+		bros[2].getSkills().removeByID("trait.disloyal");
 		local talents = bros[2].getTalents();
 		talents.resize(this.Const.Attributes.COUNT, 0);
 		talents[this.Const.Attributes.MeleeSkill] = 2;
