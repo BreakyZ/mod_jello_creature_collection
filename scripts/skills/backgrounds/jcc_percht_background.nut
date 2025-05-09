@@ -171,8 +171,8 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 				10
 			],
 			MeleeSkill = [
-				11,
-				10
+				9,
+				7
 			],
 			RangedSkill = [
 				9,

@@ -425,7 +425,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/player", {
 		this.player.onInit();
 		this.m.Body = this.Math.rand(1,2);
 		this.m.Head = this.Math.rand(1,3);
-		this.m.ActionPoints = 10;
+		//this.m.ActionPoints = 10;
 		this.m.ActionPointCosts = this.Const.DefaultMovementAPCost;
 		this.m.FatigueCosts = this.Const.DefaultMovementFatigueCost;
 		local app = this.getItems().getAppearance();
