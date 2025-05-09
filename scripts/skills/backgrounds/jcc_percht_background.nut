@@ -261,6 +261,23 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 		}
 	}
 
+	function onNewDay()
+	{
+		local actor = this.getContainer().getActor();
+		local healthMissing = actor.getHitpointsMax() - actor.getHitpoints();
+		local healthAdded = this.Math.min(healthMissing, this.Math.floor(actor.getHitpointsMax() * 0.02));
+
+		if (healthAdded <= 0)
+		{
+			return;
+		}
+
+		actor.setHitpoints(actor.getHitpoints() + healthAdded);
+		if(actor.getHitpoints()>actor.getHitpointsMax()){
+			actor.setHitpoints(actor.getHitpointsMax());
+		}
+	}
+
 	function onUpdate( _properties )
 	{
 		this.character_background.onUpdate(_properties);
