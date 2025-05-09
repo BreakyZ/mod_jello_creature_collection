@@ -414,7 +414,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/player", {
 			return;
 		}
 
-		if (!this.isGuest() && _victim.getFaction() == this.getFaction() && ("getBackground" in _victim) && _victim.getBackground().getID() == "background.jcc_percht" && this.getBackground().getID() != "background.jcc_percht")
+		if (!this.isGuest() && _victim.getFaction() == this.getFaction() && ("getBackground" in _victim) && _victim.getBackground().getID() != "background.jcc_percht")
 		{
 			return;
 		}
