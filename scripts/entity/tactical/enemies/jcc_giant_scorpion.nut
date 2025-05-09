@@ -353,6 +353,7 @@ this.jcc_giant_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.CurrentProperties = clone b;
 		this.m.ActionPointCosts = this.Const.DefaultMovementAPCost;
 		this.m.FatigueCosts = this.Const.DefaultMovementFatigueCost;
+		//this.addSprite("background");
 		this.addSprite("socket").setBrush("bust_base_beasts");
 		local legs_back = this.addSprite("legs_back");
 		legs_back.setBrush("bust_giant_scorp_legs_back");

@@ -808,6 +808,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 1.7;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 4;
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 2;
+		this.m.ConfidentMoraleBrush = "icon_confident_orcs";
 
 		this.getFlags().add("human");
 		this.getFlags().add("jccPlayerPercht");
@@ -845,6 +846,8 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 		{
 			this.updateAchievement("HumanWave", 1, 1);
 		}
+
+
 	}
 
 	function onCombatStart()
@@ -873,6 +876,13 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 	function onCombatFinished()
 	{
 		this.actor.resetRenderEffects();
+		this.setAlwaysApplySpriteOffset(true);
+		this.m.spriteOffset = 7;        
+		this.setSpriteOffset("permanent_injury_1", this.createVec(9, -2));
+		this.setSpriteOffset("permanent_injury_3", this.createVec(9, -5));
+		this.setSpriteOffset("permanent_injury_2", this.createVec(9, -2));
+		this.setSpriteOffset("permanent_injury_4", this.createVec(9, -2));		
+		this.setSpriteOffset("arms_icon", ::createVec(this.m.spriteOffset, 0))
 		this.m.IsAlive = true;
 		this.m.IsDying = false;
 		this.m.IsAbleToDie = true;
@@ -1129,22 +1139,6 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 						}
 					}
 
-					if (!appearance.HideBeard && !appearance.HideCorpseHead && sprite_beard.HasBrush)
-					{
-						decal = stub.addSprite("beard");
-						decal.setBrush(sprite_beard.getBrush().Name + "_dead");
-						decal.Color = sprite_beard.Color;
-						decal.Saturation = sprite_beard.Saturation;
-					}
-
-					if (!appearance.HideHair && !appearance.HideCorpseHead && sprite_hair.HasBrush)
-					{
-						decal = stub.addSprite("hair");
-						decal.setBrush(sprite_hair.getBrush().Name + "_dead");
-						decal.Color = sprite_hair.Color;
-						decal.Saturation = sprite_hair.Saturation;
-					}
-
 					if (_fatalityType == this.Const.FatalityType.Smashed)
 					{
 						stub.addSprite("smashed").setBrush("bust_head_smashed_01");
@@ -1153,14 +1147,6 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 					{
 						decal = stub.addSprite("helmet");
 						decal.setBrush(this.getItems().getAppearance().HelmetCorpse);
-					}
-
-					if (!appearance.HideBeard && !appearance.HideCorpseHead && sprite_beard_top.HasBrush)
-					{
-						decal = stub.addSprite("beard_top");
-						decal.setBrush(sprite_beard_top.getBrush().Name + "_dead");
-						decal.Color = sprite_beard.Color;
-						decal.Saturation = sprite_beard.Saturation;
 					}
 				}
 
@@ -1414,6 +1400,8 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.FatigueCosts = this.Const.DefaultMovementFatigueCost;
 		local app = this.getItems().getAppearance();
 		app.Quiver = this.Const.Items.Default.PlayerQuiver;
+		//app.Body = "bust_orc_01_body";
+		//app.Corpse = "bust_orc_01_body_dead";
 		//app.Body = this.m.Bodies[this.m.Body];
 		//app.Corpse = this.m.Bodies[this.m.Body] + "_dead";
 		this.addSprite("background");
@@ -2641,6 +2629,7 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 		_out.writeU8(this.m.Gender);
 		_out.writeU8(this.m.VoiceSet);
 		_out.writeBool(false);
+
 		_out.writeU8(this.m.Level);
 		_out.writeU8(this.m.PerkPoints);
 		_out.writeU8(this.m.PerkPointsSpent);
@@ -2702,56 +2691,56 @@ this.jcc_player_percht <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.Ethnicity = _in.readU8();
 			this.m.Gender = _in.readU8();
 			this.m.VoiceSet = _in.readU8();
-this.m.Sound[this.Const.Sound.ActorEvent.Death] = [
-			"sounds/enemies/percht_death01.wav",
-			"sounds/enemies/percht_death02.wav",
-			"sounds/enemies/percht_death03.wav",
-			"sounds/enemies/percht_death04.wav"
-		];
-		this.m.Sound[this.Const.Sound.ActorEvent.Flee] = [
-			"sounds/enemies/percht_flee01.wav",
-			"sounds/enemies/percht_flee02.wav"
-		];
-		this.m.Sound[this.Const.Sound.ActorEvent.NoDamageReceived] = [
-			"sounds/enemies/percht_hurt01.wav",
-			"sounds/enemies/percht_hurt02.wav",
-			"sounds/enemies/percht_hurt03.wav",
-			"sounds/enemies/percht_hurt04.wav",
-			"sounds/enemies/percht_hurt05.wav",
-		];
-		this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived] = [
-			"sounds/enemies/percht_hurt01.wav",
-			"sounds/enemies/percht_hurt02.wav",
-			"sounds/enemies/percht_hurt03.wav",
-			"sounds/enemies/percht_hurt04.wav",
-			"sounds/enemies/percht_hurt05.wav",
-		];
-		this.m.Sound[this.Const.Sound.ActorEvent.Idle] = [
-			"sounds/enemies/percht_idle01.wav",
-			"sounds/enemies/percht_idle02.wav",
-			"sounds/enemies/percht_idle03.wav",
-			"sounds/enemies/percht_idle04.wav",
-			"sounds/enemies/percht_idle05.wav",
-			"sounds/enemies/percht_idle06.wav",
-			"sounds/enemies/percht_idle07.wav",
-			"sounds/enemies/percht_idle08.wav",
-			"sounds/enemies/percht_idle09.wav",
-			"sounds/enemies/percht_idle10.wav",
-			"sounds/enemies/percht_idle11.wav",
-			"sounds/enemies/percht_idle12.wav"
-		];
-		this.m.Sound[this.Const.Sound.ActorEvent.Move] = [
-			"sounds/enemies/percht_move01.wav",
-			"sounds/enemies/percht_move02.wav",
-			"sounds/enemies/percht_move03.wav",
-			"sounds/enemies/percht_move04.wav"
-		];
-		this.m.Sound[this.Const.Sound.ActorEvent.Fatigue]=this.m.Sound[this.Const.Sound.ActorEvent.Move];
-		this.m.SoundPitch = 1.0;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 1.7;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 1.7;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 4;
-		this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 2;
+			this.m.Sound[this.Const.Sound.ActorEvent.Death] = [
+				"sounds/enemies/percht_death01.wav",
+				"sounds/enemies/percht_death02.wav",
+				"sounds/enemies/percht_death03.wav",
+				"sounds/enemies/percht_death04.wav"
+			];
+			this.m.Sound[this.Const.Sound.ActorEvent.Flee] = [
+				"sounds/enemies/percht_flee01.wav",
+				"sounds/enemies/percht_flee02.wav"
+			];
+			this.m.Sound[this.Const.Sound.ActorEvent.NoDamageReceived] = [
+				"sounds/enemies/percht_hurt01.wav",
+				"sounds/enemies/percht_hurt02.wav",
+				"sounds/enemies/percht_hurt03.wav",
+				"sounds/enemies/percht_hurt04.wav",
+				"sounds/enemies/percht_hurt05.wav",
+			];
+			this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived] = [
+				"sounds/enemies/percht_hurt01.wav",
+				"sounds/enemies/percht_hurt02.wav",
+				"sounds/enemies/percht_hurt03.wav",
+				"sounds/enemies/percht_hurt04.wav",
+				"sounds/enemies/percht_hurt05.wav",
+			];
+			this.m.Sound[this.Const.Sound.ActorEvent.Idle] = [
+				"sounds/enemies/percht_idle01.wav",
+				"sounds/enemies/percht_idle02.wav",
+				"sounds/enemies/percht_idle03.wav",
+				"sounds/enemies/percht_idle04.wav",
+				"sounds/enemies/percht_idle05.wav",
+				"sounds/enemies/percht_idle06.wav",
+				"sounds/enemies/percht_idle07.wav",
+				"sounds/enemies/percht_idle08.wav",
+				"sounds/enemies/percht_idle09.wav",
+				"sounds/enemies/percht_idle10.wav",
+				"sounds/enemies/percht_idle11.wav",
+				"sounds/enemies/percht_idle12.wav"
+			];
+			this.m.Sound[this.Const.Sound.ActorEvent.Move] = [
+				"sounds/enemies/percht_move01.wav",
+				"sounds/enemies/percht_move02.wav",
+				"sounds/enemies/percht_move03.wav",
+				"sounds/enemies/percht_move04.wav"
+			];
+			this.m.Sound[this.Const.Sound.ActorEvent.Fatigue]=this.m.Sound[this.Const.Sound.ActorEvent.Move];
+			this.m.SoundPitch = 1.0;
+			this.m.SoundVolume[this.Const.Sound.ActorEvent.Death] = 1.7;
+			this.m.SoundVolume[this.Const.Sound.ActorEvent.DamageReceived] = 1.7;
+			this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 4;
+			this.m.SoundVolume[this.Const.Sound.ActorEvent.Move] = 2;
 			_in.readBool();
 		}
 		else

@@ -35,10 +35,10 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 			"trait.superstitious",
 			"trait.asthmatic"
 		];
-		this.m.Faces = [];
-		this.m.Hairs = [];
-		this.m.HairColors = [];
-		this.m.Beards = [];
+		//this.m.Faces = null;
+		//this.m.Hairs = null;
+		//this.m.HairColors = null;
+		//this.m.Beards = null;
 		this.m.Bodies = ["bust_percht_body_0"];
 		this.m.Level = this.Math.rand(1, 3);
 		this.m.IsCombatBackground = true;
@@ -112,7 +112,7 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 				id = 17,
 				type = "text",
 				icon = "ui/icons/fatigue.png",
-				text = "Recovers an additional 6 fatigue per turn"
+				text = "Recovers an additional [color=" + this.Const.UI.Color.PositiveValue + "]6[/color] fatigue per turn"
 			}
 		];
 	}
