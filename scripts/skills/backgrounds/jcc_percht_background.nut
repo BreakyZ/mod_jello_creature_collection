@@ -159,8 +159,8 @@ this.jcc_percht_background <- this.inherit("scripts/skills/backgrounds/character
 	{
 		local c = {
 			Hitpoints = [
-				300,
-				287
+				250,
+				237
 			],
 			Bravery = [
 				44,
