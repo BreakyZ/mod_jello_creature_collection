@@ -36,6 +36,7 @@ this.jcc_basilisk_sentry_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_flee"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_retreat"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_engage_melee"));
+		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_swing"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_break_free"));
 		this.addBehavior(this.new("scripts/ai/tactical/behaviors/ai_attack_default"));
 	}

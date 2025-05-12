@@ -23,10 +23,10 @@ this.jcc_basilisk_sentry_fowleye_skill <- this.inherit("scripts/skills/skill", {
 		this.m.IsTargeted = true;
 		this.m.IsStacking = false;
 		this.m.IsAttack = true;
-		this.m.IsRanged = true;
+		this.m.IsRanged = false;
 		this.m.IsIgnoredAsAOO = true;
         this.m.IsShowingProjectile = false;
-        this.m.IsUsingHitchance = true;
+        this.m.IsUsingHitchance = false;
         this.m.IsDoingForwardMove = false;
         this.m.IsVisibleTileNeeded = false;
         this.m.ActionPointCost = 6;
@@ -106,7 +106,29 @@ this.jcc_basilisk_sentry_fowleye_skill <- this.inherit("scripts/skills/skill", {
 
 			if (!t.IsEmpty && t.getEntity().isAttackable())
 			{
-				ret = this.attackEntity(_user, t.getEntity()) || ret;
+				if (_user.isAlive() || !_user.isDying())
+				{
+					local effect = this.Tactical.spawnSpriteEffect("effect_skull_03", this.createColor("#ffffff"), t, 0, 40, 1.0, 0.25, 0, 400, 300);
+					//ret = this.attackEntity(_user, t.getEntity()) || ret;
+					local horrorTarget = t.getEntity();
+
+					horrorTarget.checkMorale(-1, -15, this.Const.MoraleCheckType.MentalAttack);
+
+					if (!horrorTarget.checkMorale(0, -5, this.Const.MoraleCheckType.MentalAttack))
+					{
+						if(!horrorTarget.getCurrentProperties().IsImmuneToStun && !horrorTarget.getSkills().hasSkill("effects.stunned"))
+						{
+							local stun = this.new("scripts/skills/effects/stunned_effect");
+							horrorTarget.getSkills().add(stun);
+
+							if (!_user.isHiddenToPlayer() && !horrorTarget.isHiddenToPlayer())
+							{
+								this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(horrorTarget) + " is petrified with fear");
+							}
+						}
+					}
+				}
+
 			}
 
 			if (!_user.isAlive() || _user.isDying())
