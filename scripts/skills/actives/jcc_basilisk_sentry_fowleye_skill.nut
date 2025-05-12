@@ -145,6 +145,27 @@ this.jcc_basilisk_sentry_fowleye_skill <- this.inherit("scripts/skills/skill", {
 		_result.Tiles.push(_tile);
 	}
 
+	function onPerformAttack( _tag )
+	{
+		local _user = _tag.User;
+		local _targetTile = _tag.TargetTile;
+		local target = _targetTile.getEntity();
+		local damage = this.Math.max(0, this.Math.rand(5,7));
+		local p = this.getContainer().getActor().getCurrentProperties();
+		local tag = {
+				Attacker = _user,
+				Skill = this,
+				HitInfo = clone this.Const.Tactical.HitInfo
+			};
+		tag.HitInfo.DamageRegular = damage;
+		tag.HitInfo.DamageFatigue = this.Const.Combat.FatigueReceivedPerHit;
+		tag.HitInfo.DamageDirect = 1.0;
+		tag.HitInfo.BodyPart = this.Const.BodyPart.Head;
+		tag.HitInfo.BodyDamageMult = 1.0;
+		tag.HitInfo.FatalityChanceMult = 0.0;
+		return true;
+	}
+
 	function onTargetSelected( _targetTile )
 	{
 		local myTile = this.m.Container.getActor().getTile();
@@ -206,6 +227,8 @@ this.jcc_basilisk_sentry_fowleye_skill <- this.inherit("scripts/skills/skill", {
 			{
 				continue;
 			}
+			
+			this.Time.scheduleEvent(this.TimeUnit.Virtual, this.m.Delay, this.onPerformAttack.bindenv(this), tag);
 
 			target.checkMorale(-1, -15, this.Const.MoraleCheckType.MentalAttack);
 

@@ -38,7 +38,7 @@ this.jcc_basilisk_sentry_inject_skill <- this.inherit("scripts/skills/skill", {
 		this.m.InjuriesOnHead = this.Const.Injury.PiercingHead; //check below
 		this.m.DirectDamageMult = 0.3; //ignore armour multi.
 		this.m.HitChanceBonus = 0;
-		this.m.ActionPointCost = 6;
+		this.m.ActionPointCost = 5;
 		this.m.FatigueCost = 20;
 		this.m.MinRange = 1;
 		this.m.MaxRange = 2;

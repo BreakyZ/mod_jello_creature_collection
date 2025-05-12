@@ -40,7 +40,7 @@
 
 ::Const.Tactical.Actor.JccBasiliskSentry <- {
 	XP = 360,
-	ActionPoints = 8,
+	ActionPoints = 9,
 	Hitpoints = 160,
 	Bravery = 80,
 	Stamina = 180,
