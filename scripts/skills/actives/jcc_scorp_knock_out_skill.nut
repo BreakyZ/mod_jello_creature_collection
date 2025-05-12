@@ -13,9 +13,9 @@ this.jcc_scorp_knock_out_skill <- this.inherit("scripts/skills/skill", {
 		this.m.ID = "actives.jcc_scorp_knock_out";
 		this.m.Name = "Pin Down";
 		this.m.Description = "A heavy blow intended to stun or incapacitate anyone unlucky enough to be hit for one turn, but not to do the most damage. Stunned targets can not keep up their Shieldwall, Spearwall or similar defensive skills.";
-		this.m.Icon = "skills/active_32.png";
-		this.m.IconDisabled = "skills/active_32_sw.png";
-		this.m.Overlay = "active_32";
+		this.m.Icon = "skills/jcc_scorpion_claw_01.png";
+		this.m.IconDisabled = "skills/jcc_scorpion_claw_01_sw.png";
+		this.m.Overlay = "jcc_scorpion_claw_01";
 		this.m.SoundOnUse = [
 			"sounds/combat/bash_01.wav",
 			"sounds/combat/bash_02.wav",

@@ -5,9 +5,9 @@ this.jcc_dragon_firejet_skill <- this.inherit("scripts/skills/skill", {
 		this.m.ID = "actives.jcc_dragon_firejet";
 		this.m.Name = "Firejet";
 		this.m.Description = "";
-		this.m.Icon = "skills/active_202.png";
-		this.m.IconDisabled = "skills/active_202_sw.png";
-		this.m.Overlay = "active_202";
+		this.m.Icon = "skills/jcc_flamejet.png";
+		this.m.IconDisabled = "skills/jcc_flamejet_sw.png";
+		this.m.Overlay = "jcc_flamejet";
 		this.m.SoundOnUse = [
 			"sounds/enemies/jcc_dragon_fire_jet_01.wav",
 			"sounds/enemies/jcc_dragon_fire_jet_02.wav",

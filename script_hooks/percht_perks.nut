@@ -1,7 +1,7 @@
 
 
 ::Const.CharacterBackgrounds.push("jcc_percht_background");
-
+/*
 ::Const.PerchtPerks.Perks <- [
 	[
 		{
@@ -414,3 +414,4 @@ for( local row = 0; row < this.Const.PerchtPerks.Perks.len(); row = ++row )
 	return null;
 };
 
+*/

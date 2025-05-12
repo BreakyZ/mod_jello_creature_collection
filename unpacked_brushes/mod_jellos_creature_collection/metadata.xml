@@ -12,6 +12,10 @@
 <sprite id="jcc_inject" ic="FF614551" img="ui\skills\jcc_inject.png" />
 <sprite id="nachtmahr_claw" ic="FF614551" img="ui\skills\nachtmahr_claw.png" />
 <sprite id="nachtmahr_paralysis" ic="FF614551" img="ui\skills\nachtmahr_paralysis.png" />
+<sprite id="jcc_scorpion_sting_01" ic="FF614551" img="ui\skills\jcc_scorpion_sting_01.png" />
+<sprite id="jcc_firebreath" ic="FF614551" img="ui\skills\jcc_firebreath.png" />
+<sprite id="jcc_flamejet" ic="FF614551" img="ui\skills\jcc_flamejet.png" />
+<sprite id="jcc_scorpion_claw_01" ic="FF614551" img="ui\skills\jcc_scorpion_claw_01.png" />
 
 <!-- Worldmap -->
 

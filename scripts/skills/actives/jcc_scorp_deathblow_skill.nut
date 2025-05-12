@@ -6,9 +6,9 @@ this.jcc_scorp_deathblow_skill <- this.inherit("scripts/skills/skill", {
 		this.m.Name = "Stinger Stab";
 		this.m.Description = "Land a deadly hit on a debilitated target to finish it off.";
 		this.m.KilledString = "Stabbed";
-		this.m.Icon = "skills/active_199.png";
-		this.m.IconDisabled = "skills/active_199_sw.png";
-		this.m.Overlay = "active_199";
+		this.m.Icon = "skills/jcc_scorpion_sting_01.png";
+		this.m.IconDisabled = "skills/jcc_scorpion_sting_01_sw.png";
+		this.m.Overlay = "jcc_scorpion_sting_01";
 		this.m.SoundOnUse = [
 			"sounds/combat/dlc6/deathblow_01.wav",
 			"sounds/combat/dlc6/deathblow_02.wav",

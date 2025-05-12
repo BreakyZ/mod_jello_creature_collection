@@ -10,9 +10,9 @@ this.jcc_dragon_fire_area_skill <- this.inherit("scripts/skills/skill", {
 		this.m.ID = "actives.jcc_dragon_fire_area";
 		this.m.Name = "Fire Breath";
 		this.m.Description = "";
-		this.m.Icon = "skills/active_203.png";
-		this.m.IconDisabled = "skills/active_203_sw.png";
-		this.m.Overlay = "active_203";
+		this.m.Icon = "skills/jcc_firebreath.png";
+		this.m.IconDisabled = "skills/jcc_firebreath_sw.png";
+		this.m.Overlay = "jcc_firebreath";
 		this.m.SoundOnFire = [
 			"sounds/enemies/jcc_dragon_fire_breath_01.wav",
 			"sounds/enemies/jcc_dragon_fire_breath_02.wav",
