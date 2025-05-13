@@ -30,6 +30,27 @@ this.jcc_slime_warbrand <- this.inherit("scripts/items/weapons/named/named_weapo
 		this.randomizeValues();
 	}
 
+	function getTooltip()
+	{
+		local result = this.weapon.getTooltip();
+		result.push({
+			id = 8,
+			type = "text",
+			icon = "ui/icons/special.png",
+			text = "Dealing damage will cover the target in slime, reducing their initiative and increasing AP cost when moving"
+		});
+		return result;
+	}
+
+	function onDamageDealt( _target, _skill, _hitInfo )
+	{
+		if (!_target.isDying() && _target.isAlive())
+		{
+			local effect = this.new("scripts/skills/effects/jcc_slimed_effect");
+			_target.getSkills().add(effect);
+		}
+	}
+
 	function updateVariant()
 	{
 		this.m.IconLarge = "weapons/melee/slimesword.png";
