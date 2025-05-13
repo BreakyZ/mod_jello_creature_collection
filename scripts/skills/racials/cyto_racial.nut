@@ -77,5 +77,21 @@ this.cyto_racial <- this.inherit("scripts/skills/skill", {
 		}
 	}
 
+	function onTargetHit( _skill, _targetEntity, _bodyPart, _damageInflictedHitpoints, _damageInflictedArmor )
+	{
+		if (!_targetEntity.isAlive())
+		{
+			return;
+		}
+
+		if (_targetEntity.getCurrentProperties().IsImmuneToPoison || _damageInflictedHitpoints < this.Const.Combat.PoisonEffectMinDamage || _targetEntity.getHitpoints() <= 0)
+		{
+			return;
+		}
+
+		local effect = this.new("scripts/skills/effects/jcc_slimed_effect");
+		_targetEntity.getSkills().add(effect);
+	}
+
 });
 
