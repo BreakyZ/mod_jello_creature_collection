@@ -8,9 +8,9 @@ this.jcc_slimed_effect <- this.inherit("scripts/skills/skill", {
 		this.m.ID = "effects.jcc_slimed";
 		this.m.Name = "Slimed";
 		this.m.Description = "This character has been covered in slime, making it increasingly difficult to move.";
-		this.m.Icon = "skills/status_effect_74.png";
-		this.m.IconMini = "status_effect_74_mini";
-		this.m.Overlay = "status_effect_74";
+		this.m.Icon = "skills/jcc_slimed_effect.png";
+		this.m.IconMini = "jcc_slimed_effect_mini";
+		this.m.Overlay = "jcc_slimed_effect";
 		this.m.Type = this.Const.SkillType.StatusEffect;
 		this.m.IsActive = false;
 		this.m.IsStacking = false;
@@ -31,7 +31,7 @@ this.jcc_slimed_effect <- this.inherit("scripts/skills/skill", {
 
 	function getTooltip()
 	{
-		local ini = 0.1*this.m.Count;
+		local ini = 10*this.m.Count;
 		return [
 			{
 				id = 1,
@@ -53,7 +53,7 @@ this.jcc_slimed_effect <- this.inherit("scripts/skills/skill", {
 				id = 8,
 				type = "text",
 				icon = "ui/icons/initiative.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-"+ini+"[/color] Initiative"
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-"+ini+"%[/color] Initiative"
 			}
 		];
 	}

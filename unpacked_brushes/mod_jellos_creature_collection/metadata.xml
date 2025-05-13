@@ -16,6 +16,7 @@
 <sprite id="jcc_firebreath" ic="FF614551" img="ui\skills\jcc_firebreath.png" />
 <sprite id="jcc_flamejet" ic="FF614551" img="ui\skills\jcc_flamejet.png" />
 <sprite id="jcc_scorpion_claw_01" ic="FF614551" img="ui\skills\jcc_scorpion_claw_01.png" />
+<sprite id="jcc_slimed_effect" ic="FF614551" img="ui\skills\jcc_slimed_effect.png" />
 
 <!-- Worldmap -->
 
