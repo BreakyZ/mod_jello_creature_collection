@@ -64,6 +64,9 @@ this.jcc_basilisk_sentry_fowleye_skill <- this.inherit("scripts/skills/skill", {
 			TargetTile = _targetTile,
 			Num = 0
 		};
+
+		this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_user) + " unleashes a baleful gaze");
+
 		this.Tactical.queryTilesInRange(myTile, d, d, false, [], this.onQueryTilesHit, result);
 		local tiles = [];
 
