@@ -20,6 +20,10 @@
 
 <sprite id="jcc_slimed_effect_mini" offsetY="35" ic="FF131048" img="ui\skills\mini\jcc_slimed_effect_mini.png" />
 
+<sprite id="jcc_engulfed_effect" ic="FF614551" img="ui\skills\jcc_engulfed_effect.png" />
+
+<sprite id="jcc_engulfed_effect_mini" offsetY="35" ic="FF131048" img="ui\skills\mini\jcc_engulfed_effect_mini.png" />
+
 
 <!-- Worldmap -->
 

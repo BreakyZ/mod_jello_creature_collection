@@ -7,9 +7,9 @@ this.jcc_engulfing_enemy_effect <- this.inherit("scripts/skills/skill", {
 		this.m.ID = "effects.jcc_engulfing_enemy_effect"; // unused effect, but referenced in other files so useful to use here
 		this.m.Name = "Engulfing an enemy";
 		this.m.Description = "This slime is engulfing an enemy, slowly eating them.";
-		this.m.Icon = "skills/status_effect_113.png";
-		this.m.IconMini = "status_effect_113_mini";
-		this.m.Overlay = "status_effect_113";
+		this.m.Icon = "skills/jcc_engulfed_effect_.png";
+		this.m.IconMini = "jcc_engulfed_effect_mini";
+		this.m.Overlay = "jcc_engulfed_effect_";
 		this.m.Type = this.Const.SkillType.StatusEffect;
 		this.m.IsActive = false;
 		this.m.IsRemovedAfterBattle = true;

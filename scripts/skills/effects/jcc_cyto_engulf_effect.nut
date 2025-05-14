@@ -24,9 +24,9 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/skill", {
 			"sounds/combat/poison_applied_02.wav"
 		];
 		this.m.ID = "effects.jcc_cyto_engulf";
-		this.m.Icon = "skills/status_effect_113.png";
-		this.m.IconMini = "status_effect_113_mini";
-		this.m.Overlay = "status_effect_113";
+		this.m.Icon = "skills/jcc_engulfed_effect_.png";
+		this.m.IconMini = "jcc_engulfed_effect_mini";
+		this.m.Overlay = "jcc_engulfed_effect_";
 		this.m.Type = this.Const.SkillType.StatusEffect;
 		this.m.IsActive = false;
 		this.m.IsRemovedAfterBattle = true;
