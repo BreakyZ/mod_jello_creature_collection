@@ -43,3 +43,5 @@ foreach (paint in paints)
 
             __original(_actor, _item = null);
         }
+    });
+}
