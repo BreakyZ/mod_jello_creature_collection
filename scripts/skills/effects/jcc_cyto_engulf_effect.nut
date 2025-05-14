@@ -1,21 +1,35 @@
-this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/effects/serpent_ensnare_effect", {
+this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/skill", {
 	m = {
 		Mode = 0,
 		LastRoundApplied = 0,
 		SpriteScaleBackup = 1.0,
 		OnRemoveCallback = null,
 		OnRemoveCallbackData = null,
-		ParentID = null
+		ParentID = null,
+		TargetEntity = null
 	},
+
+	function setOnRemoveCallback( _c, _d )
+	{
+		this.m.OnRemoveCallback = _c;
+		this.m.OnRemoveCallbackData = _d;
+	}
+	
 	function create()
 	{
-		this.serpent_ensnare_effect.create();
 		this.m.Name = "Engulfed";
 		this.m.Description = "This character is engulfed by a cytoplasm and slowly being digested alive.";
 		this.m.SoundOnUse = [
 			"sounds/combat/poison_applied_01.wav",
 			"sounds/combat/poison_applied_02.wav"
 		];
+		this.m.ID = "effects.jcc_cyto_engulf";
+		this.m.Icon = "skills/status_effect_113.png";
+		this.m.IconMini = "status_effect_113_mini";
+		this.m.Overlay = "status_effect_113";
+		this.m.Type = this.Const.SkillType.StatusEffect;
+		this.m.IsActive = false;
+		this.m.IsRemovedAfterBattle = true;
 	}
 
 	function setMode( _f )
@@ -37,6 +51,12 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/effects/serpent_ensn
 				text = "This character is engulfed by a cytoplasm and slowly being digested alive, resulting in the loss of [color=" + this.Const.UI.Color.NegativeValue + "]10[/color] hitpoints and [color=" + this.Const.UI.Color.NegativeValue + "]20%[/color] armor."
 			},
 			{
+				id = 7,
+				type = "text",
+				icon = "ui/icons/regular_damage.png",
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]-50%[/color] Damage"
+			},
+			{
 				id = 9,
 				type = "text",
 				icon = "ui/icons/action_points.png",
@@ -45,8 +65,8 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/effects/serpent_ensn
 			{
 				id = 9,
 				type = "text",
-				icon = "ui/icons/action_points.png",
-				text = "[color=" + this.Const.UI.Color.NegativeValue + "]Unable to use skills[/color]"
+				icon = "ui/icons/special.png",
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]Status is removed when the cytoplasm takes 60 or more damage in one attack[/color]"
 			}
 		];
 	}
@@ -126,5 +146,66 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/effects/serpent_ensn
 				}
 			}
 		}
+	}
+
+	function onAdded()
+	{
+		local actor = this.getContainer().getActor();
+		local sprite1 = actor.getSprite("status_rooted");
+		local sprite2 = actor.getSprite("status_rooted_back");
+		this.m.SpriteScaleBackup = sprite1.Scale;
+		sprite1.Scale = 1.0;
+		sprite2.Scale = 1.0;
+		this.Tactical.TurnSequenceBar.pushEntityBack(this.getContainer().getActor().getID());
+	}
+
+
+	function removeOthersEffect()
+	{
+		if (this.m.TargetEntity != null && this.m.TargetEntity.isAlive())
+		{
+			this.m.TargetEntity.getSkills().removeByID("effects.jcc_engulfing_enemy_effect")
+			this.m.TargetEntity = null;
+		}
+	}
+
+	function onRemoved()
+	{
+		this.removeOthersEffect()
+		local actor = this.getContainer().getActor();
+		actor.getSprite("status_rooted").Scale = this.m.SpriteScaleBackup;
+		actor.getSprite("status_rooted_back").Scale = this.m.SpriteScaleBackup;
+
+		if (this.m.OnRemoveCallback != null && !this.Tactical.Entities.isCombatFinished())
+		{
+			this.m.OnRemoveCallback(this.m.OnRemoveCallbackData);
+		}
+	}
+
+	function onDeath( _fatalityType )
+	{
+		if (this.m.OnRemoveCallbackData != null)
+		{
+			this.m.OnRemoveCallbackData.LoseHitpoints = false;
+		}
+
+		this.onRemoved();
+	}
+
+	function onUpdate( _properties )
+	{
+		_properties.IsRooted = true;
+		_properties.DamageTotalMult *= 0.5;
+		_properties.InitiativeMult *= 0.5;
+	}
+
+	function onTurnEnd()
+	{
+		this.applyDamage();
+	}
+
+	function onWaitTurn()
+	{
+		this.applyDamage();
 	}
 });

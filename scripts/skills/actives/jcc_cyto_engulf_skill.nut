@@ -1,99 +1,86 @@
-this.jcc_cyto_engulf_skill <- this.inherit("scripts/skills/actives/kraken_ensnare_skill", {
+this.jcc_cyto_engulf_skill <- this.inherit("scripts/skills/skill", {
 	m = {},
 	function create()
 	{
-		this.kraken_ensnare_skill.create();
 		this.m.ID = "actives.jcc_cyto_engulf";
 		this.m.Name = "Engulf";
 		this.m.SoundOnHit = [
 			"sounds/enemies/slime_smack_01.wav",
 			"sounds/enemies/slime_smack_02.wav"
 		];
-		this.m.ActionPointCost = 4;
+		
+		this.m.Type = this.Const.SkillType.Active;
+		this.m.Order = this.Const.SkillOrder.UtilityTargeted;
+		this.m.Delay = 0;
+		this.m.IsSerialized = false;
+		this.m.IsActive = true;
+		this.m.IsTargeted = true;
+		this.m.IsStacking = false;
+		this.m.IsAttack = true;
+		this.m.IsRanged = false;
+		this.m.IsIgnoredAsAOO = true;
+		this.m.IsShowingProjectile = false;
+		this.m.IsUsingHitchance = false;
+		this.m.IsDoingForwardMove = false;
+		this.m.IsVisibleTileNeeded = true;
+		this.m.ActionPointCost = 5;
+		this.m.FatigueCost = 15;
+		this.m.MinRange = 1;
+		this.m.MaxRange = 1;
+		this.m.MaxLevelDifference = 4;
 	}
 
-	function onNetSpawn( _data )
+	function isViableTarget( _user, _target )
 	{
-		if (_data.Skill.m.SoundOnHit.len() != 0)
+		if (_target.isAlliedWith(_user))
 		{
-			this.Sound.play(_data.Skill.m.SoundOnHit[this.Math.rand(0, _data.Skill.m.SoundOnHit.len() - 1)], this.Const.Sound.Volume.Skill, _data.TargetEntity.getPos());
+			return false;
 		}
 
-		local ensnare = this.new("scripts/skills/effects/jcc_cyto_engulf_effect");
-		ensnare.setMode(_data.User.getMode());
-		ensnare.setOnRemoveCallback(function ( _data )
+		if (_target.getCurrentProperties().IsRooted)
 		{
-			local targetTile = _data.TargetEntity.getTile();
-			local tile;
-			local n = _data.User.m.BloodType;
+			return false;
+		}
 
-			for( local i = 0; i < this.Const.Tactical.BloodEffects[n].len(); i = ++i )
+		if (_target.getCurrentProperties().IsImmuneToRoot)
+		{
+			return false;
+		}
+
+		return true;
+	}
+
+	function onUse( _user, _targetTile )
+	{
+		local targets = [];
+
+		if (_targetTile.IsOccupiedByActor)
+		{
+			local entity = _targetTile.getEntity();
+
+			if (this.isViableTarget(_user, entity))
 			{
-				this.Tactical.spawnParticleEffect(false, this.Const.Tactical.BloodEffects[n][i].Brushes, targetTile, this.Const.Tactical.BloodEffects[n][i].Delay, this.Const.Tactical.BloodEffects[n][i].Quantity, this.Const.Tactical.BloodEffects[n][i].LifeTimeQuantity, this.Const.Tactical.BloodEffects[n][i].SpawnRate, this.Const.Tactical.BloodEffects[n][i].Stages);
+				targets.push(entity);
 			}
+		}
 
-			for( local i = 0; i < 6; i = ++i )
-			{
-				if (!targetTile.hasNextTile(i))
-				{
-				}
-				else
-				{
-					local t = targetTile.getNextTile(i);
 
-					if (t.IsEmpty)
-					{
-						tile = t;
-						break;
-					}
-				}
-			}
+		foreach( target in targets )
+		{
+			target.getSkills().add(this.new("scripts/skills/effects/jcc_cyto_engulf_effect"));
+			target.raiseRootsFromGround("cyto_black_engulf", "cyto_black_engulf");
 
-			if (tile == null)
-			{
-				local mapSize = this.Tactical.getMapSize();
+			target.getSkills().getSkillByID("effects.jcc_cyto_engulf").m.TargetEntity = _user;
 
-				for( local attempts = 0; attempts < 500; attempts = ++attempts )
-				{
-					local x = this.Math.rand(5, mapSize.X - 5);
-					local y = this.Math.rand(5, mapSize.Y - 5);
-					local t = this.Tactical.getTileSquare(x, y);
+			_user.getSkills().add(this.new("scripts/skills/effects/jcc_engulfing_enemy_effect"));
+			_user.getSkills().getSkillByID("effects.jcc_engulfing_enemy_effect").m.TargetEntity = target;
 
-					if (t.IsEmpty)
-					{
-						tile = t;
-						break;
-					}
-				}
-			}
 
-			if (tile != null)
-			{
-				this.Tactical.addEntityToMap(_data.User, tile.Coords.X, tile.Coords.Y);
+			this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], this.Const.Sound.Volume.Skill, target.getPos());
+		}
 
-				if (_data.LoseHitpoints)
-				{
-					_data.User.setHitpoints(this.Math.max(25, _data.User.getHitpoints() - this.Math.rand(15, 30)));
-					_data.User.spawnBloodDecals(targetTile);
-				}
 
-				_data.User.m.IsAbleToDie = true;
-				_data.User.setDirty(true);
-				_data.User.riseFromGround(0.1);
-			}
-		}, _data);
-		_data.TargetEntity.getSkills().add(ensnare);
-		local breakFree = this.new("scripts/skills/actives/break_free_skill");
-		breakFree.m.Icon = "skills/active_148.png";
-		breakFree.m.IconDisabled = "skills/active_148_sw.png";
-		breakFree.m.Overlay = "active_148";
-		breakFree.m.SoundOnUse = _data.Skill.m.SoundOnHitHitpoints;
-		breakFree.setDecal(this.Const.BloodDecals[this.Const.BloodType.Red][this.Math.rand(0, this.Const.BloodDecals[this.Const.BloodType.Red].len() - 1)]);
-		breakFree.setChanceBonus(0);
-		_data.TargetEntity.getSkills().add(breakFree);
-		_data.TargetEntity.raiseRootsFromGround("cyto_black_engulf", "cyto_black_engulf");
-		_data.User.getSkills().setBusy(false);
-		_data.User.removeFromMap();
+		return true;
 	}
 
 });
