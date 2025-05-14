@@ -29,7 +29,7 @@ this.jcc_slimed_effect <- this.inherit("scripts/skills/skill", {
 	}
 
 	function getDescription(){
-		return "This character has been covered in slime, making it increasingly difficult to move for [color=" + this.Const.UI.Color.NegativeValue + "]+"+this.m.TurnsLeft+" more turn(s).[/color].";
+		return "This character has been covered in slime, making it increasingly difficult to move for [color=" + this.Const.UI.Color.NegativeValue + "]"+this.m.TurnsLeft+"[/color] more turn(s).";
 	}
 
 	function getTooltip()
@@ -74,6 +74,9 @@ this.jcc_slimed_effect <- this.inherit("scripts/skills/skill", {
 		}*/
 
 		this.m.TurnsLeft=2;
+		if(){
+
+		}
 		++this.m.Count;
 		this.spawnIcon("jcc_slimed_effect", this.getContainer().getActor().getTile());
 	}
