@@ -32,10 +32,10 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/skill", {
 		this.m.IsRemovedAfterBattle = true;
 	}
 
-	function setMode( _f )
+	/*function setMode( _f )
 	{
 		this.m.Mode = _f;
-	}
+	}*/
 
 	function getTooltip()
 	{

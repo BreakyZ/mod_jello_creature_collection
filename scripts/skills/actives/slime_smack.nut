@@ -125,9 +125,8 @@ this.slime_smack <- this.inherit("scripts/skills/skill", {
 
 						if(success){
 
-							if (!tile.getEntity().isDying() && tile.getEntity().isAlive())
+							if (tile.getEntity().isAlive() && !tile.getEntity().isDying())
 							{
-								
 								local effect = this.new("scripts/skills/effects/jcc_slimed_effect");
 								tile.getEntity().getSkills().add(effect);
 							}

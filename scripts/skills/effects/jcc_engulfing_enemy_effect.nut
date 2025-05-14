@@ -42,7 +42,6 @@ this.jcc_engulfing_enemy_effect <- this.inherit("scripts/skills/skill", {
 		if (_damageHitpoints >= 60)
 		{
 			this.removeSelf();
-			this.removeOthersEffect();
 		}
 	}
 
