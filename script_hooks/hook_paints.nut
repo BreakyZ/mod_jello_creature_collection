@@ -12,7 +12,7 @@ local colors = [
 	this.Const.Items.Paint.Red,
 	this.Const.Items.Paint.WhiteBlue,
 	this.Const.Items.Paint.WhiteGreen
-]
+];
 		
 foreach (paint in paints)
 {
@@ -21,14 +21,15 @@ foreach (paint in paints)
         {
             local helmet = _item == null ? _actor.getItems().getItemAtSlot(this.Const.ItemSlot.Head) : _item;
 
-			if (helmet == null || !("onPaint" in helmet) || ("allowedColours" in helmet))
+			if (helmet == null || !("onPaint" in helmet))
             {
                 return false;
             }
 
-            local canPaint = false;
             if ("allowedColours" in helmet)
             {
+                            local canPaint = false;
+
             	foreach (color in helmet.m.allowedColours)
             	{
             		if (paint[1] == color)
@@ -37,9 +38,9 @@ foreach (paint in paints)
             			break
             		}
             	}
+                if (!canPaint)
+                    return false;
             }
-            if (!canPaint)
-            	return false;
 
             __original(_actor, _item = null);
         }
