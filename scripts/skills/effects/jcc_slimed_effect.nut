@@ -74,9 +74,6 @@ this.jcc_slimed_effect <- this.inherit("scripts/skills/skill", {
 		}*/
 
 		this.m.TurnsLeft=2;
-		if(){
-
-		}
 		++this.m.Count;
 		this.spawnIcon("jcc_slimed_effect", this.getContainer().getActor().getTile());
 	}
