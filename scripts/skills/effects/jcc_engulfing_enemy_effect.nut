@@ -73,7 +73,7 @@ this.jcc_engulfing_enemy_effect <- this.inherit("scripts/skills/skill", {
 	{
 		if (this.m.TargetEntity != null && this.m.TargetEntity.isAlive())
 		{
-			this.m.TargetEntity.getSkills().removeByID("effects.jcc_cyto_engulf_effect")
+			this.m.TargetEntity.getSkills().removeByID("effects.jcc_cyto_engulf")
 			this.m.TargetEntity = null;
 		}
 	}

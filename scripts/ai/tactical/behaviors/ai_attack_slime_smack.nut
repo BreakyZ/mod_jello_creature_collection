@@ -32,6 +32,11 @@ this.ai_attack_slime_smack <- this.inherit("scripts/ai/tactical/behavior", {
 			return this.Const.AI.Behavior.Score.Zero;
 		}
 
+		if (_entity.getMoraleState() == this.Const.MoraleState.Fleeing)
+		{
+			return this.Const.AI.Behavior.Score.Zero;
+		}
+
 		local targets = this.getAgent().getKnownOpponents();
 		local bestTarget = this.getBestTarget(_entity, this.m.Skill);
 
