@@ -310,6 +310,7 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.CurrentProperties = clone baseProperties;
 		this.m.ActionPointCosts = this.Const.DefaultMovementAPCost;
 		this.m.FatigueCosts = this.Const.DefaultMovementFatigueCost;
+		this.setRenderCallbackEnabled(true);
 		local varia = this.Math.rand(1, 2);
 
 		this.addSprite("socket").setBrush("bust_base_beasts");
@@ -606,7 +607,7 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 				this.setRenderCallbackEnabled(false);
 			}
 		}
-
+		/*
 		if (this.m.DistortTargetA == null)
 		{
 			this.m.DistortTargetA = this.m.IsFlipping ? this.createVec(0, 1.0 * this.m.Size) : this.createVec(0, -1.0 * this.m.Size);
@@ -627,6 +628,7 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		this.moveSpriteOffset("jawHigh", this.m.DistortTargetPrevA, this.m.DistortTargetA, 1.0, this.m.DistortAnimationStartTimeA);
 		this.moveSpriteOffset("ribHigh", this.m.DistortTargetPrevB, this.m.DistortTargetB, 1.0, this.m.DistortAnimationStartTimeA);
 		this.moveSpriteOffset("ribSkullHigh", this.m.DistortTargetPrevC, this.m.DistortTargetC, 1.0, this.m.DistortAnimationStartTimeA);
+		*/
 
 	}
 

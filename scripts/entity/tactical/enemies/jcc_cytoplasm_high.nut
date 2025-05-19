@@ -20,11 +20,44 @@ this.jcc_cytoplasm_high <- this.inherit("scripts/entity/tactical/enemies/jcc_cyt
 		this.m.CurrentProperties = clone baseProperties;
 		this.m.ActionPointCosts = this.Const.DefaultMovementAPCost;
 		this.m.FatigueCosts = this.Const.DefaultMovementFatigueCost;
+		this.setRenderCallbackEnabled(true);
 		local varia = this.Math.rand(1, 2);
 
 		this.addSprite("socket").setBrush("bust_base_beasts");
-		local skullA = this.addSprite("skullA");
-		skullA.setBrush("bust_cytoplasm_small_skull_0" + varia);
+		//small clutter
+		local skullSmall = this.addSprite("skullSmall");
+		skullSmall.setBrush("bust_cytoplasm_small_skull_0" + varia);
+
+		//med clutter
+		local skullMed = this.addSprite("skullMed");
+		skullMed.setBrush("bust_cytoplasm_medium_skull_0" + varia);
+		skullMed.Visible=false;
+		local boneMed = this.addSprite("boneMed");
+		boneMed.setBrush("bust_cytoplasm_medium_bone");
+		boneMed.Visible=false;
+		local jawMed = this.addSprite("jawMed");
+		jawMed.setBrush("bust_cytoplasm_medium_jaw");
+		jawMed.Visible=false;
+		local ribMed = this.addSprite("ribMed");
+		ribMed.setBrush("bust_cytoplasm_medium_rib");
+		ribMed.Visible=false;
+
+		//high clutter
+		local boneHigh = this.addSprite("boneHigh");
+		boneHigh.setBrush("bust_cytoplasm_high_bone");
+		boneHigh.Visible=false;
+		local skullHigh = this.addSprite("skullHigh");
+		skullHigh.setBrush("bust_cytoplasm_high_skull_01");
+		skullHigh.Visible=false;
+		local jawHigh = this.addSprite("jawHigh");
+		jawHigh.setBrush("bust_cytoplasm_high_jaw");
+		jawHigh.Visible=false;
+		local ribHigh = this.addSprite("ribHigh");
+		ribHigh.setBrush("bust_cytoplasm_high_rib");
+		ribHigh.Visible=false;		
+		local ribSkullHigh = this.addSprite("ribSkullHigh");
+		ribSkullHigh.setBrush("bust_cytoplasm_high_skel");
+		ribSkullHigh.Visible=false;
 
 		local body = this.addSprite("body");
 		body.setBrush("bust_cytoplasm_small_body");
