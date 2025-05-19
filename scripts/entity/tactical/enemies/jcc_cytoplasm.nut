@@ -389,18 +389,18 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		{
 			this.getSprite("body").setBrush("bust_cytoplasm_medium_body");
 
-			skullSmall.Visible=false;
+			this.getSprite("skullSmall").Visible=false;
 
-			skullMed.Visible=true;
-			boneMed.Visible=true;
-			jawMed.Visible=true;
-			ribMed.Visible=true;
+			this.getSprite("skullMed").Visible=true;
+			this.getSprite("boneMed").Visible=true;
+			this.getSprite("jawMed").Visible=true;
+			this.getSprite("ribMed").Visible=true;
 
-			boneHigh.Visible=false;
-			skullHigh.Visible=false;
-			jawHigh.Visible=false;
-			ribHigh.Visible=false;		
-			ribSkullHigh.Visible=false;
+			this.getSprite("boneHigh").Visible=false;
+			this.getSprite("skullHigh").Visible=false;
+			this.getSprite("jawHigh").Visible=false;
+			this.getSprite("ribHigh").Visible=false;		
+			this.getSprite("ribSkullHigh").Visible=false;
 
 			if (!_instant)
 			{
@@ -424,18 +424,18 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		{
 			this.getSprite("body").setBrush("bust_cytoplasm_high_body");
 
-			skullSmall.Visible=false;
+			this.getSprite("skullSmall").Visible=false;
 
-			skullMed.Visible=false;
-			boneMed.Visible=false;
-			jawMed.Visible=false;
-			ribMed.Visible=false;
+			this.getSprite("skullMed").Visible=false;
+			this.getSprite("boneMed").Visible=false;
+			this.getSprite("jawMed").Visible=false;
+			this.getSprite("ribMed").Visible=false;
 
-			boneHigh.Visible=true;
-			skullHigh.Visible=true;
-			jawHigh.Visible=true;
-			ribHigh.Visible=true;		
-			ribSkullHigh.Visible=true;
+			this.getSprite("boneHigh").Visible=true;
+			this.getSprite("skullHigh").Visible=true;
+			this.getSprite("jawHigh").Visible=true;
+			this.getSprite("ribHigh").Visible=true;		
+			this.getSprite("ribSkullHigh").Visible=true;
 
 			if (!_instant)
 			{
@@ -488,18 +488,18 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 			this.getSprite("body").setBrush("bust_cytoplasm_medium_body");
 
 
-			skullSmall.Visible=false;
+			this.getSprite("skullSmall").Visible=false;
 
-			skullMed.Visible=true;
-			boneMed.Visible=true;
-			jawMed.Visible=true;
-			ribMed.Visible=true;
+			this.getSprite("skullMed").Visible=true;
+			this.getSprite("boneMed").Visible=true;
+			this.getSprite("jawMed").Visible=true;
+			this.getSprite("ribMed").Visible=true;
 
-			boneHigh.Visible=false;
-			skullHigh.Visible=false;
-			jawHigh.Visible=false;
-			ribHigh.Visible=false;		
-			ribSkullHigh.Visible=false;
+			this.getSprite("boneHigh").Visible=false;
+			this.getSprite("skullHigh").Visible=false;
+			this.getSprite("jawHigh").Visible=false;
+			this.getSprite("ribHigh").Visible=false;		
+			this.getSprite("ribSkullHigh").Visible=false;
 
 			if (!_instant)
 			{
@@ -526,18 +526,18 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 			this.getSprite("body").setBrush("bust_cytoplasm_small_body");
 
 
-			skullSmall.Visible=true;
+			this.getSprite("skullSmall").Visible=true;
 
-			skullMed.Visible=false;
-			boneMed.Visible=false;
-			jawMed.Visible=false;
-			ribMed.Visible=false;
+			this.getSprite("skullMed").Visible=false;
+			this.getSprite("boneMed").Visible=false;
+			this.getSprite("jawMed").Visible=false;
+			this.getSprite("ribMed").Visible=false;
 
-			boneHigh.Visible=false;
-			skullHigh.Visible=false;
-			jawHigh.Visible=false;
-			ribHigh.Visible=false;		
-			ribSkullHigh.Visible=false;
+			this.getSprite("boneHigh").Visible=false;
+			this.getSprite("skullHigh").Visible=false;
+			this.getSprite("jawHigh").Visible=false;
+			this.getSprite("ribHigh").Visible=false;		
+			this.getSprite("ribSkullHigh").Visible=false;
 
 			if (!_instant)
 			{
