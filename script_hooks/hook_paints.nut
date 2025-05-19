@@ -26,10 +26,9 @@ foreach (paint in paints)
                 return false;
             }
 
-            if ("allowedColours" in helmet)
+            if ("allowedColours" in helmet.m)
             {
-                            local canPaint = false;
-
+                local canPaint = false;
             	foreach (color in helmet.m.allowedColours)
             	{
             		if (paint[1] == color)
