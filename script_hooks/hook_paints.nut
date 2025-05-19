@@ -1,6 +1,6 @@
 local paints = [
     ["paint_black_item", this.Const.Items.Paint.Black],
-    ["paint_orange_red_item", this.Const.Items.Paint.OrangeRed]
+    ["paint_orange_red_item", this.Const.Items.Paint.OrangeRed],
     ["paint_red_item", this.Const.Items.Paint.Red],
     ["paint_white_blue_item", this.Const.Items.Paint.WhiteBlue],
     ["paint_white_green_item", this.Const.Items.Paint.WhiteGreen]
