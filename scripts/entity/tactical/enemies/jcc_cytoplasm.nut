@@ -210,12 +210,17 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 
 			for( local i = 0; i < n; i = ++i )
 			{
-				_loot.push(this.new("scripts/items/misc/sulfurous_rocks_item"));
+				if(this.Math.rand(1,100) < 50){
+					_loot.push(this.new("scripts/items/supplies/jcc_jelly_cube_item"));
+				}else {
+
+					_loot.push(this.new("scripts/items/misc/jcc_ooze_item"));
+				}
 			}
 
 			if (this.Math.rand(1, 100) <= 10)
 			{
-				_loot.push(this.new("scripts/items/loot/glittering_rock_item"));
+				_loot.push(this.new("scripts/items/loot/jcc_slime_treasure_item"));
 			}
 		}
 
@@ -300,8 +305,41 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		local varia = this.Math.rand(1, 2);
 
 		this.addSprite("socket").setBrush("bust_base_beasts");
-		local skullA = this.addSprite("skullA");
-		skullA.setBrush("bust_cytoplasm_small_skull_0" + varia);
+
+		//small clutter
+		local skullSmall = this.addSprite("skullSmall");
+		skullSmall.setBrush("bust_cytoplasm_small_skull_0" + varia);
+
+		//med clutter
+		local skullMed = this.addSprite("skullMed");
+		skullMed.setBrush("bust_cytoplasm_medium_skull_0" + varia);
+		skullMed.Visible=false;
+		local boneMed = this.addSprite("boneMed");
+		boneMed.setBrush("bust_cytoplasm_medium_bone");
+		boneMed.Visible=false;
+		local jawMed = this.addSprite("jawMed");
+		jawMed.setBrush("bust_cytoplasm_medium_jaw");
+		jawMed.Visible=false;
+		local ribMed = this.addSprite("ribMed");
+		ribMed.setBrush("bust_cytoplasm_medium_rib");
+		ribMed.Visible=false;
+
+		//high clutter
+		local boneHigh = this.addSprite("boneHigh");
+		boneHigh.setBrush("bust_cytoplasm_high_bone");
+		boneHigh.Visible=false;
+		local skullHigh = this.addSprite("skullHigh");
+		skullHigh.setBrush("bust_cytoplasm_high_skull_01");
+		skullHigh.Visible=false;
+		local jawHigh = this.addSprite("jawHigh");
+		jawHigh.setBrush("bust_cytoplasm_high_jaw");
+		jawHigh.Visible=false;
+		local ribHigh = this.addSprite("ribHigh");
+		ribHigh.setBrush("bust_cytoplasm_high_rib");
+		ribHigh.Visible=false;		
+		local ribSkullHigh = this.addSprite("ribSkullHigh");
+		ribSkullHigh.setBrush("bust_cytoplasm_high_skel");
+		ribSkullHigh.Visible=false;
 
 		local body = this.addSprite("body");
 		body.setBrush("bust_cytoplasm_small_body");
@@ -343,6 +381,19 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		{
 			this.getSprite("body").setBrush("bust_cytoplasm_medium_body");
 
+			skullSmall.Visible=false;
+
+			skullMed.Visible=true;
+			boneMed.Visible=true;
+			jawMed.Visible=true;
+			ribMed.Visible=true;
+
+			boneHigh.Visible=false;
+			skullHigh.Visible=false;
+			jawHigh.Visible=false;
+			ribHigh.Visible=false;		
+			ribSkullHigh.Visible=false;
+
 			if (!_instant)
 			{
 				this.setRenderCallbackEnabled(true);
@@ -364,6 +415,19 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		else if (this.m.Size == 3)
 		{
 			this.getSprite("body").setBrush("bust_cytoplasm_high_body");
+
+			skullSmall.Visible=false;
+
+			skullMed.Visible=false;
+			boneMed.Visible=false;
+			jawMed.Visible=false;
+			ribMed.Visible=false;
+
+			boneHigh.Visible=true;
+			skullHigh.Visible=true;
+			jawHigh.Visible=true;
+			ribHigh.Visible=true;		
+			ribSkullHigh.Visible=true;
 
 			if (!_instant)
 			{
@@ -415,6 +479,20 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		{
 			this.getSprite("body").setBrush("bust_cytoplasm_medium_body");
 
+
+			skullSmall.Visible=false;
+
+			skullMed.Visible=true;
+			boneMed.Visible=true;
+			jawMed.Visible=true;
+			ribMed.Visible=true;
+
+			boneHigh.Visible=false;
+			skullHigh.Visible=false;
+			jawHigh.Visible=false;
+			ribHigh.Visible=false;		
+			ribSkullHigh.Visible=false;
+
 			if (!_instant)
 			{
 				this.setRenderCallbackEnabled(true);
@@ -438,6 +516,20 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		else if (this.m.Size == 1)
 		{
 			this.getSprite("body").setBrush("bust_cytoplasm_small_body");
+
+
+			skullSmall.Visible=true;
+
+			skullMed.Visible=false;
+			boneMed.Visible=false;
+			jawMed.Visible=false;
+			ribMed.Visible=false;
+
+			boneHigh.Visible=false;
+			skullHigh.Visible=false;
+			jawHigh.Visible=false;
+			ribHigh.Visible=false;		
+			ribSkullHigh.Visible=false;
 
 			if (!_instant)
 			{
