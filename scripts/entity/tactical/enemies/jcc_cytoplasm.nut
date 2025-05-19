@@ -7,7 +7,15 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 		BackupFaction = 0,
 		BackupWorldParty = null,
 		IsShrinking = false,
-		IsSpawningOnTile = false
+		IsSpawningOnTile = false,
+		DistortTargetA = null,
+		DistortTargetPrevA = this.createVec(0, 0),
+		DistortTargetB = null,
+		DistortTargetPrevB = this.createVec(0, 0),
+		DistortTargetC = null,
+		DistortTargetPrevC = this.createVec(0, 0),
+		DistortAnimationStartTimeA = 0,
+		IsFlipping = false
 	},
 	function getSize()
 	{
@@ -598,6 +606,28 @@ this.jcc_cytoplasm <- this.inherit("scripts/entity/tactical/actor", {
 				this.setRenderCallbackEnabled(false);
 			}
 		}
+
+		if (this.m.DistortTargetA == null)
+		{
+			this.m.DistortTargetA = this.m.IsFlipping ? this.createVec(0, 1.0 * this.m.Size) : this.createVec(0, -1.0 * this.m.Size);
+			this.m.DistortTargetB = !this.m.IsFlipping ? this.createVec(-0.5 * this.m.Size, 0) : this.createVec(0.5 * this.m.Size, 0);
+			this.m.DistortTargetC = !this.m.IsFlipping ? this.createVec(0.5 * this.m.Size, 0) : this.createVec(-0.5 * this.m.Size, 0);
+			this.m.DistortAnimationStartTimeA = this.Time.getVirtualTimeF() - this.Math.rand(10, 100) * 0.01;
+		}
+
+		this.moveSpriteOffset("skullSmall", this.m.DistortTargetPrevB, this.m.DistortTargetB, 1.0, this.m.DistortAnimationStartTimeA);
+		
+		this.moveSpriteOffset("skullMed", this.m.DistortTargetPrevC, this.m.DistortTargetC, 1.0, this.m.DistortAnimationStartTimeA);
+		this.moveSpriteOffset("boneMed", this.m.DistortTargetPrevA, this.m.DistortTargetA, 1.0, this.m.DistortAnimationStartTimeA);
+		this.moveSpriteOffset("jawMed", this.m.DistortTargetPrevA, this.m.DistortTargetA, 1.0, this.m.DistortAnimationStartTimeA);
+		this.moveSpriteOffset("ribMed", this.m.DistortTargetPrevB, this.m.DistortTargetB, 1.0, this.m.DistortAnimationStartTimeA);
+		
+		this.moveSpriteOffset("boneHigh", this.m.DistortTargetPrevC, this.m.DistortTargetC, 1.0, this.m.DistortAnimationStartTimeA);
+		this.moveSpriteOffset("skullHigh", this.m.DistortTargetPrevA, this.m.DistortTargetA, 1.0, this.m.DistortAnimationStartTimeA);
+		this.moveSpriteOffset("jawHigh", this.m.DistortTargetPrevA, this.m.DistortTargetA, 1.0, this.m.DistortAnimationStartTimeA);
+		this.moveSpriteOffset("ribHigh", this.m.DistortTargetPrevB, this.m.DistortTargetB, 1.0, this.m.DistortAnimationStartTimeA);
+		this.moveSpriteOffset("ribSkullHigh", this.m.DistortTargetPrevC, this.m.DistortTargetC, 1.0, this.m.DistortAnimationStartTimeA);
+
 	}
 
 	function onMovementStep( _tile, _levelDifference )

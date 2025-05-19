@@ -244,4 +244,5 @@
 		};
 		this.m.Options.push(beast);
 		this.m.BeastsLow.push(beast);
+	}
 });
