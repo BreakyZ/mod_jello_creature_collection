@@ -3,16 +3,9 @@ local paints = [
     ["paint_orange_red_item", this.Const.Items.Paint.OrangeRed],
     ["paint_red_item", this.Const.Items.Paint.Red],
     ["paint_white_blue_item", this.Const.Items.Paint.WhiteBlue],
-    ["paint_white_green_item", this.Const.Items.Paint.WhiteGreen]
+    ["paint_white_green_yellow_item", this.Const.Items.Paint.WhiteGreenYellow]
 ];
 
-local colors = [
-	this.Const.Items.Paint.Black,
-	this.Const.Items.Paint.OrangeRed,
-	this.Const.Items.Paint.Red,
-	this.Const.Items.Paint.WhiteBlue,
-	this.Const.Items.Paint.WhiteGreen
-];
 		
 foreach (paint in paints)
 {
