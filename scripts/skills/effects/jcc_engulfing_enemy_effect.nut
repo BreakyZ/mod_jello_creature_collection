@@ -1,15 +1,27 @@
 this.jcc_engulfing_enemy_effect <- this.inherit("scripts/skills/skill", {
 	m = {
-		TargetEntity = null
-		},
+		Victim = null,
+		IsActivated = false
+	},
+
+	function activate()
+	{
+		this.m.IsActivated = true;
+	}
+
+	function setVictim ( _a )
+	{
+		this.m.Victim = ::MSU.asWeakTableRef(_a);
+	}
+
 	function create()
 	{
-		this.m.ID = "effects.jcc_engulfing_enemy_effect"; // unused effect, but referenced in other files so useful to use here
+		this.m.ID = "effects.jcc_engulfing_enemy";
 		this.m.Name = "Engulfing an enemy";
 		this.m.Description = "This slime is engulfing an enemy, slowly eating them.";
-		this.m.Icon = "skills/jcc_engulfed_effect_.png";
+		this.m.Icon = "skills/jcc_engulfed_effect.png";
 		this.m.IconMini = "jcc_engulfed_effect_mini";
-		this.m.Overlay = "jcc_engulfed_effect_";
+		this.m.Overlay = "jcc_engulfed_effect";
 		this.m.Type = this.Const.SkillType.StatusEffect;
 		this.m.IsActive = false;
 		this.m.IsRemovedAfterBattle = true;
@@ -17,7 +29,7 @@ this.jcc_engulfing_enemy_effect <- this.inherit("scripts/skills/skill", {
 
 	function getName()
 	{
-		if (this.m.TargetEntity != null) return "Engulfing " + this.m.TargetEntity.getName()
+		if (this.m.Victim != null) return "Engulfing " + this.m.Victim.getName()
 		return "Engulfing an enemy";
 	}
 
@@ -27,7 +39,7 @@ this.jcc_engulfing_enemy_effect <- this.inherit("scripts/skills/skill", {
 			{
 				id = 1,
 				type = "title",
-				text = "Holding " + this.m.TargetEntity.getName()
+				text = "Holding " + this.m.Victim.getName()
 			},
 			{
 				id = 2,
@@ -52,10 +64,11 @@ this.jcc_engulfing_enemy_effect <- this.inherit("scripts/skills/skill", {
 	}
 	function onUpdate( _properties )
 	{
-		if (this.m.TargetEntity != null && this.m.TargetEntity.isAlive())
+		if (this.m.IsActivated && this.m.Victim != null && this.m.Victim.isAlive())
 		{
-			local dist = this.getContainer().getActor().getTile().getDistanceTo(this.m.TargetEntity.getTile())
-			if (dist != 2){
+			local dist = this.getContainer().getActor().getTile().getDistanceTo(this.m.Victim.getTile())
+			if (dist > 1)
+			{
 				this.removeSelf();
 				return;
 			}
@@ -70,10 +83,11 @@ this.jcc_engulfing_enemy_effect <- this.inherit("scripts/skills/skill", {
 
 	function removeOthersEffect()
 	{
-		if (this.m.TargetEntity != null && this.m.TargetEntity.isAlive())
+		if (this.m.Victim != null && this.m.Victim.isAlive())
 		{
-			this.m.TargetEntity.getSkills().removeByID("effects.jcc_cyto_engulf")
-			this.m.TargetEntity = null;
+			this.m.Victim.getSkills().removeByID("effects.jcc_cyto_engulf")
+			this.m.Victim = null;
+			this.m.IsActivated = false;
 		}
 	}
 });

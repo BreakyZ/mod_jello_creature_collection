@@ -1,18 +1,19 @@
 this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/skill", {
 	m = {
-		Mode = 0,
 		LastRoundApplied = 0,
 		SpriteScaleBackup = 1.0,
-		OnRemoveCallback = null,
-		OnRemoveCallbackData = null,
-		ParentID = null,
-		TargetEntity = null
+		Slime = null,
+		IsActivated = false
 	},
 
-	function setOnRemoveCallback( _c, _d )
+	function activate()
 	{
-		this.m.OnRemoveCallback = _c;
-		this.m.OnRemoveCallbackData = _d;
+		this.m.IsActivated = true;
+	}
+
+	function setSlime ( _a )
+	{
+		this.m.Slime = ::MSU.asWeakTableRef(_a);
 	}
 	
 	function create()
@@ -24,18 +25,13 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/skill", {
 			"sounds/combat/poison_applied_02.wav"
 		];
 		this.m.ID = "effects.jcc_cyto_engulf";
-		this.m.Icon = "skills/jcc_engulfed_effect_.png";
+		this.m.Icon = "skills/jcc_engulfed_effect.png";
 		this.m.IconMini = "jcc_engulfed_effect_mini";
-		this.m.Overlay = "jcc_engulfed_effect_";
+		this.m.Overlay = "jcc_engulfed_effect";
 		this.m.Type = this.Const.SkillType.StatusEffect;
 		this.m.IsActive = false;
 		this.m.IsRemovedAfterBattle = true;
 	}
-
-	/*function setMode( _f )
-	{
-		this.m.Mode = _f;
-	}*/
 
 	function getTooltip()
 	{
@@ -162,10 +158,11 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/skill", {
 
 	function removeOthersEffect()
 	{
-		if (this.m.TargetEntity != null && this.m.TargetEntity.isAlive())
+		if (this.m.Slime != null && this.m.Slime.isAlive())
 		{
-			this.m.TargetEntity.getSkills().removeByID("effects.jcc_engulfing_enemy_effect")
-			this.m.TargetEntity = null;
+			this.m.Slime.getSkills().removeByID("effects.jcc_engulfing_enemy")
+			this.m.Slime = null;
+			this.m.IsActivated = false;
 		}
 	}
 
@@ -175,28 +172,21 @@ this.jcc_cyto_engulf_effect <- this.inherit("scripts/skills/skill", {
 		local actor = this.getContainer().getActor();
 		actor.getSprite("status_rooted").Scale = this.m.SpriteScaleBackup;
 		actor.getSprite("status_rooted_back").Scale = this.m.SpriteScaleBackup;
-
-		if (this.m.OnRemoveCallback != null && !this.Tactical.Entities.isCombatFinished())
-		{
-			this.m.OnRemoveCallback(this.m.OnRemoveCallbackData);
-		}
 	}
 
 	function onDeath( _fatalityType )
 	{
-		if (this.m.OnRemoveCallbackData != null)
-		{
-			this.m.OnRemoveCallbackData.LoseHitpoints = false;
-		}
-
 		this.onRemoved();
 	}
 
 	function onUpdate( _properties )
 	{
-		_properties.IsRooted = true;
-		_properties.DamageTotalMult *= 0.5;
-		_properties.InitiativeMult *= 0.5;
+		if (this.m.IsActivated && this.m.Slime != null && this.m.Slime.isAlive())
+		{
+			_properties.IsRooted = true;
+			_properties.DamageTotalMult *= 0.5;
+			_properties.InitiativeMult *= 0.5;
+		}
 	}
 
 	function onTurnEnd()

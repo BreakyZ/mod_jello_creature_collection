@@ -30,19 +30,19 @@ this.jcc_cyto_engulf_skill <- this.inherit("scripts/skills/skill", {
 		this.m.MaxLevelDifference = 4;
 	}
 
-	function isViableTarget( _user, _target )
+	function isUsable()
 	{
-		if (_target.isAlliedWith(_user))
+		return this.skill.isUsable();
+	}
+
+	function onVerifyTarget( _originTile, _targetTile )
+	{
+		if (!this.skill.onVerifyTarget(_originTile, _targetTile))
 		{
 			return false;
 		}
 
-		if (_target.getCurrentProperties().IsRooted)
-		{
-			return false;
-		}
-
-		if (_target.getCurrentProperties().IsImmuneToRoot)
+		if (_targetTile.getEntity().getCurrentProperties().IsRooted || _targetTile.getEntity().getCurrentProperties().IsImmuneToRoot)
 		{
 			return false;
 		}
@@ -52,32 +52,21 @@ this.jcc_cyto_engulf_skill <- this.inherit("scripts/skills/skill", {
 
 	function onUse( _user, _targetTile )
 	{
-		local targets = [];
+		if (_targetTile.getEntity().getCurrentProperties().IsImmuneToRoot)
+			return false;
 
-		if (_targetTile.IsOccupiedByActor)
-		{
-			local entity = _targetTile.getEntity();
+		local target = _targetTile.getEntity();
+		target.raiseRootsFromGround("cyto_black_engulf", "cyto_black_engulf");
 
-			if (this.isViableTarget(_user, entity))
-			{
-				targets.push(entity);
-			}
-		}
+		target.getSkills().add(this.new("scripts/skills/effects/jcc_cyto_engulf_effect"));
+		_user.getSkills().add(this.new("scripts/skills/effects/jcc_engulfing_enemy_effect"));
 
+		target.getSkills().getSkillByID("effects.jcc_cyto_engulf").setSlime(_user);
+		_user.getSkills().getSkillByID("effects.jcc_engulfing_enemy").setVictim(target);
+		target.getSkills().getSkillByID("effects.jcc_cyto_engulf").activate();
+		_user.getSkills().getSkillByID("effects.jcc_engulfing_enemy").activate();
 
-		foreach( target in targets )
-		{
-			target.getSkills().add(this.new("scripts/skills/effects/jcc_cyto_engulf_effect"));
-			target.raiseRootsFromGround("cyto_black_engulf", "cyto_black_engulf");
-
-			target.getSkills().getSkillByID("effects.jcc_cyto_engulf").m.TargetEntity = _user;
-
-			_user.getSkills().add(this.new("scripts/skills/effects/jcc_engulfing_enemy_effect"));
-			_user.getSkills().getSkillByID("effects.jcc_engulfing_enemy_effect").m.TargetEntity = target;
-
-
-			this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], this.Const.Sound.Volume.Skill, target.getPos());
-		}
+		this.Sound.play(this.m.SoundOnHit[this.Math.rand(0, this.m.SoundOnHit.len() - 1)], this.Const.Sound.Volume.Skill, target.getPos());
 
 
 		return true;
