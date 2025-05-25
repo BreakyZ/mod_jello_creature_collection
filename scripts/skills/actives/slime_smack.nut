@@ -123,9 +123,10 @@ this.slime_smack <- this.inherit("scripts/skills/skill", {
 						this.spawnAttackEffect(tile, this.Const.Tactical.AttackEffectChop);
 						local success = _skill.attackEntity(user, tile.getEntity());
 
-						if(success){
+						if (success)
+						{
 
-							if (tile.getEntity().isAlive() && !tile.getEntity().isDying())
+							if (tile.getEntity() != null && tile.getEntity().isAlive() && !tile.getEntity().isDying())
 							{
 								local effect = this.new("scripts/skills/effects/jcc_slimed_effect");
 								tile.getEntity().getSkills().add(effect);
