@@ -233,15 +233,15 @@ this.jcc_player_percht_scenario <- this.inherit("scripts/scenarios/world/startin
 		}
 	}
 
-	/*function onInit()
+	function onInit()
 	{
 		for( local i = 5; i <= 8; i = ++i )
 		{
-			this.World.Assets.m.TerrainTypeSpeedMult[i] *= 1.2;
-			//this.World.Assets.m.TerrainTypeVisionRadiusMult[i] *= 1.5;
-			//this.World.Assets.m.TerrainTypeVisibilityMult[i] *= 0.5;
+			::Const.World.TerrainTypeSpeedMult[i] = 1.0;
+			::Const.World.TerrainTypeVisionRadiusMult[i] *= 1.5;
+			::Const.World.TerrainTypeVisibilityMult[i] = 1.0;
 		}
-	}*/
+	}
 
 });
 
