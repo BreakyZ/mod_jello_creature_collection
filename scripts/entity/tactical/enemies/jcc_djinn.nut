@@ -135,7 +135,7 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 	{
 		if ((_killer == null || _killer.getFaction() == this.Const.Faction.Player || _killer.getFaction() == this.Const.Faction.PlayerAnimals) && this.Math.rand(0, 1) == 1)
 		{
-			_loot.push(this.new("scripts/items/misc/vampire_dust_item"));
+			_loot.push(this.new("scripts/items/misc/jcc_djinn_item"));
 		}
 
 		return this.actor.getLootForTile(_killer, _loot);

@@ -4,7 +4,7 @@ this.jcc_throw_slime_flask <- this.inherit("scripts/skills/skill", {
 	{
 		this.m.ID = "actives.jcc_throw_slime_flask";
 		this.m.Name = "Throw Slime Flask";
-		this.m.Description = "Throw a bottled slime towards a target, where it will shatter and unleash a friendly cytoplasm, covering it's target in slime on impact.";
+		this.m.Description = "Throw a bottled slime towards a target, where it will shatter and unleash a friendly cytoplasm, covering it\'s target in slime on impact.";
 		this.m.Icon = "skills/active_106.png";
 		this.m.IconDisabled = "skills/active_106_sw.png";
 		this.m.Overlay = "active_106";

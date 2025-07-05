@@ -5,7 +5,7 @@ this.jcc_percht_trophy_item <- this.inherit("scripts/items/accessory/accessory",
 		this.accessory.create();
 		this.m.ID = "accessory.jcc_percht_trophy";
 		this.m.Name = "Percht Trophy Necklace";
-		this.m.Description = "Made from the parts of a vicious Percht, this trophy brazenly states a man's ego";
+		this.m.Description = "Made from the parts of a vicious Percht, this trophy brazenly states a man\'s ego";
 		this.m.SlotType = this.Const.ItemSlot.Accessory;
 		this.m.IsDroppedAsLoot = true;
 		this.m.ShowOnCharacter = true;
