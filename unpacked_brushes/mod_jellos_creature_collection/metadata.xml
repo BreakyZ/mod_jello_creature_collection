@@ -190,6 +190,8 @@
 
 <!-- Djinn -->
 
+  <sprite id="bust_jcc_djinn_dead" offsetY="12" ic="FF465E6A" img="entity\beasts\jcc_djinn_dead.png" left="-58" right="59" />
+
 <sprite id="bust_jcc_djinn_head_01" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_head_01.png" />
 <sprite id="bust_jcc_djinn_head_02" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_head_02.png" />
 <sprite id="bust_jcc_djinn_head_03" offsetY="42" left="-91" right="96" top="-81" bottom="91" ic="FF24554E"  img="entity\beasts\bust_jcc_djinn_head_03.png" />

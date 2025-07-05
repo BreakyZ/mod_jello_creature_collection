@@ -107,7 +107,7 @@ this.jcc_djinn <- this.inherit("scripts/entity/tactical/actor", {
 
 		if (_tile != null)
 		{
-			local decal = _tile.spawnDetail("bust_skeleton_vampire_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false);
+			local decal = _tile.spawnDetail("bust_jcc_djinn_dead", this.Const.Tactical.DetailFlag.Corpse, flip, false);
 			decal.Scale = 0.9;
 			decal.setBrightness(0.9);
 			this.spawnTerrainDropdownEffect(_tile);
