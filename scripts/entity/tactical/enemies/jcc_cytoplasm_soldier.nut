@@ -121,14 +121,18 @@ this.jcc_cytoplasm_soldier <- this.inherit("scripts/entity/tactical/actor", {
 
 			for( local i = 0; i < n; i = ++i )
 			{
-				_loot.push(this.new("scripts/items/misc/sulfurous_rocks_item"));
+				if(this.Math.rand(1,100) < 50){
+					_loot.push(this.new("scripts/items/supplies/jcc_jelly_cube_item"));
+				}else {
+
+					_loot.push(this.new("scripts/items/misc/jcc_ooze_item"));
+				}
 			}
 
 			if (this.Math.rand(1, 100) <= 10)
 			{
-				_loot.push(this.new("scripts/items/loot/glittering_rock_item"));
+				_loot.push(this.new("scripts/items/loot/jcc_slime_treasure_item"));
 			}
-		}
 
 		return this.actor.getLootForTile(_killer, _loot);
 	}

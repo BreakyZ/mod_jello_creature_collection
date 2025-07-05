@@ -242,21 +242,23 @@ this.jcc_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 				local r = this.Math.rand(1, 100);
 				local loot;
 
-				if (r <= 60)
+				/*if (r <= 60)
 				{
 					loot = this.new("scripts/items/misc/spider_silk_item");
 				}
 				else
 				{
-					loot = this.new("scripts/items/misc/poison_gland_item");
-				}
+					loot = this.new("scripts/items/misc/jcc_scorp_stinger");
+				}*/
+
+				loot = this.new("scripts/items/misc/jcc_scorp_stinger_item");
 
 				_loot.push(loot);
 			}
 
 			if (this.Math.rand(1, 100) <= 5)
 			{
-				local loot = this.new("scripts/items/loot/webbed_valuables_item");
+				local loot = this.new("scripts/items/misc/jcc_chitin_item");
 				_loot.push(loot);
 			}
 		}
@@ -267,7 +269,7 @@ this.jcc_scorpion <- this.inherit("scripts/entity/tactical/actor", {
 	function generateCorpse( _tile, _fatalityType, _killer )
 	{
 		local corpse = clone this.Const.Corpse;
-		corpse.CorpseName = "A Webknecht";
+		corpse.CorpseName = "A Scorpion";
 		corpse.Items = this.getItems().prepareItemsForCorpse(_killer);
 		corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
 		corpse.IsConsumable = false;
