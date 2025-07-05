@@ -1,19 +1,19 @@
-this.jcc_slime_flask_item <- this.inherit("scripts/items/weapons/weapon", {
+this.jcc_black_fire_bomb_item <- this.inherit("scripts/items/weapons/weapon", {
 	m = {},
 	function create()
 	{
 		this.weapon.create();
-		this.m.ID = "weapon.jcc_slime_flask";
-		this.m.Name = "Bottled Cytoplasm";
-		this.m.Description = "A docile cytoplasm stored in a glass bottle. Can be thrown to sic it on an enemy.";
-		this.m.IconLarge = "tools/bottledSlime14070.png";
-		this.m.Icon = "tools/bottledSlime7070.png";
+		this.m.ID = "weapon.jcc_black_fire_bomb";
+		this.m.Name = "Hellfire Pot";
+		this.m.Description = "A black stone pot filled with highly flammable liquid not quite of this world. Burns bright even in the cold.";
+		this.m.IconLarge = "tools/jccfirepot14070.png";
+		this.m.Icon = "tools/jccfirepot7070.png";
 		this.m.SlotType = this.Const.ItemSlot.Offhand;
 		this.m.ItemType = this.Const.Items.ItemType.Tool;
 		this.m.AddGenericSkill = true;
 		this.m.ShowArmamentIcon = true;
-		this.m.ArmamentIcon = "icon_jcc_slime_bottle";
-		this.m.Value = 400;
+		this.m.ArmamentIcon = "icon_jcc_bomb";
+		this.m.Value = 600;
 		this.m.RangeMax = 3;
 		this.m.StaminaModifier = 0;
 		this.m.IsDroppedAsLoot = true;
@@ -69,16 +69,10 @@ this.jcc_slime_flask_item <- this.inherit("scripts/items/weapons/weapon", {
 			text = "Range of [color=" + this.Const.UI.Color.PositiveValue + "]" + this.m.RangeMax + "[/color] tiles"
 		});
 		result.push({
-			id = 4,
-			type = "text",
-			icon = "ui/icons/special.png",
-			text = "Unleashes a cytoplasm near the target"
-		});
-		result.push({
 			id = 5,
 			type = "text",
 			icon = "ui/icons/special.png",
-			text = "Covers the target in slime, increasing movement costs and decreasing initiative"
+			text = "Will set [color=" + this.Const.UI.Color.DamageValue + "]7[/color] tiles ablaze with burning fire for 3 rounds"
 		});
 		result.push({
 			id = 6,
@@ -91,13 +85,13 @@ this.jcc_slime_flask_item <- this.inherit("scripts/items/weapons/weapon", {
 
 	function playInventorySound( _eventType )
 	{
-		this.Sound.play("sounds/bottle_01.wav", this.Const.Sound.Volume.Inventory);
+		this.Sound.play("sounds/move_pot_clay_01.wav", this.Const.Sound.Volume.Inventory);
 	}
 
 	function onEquip()
 	{
 		this.weapon.onEquip();
-		local skill = this.new("scripts/skills/actives/jcc_throw_slime_flask");
+		local skill = this.new("scripts/skills/actives/jcc_throw_black_fire_bomb_skill");
 		skill.setItem(this);
 		this.addSkill(skill);
 	}

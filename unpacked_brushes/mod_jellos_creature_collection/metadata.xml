@@ -17,6 +17,11 @@
 <sprite id="jcc_flamejet" ic="FF614551" img="ui\skills\jcc_flamejet.png" />
 <sprite id="jcc_scorpion_claw_01" ic="FF614551" img="ui\skills\jcc_scorpion_claw_01.png" />
 <sprite id="jcc_slimed_effect" ic="FF614551" img="ui\skills\jcc_slimed_effect.png" />
+<sprite id="slimeBottleThrow" ic="FF614551" img="ui\skills\slimeBottleThrow.png" />
+<sprite id="tarpotThrow" ic="FF614551" img="ui\skills\tarpotThrow.png" />
+<sprite id="jcc_throw_firebomb" ic="FF614551" img="ui\skills\jcc_throw_firebomb.png" />
+
+
 
 <sprite id="jcc_slimed_effect_mini" offsetY="35" ic="FF131048" img="ui\skills\mini\jcc_slimed_effect_mini.png" />
 
@@ -363,5 +368,15 @@
   <sprite id="basilisk_trophy_dead" offsetX="6" offsetY="10" f="64FD" ic="FF384D5B" width="191" height="185" img="entity\details\basilisk_trophy_dead.png" left="-36" right="16" top="-47" bottom="17" />
   <sprite id="percht_trophy" offsetY="35" ic="FF374C5A" width="140" height="248" img="entity\details\percht_trophy.png" left="-26" right="34" top="-49" bottom="3" />
   <sprite id="percht_trophy_dead" offsetX="6" offsetY="10" f="64FD" ic="FF384D5B" width="191" height="185" img="entity\details\percht_trophy_dead.png" left="-36" right="16" top="-47" bottom="17" />
+
+
+  <sprite id="icon_jcc_slime_bottle" offsetY="35" ic="FF406764" width="130" height="142" img="icons\icon_jcc_slime_bottle.png" left="9" right="49" top="-55" bottom="-12" />
+  <sprite id="icon_jcc_tarpot" offsetY="35" ic="FF406764" width="130" height="142" img="icons\icon_jcc_tarpot.png" left="9" right="50" top="-55" bottom="-12" />
+  <sprite id="icon_jcc_bomb" offsetY="35" ic="FF406764" width="130" height="142" img="icons\icon_jcc_bomb.png" left="11" right="53" top="-57" bottom="-10" />
+
+  <sprite id="jcc_bomb_proj" rotSpeed="800" ic="FF436E6F" img="effects\jcc_bomb_proj.png" />
+  <sprite id="jcc_slimeflask_proj" rotSpeed="800" ic="FF436E6F" img="effects\jcc_slimeflask_proj.png" />
+  <sprite id="jcc_tarpot_proj" rotSpeed="800" ic="FF436E6F" img="effects\jcc_tarpot_proj.png" />
+
 
 </brush>

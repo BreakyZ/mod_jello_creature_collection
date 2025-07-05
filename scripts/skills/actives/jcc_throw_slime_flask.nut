@@ -5,9 +5,9 @@ this.jcc_throw_slime_flask <- this.inherit("scripts/skills/skill", {
 		this.m.ID = "actives.jcc_throw_slime_flask";
 		this.m.Name = "Throw Slime Flask";
 		this.m.Description = "Throw a bottled slime towards a target, where it will shatter and unleash a friendly cytoplasm, covering it\'s target in slime on impact.";
-		this.m.Icon = "skills/active_106.png";
-		this.m.IconDisabled = "skills/active_106_sw.png";
-		this.m.Overlay = "active_106";
+		this.m.Icon = "skills/slimeBottleThrow.png";
+		this.m.IconDisabled = "skills/slimeBottleThrow_sw.png";
+		this.m.Overlay = "slimeBottleThrow";
 		this.m.SoundOnUse = [
 			"sounds/combat/throw_ball_01.wav",
 			"sounds/combat/throw_ball_02.wav",
@@ -39,7 +39,7 @@ this.jcc_throw_slime_flask <- this.inherit("scripts/skills/skill", {
 		this.m.MinRange = 1;
 		this.m.MaxRange = 3;
 		this.m.MaxLevelDifference = 3;
-		this.m.ProjectileType = this.Const.ProjectileType.Flask;
+		this.m.ProjectileType = this.Const.ProjectileType.JccSlimeFlask;
 		this.m.ProjectileTimeScale = 1.5;
 		this.m.IsProjectileRotated = false;
 	}
