@@ -6,7 +6,7 @@ this.percht_agent <- this.inherit("scripts/ai/tactical/agent", {
 		this.m.ID = this.Const.AI.Agent.ID.Percht;		
 		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.EngageMelee] = 1.5;
 		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.Shieldwall] = 0.5;
-		this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.05;
+		//this.m.Properties.BehaviorMult[this.Const.AI.Behavior.ID.Retreat] = 0.05;
 		this.m.Properties.TargetPriorityHitchanceMult = 0.5;
 		this.m.Properties.TargetPriorityHitpointsMult = 0.25;
 		this.m.Properties.TargetPriorityRandomMult = 0.1;
